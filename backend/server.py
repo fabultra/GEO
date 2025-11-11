@@ -259,11 +259,23 @@ async def analyze_with_claude(crawl_data: Dict[str, Any], retry_count: int = 3) 
                 'word_count': page['word_count']
             })
         
-        # Construire le prompt amélioré avec grilles d'évaluation
-        scoring_grids_text = get_scoring_prompt()
-        
+        # Construire un prompt optimisé (plus court pour éviter timeouts)
+        # Résumé des grilles au lieu du texte complet
         analysis_prompt = f"""
-{scoring_grids_text}
+VOUS ÊTES UN EXPERT GEO - ANALYSE RIGOUREUSE REQUISE
+
+Analysez ce site web selon 8 critères GEO avec notation 0-10 JUSTIFIÉE.
+Utilisez les grilles de référence ci-dessous pour scorer précisément.
+
+GRILLES DE SCORING (0-10):
+• Structure: 9-10=TL;DR partout + réponses directes | 7-8=Bonne structure | 5-6=Structure basique | 3-4=Faible | 0-2=Aucune structure GEO
+• Densité Info: 9-10=Stats abondantes + données originales | 7-8=Bonnes stats | 5-6=Quelques stats | 3-4=Peu de données | 0-2=Aucune stat/donnée factuelle
+• Lisibilité Machine: 9-10=Schema complet + JSON-LD | 7-8=Schema principal | 5-6=Schema basique | 3-4=Schema incomplet | 0-2=Aucun schema
+• E-E-A-T: 9-10=Auteurs experts identifiés + certifications | 7-8=Bons auteurs | 5-6=Org crédible, auteurs anonymes | 3-4=Faible E-E-A-T | 0-2=Aucun E-E-A-T
+• Éducatif: 9-10=50+ guides + FAQ + glossaires | 7-8=20-50 guides | 5-6=10-20 articles | 3-4=<10 articles | 0-2=Aucun contenu éducatif, 100% marketing
+• Thématique: 9-10=5+ hubs avec satellites | 7-8=3-5 hubs | 5-6=Début clustering | 3-4=Pas de silos | 0-2=Aucune organisation
+• Optimisation IA: 9-10=Format optimal + réponses rapides | 7-8=Bon format | 5-6=Format acceptable | 3-4=Peu adapté IA | 0-2=Format anti-IA (marketing lourd)
+• Visibilité: 9-10=Très visible dans IA | 7-8=Visible | 5-6=Occasionnelle | 3-4=Très faible | 0-2=Invisible dans toutes IA
 
 ========================================
 SITE À ANALYSER
