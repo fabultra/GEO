@@ -489,17 +489,20 @@ async def generate_pdf_report(report: Report) -> bytes:
         styles = getSampleStyleSheet()
         
         # Title style
+        brand_color = os.environ.get('PDF_BRAND_COLOR', '#1a1a1a')
         title_style = ParagraphStyle(
             'CustomTitle',
             parent=styles['Heading1'],
             fontSize=24,
-            textColor=colors.HexColor('#1a56db'),
+            textColor=colors.HexColor(brand_color),
             spaceAfter=30,
             alignment=TA_CENTER
         )
         
-        # Add title
-        story.append(Paragraph(f"Rapport GEO - {report.type.upper()}", title_style))
+        # Add title with SEKOIA branding
+        org_name = os.environ.get('ORG_NAME', 'SEKOIA')
+        story.append(Paragraph(f"Rapport GEO - {org_name}", title_style))
+        story.append(Paragraph(f"<b>Type:</b> {report.type.upper()}", styles['Normal']))
         story.append(Paragraph(f"<b>Site:</b> {report.url}", styles['Normal']))
         story.append(Paragraph(f"<b>Date:</b> {report.createdAt.strftime('%Y-%m-%d %H:%M')}", styles['Normal']))
         story.append(Spacer(1, 0.3*inch))
