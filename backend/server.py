@@ -372,8 +372,8 @@ IMPORTANT: Remplissez detailed_observations pour CHAQUE critere: structure, info
         
         # Parse JSON response avec nettoyage robuste
         try:
-            # Extract JSON from response
-            response_text = response.strip()
+            # Clean response text
+            response_text = response_text.strip()
             
             # Enlever les markdown code blocks
             if '```json' in response_text:
