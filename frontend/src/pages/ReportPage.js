@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Button } from '../components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { Download, ArrowLeft, TrendingUp, AlertCircle } from 'lucide-react';
+import { Download, ArrowLeft, TrendingUp, AlertCircle, CheckCircle2, XCircle, Sparkles } from 'lucide-react';
 import { toast } from 'sonner';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
