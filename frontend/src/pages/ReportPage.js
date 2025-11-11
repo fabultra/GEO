@@ -149,6 +149,106 @@ const ReportPage = () => {
             <TabsTrigger value="analysis" data-testid="analysis-tab">Analyse</TabsTrigger>
           </TabsList>
 
+          {/* Executive Summary Tab */}
+          <TabsContent value="summary" className="space-y-6">
+            <h3 className="text-2xl font-bold mb-4">Synthèse Exécutive</h3>
+            
+            {report.executive_summary ? (
+              <div className="space-y-6">
+                {/* Global Assessment */}
+                <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border-l-4 border-blue-600">
+                  <h4 className="font-bold text-lg mb-3 text-blue-900">Évaluation Globale</h4>
+                  <p className="text-gray-700 text-base leading-relaxed">
+                    {report.executive_summary.global_assessment}
+                  </p>
+                </div>
+
+                {/* Critical Issues */}
+                {report.executive_summary.critical_issues && report.executive_summary.critical_issues.length > 0 && (
+                  <div className="p-6 bg-red-50 rounded-xl border-l-4 border-red-600">
+                    <h4 className="font-bold text-lg mb-3 text-red-900 flex items-center">
+                      <AlertCircle className="w-5 h-5 mr-2" />
+                      Problèmes Critiques
+                    </h4>
+                    <ul className="space-y-2">
+                      {report.executive_summary.critical_issues.map((issue, idx) => (
+                        <li key={idx} className="flex items-start space-x-2">
+                          <span className="text-red-600 font-bold mt-1">•</span>
+                          <span className="text-gray-700">{issue}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Key Opportunities */}
+                {report.executive_summary.key_opportunities && report.executive_summary.key_opportunities.length > 0 && (
+                  <div className="p-6 bg-green-50 rounded-xl border-l-4 border-green-600">
+                    <h4 className="font-bold text-lg mb-3 text-green-900 flex items-center">
+                      <TrendingUp className="w-5 h-5 mr-2" />
+                      Opportunités Majeures
+                    </h4>
+                    <ul className="space-y-2">
+                      {report.executive_summary.key_opportunities.map((opp, idx) => (
+                        <li key={idx} className="flex items-start space-x-2">
+                          <span className="text-green-600 font-bold mt-1">•</span>
+                          <span className="text-gray-700">{opp}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* ROI & Investment */}
+                <div className="grid md:grid-cols-2 gap-4">
+                  {report.executive_summary.estimated_visibility_loss && (
+                    <div className="p-6 bg-orange-50 rounded-xl border border-orange-200">
+                      <h4 className="font-semibold mb-2 text-orange-900">Visibilité Perdue Estimée</h4>
+                      <p className="text-2xl font-bold text-orange-700">
+                        {report.executive_summary.estimated_visibility_loss}
+                      </p>
+                    </div>
+                  )}
+                  
+                  {report.executive_summary.recommended_investment && (
+                    <div className="p-6 bg-blue-50 rounded-xl border border-blue-200">
+                      <h4 className="font-semibold mb-2 text-blue-900">Investissement Recommandé</h4>
+                      <p className="text-sm text-gray-700">
+                        {report.executive_summary.recommended_investment}
+                      </p>
+                    </div>
+                  )}
+                </div>
+
+                {/* ROI Estimation */}
+                {report.roi_estimation && (
+                  <div className="p-6 bg-purple-50 rounded-xl border border-purple-200">
+                    <h4 className="font-bold text-lg mb-4 text-purple-900">Estimation du ROI</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <span className="font-semibold text-sm text-purple-800">Situation Actuelle:</span>
+                        <p className="text-gray-700 mt-1">{report.roi_estimation.current_situation}</p>
+                      </div>
+                      <div>
+                        <span className="font-semibold text-sm text-purple-800">Amélioration Potentielle:</span>
+                        <p className="text-gray-700 mt-1">{report.roi_estimation.potential_improvement}</p>
+                      </div>
+                      <div>
+                        <span className="font-semibold text-sm text-purple-800">Calendrier:</span>
+                        <p className="text-gray-700 mt-1">{report.roi_estimation.timeline}</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="text-center py-8 text-gray-500">
+                <AlertCircle className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                <p>Synthèse exécutive non disponible</p>
+              </div>
+            )}
+          </TabsContent>
+
           {/* Scores Tab */}
           <TabsContent value="scores" className="space-y-6">
             <h3 className="text-xl font-bold mb-4">Détail des 8 Critères GEO</h3>
