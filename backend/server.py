@@ -246,15 +246,15 @@ async def analyze_with_claude(crawl_data: Dict[str, Any], retry_count: int = 3) 
         # Limiter la taille du contenu envoyé à Claude pour éviter les timeouts
         max_pages_to_analyze = 3  # Réduire de 5 à 3 pages pour éviter les timeouts
         
-        # Prepare content summary for Claude
+        # Prepare content summary for Claude (limité pour éviter timeouts)
         pages_summary = []
-        for page in crawl_data['pages'][:5]:  # Analyze first 5 pages
+        for page in crawl_data['pages'][:max_pages_to_analyze]:
             pages_summary.append({
                 'url': page['url'],
                 'title': page['title'],
-                'h1': page['h1'],
+                'h1': page['h1'][:3],  # Limiter à 3 H1
                 'h2': page['h2'][:5],
-                'content_preview': ' '.join(page['paragraphs'][:3])[:500],
+                'content_preview': ' '.join(page['paragraphs'][:2])[:400],  # Réduire preview
                 'has_json_ld': len(page['json_ld']) > 0,
                 'word_count': page['word_count']
             })
