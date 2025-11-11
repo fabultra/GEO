@@ -147,29 +147,57 @@ const ReportPage = () => {
           </TabsList>
 
           {/* Scores Tab */}
-          <TabsContent value="scores" className="space-y-4">
+          <TabsContent value="scores" className="space-y-6">
             <h3 className="text-xl font-bold mb-4">Détail des 8 Critères GEO</h3>
             
-            <div className="grid md:grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
-                { label: 'Structure & Formatage', value: report.scores.structure },
-                { label: 'Densité d\'Information', value: report.scores.infoDensity },
-                { label: 'Lisibilité Machine/SEO', value: report.scores.readability },
-                { label: 'E-E-A-T', value: report.scores.eeat },
-                { label: 'Contenu Éducatif', value: report.scores.educational },
-                { label: 'Organisation Thématique', value: report.scores.thematic },
-                { label: 'Optimisation IA', value: report.scores.aiOptimization },
-                { label: 'Visibilité Actuelle', value: report.scores.visibility }
+                { label: 'Structure & Formatage', value: report.scores.structure, key: 'structure' },
+                { label: 'Densité d\'Information', value: report.scores.infoDensity, key: 'infoDensity' },
+                { label: 'Lisibilité Machine/SEO', value: report.scores.readability, key: 'readability' },
+                { label: 'E-E-A-T', value: report.scores.eeat, key: 'eeat' },
+                { label: 'Contenu Éducatif', value: report.scores.educational, key: 'educational' },
+                { label: 'Organisation Thématique', value: report.scores.thematic, key: 'thematic' },
+                { label: 'Optimisation IA', value: report.scores.aiOptimization, key: 'aiOptimization' },
+                { label: 'Visibilité Actuelle', value: report.scores.visibility, key: 'visibility' }
               ].map((criterion, idx) => (
-                <div key={idx} className="heatmap-cell" style={{
-                  background: `linear-gradient(135deg, ${getScoreColor(criterion.value)} 0%, ${getScoreColor(criterion.value)}dd 100%)`
-                }}>
+                <div 
+                  key={idx} 
+                  className="rounded-xl p-6 text-center transition-transform hover:scale-105 shadow-lg"
+                  style={{
+                    background: `linear-gradient(135deg, ${getScoreColor(criterion.value)} 0%, ${getScoreColor(criterion.value)}dd 100%)`
+                  }}
+                  data-testid={`score-${criterion.key}`}
+                >
                   <div className="text-white">
-                    <div className="text-2xl font-bold">{criterion.value.toFixed(1)}</div>
-                    <div className="text-sm font-medium mt-1">{criterion.label}</div>
+                    <div className="text-3xl font-bold mb-2">{criterion.value?.toFixed(1) || '0.0'}</div>
+                    <div className="text-xs font-medium uppercase tracking-wide">{criterion.label}</div>
                   </div>
                 </div>
               ))}
+            </div>
+            
+            {/* Score Legend */}
+            <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+              <h4 className="font-semibold mb-3 text-sm">Interprétation des scores:</h4>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-xs">
+                <div className="flex items-center space-x-2">
+                  <div className="w-4 h-4 bg-green-500 rounded"></div>
+                  <span>7-10: Excellent</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-4 h-4 bg-yellow-500 rounded"></div>
+                  <span>5-6.9: Bon</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-4 h-4 bg-orange-500 rounded"></div>
+                  <span>3-4.9: Moyen</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-4 h-4 bg-red-500 rounded"></div>
+                  <span>0-2.9: Faible</span>
+                </div>
+              </div>
             </div>
           </TabsContent>
 
