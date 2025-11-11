@@ -241,7 +241,8 @@ async def crawl_website(url: str, max_pages: int = 10) -> Dict[str, Any]:
 async def analyze_with_claude(crawl_data: Dict[str, Any], retry_count: int = 3) -> Dict[str, Any]:
     """Use Claude to analyze crawled content based on 8 GEO criteria"""
     try:
-        api_key = os.environ.get('EMERGENT_LLM_KEY')
+        # Utiliser la clé Anthropic directe en priorité, fallback sur Emergent
+        api_key = os.environ.get('ANTHROPIC_API_KEY', os.environ.get('EMERGENT_LLM_KEY'))
         
         # Limiter la taille du contenu envoyé à Claude pour éviter les timeouts
         max_pages_to_analyze = 3  # Réduire de 5 à 3 pages pour éviter les timeouts
