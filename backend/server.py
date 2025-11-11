@@ -302,17 +302,24 @@ JSON REQUIS (RESPECTEZ CE FORMAT EXACTEMENT):
     "visibility": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}}
   }},
   "recommendations": [
-    {{"title": "...", "criterion": "...", "impact": "high/medium/low", "effort": "high/medium/low", "priority": 1-15, "description": "...", "example": "..."}}
+    {{"title": "Ajouter des FAQ structurees", "criterion": "educational", "impact": "high", "effort": "medium", "priority": 1, "description": "Creer une section FAQ avec 20 questions sur une ligne", "example": "Schema FAQPage JSON-LD"}},
+    {{"title": "Optimiser meta descriptions", "criterion": "readability", "impact": "high", "effort": "low", "priority": 2, "description": "Recrire toutes les meta en mode factuel sous 120 caracteres", "example": "Meta actuelle vs meta optimisee"}}
   ],
   "quick_wins": [
-    {{"title": "...", "impact": "...", "time_required": "...", "description": "..."}}
+    {{"title": "Ajouter Schema Organization", "impact": "Visibilite immediate dans IA", "time_required": "1 heure", "description": "Implementer JSON-LD Organization sur page accueil"}},
+    {{"title": "Creer section TL;DR", "impact": "Meilleur taux extraction IA", "time_required": "2 heures", "description": "Ajouter resume 40-60 mots debut de chaque page pilier"}}
   ],
-  "analysis": {{"strengths": ["..."], "weaknesses": ["..."], "opportunities": ["..."]}},
-  "executive_summary": {{"global_assessment": "...", "critical_issues": ["..."], "key_opportunities": ["..."], "estimated_visibility_loss": "...", "recommended_investment": "..."}},
-  "roi_estimation": {{"current_situation": "...", "potential_improvement": "...", "timeline": "..."}}
+  "analysis": {{"strengths": ["Force 1 detaillee"], "weaknesses": ["Faiblesse 1 detaillee"], "opportunities": ["Opportunite 1 avec potentiel"]}},
+  "executive_summary": {{"global_assessment": "Evaluation en 2 phrases sans saut de ligne", "critical_issues": ["Probleme critique 1"], "key_opportunities": ["Opportunite majeure 1"], "estimated_visibility_loss": "60-70%", "recommended_investment": "Phase 1: 15-20k budget sur 3 mois"}},
+  "roi_estimation": {{"current_situation": "Situation actuelle en une phrase", "potential_improvement": "Amelioration potentielle en une phrase", "timeline": "6-12 mois pour resultats"}}
 }}
 
-EXIGENCES: Min 15 reco + 5 quick wins + observations détaillées par critère + exemples concrets
+RAPPEL CRITIQUE:
+- JSON valide UNIQUEMENT (pas de texte avant/apres)
+- Descriptions sur UNE seule ligne
+- Min 15 recommendations
+- Min 5 quick_wins
+- Guillemets echappes avec \\"
 """
         
         # Retry logic avec backoff exponentiel
