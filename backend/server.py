@@ -444,7 +444,7 @@ IMPORTANT: Remplissez detailed_observations pour CHAQUE critere: structure, info
                 
         except Exception as e:
             logger.error(f"Erreur complète de parsing: {str(e)}")
-            logger.error(f"Réponse brute (premiers 500 chars): {response[:500]}")
+            logger.error(f"Réponse brute (premiers 500 chars): {response_text[:500] if response_text else 'None'}")
             
             # Fallback with default scores
             return {
