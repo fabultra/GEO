@@ -95,6 +95,30 @@ class Recommendation(BaseModel):
     description: str
     example: Optional[str] = None
 
+class DetailedObservation(BaseModel):
+    score_justification: str
+    specific_problems: List[str] = []
+    positive_points: List[str] = []
+    missing_elements: List[str] = []
+
+class QuickWin(BaseModel):
+    title: str
+    impact: str
+    time_required: str
+    description: str
+
+class ExecutiveSummary(BaseModel):
+    global_assessment: str
+    critical_issues: List[str] = []
+    key_opportunities: List[str] = []
+    estimated_visibility_loss: Optional[str] = None
+    recommended_investment: Optional[str] = None
+
+class ROIEstimation(BaseModel):
+    current_situation: str
+    potential_improvement: str
+    timeline: str
+
 class Report(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
@@ -103,7 +127,11 @@ class Report(BaseModel):
     type: str = "executive"  # executive or complete
     scores: Score
     recommendations: List[Recommendation] = []
+    quick_wins: List[QuickWin] = []
     analysis: Optional[Dict[str, Any]] = None
+    detailed_observations: Optional[Dict[str, Any]] = None
+    executive_summary: Optional[Dict[str, Any]] = None
+    roi_estimation: Optional[Dict[str, Any]] = None
     pdfUrl: Optional[str] = None
     createdAt: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
