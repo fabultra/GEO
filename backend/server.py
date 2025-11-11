@@ -556,14 +556,18 @@ async def process_analysis_job(job_id: str):
             {"$set": {"progress": 70}}
         )
         
-        # Step 3: Create report
+        # Step 3: Create report with enriched data
         report = Report(
             leadId=job_doc['leadId'],
             url=job_doc['url'],
             type="executive",
             scores=Score(**analysis_result['scores']),
-            recommendations=[Recommendation(**rec) for rec in analysis_result.get('recommendations', [])[:15]],
-            analysis=analysis_result.get('analysis')
+            recommendations=[Recommendation(**rec) for rec in analysis_result.get('recommendations', [])[:20]],
+            quick_wins=[QuickWin(**qw) for qw in analysis_result.get('quick_wins', [])[:10]],
+            analysis=analysis_result.get('analysis'),
+            detailed_observations=analysis_result.get('detailed_observations'),
+            executive_summary=analysis_result.get('executive_summary'),
+            roi_estimation=analysis_result.get('roi_estimation')
         )
         
         # Save report
