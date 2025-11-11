@@ -528,7 +528,7 @@ async def generate_pdf_report(report: Report) -> bytes:
         
         scores_table = Table(scores_data, colWidths=[4*inch, 1.5*inch])
         scores_table.setStyle(TableStyle([
-            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#1a56db')),
+            ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor(brand_color)),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
             ('ALIGN', (0, 0), (-1, -1), 'LEFT'),
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
