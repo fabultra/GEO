@@ -288,9 +288,9 @@ CONTENU:
 INSTRUCTIONS:
 Pour CHAQUE critère: score 0-10 justifié + problèmes spécifiques + exemples concrets du site
 
-JSON REQUIS (structure exacte):
+JSON REQUIS (RESPECTEZ CE FORMAT EXACTEMENT):
 {{
-  "scores": {{"structure": 0-10, "infoDensity": 0-10, "readability": 0-10, "eeat": 0-10, "educational": 0-10, "thematic": 0-10, "aiOptimization": 0-10, "visibility": 0-10, "global_score": moyenne}},
+  "scores": {{"structure": 7.5, "infoDensity": 3.0, "readability": 5.0, "eeat": 6.0, "educational": 2.0, "thematic": 4.5, "aiOptimization": 3.5, "visibility": 2.5, "global_score": 4.25}},
   "detailed_observations": {{
     "structure": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
     "infoDensity": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
