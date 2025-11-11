@@ -285,114 +285,31 @@ CONTENU:
 INSTRUCTIONS:
 Pour CHAQUE critère: score 0-10 justifié + problèmes spécifiques + exemples concrets du site
 
-FORMAT DE RÉPONSE (JSON valide obligatoire):
+JSON REQUIS (structure exacte):
 {{
-  "scores": {{
-    "structure": float (0-10),
-    "infoDensity": float (0-10),
-    "readability": float (0-10),
-    "eeat": float (0-10),
-    "educational": float (0-10),
-    "thematic": float (0-10),
-    "aiOptimization": float (0-10),
-    "visibility": float (0-10),
-    "global_score": float (moyenne pondérée)
-  }},
+  "scores": {{"structure": 0-10, "infoDensity": 0-10, "readability": 0-10, "eeat": 0-10, "educational": 0-10, "thematic": 0-10, "aiOptimization": 0-10, "visibility": 0-10, "global_score": moyenne}},
   "detailed_observations": {{
-    "structure": {{
-      "score_justification": "Pourquoi ce score?",
-      "specific_problems": ["Problème 1 avec exemple", "Problème 2 avec exemple"],
-      "positive_points": ["Point fort 1", "Point fort 2"],
-      "missing_elements": ["Élément manquant 1", "Élément manquant 2"]
-    }},
-    "infoDensity": {{
-      "score_justification": "Pourquoi ce score?",
-      "specific_problems": ["Ex: Aucune statistique trouvée sur les pages analysées"],
-      "positive_points": ["Points forts s'il y en a"],
-      "missing_elements": ["Ex: Pas de données chiffrées, pas de sources citées"]
-    }},
-    "readability": {{
-      "score_justification": "Pourquoi ce score?",
-      "specific_problems": ["Ex: Meta descriptions marketing non-factuelles"],
-      "positive_points": ["Ex: Structure HTML correcte"],
-      "missing_elements": ["Ex: Aucun schema.org détecté dans JSON-LD"]
-    }},
-    "eeat": {{
-      "score_justification": "Pourquoi ce score?",
-      "specific_problems": ["Ex: Aucun auteur identifié"],
-      "positive_points": ["Ex: Organisation établie depuis X années"],
-      "missing_elements": ["Ex: Pas de certifications affichées"]
-    }},
-    "educational": {{
-      "score_justification": "Pourquoi ce score?",
-      "specific_problems": ["Ex: Contenu 100% marketing, aucun guide éducatif"],
-      "positive_points": ["Points forts s'il y en a"],
-      "missing_elements": ["Ex: Pas de FAQ, pas de glossaire, pas de tutoriels"]
-    }},
-    "thematic": {{
-      "score_justification": "Pourquoi ce score?",
-      "specific_problems": ["Ex: Pas de maillage interne visible"],
-      "positive_points": ["Ex: Structure de navigation claire"],
-      "missing_elements": ["Ex: Pas de pages piliers, pas de silos thématiques"]
-    }},
-    "aiOptimization": {{
-      "score_justification": "Pourquoi ce score?",
-      "specific_problems": ["Ex: Aucune réponse directe en début de page"],
-      "positive_points": ["Points forts s'il y en a"],
-      "missing_elements": ["Ex: Pas de TL;DR, pas de format conversationnel"]
-    }},
-    "visibility": {{
-      "score_justification": "Pourquoi ce score?",
-      "specific_problems": ["Ex: Contenu probablement invisible dans les IA"],
-      "positive_points": ["Ex: Domaine établi"],
-      "missing_elements": ["Ex: Pas de contenu citable"]
-    }}
+    "structure": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
+    "infoDensity": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
+    "readability": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
+    "eeat": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
+    "educational": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
+    "thematic": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
+    "aiOptimization": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
+    "visibility": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}}
   }},
   "recommendations": [
-    {{
-      "title": "Titre actionnable",
-      "criterion": "structure|infoDensity|readability|eeat|educational|thematic|aiOptimization|visibility",
-      "impact": "high|medium|low",
-      "effort": "high|medium|low",
-      "priority": 1-15,
-      "description": "Description détaillée (100-200 mots) expliquant le problème, pourquoi c'est important, et comment le résoudre",
-      "example": "Exemple CONCRET avec code/texte si applicable"
-    }}
+    {{"title": "...", "criterion": "...", "impact": "high/medium/low", "effort": "high/medium/low", "priority": 1-15, "description": "...", "example": "..."}}
   ],
   "quick_wins": [
-    {{
-      "title": "Action rapide",
-      "impact": "Impact attendu",
-      "time_required": "Temps estimé",
-      "description": "Quoi faire exactement"
-    }}
+    {{"title": "...", "impact": "...", "time_required": "...", "description": "..."}}
   ],
-  "analysis": {{
-    "strengths": ["Force 1 avec détail", "Force 2 avec détail", "Force 3"],
-    "weaknesses": ["Faiblesse 1 détaillée", "Faiblesse 2 détaillée", "Faiblesse 3"],
-    "opportunities": ["Opportunité 1 avec potentiel", "Opportunité 2", "Opportunité 3"]
-  }},
-  "executive_summary": {{
-    "global_assessment": "Évaluation globale en 2-3 phrases",
-    "critical_issues": ["Problème critique 1", "Problème critique 2"],
-    "key_opportunities": ["Opportunité majeure 1", "Opportunité majeure 2"],
-    "estimated_visibility_loss": "Pourcentage de visibilité perdue estimé",
-    "recommended_investment": "Phase 1 (3 mois): Budget estimé et actions"
-  }},
-  "roi_estimation": {{
-    "current_situation": "Description de la situation actuelle",
-    "potential_improvement": "Amélioration potentielle avec GEO",
-    "timeline": "6-12 mois pour résultats significatifs"
-  }}
+  "analysis": {{"strengths": ["..."], "weaknesses": ["..."], "opportunities": ["..."]}},
+  "executive_summary": {{"global_assessment": "...", "critical_issues": ["..."], "key_opportunities": ["..."], "estimated_visibility_loss": "...", "recommended_investment": "..."}},
+  "roi_estimation": {{"current_situation": "...", "potential_improvement": "...", "timeline": "..."}}
 }}
 
-EXIGENCES STRICTES:
-- Minimum 15 recommandations détaillées
-- 5-7 quick wins actionnables immédiatement
-- Observations spécifiques pour CHAQUE critère
-- Exemples concrets tirés du contenu analysé
-- Justifications rigoureuses des scores
-- Comparaisons avec best practices 2025
+EXIGENCES: Min 15 reco + 5 quick wins + observations détaillées par critère + exemples concrets
 """
         
         # Retry logic avec backoff exponentiel
