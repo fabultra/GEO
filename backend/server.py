@@ -292,7 +292,7 @@ JSON REQUIS (RESPECTEZ CE FORMAT EXACTEMENT):
 {{
   "scores": {{"structure": 7.5, "infoDensity": 3.0, "readability": 5.0, "eeat": 6.0, "educational": 2.0, "thematic": 4.5, "aiOptimization": 3.5, "visibility": 2.5, "global_score": 4.25}},
   "detailed_observations": {{
-    "structure": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
+    "structure": {{"score_justification": "Description courte sur UNE ligne", "specific_problems": ["Probleme 1 sans saut de ligne"], "positive_points": ["Point fort 1"], "missing_elements": ["Element manquant 1"]}},
     "infoDensity": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
     "readability": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
     "eeat": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
