@@ -351,6 +351,54 @@ const ReportPage = () => {
             )}
           </TabsContent>
 
+          {/* Quick Wins Tab */}
+          <TabsContent value="quickwins">
+            <h3 className="text-xl font-bold mb-4 flex items-center">
+              <Sparkles className="w-6 h-6 mr-2 text-yellow-600" />
+              Quick Wins - Actions Immédiates
+            </h3>
+            
+            <div className="mb-4 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+              <p className="text-sm text-gray-700">
+                Ces actions peuvent être implémentées <strong>cette semaine</strong> pour des résultats immédiats.
+                Impact élevé avec effort minimal.
+              </p>
+            </div>
+            
+            {report.quick_wins && report.quick_wins.length > 0 ? (
+              <div className="space-y-4">
+                {report.quick_wins.map((qw, idx) => (
+                  <div 
+                    key={idx} 
+                    className="border-2 border-yellow-300 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow"
+                    data-testid={`quickwin-${idx}`}
+                  >
+                    <div className="flex justify-between items-start mb-3">
+                      <h4 className="font-bold text-lg text-gray-900">
+                        ⚡ {idx + 1}. {qw.title}
+                      </h4>
+                      <span className="text-xs bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-semibold">
+                        {qw.time_required}
+                      </span>
+                    </div>
+                    
+                    <div className="mb-3 p-3 bg-green-50 rounded-lg">
+                      <span className="text-xs font-semibold text-green-800">Impact Attendu:</span>
+                      <p className="text-sm text-gray-700 mt-1">{qw.impact}</p>
+                    </div>
+                    
+                    <p className="text-gray-700">{qw.description}</p>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-8 text-gray-500">
+                <AlertCircle className="w-12 h-12 mx-auto mb-2 opacity-50" />
+                <p>Aucun quick win disponible</p>
+              </div>
+            )}
+          </TabsContent>
+
           {/* Analysis Tab */}
           <TabsContent value="analysis">
             <h3 className="text-xl font-bold mb-4">Analyse Détaillée</h3>
