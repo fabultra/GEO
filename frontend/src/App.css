@@ -8,59 +8,61 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  background: #f8f9fa;
   min-height: 100vh;
-  color: #1e293b;
+  color: #212529;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Space Grotesk', sans-serif;
+  color: #1a1a1a;
 }
 
 .glass-effect {
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  border: 1px solid rgba(230, 230, 230, 0.5);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #1a56db 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #1a56db 0%, #3b82f6 100%);
+  background: #1a1a1a;
   color: white;
   border: none;
   padding: 0.75rem 2rem;
-  border-radius: 12px;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(26, 86, 219, 0.3);
+  box-shadow: 0 4px 12px rgba(26, 26, 26, 0.15);
 }
 
 .btn-primary:hover {
+  background: #2a2a2a;
   transform: translateY(-2px);
-  box-shadow: 0 6px 25px rgba(26, 86, 219, 0.4);
+  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.25);
 }
 
 .btn-secondary {
   background: white;
-  color: #1a56db;
-  border: 2px solid #1a56db;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
   padding: 0.75rem 2rem;
-  border-radius: 12px;
+  border-radius: 8px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background: #1a56db;
+  background: #1a1a1a;
   color: white;
   transform: translateY(-2px);
 }
@@ -74,9 +76,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   font-size: 2rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #1a56db 0%, #3b82f6 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);
   color: white;
-  box-shadow: 0 8px 25px rgba(26, 86, 219, 0.3);
+  box-shadow: 0 8px 25px rgba(26, 26, 26, 0.2);
 }
 
 .heatmap-cell {
@@ -96,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  border-left: 4px solid #1a56db;
+  border-left: 4px solid #1a1a1a;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
@@ -131,8 +133,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loading-spinner {
-  border: 4px solid rgba(26, 86, 219, 0.1);
-  border-top: 4px solid #1a56db;
+  border: 4px solid rgba(26, 26, 26, 0.1);
+  border-top: 4px solid #1a1a1a;
   border-radius: 50%;
   width: 40px;
   height: 40px;

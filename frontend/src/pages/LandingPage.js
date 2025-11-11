@@ -6,7 +6,7 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Checkbox } from '../components/ui/checkbox';
 import { toast } from 'sonner';
-import { Sparkles, BarChart3, FileText, TrendingUp } from 'lucide-react';
+import { BarChart3, FileText, TrendingUp, Zap } from 'lucide-react';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 const API = `${BACKEND_URL}/api`;
@@ -58,19 +58,18 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-indigo-50"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="relative overflow-hidden bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           {/* Header */}
           <div className="flex justify-between items-center mb-16">
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-8 h-8 text-blue-600" />
-              <span className="text-2xl font-bold gradient-text">GEO Analytics</span>
+            <div className="flex items-center space-x-3">
+              <img src="/sekoia-logo.png" alt="SEKOIA" className="h-10" />
             </div>
             <Button 
               variant="outline" 
               onClick={() => navigate('/dashboard')}
               data-testid="dashboard-nav-btn"
+              className="border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white"
             >
               Dashboard
             </Button>
@@ -80,42 +79,42 @@ const LandingPage = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Text */}
             <div className="animate-fade-in">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Optimisez votre site pour les
-                <span className="gradient-text"> moteurs IA</span>
+              <p className="text-sm font-semibold text-gray-600 mb-4 tracking-wider uppercase">Analyse GEO Professionnelle</p>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-gray-900">
+                Optimisez votre visibilité dans les
+                <span className="block mt-2">moteurs génératifs</span>
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 mb-8">
-                Analyse complète GEO (Generative Engine Optimization) en quelques minutes.
-                Découvrez comment améliorer votre visibilité sur ChatGPT, Perplexity et autres IA génératives.
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Analyse complète de votre site web selon 8 critères GEO. Découvrez comment améliorer votre présence sur ChatGPT, Perplexity et autres IA génératives.
               </p>
 
               {/* Features */}
-              <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-2 gap-6 mb-8">
                 <div className="flex items-start space-x-3">
-                  <BarChart3 className="w-6 h-6 text-blue-600 mt-1" />
+                  <BarChart3 className="w-6 h-6 text-gray-800 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-base">8 Critères GEO</h3>
+                    <h3 className="font-semibold text-base text-gray-900">8 Critères GEO</h3>
                     <p className="text-sm text-gray-600">Analyse détaillée</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <FileText className="w-6 h-6 text-blue-600 mt-1" />
+                  <FileText className="w-6 h-6 text-gray-800 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-base">Rapport PDF</h3>
+                    <h3 className="font-semibold text-base text-gray-900">Rapport PDF</h3>
                     <p className="text-sm text-gray-600">Export professionnel</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <TrendingUp className="w-6 h-6 text-blue-600 mt-1" />
+                  <TrendingUp className="w-6 h-6 text-gray-800 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-base">Recommandations</h3>
-                    <p className="text-sm text-gray-600">Actionables priorisées</p>
+                    <h3 className="font-semibold text-base text-gray-900">Recommandations</h3>
+                    <p className="text-sm text-gray-600">Actionnables priorisées</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <Sparkles className="w-6 h-6 text-blue-600 mt-1" />
+                  <Zap className="w-6 h-6 text-gray-800 mt-1 flex-shrink-0" />
                   <div>
-                    <h3 className="font-semibold text-base">IA Claude</h3>
+                    <h3 className="font-semibold text-base text-gray-900">IA Claude</h3>
                     <p className="text-sm text-gray-600">Analyse avancée</p>
                   </div>
                 </div>
@@ -124,12 +123,13 @@ const LandingPage = () => {
 
             {/* Right Column - Form */}
             <div className="glass-effect rounded-2xl p-8 animate-fade-in" style={{animationDelay: '0.2s'}}>
-              <h2 className="text-2xl font-bold mb-6">Obtenez votre rapport GEO gratuit</h2>
+              <h2 className="text-2xl font-bold mb-2 text-gray-900">Analyse GEO gratuite</h2>
+              <p className="text-sm text-gray-600 mb-6">Obtenez votre rapport en quelques minutes</p>
               
               <form onSubmit={handleSubmit} className="space-y-4" data-testid="lead-form">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label htmlFor="firstName">Prénom *</Label>
+                    <Label htmlFor="firstName" className="text-gray-700">Prénom *</Label>
                     <Input
                       id="firstName"
                       data-testid="firstName-input"
@@ -137,10 +137,11 @@ const LandingPage = () => {
                       onChange={(e) => setFormData({...formData, firstName: e.target.value})}
                       placeholder="Jean"
                       required
+                      className="border-gray-300 focus:border-gray-800 focus:ring-gray-800"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="lastName">Nom *</Label>
+                    <Label htmlFor="lastName" className="text-gray-700">Nom *</Label>
                     <Input
                       id="lastName"
                       data-testid="lastName-input"
@@ -148,12 +149,13 @@ const LandingPage = () => {
                       onChange={(e) => setFormData({...formData, lastName: e.target.value})}
                       placeholder="Dupont"
                       required
+                      className="border-gray-300 focus:border-gray-800 focus:ring-gray-800"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <Label htmlFor="email">Email *</Label>
+                  <Label htmlFor="email" className="text-gray-700">Email *</Label>
                   <Input
                     id="email"
                     type="email"
@@ -162,22 +164,24 @@ const LandingPage = () => {
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     placeholder="jean.dupont@exemple.com"
                     required
+                    className="border-gray-300 focus:border-gray-800 focus:ring-gray-800"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="company">Entreprise</Label>
+                  <Label htmlFor="company" className="text-gray-700">Entreprise</Label>
                   <Input
                     id="company"
                     data-testid="company-input"
                     value={formData.company}
                     onChange={(e) => setFormData({...formData, company: e.target.value})}
                     placeholder="Mon Entreprise Inc."
+                    className="border-gray-300 focus:border-gray-800 focus:ring-gray-800"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="url">URL de votre site web *</Label>
+                  <Label htmlFor="url" className="text-gray-700">URL de votre site web *</Label>
                   <Input
                     id="url"
                     type="url"
@@ -186,6 +190,7 @@ const LandingPage = () => {
                     onChange={(e) => setFormData({...formData, url: e.target.value})}
                     placeholder="https://www.exemple.com"
                     required
+                    className="border-gray-300 focus:border-gray-800 focus:ring-gray-800"
                   />
                 </div>
 
@@ -229,7 +234,8 @@ const LandingPage = () => {
       {/* Footer */}
       <div className="bg-gray-900 text-white py-8 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-sm">© 2025 GEO Analytics. Tous droits réservés.</p>
+          <p className="text-sm">© 2025 SEKOIA. Tous droits réservés.</p>
+          <p className="text-xs text-gray-400 mt-2">Outil d'analyse GEO développé par SEKOIA</p>
         </div>
       </div>
     </div>
