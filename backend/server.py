@@ -13,8 +13,8 @@ import asyncio
 from bs4 import BeautifulSoup
 import requests
 from urllib.parse import urljoin, urlparse
-from emergentintegrations.llm.chat import LlmChat, UserMessage
 import json
+from anthropic import AsyncAnthropic
 from io import BytesIO
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
