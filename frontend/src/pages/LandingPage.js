@@ -63,7 +63,8 @@ const LandingPage = () => {
           {/* Header */}
           <div className="flex justify-between items-center mb-16">
             <div className="flex items-center space-x-3">
-              <img src="/sekoia-logo.png" alt="SEKOIA" className="h-10" />
+              <img src="/sekoia-logo.png" alt="SEKOIA" className="h-8" onError={(e) => {e.target.style.display='none'; e.target.nextSibling.style.display='block'}} />
+              <h1 className="text-2xl font-bold text-gray-900" style={{display: 'none'}}>SEKOIA</h1>
             </div>
             <Button 
               variant="outline" 
