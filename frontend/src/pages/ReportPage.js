@@ -140,10 +140,12 @@ const ReportPage = () => {
         </div>
 
         {/* Tabs */}
-        <Tabs defaultValue="scores" className="glass-effect rounded-2xl p-6">
-          <TabsList className="grid w-full grid-cols-3 mb-6">
+        <Tabs defaultValue="summary" className="glass-effect rounded-2xl p-6">
+          <TabsList className="grid w-full grid-cols-5 mb-6">
+            <TabsTrigger value="summary" data-testid="summary-tab">Synthèse</TabsTrigger>
             <TabsTrigger value="scores" data-testid="scores-tab">Scores</TabsTrigger>
             <TabsTrigger value="recommendations" data-testid="recommendations-tab">Recommandations</TabsTrigger>
+            <TabsTrigger value="quickwins" data-testid="quickwins-tab">Quick Wins</TabsTrigger>
             <TabsTrigger value="analysis" data-testid="analysis-tab">Analyse</TabsTrigger>
           </TabsList>
 
