@@ -56,7 +56,7 @@ const DashboardPage = () => {
         {/* Header */}
         <div className="flex justify-between items-center mb-8">
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold">Dashboard GEO</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold">Dashboard SEKOIA</h1>
             <p className="text-gray-600 mt-2">Tous vos rapports d'analyse</p>
           </div>
           <Button 
