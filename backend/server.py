@@ -264,8 +264,11 @@ async def analyze_with_claude(crawl_data: Dict[str, Any], retry_count: int = 3) 
         analysis_prompt = f"""
 VOUS ÊTES UN EXPERT GEO - ANALYSE RIGOUREUSE REQUISE
 
+IMPORTANT: Répondez UNIQUEMENT en JSON valide. N'ajoutez AUCUN texte avant ou après le JSON.
+Les descriptions doivent être sur UNE SEULE ligne (pas de sauts de ligne).
+Échappez les guillemets dans les textes avec \\"
+
 Analysez ce site web selon 8 critères GEO avec notation 0-10 JUSTIFIÉE.
-Utilisez les grilles de référence ci-dessous pour scorer précisément.
 
 GRILLES DE SCORING (0-10):
 • Structure: 9-10=TL;DR partout + réponses directes | 7-8=Bonne structure | 5-6=Structure basique | 3-4=Faible | 0-2=Aucune structure GEO
