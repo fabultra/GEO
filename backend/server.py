@@ -277,28 +277,13 @@ GRILLES DE SCORING (0-10):
 • Optimisation IA: 9-10=Format optimal + réponses rapides | 7-8=Bon format | 5-6=Format acceptable | 3-4=Peu adapté IA | 0-2=Format anti-IA (marketing lourd)
 • Visibilité: 9-10=Très visible dans IA | 7-8=Visible | 5-6=Occasionnelle | 3-4=Très faible | 0-2=Invisible dans toutes IA
 
-========================================
-SITE À ANALYSER
-========================================
+SITE ANALYSÉ: {crawl_data['base_url']} | Pages: {crawl_data['pages_crawled']}
 
-URL: {crawl_data['base_url']}
-Pages crawlées: {crawl_data['pages_crawled']}
-
-CONTENU EXTRAIT:
+CONTENU:
 {json.dumps(pages_summary, ensure_ascii=False, indent=2)}
 
-========================================
-INSTRUCTIONS D'ANALYSE
-========================================
-
-Vous devez produire une analyse GEO DÉTAILLÉE et RIGOUREUSE en suivant EXACTEMENT les grilles d'évaluation fournies.
-
-Pour CHAQUE critère, vous devez:
-1. Examiner les éléments spécifiques listés dans la grille
-2. Identifier les problèmes concrets avec EXEMPLES du site
-3. Comparer avec les best practices GEO
-4. Attribuer un score 0-10 JUSTIFIÉ selon la grille
-5. Fournir des observations détaillées
+INSTRUCTIONS:
+Pour CHAQUE critère: score 0-10 justifié + problèmes spécifiques + exemples concrets du site
 
 FORMAT DE RÉPONSE (JSON valide obligatoire):
 {{
