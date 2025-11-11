@@ -328,16 +328,29 @@ IMPORTANT: Remplissez detailed_observations pour CHAQUE critere: structure, info
         
         # Retry logic avec backoff exponentiel
         last_error = None
+        response_text = None
+        
         for attempt in range(retry_count):
             try:
-                chat = LlmChat(
-                    api_key=api_key,
-                    session_id=f"analysis_{uuid.uuid4()}",
-                    system_message="Vous êtes un expert en GEO. Répondez uniquement en JSON valide."
-                ).with_model("anthropic", "claude-3-7-sonnet-20250219")
+                # Utiliser l'API Anthropic directe
+                client = AsyncAnthropic(api_key=api_key)
                 
-                user_message = UserMessage(text=analysis_prompt)
-                response = await chat.send_message(user_message)
+                response = await client.messages.create(
+                    model="claude-3-7-sonnet-20250219",
+                    max_tokens=8192,
+                    temperature=0.3,
+                    system="Vous êtes un expert en GEO. Répondez uniquement en JSON valide.",
+                    messages=[
+                        {
+                            "role": "user",
+                            "content": analysis_prompt
+                        }
+                    ]
+                )
+                
+                # Extraire le texte de la réponse
+                response_text = response.content[0].text
+                logger.info("Réponse reçue de Claude")
                 break  # Succès, sortir de la boucle
                 
             except Exception as e:
@@ -353,6 +366,9 @@ IMPORTANT: Remplissez detailed_observations pour CHAQUE critere: structure, info
                     # Dernière tentative échouée, lever l'erreur
                     logger.error(f"Toutes les tentatives ont échoué: {str(last_error)}")
                     raise last_error
+        
+        if not response_text:
+            raise ValueError("Aucune réponse reçue de Claude")
         
         # Parse JSON response avec nettoyage robuste
         try:
