@@ -398,14 +398,33 @@ EXIGENCES STRICTES:
 - Comparaisons avec best practices 2025
 """
         
-        chat = LlmChat(
-            api_key=api_key,
-            session_id=f"analysis_{uuid.uuid4()}",
-            system_message="Vous êtes un expert en GEO. Répondez uniquement en JSON valide."
-        ).with_model("anthropic", "claude-3-7-sonnet-20250219")
-        
-        user_message = UserMessage(text=analysis_prompt)
-        response = await chat.send_message(user_message)
+        # Retry logic avec backoff exponentiel
+        last_error = None
+        for attempt in range(retry_count):
+            try:
+                chat = LlmChat(
+                    api_key=api_key,
+                    session_id=f"analysis_{uuid.uuid4()}",
+                    system_message="Vous êtes un expert en GEO. Répondez uniquement en JSON valide."
+                ).with_model("anthropic", "claude-3-7-sonnet-20250219")
+                
+                user_message = UserMessage(text=analysis_prompt)
+                response = await chat.send_message(user_message)
+                break  # Succès, sortir de la boucle
+                
+            except Exception as e:
+                last_error = e
+                logger.warning(f"Tentative {attempt + 1}/{retry_count} échouée: {str(e)}")
+                
+                if attempt < retry_count - 1:
+                    # Attendre avant de retry (backoff exponentiel)
+                    wait_time = 2 ** attempt  # 1s, 2s, 4s
+                    logger.info(f"Attente de {wait_time}s avant retry...")
+                    await asyncio.sleep(wait_time)
+                else:
+                    # Dernière tentative échouée, lever l'erreur
+                    logger.error(f"Toutes les tentatives ont échoué: {str(last_error)}")
+                    raise last_error
         
         # Parse JSON response
         try:
