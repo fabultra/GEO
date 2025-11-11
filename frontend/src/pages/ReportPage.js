@@ -53,9 +53,10 @@ const ReportPage = () => {
   };
 
   const getScoreColor = (score) => {
-    if (score >= 7) return 'bg-green-500';
-    if (score >= 5) return 'bg-yellow-500';
-    return 'bg-red-500';
+    if (score >= 7) return '#22c55e';  // green
+    if (score >= 5) return '#eab308';  // yellow
+    if (score >= 3) return '#f97316';  // orange
+    return '#ef4444';  // red
   };
 
   const getImpactBadgeClass = (impact) => {
