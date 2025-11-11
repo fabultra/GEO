@@ -228,26 +228,36 @@ async def analyze_with_claude(crawl_data: Dict[str, Any]) -> Dict[str, Any]:
                 'word_count': page['word_count']
             })
         
+        # Construire le prompt amélioré avec grilles d'évaluation
+        scoring_grids_text = get_scoring_prompt()
+        
         analysis_prompt = f"""
-Vous êtes un expert en GEO (Generative Engine Optimization). Analysez ce site web selon 8 critères et fournissez des scores de 0 à 10 pour chacun.
+{scoring_grids_text}
 
-Site analysé: {crawl_data['base_url']}
+========================================
+SITE À ANALYSER
+========================================
+
+URL: {crawl_data['base_url']}
 Pages crawlées: {crawl_data['pages_crawled']}
 
-Contenu:
+CONTENU EXTRAIT:
 {json.dumps(pages_summary, ensure_ascii=False, indent=2)}
 
-Critères d'analyse:
-1. Structure & formatage (balises HTML, hiérarchie, organisation)
-2. Densité/qualité d'information (profondeur, exhaustivité)
-3. Lisibilité machine/SEO (meta, JSON-LD, sémantique)
-4. E-E-A-T (Expertise, Expérience, Autorité, Trust)
-5. Contenu éducatif (valeur pédagogique, guides, FAQ)
-6. Organisation thématique (silos, taxonomie, liens internes)
-7. Optimisation IA (ChatGPT, Perplexity, AI Overviews)
-8. Visibilité actuelle (signaux de ranking, présence)
+========================================
+INSTRUCTIONS D'ANALYSE
+========================================
 
-Fournissez la réponse en JSON valide avec cette structure exacte:
+Vous devez produire une analyse GEO DÉTAILLÉE et RIGOUREUSE en suivant EXACTEMENT les grilles d'évaluation fournies.
+
+Pour CHAQUE critère, vous devez:
+1. Examiner les éléments spécifiques listés dans la grille
+2. Identifier les problèmes concrets avec EXEMPLES du site
+3. Comparer avec les best practices GEO
+4. Attribuer un score 0-10 JUSTIFIÉ selon la grille
+5. Fournir des observations détaillées
+
+FORMAT DE RÉPONSE (JSON valide obligatoire):
 {{
   "scores": {{
     "structure": float (0-10),
@@ -258,27 +268,103 @@ Fournissez la réponse en JSON valide avec cette structure exacte:
     "thematic": float (0-10),
     "aiOptimization": float (0-10),
     "visibility": float (0-10),
-    "global_score": float (moyenne des 8 scores)
+    "global_score": float (moyenne pondérée)
+  }},
+  "detailed_observations": {{
+    "structure": {{
+      "score_justification": "Pourquoi ce score?",
+      "specific_problems": ["Problème 1 avec exemple", "Problème 2 avec exemple"],
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "missing_elements": ["Élément manquant 1", "Élément manquant 2"]
+    }},
+    "infoDensity": {{
+      "score_justification": "Pourquoi ce score?",
+      "specific_problems": ["Ex: Aucune statistique trouvée sur les pages analysées"],
+      "positive_points": ["Points forts s'il y en a"],
+      "missing_elements": ["Ex: Pas de données chiffrées, pas de sources citées"]
+    }},
+    "readability": {{
+      "score_justification": "Pourquoi ce score?",
+      "specific_problems": ["Ex: Meta descriptions marketing non-factuelles"],
+      "positive_points": ["Ex: Structure HTML correcte"],
+      "missing_elements": ["Ex: Aucun schema.org détecté dans JSON-LD"]
+    }},
+    "eeat": {{
+      "score_justification": "Pourquoi ce score?",
+      "specific_problems": ["Ex: Aucun auteur identifié"],
+      "positive_points": ["Ex: Organisation établie depuis X années"],
+      "missing_elements": ["Ex: Pas de certifications affichées"]
+    }},
+    "educational": {{
+      "score_justification": "Pourquoi ce score?",
+      "specific_problems": ["Ex: Contenu 100% marketing, aucun guide éducatif"],
+      "positive_points": ["Points forts s'il y en a"],
+      "missing_elements": ["Ex: Pas de FAQ, pas de glossaire, pas de tutoriels"]
+    }},
+    "thematic": {{
+      "score_justification": "Pourquoi ce score?",
+      "specific_problems": ["Ex: Pas de maillage interne visible"],
+      "positive_points": ["Ex: Structure de navigation claire"],
+      "missing_elements": ["Ex: Pas de pages piliers, pas de silos thématiques"]
+    }},
+    "aiOptimization": {{
+      "score_justification": "Pourquoi ce score?",
+      "specific_problems": ["Ex: Aucune réponse directe en début de page"],
+      "positive_points": ["Points forts s'il y en a"],
+      "missing_elements": ["Ex: Pas de TL;DR, pas de format conversationnel"]
+    }},
+    "visibility": {{
+      "score_justification": "Pourquoi ce score?",
+      "specific_problems": ["Ex: Contenu probablement invisible dans les IA"],
+      "positive_points": ["Ex: Domaine établi"],
+      "missing_elements": ["Ex: Pas de contenu citable"]
+    }}
   }},
   "recommendations": [
     {{
-      "title": "Titre court",
+      "title": "Titre actionnable",
       "criterion": "structure|infoDensity|readability|eeat|educational|thematic|aiOptimization|visibility",
       "impact": "high|medium|low",
       "effort": "high|medium|low",
-      "priority": 1-10,
-      "description": "Description détaillée",
-      "example": "Exemple concret (optionnel)"
+      "priority": 1-15,
+      "description": "Description détaillée (100-200 mots) expliquant le problème, pourquoi c'est important, et comment le résoudre",
+      "example": "Exemple CONCRET avec code/texte si applicable"
+    }}
+  ],
+  "quick_wins": [
+    {{
+      "title": "Action rapide",
+      "impact": "Impact attendu",
+      "time_required": "Temps estimé",
+      "description": "Quoi faire exactement"
     }}
   ],
   "analysis": {{
-    "strengths": ["Force 1", "Force 2"],
-    "weaknesses": ["Faiblesse 1", "Faiblesse 2"],
-    "opportunities": ["Opportunité 1", "Opportunité 2"]
+    "strengths": ["Force 1 avec détail", "Force 2 avec détail", "Force 3"],
+    "weaknesses": ["Faiblesse 1 détaillée", "Faiblesse 2 détaillée", "Faiblesse 3"],
+    "opportunities": ["Opportunité 1 avec potentiel", "Opportunité 2", "Opportunité 3"]
+  }},
+  "executive_summary": {{
+    "global_assessment": "Évaluation globale en 2-3 phrases",
+    "critical_issues": ["Problème critique 1", "Problème critique 2"],
+    "key_opportunities": ["Opportunité majeure 1", "Opportunité majeure 2"],
+    "estimated_visibility_loss": "Pourcentage de visibilité perdue estimé",
+    "recommended_investment": "Phase 1 (3 mois): Budget estimé et actions"
+  }},
+  "roi_estimation": {{
+    "current_situation": "Description de la situation actuelle",
+    "potential_improvement": "Amélioration potentielle avec GEO",
+    "timeline": "6-12 mois pour résultats significatifs"
   }}
 }}
 
-Donnez 10 recommandations minimum, triées par priorité (impact élevé / effort faible en premier).
+EXIGENCES STRICTES:
+- Minimum 15 recommandations détaillées
+- 5-7 quick wins actionnables immédiatement
+- Observations spécifiques pour CHAQUE critère
+- Exemples concrets tirés du contenu analysé
+- Justifications rigoureuses des scores
+- Comparaisons avec best practices 2025
 """
         
         chat = LlmChat(
