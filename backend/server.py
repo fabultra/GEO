@@ -340,19 +340,82 @@ EXIGENCES: Min 15 reco + 5 quick wins + observations détaillées par critère +
                     logger.error(f"Toutes les tentatives ont échoué: {str(last_error)}")
                     raise last_error
         
-        # Parse JSON response
+        # Parse JSON response avec nettoyage robuste
         try:
             # Extract JSON from response
             response_text = response.strip()
+            
+            # Enlever les markdown code blocks
             if '```json' in response_text:
                 response_text = response_text.split('```json')[1].split('```')[0]
             elif '```' in response_text:
                 response_text = response_text.split('```')[1].split('```')[0]
             
-            analysis_result = json.loads(response_text)
-            return analysis_result
-        except json.JSONDecodeError as e:
-            logger.error(f"JSON parse error: {str(e)}")
+            response_text = response_text.strip()
+            
+            # Tentative de parsing direct
+            try:
+                analysis_result = json.loads(response_text)
+                
+                # Valider que les champs essentiels sont présents
+                if 'scores' not in analysis_result or 'recommendations' not in analysis_result:
+                    raise ValueError("Champs essentiels manquants")
+                    
+                return analysis_result
+                
+            except (json.JSONDecodeError, ValueError) as e:
+                logger.warning(f"Première tentative de parsing échouée: {str(e)}")
+                
+                # Tentative 2: Nettoyer les guillemets problématiques
+                import re
+                # Remplacer les sauts de ligne dans les strings par des espaces
+                response_text = re.sub(r'(?<=: ")(.*?)(?="[,\}])', lambda m: m.group(0).replace('\n', ' '), response_text, flags=re.DOTALL)
+                
+                try:
+                    analysis_result = json.loads(response_text)
+                    if 'scores' in analysis_result and 'recommendations' in analysis_result:
+                        return analysis_result
+                except:
+                    pass
+                
+                # Tentative 3: Parser manuellement les scores au minimum
+                logger.error(f"Impossible de parser le JSON complet. Extraction des scores uniquement.")
+                scores_match = re.search(r'"scores":\s*\{([^}]+)\}', response_text)
+                
+                if scores_match:
+                    scores_text = '{' + scores_match.group(1) + '}'
+                    try:
+                        scores = json.loads(scores_text)
+                        logger.info("Scores extraits avec succès")
+                        
+                        # Construire une réponse minimale valide
+                        return {
+                            "scores": scores,
+                            "recommendations": [{
+                                "title": "Analyse partielle - Rapport incomplet",
+                                "criterion": "general",
+                                "impact": "high",
+                                "effort": "medium",
+                                "priority": 1,
+                                "description": "L'analyse complète n'a pas pu être générée. Veuillez relancer l'analyse.",
+                                "example": "Erreur de parsing JSON"
+                            }],
+                            "analysis": {
+                                "strengths": ["Scores générés"],
+                                "weaknesses": ["Rapport incomplet"],
+                                "opportunities": ["Relancer l'analyse"]
+                            }
+                        }
+                    except:
+                        pass
+                
+                # Dernier fallback
+                raise ValueError("Impossible d'extraire les données")
+                
+        except Exception as e:
+            logger.error(f"Erreur complète de parsing: {str(e)}")
+            logger.error(f"Réponse brute (premiers 500 chars): {response[:500]}")
+            
             # Fallback with default scores
             return {
                 "scores": {
@@ -366,11 +429,19 @@ EXIGENCES: Min 15 reco + 5 quick wins + observations détaillées par critère +
                     "visibility": 5.0,
                     "global_score": 5.0
                 },
-                "recommendations": [],
+                "recommendations": [{
+                    "title": "Erreur d'analyse",
+                    "criterion": "general",
+                    "impact": "high",
+                    "effort": "low",
+                    "priority": 1,
+                    "description": "L'analyse n'a pas pu être complétée. Veuillez réessayer.",
+                    "example": str(e)
+                }],
                 "analysis": {
-                    "strengths": ["Analyse en cours"],
-                    "weaknesses": ["Données insuffisantes"],
-                    "opportunities": ["À déterminer"]
+                    "strengths": ["À déterminer"],
+                    "weaknesses": ["Erreur d'analyse"],
+                    "opportunities": ["Réessayer l'analyse"]
                 }
             }
             
