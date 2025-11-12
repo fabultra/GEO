@@ -203,10 +203,10 @@ class WordReportGenerator:
     
     def add_methodology(self, report_data: Dict[str, Any]):
         """Méthodologie (3 pages)"""
-        self.doc.add_heading('Méthodologie d\\'Analyse', level=1)
+        self.doc.add_heading("Méthodologie d'Analyse", level=1)
         
         # Process en 3 phases
-        self.doc.add_heading('Processus d\\'Analyse en 3 Phases', level=2)
+        self.doc.add_heading("Processus d'Analyse en 3 Phases", level=2)
         
         phases = [
             ("Phase 1: Crawling (40%)", 
