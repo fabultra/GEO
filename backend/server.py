@@ -267,7 +267,7 @@ async def crawl_website(url: str, max_pages: int = 10) -> Dict[str, Any]:
         logger.error(f"Crawl error: {str(e)}")
         raise
 
-async def analyze_with_claude(crawl_data: Dict[str, Any], retry_count: int = 3) -> Dict[str, Any]:
+async def analyze_with_claude(crawl_data: Dict[str, Any], visibility_data: Dict[str, Any] = None, retry_count: int = 3) -> Dict[str, Any]:
     """Use Claude to analyze crawled content based on 8 GEO criteria"""
     try:
         # Utiliser la clé Anthropic directe en priorité, fallback sur Emergent
