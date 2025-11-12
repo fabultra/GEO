@@ -252,6 +252,66 @@ class GEOSaaSAPITester:
         self.log("✅ All modules validation completed")
         return True
     
+    def test_download_docx(self, report_id: str) -> bool:
+        """Test DOCX download"""
+        url = f"{self.api_url}/reports/{report_id}/docx"
+        self.tests_run += 1
+        self.log(f"🔍 Testing DOCX Download...")
+        self.log(f"   GET {url}")
+        
+        try:
+            response = requests.get(url, timeout=30)
+            success = response.status_code == 200
+            
+            if success:
+                self.tests_passed += 1
+                content_type = response.headers.get('content-type', '')
+                content_length = len(response.content)
+                self.log(f"✅ PASSED - Status: {response.status_code}")
+                self.log(f"   Content-Type: {content_type}")
+                self.log(f"   Content-Length: {content_length} bytes")
+            else:
+                self.log(f"❌ FAILED - Status: {response.status_code}")
+                
+            return success
+            
+        except Exception as e:
+            self.log(f"❌ FAILED - Error: {str(e)}")
+            return False
+    
+    def test_download_dashboard(self, report_id: str) -> bool:
+        """Test HTML Dashboard download"""
+        url = f"{self.api_url}/reports/{report_id}/dashboard"
+        self.tests_run += 1
+        self.log(f"🔍 Testing HTML Dashboard...")
+        self.log(f"   GET {url}")
+        
+        try:
+            response = requests.get(url, timeout=30)
+            success = response.status_code == 200
+            
+            if success:
+                self.tests_passed += 1
+                content_type = response.headers.get('content-type', '')
+                content_length = len(response.content)
+                self.log(f"✅ PASSED - Status: {response.status_code}")
+                self.log(f"   Content-Type: {content_type}")
+                self.log(f"   Content-Length: {content_length} bytes")
+                
+                # Check if it's actually HTML
+                if 'html' in content_type.lower():
+                    self.log(f"   ✅ Valid HTML dashboard")
+                else:
+                    self.log(f"   ⚠️  Content type not HTML: {content_type}")
+            else:
+                self.log(f"❌ FAILED - Status: {response.status_code}")
+                
+            return success
+            
+        except Exception as e:
+            self.log(f"❌ FAILED - Error: {str(e)}")
+            return False
+
     def test_download_pdf(self, report_id: str) -> bool:
         """Test PDF download"""
         url = f"{self.api_url}/reports/{report_id}/pdf"
