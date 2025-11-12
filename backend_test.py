@@ -400,12 +400,16 @@ class GEOSaaSAPITester:
             self.test_job_status(job_id)
             
             # Test 5: Wait for job completion (with timeout)
-            report_id = self.wait_for_job_completion(job_id, max_wait_time=180)  # 3 minutes max
+            report_id = self.wait_for_job_completion(job_id, max_wait_time=300)  # 5 minutes max for full pipeline
             
             if report_id:
-                # Test 6: Get report
+                # Test 6: Get report and validate new modules
                 if self.test_get_report(report_id):
-                    # Test 7: Download PDF
+                    # Test 7: Download DOCX (Word Report)
+                    self.test_download_docx(report_id)
+                    # Test 8: Download HTML Dashboard
+                    self.test_download_dashboard(report_id)
+                    # Test 9: Download PDF (legacy)
                     self.test_download_pdf(report_id)
                 else:
                     self.log("❌ Get report failed")
