@@ -315,6 +315,9 @@ SITE ANALYSÉ: {crawl_data['base_url']} | Pages: {crawl_data['pages_crawled']}
 CONTENU:
 {json.dumps(pages_summary, ensure_ascii=False, indent=2)}
 
+DONNÉES DE VISIBILITÉ IA:
+{json.dumps(visibility_data, ensure_ascii=False, indent=2) if visibility_data else "Aucune donnée de visibilité disponible"}
+
 INSTRUCTIONS:
 Pour CHAQUE critère: score 0-10 justifié + problèmes spécifiques + exemples concrets du site
 
