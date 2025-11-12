@@ -321,6 +321,12 @@ DONNÉES DE VISIBILITÉ IA:
 INSTRUCTIONS:
 Pour CHAQUE critère: score 0-10 justifié + problèmes spécifiques + exemples concrets du site
 
+IMPORTANT pour Critères 7 & 8:
+- Utilisez les VRAIES données de visibilité ci-dessus
+- Critère 7 (aiOptimization): Basez le score sur platform_scores
+- Critère 8 (visibility): Basez le score sur overall_visibility
+- Convertissez les % en scores 0-10 (ex: 40% = 4.0/10)
+
 JSON REQUIS (RESPECTEZ CE FORMAT EXACTEMENT):
 {{
   "scores": {{"structure": 7.5, "infoDensity": 3.0, "readability": 5.0, "eeat": 6.0, "educational": 2.0, "thematic": 4.5, "aiOptimization": 3.5, "visibility": 2.5, "global_score": 4.25}},
