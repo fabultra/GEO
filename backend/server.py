@@ -882,6 +882,48 @@ async def download_report_pdf(report_id: str):
         logger.error(f"PDF download error: {str(e)}")
         raise HTTPException(status_code=500, detail=str(e))
 
+@api_router.get("/reports/{report_id}/docx")
+async def download_report_docx(report_id: str):
+    """Download Word report"""
+    from fastapi.responses import FileResponse
+    import os
+    
+    try:
+        file_path = f"/app/backend/reports/{report_id}_report.docx"
+        if not os.path.exists(file_path):
+            raise HTTPException(status_code=404, detail="Word report not found")
+        
+        return FileResponse(
+            path=file_path,
+            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            filename=f"rapport-geo-{report_id}.docx"
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"DOCX download error: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@api_router.get("/reports/{report_id}/dashboard")
+async def view_dashboard(report_id: str):
+    """View HTML dashboard"""
+    from fastapi.responses import FileResponse
+    import os
+    
+    try:
+        file_path = f"/app/backend/dashboards/{report_id}_dashboard.html"
+        if not os.path.exists(file_path):
+            raise HTTPException(status_code=404, detail="Dashboard not found")
+        
+        return FileResponse(path=file_path, media_type="text/html")
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Dashboard view error: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
 @api_router.get("/leads")
 async def get_all_leads():
     """Get all leads with their reports"""
