@@ -617,12 +617,42 @@ async def process_analysis_job(job_id: str):
             {"$set": {"progress": 40}}
         )
         
-        # Step 2: Analyze with Claude
-        analysis_result = await analyze_with_claude(crawl_data)
+        # Step 2: Generate test queries
+        from query_generator import generate_test_queries
+        test_queries = generate_test_queries(job_doc['url'], crawl_data)
+        logger.info(f"Generated {len(test_queries)} test queries")
         
         await db.analysis_jobs.update_one(
             {"id": job_id},
-            {"$set": {"progress": 70}}
+            {"$set": {"progress": 50}}
+        )
+        
+        # Step 3: Test visibility in AI platforms (critère 7 & 8)
+        try:
+            tester = VisibilityTester()
+            visibility_data = await tester.test_visibility(job_doc['url'], test_queries)
+            logger.info(f"Visibility test completed: {visibility_data['overall_visibility']:.1%}")
+        except Exception as e:
+            logger.error(f"Visibility test failed: {str(e)}")
+            visibility_data = {
+                'overall_visibility': 0.0,
+                'platform_scores': {},
+                'queries_tested': 0,
+                'total_tests': 0,
+                'error': str(e)
+            }
+        
+        await db.analysis_jobs.update_one(
+            {"id": job_id},
+            {"$set": {"progress": 60}}
+        )
+        
+        # Step 4: Analyze with Claude
+        analysis_result = await analyze_with_claude(crawl_data, visibility_data)
+        
+        await db.analysis_jobs.update_one(
+            {"id": job_id},
+            {"$set": {"progress": 75}}
         )
         
         # Step 3: Create report with enriched data
