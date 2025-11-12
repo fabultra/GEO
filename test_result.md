@@ -138,15 +138,18 @@ backend:
   
   - task: "Module 3: Competitive Intelligence"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/competitive_intelligence.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Module complet créé avec analyse des compétiteurs, tableau comparatif et insights actionnables. NOUVELLEMENT intégré dans server.py process_analysis_job. À tester."
+        - working: true
+          agent: "testing"
+          comment: "✅ TESTÉ ET FONCTIONNEL - Module intégré avec succès dans le pipeline. Génère competitive_intelligence avec competitors_analyzed, analyses, comparative_metrics et actionable_insights. Testé avec sekoia.ca, 1 compétiteur analysé. Minor: URL parsing needs cleanup but core functionality works."
   
   - task: "Module 4: Schema JSON-LD Generator"
     implemented: true
