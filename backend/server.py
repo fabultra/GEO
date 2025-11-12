@@ -85,6 +85,23 @@ class Score(BaseModel):
     aiOptimization: float = 0.0
     visibility: float = 0.0
     global_score: float = 0.0
+    
+    @staticmethod
+    def calculate_weighted_score(scores: dict) -> float:
+        """Calcule le score global pondéré selon la méthodologie GEO"""
+        weights = {
+            'structure': 0.15,
+            'infoDensity': 0.20,
+            'readability': 0.10,
+            'eeat': 0.15,
+            'educational': 0.20,
+            'thematic': 0.05,
+            'aiOptimization': 0.10,
+            'visibility': 0.05
+        }
+        
+        weighted_sum = sum(scores.get(key, 0) * weight for key, weight in weights.items())
+        return round(weighted_sum, 2)
 
 class Recommendation(BaseModel):
     title: str
