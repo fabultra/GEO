@@ -342,6 +342,7 @@ class GEOSaaSAPITester:
     def wait_for_job_completion(self, job_id: str, max_wait_time: int = 300) -> Optional[str]:
         """Wait for analysis job to complete and return report ID"""
         self.log(f"⏳ Waiting for job {job_id} to complete (max {max_wait_time}s)...")
+        self.log(f"   This may take 3-5 minutes for complete pipeline processing...")
         
         start_time = time.time()
         while time.time() - start_time < max_wait_time:
