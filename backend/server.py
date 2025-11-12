@@ -137,6 +137,13 @@ class ROIEstimation(BaseModel):
     potential_improvement: str
     timeline: str
 
+class VisibilityResults(BaseModel):
+    overall_visibility: float
+    platform_scores: Dict[str, float]
+    queries_tested: int
+    total_tests: int
+    details: List[Dict[str, Any]] = []
+
 class Report(BaseModel):
     model_config = ConfigDict(extra="ignore")
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
@@ -150,7 +157,11 @@ class Report(BaseModel):
     detailed_observations: Optional[Dict[str, Any]] = None
     executive_summary: Optional[Dict[str, Any]] = None
     roi_estimation: Optional[Dict[str, Any]] = None
+    visibility_results: Optional[Dict[str, Any]] = None
+    test_queries: Optional[List[str]] = None
     pdfUrl: Optional[str] = None
+    docxUrl: Optional[str] = None
+    dashboardUrl: Optional[str] = None
     createdAt: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 class ReportCreate(BaseModel):
