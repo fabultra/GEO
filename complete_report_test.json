@@ -1,0 +1,1018 @@
+{
+  "id": "2d23c277-deb0-4f51-aec6-2905db438ca7",
+  "leadId": "a738694e-84f3-4ac5-9a08-10c2c4f13303",
+  "url": "sekoia.ca",
+  "type": "executive",
+  "scores": {
+    "structure": 3,
+    "infoDensity": 2,
+    "readability": 5,
+    "eeat": 2.5,
+    "educational": 1,
+    "thematic": 2,
+    "aiOptimization": 0,
+    "visibility": 0,
+    "global_score": 2.02
+  },
+  "recommendations": [
+    {
+      "title": "Créer une FAQ structurée complète",
+      "criterion": "educational",
+      "impact": "high",
+      "effort": "medium",
+      "priority": 1,
+      "description": "Développer une section FAQ avec au moins 20 questions-réponses couvrant les services, la méthodologie, les résultats attendus et les préoccupations courantes des clients.",
+      "example": "Implémenter un Schema FAQPage JSON-LD et structurer visuellement avec des accordéons pour chaque Q/R"
+    },
+    {
+      "title": "Ajouter des TL;DR en début de chaque page",
+      "criterion": "structure",
+      "impact": "high",
+      "effort": "low",
+      "priority": 2,
+      "description": "Créer des résumés de 40-60 mots au début de chaque page qui synthétisent l'essentiel du contenu de manière factuelle et directe.",
+      "example": "TL;DR: Sekoia aide les entreprises à optimiser leur écosystème numérique avec une méthodologie en 3 phases: analyse, mise à niveau et croissance. Nos services incluent SEO, PPC, analytics et UX, avec un focus sur les données et le ROI mesurable."
+    },
+    {
+      "title": "Développer des études de cas détaillées",
+      "criterion": "infoDensity",
+      "impact": "high",
+      "effort": "high",
+      "priority": 3,
+      "description": "Créer au moins 5 études de cas détaillées avec données chiffrées, méthodologie appliquée et résultats mesurables pour démontrer l'efficacité des services.",
+      "example": "Étude de cas: \"Comment nous avons augmenté le trafic organique de 150% en 6 mois pour ClientX\" avec graphiques, métriques et méthodologie"
+    },
+    {
+      "title": "Enrichir les schemas JSON-LD",
+      "criterion": "readability",
+      "impact": "high",
+      "effort": "medium",
+      "priority": 4,
+      "description": "Implémenter des schemas JSON-LD avancés sur toutes les pages: Organization, Service, FAQPage, HowTo, et Review pour améliorer la compréhension par les machines.",
+      "example": "Ajouter un schema Service complet détaillant chaque service offert avec description, prix, durée, et résultats attendus"
+    },
+    {
+      "title": "Créer des profils d'experts",
+      "criterion": "eeat",
+      "impact": "medium",
+      "effort": "medium",
+      "priority": 5,
+      "description": "Développer une page d'équipe avec biographies détaillées des experts, leurs certifications, expériences et domaines de spécialisation.",
+      "example": "Profil expert: \"Jean Dupont, Expert SEO certifié Google avec 10 ans d'expérience dans l'optimisation de sites e-commerce. A travaillé pour X, Y, Z entreprises.\""
+    },
+    {
+      "title": "Développer un hub de ressources éducatives",
+      "criterion": "educational",
+      "impact": "high",
+      "effort": "high",
+      "priority": 6,
+      "description": "Créer une section ressources avec guides, tutoriels, webinaires et livres blancs sur le marketing digital, l'analyse de données et l'optimisation web.",
+      "example": "Guide complet: \"Comment analyser efficacement vos données Google Analytics en 10 étapes\" avec captures d'écran et instructions détaillées"
+    },
+    {
+      "title": "Restructurer le site en silos thématiques",
+      "criterion": "thematic",
+      "impact": "high",
+      "effort": "high",
+      "priority": 7,
+      "description": "Réorganiser l'architecture du site en créant des hubs thématiques (SEO, PPC, Analytics, UX) avec pages satellites liées à chaque thématique principale.",
+      "example": "Hub SEO avec pages satellites: audit SEO, optimisation on-page, link building, SEO local, SEO technique, chacune liée au hub principal"
+    },
+    {
+      "title": "Créer des tableaux comparatifs",
+      "criterion": "aiOptimization",
+      "impact": "medium",
+      "effort": "medium",
+      "priority": 8,
+      "description": "Développer des tableaux comparatifs pour les différents services, approches méthodologiques et résultats attendus, facilitant l'extraction d'information par les IA.",
+      "example": "Tableau comparatif des différentes approches SEO: technique vs contenu vs autorité, avec avantages, inconvénients et cas d'usage"
+    },
+    {
+      "title": "Ajouter des données statistiques sectorielles",
+      "criterion": "infoDensity",
+      "impact": "medium",
+      "effort": "medium",
+      "priority": 9,
+      "description": "Intégrer des statistiques sectorielles pertinentes et à jour pour contextualiser les services offerts et démontrer leur pertinence.",
+      "example": "\"Selon une étude récente, les entreprises investissant dans le SEO voient un ROI moyen de X% après 6 mois, comparé à Y% pour le PPC\""
+    },
+    {
+      "title": "Créer un glossaire technique",
+      "criterion": "educational",
+      "impact": "medium",
+      "effort": "medium",
+      "priority": 10,
+      "description": "Développer un glossaire complet des termes techniques utilisés dans le marketing digital et l'analyse de données avec définitions claires.",
+      "example": "Glossaire avec définitions de termes comme \"CTR\", \"CPA\", \"SERP\", \"Backlink\", \"Taux de rebond\" avec exemples concrets d'application"
+    },
+    {
+      "title": "Implémenter des sections Q&R directes",
+      "criterion": "aiOptimization",
+      "impact": "high",
+      "effort": "medium",
+      "priority": 11,
+      "description": "Ajouter des sections de questions-réponses directes sur chaque page de service, anticipant les questions courantes des utilisateurs avec réponses concises.",
+      "example": "Q: Combien de temps faut-il pour voir des résultats en SEO? R: En général, les premiers résultats sont visibles après 3-4 mois, avec des améliorations significatives après 6-8 mois."
+    },
+    {
+      "title": "Développer des témoignages clients détaillés",
+      "criterion": "eeat",
+      "impact": "medium",
+      "effort": "medium",
+      "priority": 12,
+      "description": "Recueillir et publier des témoignages clients détaillés avec noms, entreprises, problématiques spécifiques et résultats obtenus.",
+      "example": "Témoignage de Marie Martin, Directrice Marketing chez EntrepriseX: \"Grâce à Sekoia, nous avons augmenté nos conversions de 45% en 4 mois. Leur approche analytique a transformé notre stratégie digitale.\""
+    },
+    {
+      "title": "Créer des guides étape par étape",
+      "criterion": "educational",
+      "impact": "high",
+      "effort": "high",
+      "priority": 13,
+      "description": "Développer des guides détaillés étape par étape pour chaque aspect du marketing digital, de l'analyse de données et de l'optimisation web.",
+      "example": "Guide: \"Comment réaliser un audit SEO complet en 12 étapes\" avec instructions détaillées, captures d'écran et modèles téléchargeables"
+    },
+    {
+      "title": "Ajouter des métriques de performance",
+      "criterion": "infoDensity",
+      "impact": "high",
+      "effort": "medium",
+      "priority": 14,
+      "description": "Intégrer des métriques de performance concrètes pour chaque service offert, avec benchmarks sectoriels et résultats moyens obtenus.",
+      "example": "\"Nos campagnes PPC génèrent en moyenne un ROAS de 400% pour nos clients du secteur e-commerce, contre une moyenne sectorielle de 200%.\""
+    },
+    {
+      "title": "Développer une page méthodologie détaillée",
+      "criterion": "structure",
+      "impact": "medium",
+      "effort": "medium",
+      "priority": 15,
+      "description": "Enrichir la page méthodologie avec une explication détaillée de chaque phase, sous-étapes, livrables et résultats attendus.",
+      "example": "Phase 1: Analyse - Comprend audit technique, analyse concurrentielle, étude des mots-clés, analyse UX, avec livrables spécifiques pour chaque composante"
+    },
+    {
+      "title": "Créer un blog informatif",
+      "criterion": "educational",
+      "impact": "high",
+      "effort": "high",
+      "priority": 16,
+      "description": "Développer un blog avec articles informatifs réguliers sur les tendances, stratégies et meilleures pratiques en marketing digital et analyse de données.",
+      "example": "Article: \"5 stratégies data-driven pour optimiser votre taux de conversion en 2023\" avec données, exemples et étapes concrètes"
+    },
+    {
+      "title": "Implémenter des breadcrumbs thématiques",
+      "criterion": "thematic",
+      "impact": "medium",
+      "effort": "low",
+      "priority": 17,
+      "description": "Ajouter des fils d'Ariane (breadcrumbs) sur toutes les pages pour clarifier la structure thématique et faciliter la navigation.",
+      "example": "Accueil > Services > SEO > Audit SEO technique - avec balisage schema BreadcrumbList"
+    },
+    {
+      "title": "Développer des pages de comparaison de services",
+      "criterion": "infoDensity",
+      "impact": "medium",
+      "effort": "medium",
+      "priority": 18,
+      "description": "Créer des pages comparant objectivement différentes approches et services marketing, avec avantages, inconvénients et cas d'usage idéaux.",
+      "example": "Page: \"SEO vs PPC: Quelle stratégie choisir selon vos objectifs?\" avec tableau comparatif détaillé et arbre de décision"
+    },
+    {
+      "title": "Ajouter des certifications et partenariats",
+      "criterion": "eeat",
+      "impact": "medium",
+      "effort": "low",
+      "priority": 19,
+      "description": "Mettre en avant les certifications, partenariats et accréditations de l'entreprise et de ses employés avec logos et descriptions.",
+      "example": "\"Sekoia est partenaire certifié Google, Facebook et HubSpot, avec 5 experts certifiés Google Analytics et 3 experts certifiés Google Ads.\""
+    },
+    {
+      "title": "Créer une page \"À propos\" détaillée",
+      "criterion": "eeat",
+      "impact": "medium",
+      "effort": "medium",
+      "priority": 20,
+      "description": "Développer une page \"À propos\" complète avec histoire de l'entreprise, mission, valeurs, équipe et approche unique.",
+      "example": "Section histoire: \"Fondée en 2015 par Jean Martin, expert en analyse de données, Sekoia est née de la conviction que le marketing digital devait être plus transparent et basé sur des données concrètes.\""
+    }
+  ],
+  "quick_wins": [
+    {
+      "title": "Ajouter Schema Organization complet",
+      "impact": "Amélioration immédiate de la compréhension par les IA",
+      "time_required": "2 heures",
+      "description": "Implémenter un JSON-LD Organization détaillé incluant fondateurs, services, localisation et coordonnées sur la page d'accueil"
+    },
+    {
+      "title": "Créer des TL;DR en début de page",
+      "impact": "Augmentation significative du taux d'extraction par les IA",
+      "time_required": "3 heures",
+      "description": "Ajouter des résumés factuels de 40-60 mots au début de chaque page principale du site"
+    },
+    {
+      "title": "Ajouter une FAQ basique",
+      "impact": "Meilleure visibilité dans les résultats IA pour les questions courantes",
+      "time_required": "4 heures",
+      "description": "Créer une section FAQ avec 10 questions-réponses les plus courantes et implémenter le schema FAQPage"
+    },
+    {
+      "title": "Enrichir les H1 et H2",
+      "impact": "Meilleure compréhension du contenu par les IA",
+      "time_required": "2 heures",
+      "description": "Reformuler les titres H1 et H2 pour qu'ils soient plus informatifs et moins marketing"
+    },
+    {
+      "title": "Ajouter des listes à puces",
+      "impact": "Facilitation de l'extraction d'information par les IA",
+      "time_required": "3 heures",
+      "description": "Transformer les paragraphes en listes à puces pour les services, avantages et méthodologies"
+    },
+    {
+      "title": "Créer une page d'équipe simple",
+      "impact": "Renforcement de l'E-E-A-T perçu par les IA",
+      "time_required": "4 heures",
+      "description": "Développer une page présentant les membres clés de l'équipe avec leurs expertises et certifications"
+    },
+    {
+      "title": "Ajouter des données chiffrées",
+      "impact": "Augmentation de la densité d'information extractible",
+      "time_required": "3 heures",
+      "description": "Intégrer des statistiques et chiffres clés sur les pages de services et la page d'accueil"
+    }
+  ],
+  "analysis": {
+    "strengths": [
+      "Présence de base de JSON-LD sur les pages analysées, montrant une conscience minimale des besoins de structuration pour les machines",
+      "Structure HTML correcte avec utilisation appropriée des balises H1 et H2, facilitant la compréhension de la hiérarchie du contenu",
+      "Début d'approche méthodologique avec la présentation des 3 phases (Analyse, Mise à niveau, Croissance), offrant un cadre conceptuel",
+      "Site techniquement fonctionnel avec une navigation de base permettant d'accéder aux différentes sections"
+    ],
+    "weaknesses": [
+      "Contenu extrêmement léger avec moins de 200 mots sur la page d'accueil, insuffisant pour démontrer l'expertise ou répondre aux questions des utilisateurs",
+      "Absence totale de contenu éducatif, de guides ou de ressources informatives, rendant le site invisible pour les requêtes informationnelles",
+      "Manque complet de données factuelles, statistiques ou preuves concrètes pour appuyer les affirmations marketing",
+      "Aucune structure thématique claire ni organisation en silos de contenu, limitant la compréhension des relations entre les sujets",
+      "Format marketing lourd non adapté à l'extraction par les IA, avec absence de réponses directes aux questions des utilisateurs",
+      "Invisibilité totale dans les résultats des IA sur toutes les plateformes testées (0% de visibilité)"
+    ],
+    "opportunities": [
+      "Développement d'un hub de ressources éducatives pour positionner l'entreprise comme autorité dans son domaine et attirer du trafic organique",
+      "Création d'études de cas détaillées avec données chiffrées pour démontrer l'expertise et les résultats concrets obtenus pour les clients",
+      "Implémentation de structures optimisées pour l'IA (TL;DR, FAQ, tableaux comparatifs) pour améliorer significativement la visibilité dans les résultats IA",
+      "Restructuration du site en silos thématiques clairs pour mieux organiser l'information et faciliter la compréhension par les utilisateurs et les IA",
+      "Développement de profils d'experts détaillés pour renforcer l'E-E-A-T et la crédibilité perçue par les utilisateurs et les IA"
+    ]
+  },
+  "detailed_observations": {
+    "structure": {
+      "score_justification": "Le site présente une structure très basique avec peu d'éléments organisationnels adaptés au GEO, sans TL;DR ni réponses directes aux questions des utilisateurs.",
+      "specific_problems": [
+        "Absence de TL;DR en début de page",
+        "Pas de structure en H2/H3 claire pour faciliter l'extraction d'information",
+        "Navigation peu intuitive pour les robots IA",
+        "Contenu marketing plutôt qu'informatif"
+      ],
+      "positive_points": [
+        "Présence de JSON-LD de base",
+        "Structure de page cohérente avec H1 et H2"
+      ],
+      "missing_elements": [
+        "Résumés en début de page",
+        "FAQ structurée",
+        "Tableaux comparatifs",
+        "Listes à puces pour les points clés",
+        "Sections clairement délimitées"
+      ]
+    },
+    "infoDensity": {
+      "score_justification": "Le site présente une très faible densité d'information avec peu de données factuelles, statistiques ou chiffres concrets pour appuyer ses affirmations.",
+      "specific_problems": [
+        "Contenu très léger (moins de 200 mots sur la page d'accueil)",
+        "Absence de statistiques ou données chiffrées",
+        "Affirmations génériques sans preuves",
+        "Manque d'exemples concrets"
+      ],
+      "positive_points": [
+        "Mention de partenariats avec des plateformes connues"
+      ],
+      "missing_elements": [
+        "Études de cas détaillées",
+        "Statistiques de performance",
+        "Données sectorielles",
+        "Benchmarks",
+        "Résultats quantifiables",
+        "Témoignages chiffrés"
+      ]
+    },
+    "readability": {
+      "score_justification": "Le site possède un schema JSON-LD basique mais manque de structures sémantiques avancées pour une meilleure compréhension par les machines.",
+      "specific_problems": [
+        "Schema JSON-LD limité aux informations de base",
+        "Absence de schema spécifiques (FAQPage, HowTo, etc.)",
+        "Manque de balisage sémantique avancé",
+        "Métadonnées insuffisantes"
+      ],
+      "positive_points": [
+        "Présence de JSON-LD sur les pages analysées",
+        "Structure HTML correcte avec utilisation appropriée des balises H1/H2"
+      ],
+      "missing_elements": [
+        "Schema FAQPage",
+        "Schema HowTo",
+        "Schema Service",
+        "Schema Review",
+        "Balisage des données structurées plus complet",
+        "Métadonnées enrichies"
+      ]
+    },
+    "eeat": {
+      "score_justification": "Le site manque d'éléments démontrant l'expertise, l'autorité et la fiabilité avec absence d'auteurs identifiés et peu d'informations sur l'entreprise.",
+      "specific_problems": [
+        "Pas d'auteurs identifiés pour le contenu",
+        "Absence de biographies d'experts",
+        "Manque de certifications ou accréditations visibles",
+        "Pas de page \"À propos\" détaillée"
+      ],
+      "positive_points": [
+        "Mention de l'entreprise comme entité",
+        "Référence à une équipe d'experts (sans détails)"
+      ],
+      "missing_elements": [
+        "Profils d'auteurs avec expertise",
+        "Certifications et partenariats détaillés",
+        "Témoignages clients vérifiables",
+        "Études de cas signées",
+        "Page d'équipe avec biographies"
+      ]
+    },
+    "educational": {
+      "score_justification": "Le site est presque exclusivement marketing avec très peu de contenu éducatif, sans guides, FAQ ou ressources pédagogiques.",
+      "specific_problems": [
+        "Contenu presque 100% marketing",
+        "Absence de guides ou tutoriels",
+        "Pas de FAQ",
+        "Aucun glossaire ou définitions",
+        "Manque de ressources téléchargeables"
+      ],
+      "positive_points": [
+        "Brève description de la méthodologie en 3 phases"
+      ],
+      "missing_elements": [
+        "Guides pratiques",
+        "Tutoriels détaillés",
+        "FAQ complète",
+        "Études de cas éducatives",
+        "Glossaire de termes techniques",
+        "Blog informatif",
+        "Webinaires ou vidéos explicatives"
+      ]
+    },
+    "thematic": {
+      "score_justification": "Le site ne présente pas d'organisation thématique claire, sans silos de contenu ni clustering évident des sujets abordés.",
+      "specific_problems": [
+        "Pas de structure en silos thématiques",
+        "Absence de hubs de contenu",
+        "Navigation thématique inexistante",
+        "Manque de liens internes entre contenus connexes"
+      ],
+      "positive_points": [
+        "Début de structure avec la page méthodologie"
+      ],
+      "missing_elements": [
+        "Hubs thématiques",
+        "Pages satellites liées aux thèmes principaux",
+        "Architecture de l'information en silos",
+        "Taxonomie claire",
+        "Catégorisation du contenu",
+        "Breadcrumbs thématiques"
+      ]
+    },
+    "aiOptimization": {
+      "score_justification": "Le site n'est pas du tout optimisé pour l'extraction par les IA avec un format marketing lourd, absence de réponses directes et manque de structure extractible.",
+      "specific_problems": [
+        "Format marketing non adapté à l'extraction IA",
+        "Absence de réponses directes aux questions",
+        "Manque de données structurées pour l'IA",
+        "Contenu trop générique et peu factuel"
+      ],
+      "positive_points": [
+        "Utilisation basique de JSON-LD"
+      ],
+      "missing_elements": [
+        "Format question-réponse",
+        "Résumés extractibles",
+        "Données structurées avancées",
+        "Contenu factuel direct",
+        "Sections TL;DR",
+        "Tableaux de données",
+        "Listes à puces"
+      ]
+    },
+    "visibility": {
+      "score_justification": "Le site est totalement invisible dans les résultats des IA, avec un score de visibilité de 0% sur toutes les plateformes testées.",
+      "specific_problems": [
+        "Invisibilité totale dans ChatGPT, Claude, Perplexity, Gemini et Google AI",
+        "Absence de mentions pour toutes les requêtes testées",
+        "Contenu non cité comme référence",
+        "Manque d'autorité perçue par les IA"
+      ],
+      "positive_points": [
+        "Aucun point positif identifié pour la visibilité IA"
+      ],
+      "missing_elements": [
+        "Contenu citable par les IA",
+        "Autorité thématique",
+        "Données uniques et référençables",
+        "Format adapté aux citations IA",
+        "Présence dans les résultats de recherche IA"
+      ]
+    }
+  },
+  "executive_summary": {
+    "global_assessment": "Le site Sekoia.ca présente des lacunes critiques en termes de GEO avec un contenu extrêmement léger, presque exclusivement marketing et sans structure adaptée à l'extraction par les IA, résultant en une invisibilité totale dans les résultats IA.",
+    "critical_issues": [
+      "Invisibilité totale (0%) dans les résultats des IA sur toutes les plateformes testées",
+      "Contenu extrêmement léger (moins de 200 mots par page) et presque exclusivement marketing",
+      "Absence de données factuelles, statistiques ou preuves concrètes",
+      "Manque de structure adaptée à l'extraction par les IA (pas de TL;DR, FAQ, tableaux)",
+      "Absence de démonstration d'expertise (pas d'auteurs identifiés, pas de contenu éducatif)"
+    ],
+    "key_opportunities": [
+      "Développement rapide de contenu factuel et éducatif avec structures optimisées pour l'IA",
+      "Création d'études de cas détaillées avec données chiffrées pour démontrer l'expertise",
+      "Implémentation de schemas JSON-LD avancés pour améliorer la compréhension par les machines",
+      "Restructuration du site en silos thématiques avec hubs de contenu et pages satellites",
+      "Renforcement de l'E-E-A-T avec profils d'experts, certifications et témoignages clients"
+    ],
+    "estimated_visibility_loss": "90-100%",
+    "recommended_investment": "Phase 1: 20-25k budget sur 3-4 mois pour développement de contenu éducatif et restructuration GEO; Phase 2: 15-20k sur 3 mois pour optimisation avancée et création d'études de cas"
+  },
+  "roi_estimation": {
+    "current_situation": "Le site est actuellement invisible dans les résultats des IA (0% de visibilité) et manque de contenu substantiel pour démontrer l'expertise ou répondre aux questions des utilisateurs.",
+    "potential_improvement": "Avec les recommandations mises en œuvre, le site pourrait atteindre 40-50% de visibilité IA dans les 6 premiers mois et jusqu'à 70-80% après 12 mois, générant une augmentation significative du trafic organique et des leads qualifiés.",
+    "timeline": "3-6 mois pour les premiers résultats visibles, 8-12 mois pour une transformation complète de la visibilité IA et du positionnement d'autorité"
+  },
+  "visibility_results": {
+    "overall_visibility": 0,
+    "platform_scores": {
+      "ChatGPT": 0,
+      "Claude": 0,
+      "Perplexity": 0,
+      "Gemini": 0,
+      "Google AI Overviews": 0
+    },
+    "queries_tested": 10,
+    "total_tests": 50,
+    "details": [
+      {
+        "platform": "ChatGPT",
+        "query": "meilleurs {service} Québec",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "meilleurs {service} Québec",
+        "mentioned": false,
+        "answer": "# Meilleurs services au Québec\n\nVoici quelques-uns des services les plus réputés au Québec :\n\n## Services gouvernementaux\n- **Services Québec** - Guichet unique pour les services gouvernementaux\n- **SAAQ** (Société de l'assurance automobile du Québec)\n- **RAMQ** (Régie de l'assurance maladie du Québec)\n- **Revenu Québec**\n\n## Santé\n- **CLSC** (Centres locaux de services communautaires)\n- **Info-Santé 811**\n- **Réseau des hôpitaux universitaires**\n\n## Transport\n- **STM** (Société de transport de Montréal)\n- **RTC** (Réseau de transport de la Capitale)\n- **EXO** (transport métropolitain)\n\n## Éducation\n- **Réseau des universités québécoises**\n- **Réseau des cégeps**\n- **Services de garde subventionnés (CPE)**\n\n## Télécommunications\n- **Vidéotron**\n- **Bell Québec**\n- **Telus Québec**\n\nPour des recommandations plus précises, pourriez-vous spécifier quel type de service vous recherchez en particulier?",
+        "tokens_used": 336
+      },
+      {
+        "platform": "Perplexity",
+        "query": "meilleurs {service} Québec",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "meilleurs {service} Québec",
+        "mentioned": false,
+        "answer": "Pour vous recommander les meilleurs services à Québec, j'ai besoin de plus d'informations.  \"Service\" est un terme très large.  Pourriez-vous préciser le type de service que vous recherchez?\n\nPar exemple, cherchez-vous:\n\n*   **Un service de réparation (auto, électroménager, plomberie, etc.)?**\n*   **Un service professionnel (avocat, comptable, notaire, etc.)?**\n*   **Un service de divertissement (restaurants, activités, etc.)?**\n*   **Un service de santé (médecin, dentiste, physiothérapeute, etc.)?**\n*   **Un service gouvernemental?**\n*   **Un service à domicile (ménage, jardinage, etc.)?**\n*   **Un service de livraison?**\n*   **Un service de télécommunication (internet, cellulaire, etc.)?**\n\nPlus vous me donnez de détails, plus je pourrai vous fournir des recommandations pertinentes et utiles.  Par exemple, si vous cherchez un bon restaurant, quel type de cuisine préférez-vous? Quel est votre budget?\n\nN'hésitez pas à me donner le plus de détails possible!\n"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "meilleurs {service} Québec",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "comment choisir {service}",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "comment choisir {service}",
+        "mentioned": false,
+        "answer": "# Comment choisir un service\n\nPour choisir un service adapté à vos besoins, voici quelques conseils généraux :\n\n## Définir vos besoins\n- Identifiez clairement ce que vous attendez du service\n- Établissez une liste de fonctionnalités essentielles\n\n## Comparer les options\n- Recherchez différents prestataires\n- Comparez les prix, fonctionnalités et conditions\n\n## Vérifier la réputation\n- Consultez les avis clients\n- Renseignez-vous sur la fiabilité du prestataire\n\n## Examiner le support client\n- Vérifiez les moyens de contact disponibles\n- Renseignez-vous sur les délais de réponse\n\n## Considérer le rapport qualité-prix\n- Ne vous fiez pas uniquement au prix le plus bas\n- Évaluez la valeur globale du service\n\nPour un conseil plus personnalisé, pourriez-vous préciser quel type de service vous recherchez exactement ?",
+        "tokens_used": 265
+      },
+      {
+        "platform": "Perplexity",
+        "query": "comment choisir {service}",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "comment choisir {service}",
+        "mentioned": false,
+        "answer": "Pour vous aider à choisir le bon service, j'ai besoin de plus d'informations. \"Service\" est un terme très large. Pour vous donner des conseils pertinents, veuillez me préciser **quel type de service** vous recherchez.\n\nPar exemple, recherchez-vous :\n\n*   **Un service de streaming vidéo ?** (Netflix, Disney+, Amazon Prime Video, etc.)\n*   **Un service de stockage cloud ?** (Google Drive, Dropbox, OneDrive, etc.)\n*   **Un service de livraison de repas ?** (Uber Eats, DoorDash, Grubhub, etc.)\n*   **Un service de télécommunication ?** (Fournisseur d'accès internet, opérateur mobile)\n*   **Un service de comptabilité ?**\n*   **Un service de nettoyage ?**\n*   **Un service de développement web ?**\n\nUne fois que vous m'aurez précisé le type de service, je pourrai vous poser des questions plus précises pour comprendre vos besoins et vous donner des conseils personnalisés.\n\nEn attendant, voici quelques questions générales à considérer lors du choix d'un service :\n\n*   **Quels sont vos besoins spécifiques ?** (Fonctionnalités, budget, etc.)\n*   **Quelle est la réputation du fournisseur de services ?** (Lisez les avis en ligne, demandez des recommandations)\n*   **Quels sont les tarifs et les conditions d'utilisation ?** (Frais cachés, durée de l'engagement, etc.)\n*   **Quel est le niveau de support client offert ?** (Disponibilité, réactivité, etc.)\n*   **Existe-t-il une période d'essai gratuite ?** (Pour tester le service avant de s'engager)\n\nN'hésitez pas à me donner plus de détails pour que je puisse vous aider au mieux !\n"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "comment choisir {service}",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "{service} prix Montréal",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "{service} prix Montréal",
+        "mentioned": false,
+        "answer": "Pour obtenir des informations sur les prix des services à Montréal, j'aurais besoin de plus de détails sur le service spécifique qui vous intéresse. Montréal offre une grande variété de services dans différents domaines comme :\n\n- Services de transport (taxi, transport en commun, location de voitures)\n- Services de santé\n- Services de restauration\n- Services d'hébergement\n- Services professionnels (plomberie, électricité, etc.)\n- Services de loisirs\n\nPourriez-vous préciser quel type de service vous recherchez à Montréal? Je pourrai alors vous fournir des informations plus précises sur les prix.",
+        "tokens_used": 182
+      },
+      {
+        "platform": "Perplexity",
+        "query": "{service} prix Montréal",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "{service} prix Montréal",
+        "mentioned": false,
+        "answer": "Pour vous donner une estimation du prix d'un service à Montréal, j'ai besoin de savoir de quel service vous parlez.  Par exemple, voulez-vous connaître le prix :\n\n*   **D'une coupe de cheveux?**\n*   **D'un trajet en taxi?**\n*   **D'un plombier?**\n*   **D'un repas au restaurant?**\n*   **D'un service de ménage?**\n*   **D'un abonnement internet?**\n\nPlus vous serez précis, plus je pourrai vous donner une réponse utile.  N'hésitez pas à me donner le nom du service spécifique que vous recherchez.\n"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "{service} prix Montréal",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "comparatif {service} Québec",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "comparatif {service} Québec",
+        "mentioned": false,
+        "answer": "# Comparatif des services offerts par Services Québec\n\nServices Québec est un organisme gouvernemental qui offre plusieurs types de services aux citoyens québécois. Voici un comparatif des principaux services disponibles :\n\n## Services aux citoyens\n\n| Service | Description | Accessibilité | Particularités |\n|---------|-------------|---------------|----------------|\n| Services en ligne | Accès à de nombreux formulaires et demandes via le portail web | 24/7 | Nécessite parfois un compte clicSÉQUR |\n| Bureaux physiques | Services en personne | Heures d'ouverture régulières | Présents dans toutes les régions du Québec |\n| Services téléphoniques | Information par téléphone | Heures d'ouverture étendues | Temps d'attente variable |\n\n## Principaux domaines de services\n\n| Domaine | Services offerts | Avantages |\n|---------|-----------------|-----------|\n| Emploi | Recherche d'emploi, formation, programmes d'aide | Accompagnement personnalisé |\n| Aide sociale | Soutien financier, programmes d'insertion | Évaluation des besoins individuels |\n| État civil | Certificats (naissance, mariage, décès) | Service essentiel pour documents officiels |\n| Registre foncier | Consultation des droits immobiliers | Accès aux informations cadastrales |\n| Services aux entreprises | Démarrage, permis, licences | Accompagnement pour entrepreneurs |\n\n## Comparaison des modes d'accès\n\n- **En ligne** : Plus rapide, accessible en tout temps, mais moins personnalisé\n- **En personne** : Conseils adaptés, aide pour remplir les formulaires, mais nécessite un déplacement\n- **Par téléphone** : Bon compromis entre accessibilité et service personnalisé\n\nPour obtenir des informations plus précises sur un service spécifique de Services Québec, n'hésitez pas à préciser votre",
+        "tokens_used": 516
+      },
+      {
+        "platform": "Perplexity",
+        "query": "comparatif {service} Québec",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "comparatif {service} Québec",
+        "mentioned": false,
+        "answer": "Pour vous fournir un comparatif pertinent des services au Québec, j'ai besoin de plus de précisions.  Quel type de service vous intéresse?  Par exemple, cherchez-vous à comparer:\n\n*   **Les fournisseurs d'accès internet?** (e.g., Vidéotron, Bell, EBOX, etc.)\n*   **Les compagnies d'assurance automobile?** (e.g., Desjardins, Intact, La Capitale, etc.)\n*   **Les institutions financières?** (e.g., Desjardins, Banque Nationale, RBC, etc.)\n*   **Les services de garderie?** (e.g., CPE, garderies privées subventionnées, garderies privées non subventionnées)\n*   **Les services de santé?** (e.g., public vs. privé, différents hôpitaux, etc.)\n*   **Les services de transport en commun?** (e.g., STM, RTL, STL, etc.)\n*   **Les services de téléphonie mobile?** (e.g., Bell, Rogers, Telus, Vidéotron, Fizz, etc.)\n*   **Les services de streaming?** (e.g., Netflix, Crave, Disney+, Amazon Prime Video, etc.)\n*   **Les services de livraison de repas?** (e.g., Uber Eats, DoorDash, SkipTheDishes)\n*   **Les services gouvernementaux?** (e.g., SAAQ, RAMQ, etc. - comparaison de l'efficacité, des temps d'attente, etc.)\n\nPlus vous serez précis, plus je pourrai vous donner une réponse utile et pertinente.  N'hésitez pas à me donner des détails sur ce que vous recherchez.  Par exemple, si vous cherchez à comparer les fournisseurs d'accès internet, dites-moi quel est votre budget, votre besoin en termes de vitesse, et votre localisation.\n"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "comparatif {service} Québec",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "guide {service} débutant",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "guide {service} débutant",
+        "mentioned": false,
+        "answer": "# Guide du Débutant pour les Services\n\n## Introduction\nBienvenue dans ce guide pour débutants sur les services. Ce document a pour but de vous aider à comprendre les bases des services, qu'il s'agisse de services en ligne, de services clients, ou d'autres types de services.\n\n## Qu'est-ce qu'un service?\nUn service est une prestation fournie par une personne ou une organisation pour répondre à un besoin spécifique. Contrairement à un produit physique, un service est généralement intangible.\n\n## Types de services courants\n- Services en ligne (hébergement web, streaming, cloud)\n- Services clients (assistance, support technique)\n- Services professionnels (conseil, formation)\n- Services publics (administration, santé, éducation)\n- Services quotidiens (restauration, transport, entretien)\n\n## Comment choisir un service\n1. **Identifiez vos besoins** précis\n2. **Comparez les offres** disponibles\n3. **Vérifiez les avis** et recommandations\n4. **Examinez les tarifs** et conditions\n5. **Testez si possible** avant un engagement à long terme\n\n## Premiers pas avec un nouveau service\n- Lisez attentivement les conditions d'utilisation\n- Configurez correctement votre compte/profil\n- Explorez les fonctionnalités de base\n- Consultez les tutoriels ou guides disponibles\n- N'hésitez pas à contacter le support en cas de question\n\n## Conseils pour une bonne expérience\n- Gardez trace de vos identifiants de connexion\n- Restez informé des mises à jour\n- Donnez des retours constructifs\n- Utilisez régulièrement le service pour en maîtriser les fonctionnalités\n\n## Conclusion\nPrendre en main un nouveau service peut sembler intimidant au début, mais avec un peu de patience et de pratique, vous deviendrez rapidement à l'aise. N'hésitez pas à explorer et à poser des questions",
+        "tokens_used": 514
+      },
+      {
+        "platform": "Perplexity",
+        "query": "guide {service} débutant",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "guide {service} débutant",
+        "mentioned": false,
+        "answer": "## Guide du Débutant pour {service}\n\nCe guide est conçu pour vous aider à démarrer avec {service}, que vous soyez un novice complet ou que vous ayez une expérience limitée. Nous allons couvrir les bases, les concepts clés, et vous donner des conseils pour une utilisation efficace.\n\n**I. Qu'est-ce que {service} ?**\n\n*   **Définition simple :** Expliquez en termes simples ce que fait {service}.  Évitez le jargon technique au maximum.\n*   **Objectif principal :** Quel problème {service} résout-il ?  Quel est son but principal ?\n*   **Exemples d'utilisation :** Donnez quelques exemples concrets de la façon dont les gens utilisent {service} dans la vie réelle.\n*   **Avantages clés :**  Pourquoi devriez-vous utiliser {service} ?  Quels sont les bénéfices que vous pouvez en retirer ? (Gain de temps, réduction des coûts, amélioration de l'efficacité, etc.)\n\n**Exemple (si {service} = Google Analytics) :**\n\n*   **Définition simple :** Google Analytics est un outil gratuit qui vous permet de suivre le trafic sur votre site web.\n*   **Objectif principal :** Il vous aide à comprendre comment les gens trouvent votre site, ce qu'ils font une fois qu'ils y sont, et comment vous pouvez améliorer votre site pour attirer plus de visiteurs et les convertir en clients.\n*   **Exemples d'utilisation :** Vous pouvez voir quelles pages sont les plus populaires, d'où viennent vos visiteurs (Google, Facebook, etc.), et combien de temps ils passent sur votre site.\n*   **Avantages clés :**  Comprendre le comportement de vos visiteurs, optimiser votre site web, améliorer votre marketing, et augmenter vos ventes.\n\n**II. Concepts Clés de {service}**\n\n*   **Vocabulaire de base :** Définissez les termes importants que vous rencontrerez souvent en utilisant {service}.  (Exemple : \"KPI\", \"Dashboard\", \"Segment\", etc.)\n*   **Fonctionnalités principales :** Décrivez les fonctionnalités les plus importantes de {service}.  (Exemple : création de rapports, analyse de données, automatisation, etc.)\n*   **Architecture (si pertinent) :**  Si la compréhension de"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "guide {service} débutant",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "{service} professionnel vs autonome",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "{service} professionnel vs autonome",
+        "mentioned": false,
+        "answer": "# Professionnel vs Autonome\n\n## Différences principales\n\n**Professionnel :**\n- Désigne quelqu'un qui exerce une activité comme métier\n- Implique généralement une formation spécifique et des qualifications reconnues\n- Suppose le respect de normes et standards d'un secteur\n- Souvent associé à une rémunération pour services rendus\n\n**Autonome :**\n- Désigne quelqu'un qui peut fonctionner de façon indépendante\n- Capable de prendre ses propres décisions\n- Peut gérer ses tâches sans supervision constante\n- Ne fait pas nécessairement référence à un contexte professionnel\n\n## Dans un contexte de travail\n\nUn travailleur peut être à la fois professionnel (qualifié dans son domaine) et autonome (capable de travailler sans supervision constante).\n\nLe statut d'autonome peut aussi faire référence au statut juridique d'un travailleur indépendant (auto-entrepreneur, freelance), par opposition à un salarié.\n\nEst-ce que vous souhaitez des précisions sur un aspect particulier de cette comparaison?",
+        "tokens_used": 298
+      },
+      {
+        "platform": "Perplexity",
+        "query": "{service} professionnel vs autonome",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "{service} professionnel vs autonome",
+        "mentioned": false,
+        "answer": "Pour comparer un service professionnel et un service autonome, il est important de définir ce que l'on entend par chacun. Voici une distinction générale, suivie d'une comparaison plus détaillée :\n\n**Service Professionnel :**\n\n*   **Définition :** Un service fourni par une entreprise ou un individu ayant une expertise spécifique, des qualifications reconnues (diplômes, certifications), et qui opère généralement dans un cadre formel avec des contrats, des assurances, et des normes professionnelles.\n*   **Exemples :** Services juridiques (avocat), comptables (expert-comptable), médicaux (médecin), architecturaux (architecte), ingénierie (ingénieur), conseil en management (consultant), etc.\n\n**Service Autonome (Freelance ou Indépendant) :**\n\n*   **Définition :** Un service fourni par un individu qui travaille à son propre compte, sans être employé par une entreprise. Il peut avoir des compétences spécialisées, mais n'est pas toujours soumis aux mêmes exigences de qualifications formelles ou de normes professionnelles qu'un service professionnel.\n*   **Exemples :** Rédacteur web freelance, graphiste indépendant, développeur web freelance, consultant marketing indépendant, coach personnel, etc.\n\n**Comparaison Détaillée :**\n\n| Caractéristique        | Service Professionnel                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       "
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "{service} professionnel vs autonome",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "erreurs éviter {service}",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "erreurs éviter {service}",
+        "mentioned": false,
+        "answer": "# Erreurs à éviter dans le secteur des services\n\nVoici les erreurs courantes à éviter lorsqu'on travaille dans le domaine des services :\n\n## Communication\n- Ne pas écouter attentivement les besoins du client\n- Utiliser un jargon technique incompréhensible\n- Interrompre le client pendant qu'il s'exprime\n- Communiquer de façon impersonnelle ou robotique\n\n## Relation client\n- Faire des promesses impossibles à tenir\n- Négliger de suivre les demandes ou réclamations\n- Montrer de l'impatience face aux questions répétitives\n- Ne pas s'excuser sincèrement en cas d'erreur\n\n## Organisation\n- Manquer de préparation avant un rendez-vous\n- Ne pas respecter les délais annoncés\n- Perdre des informations importantes du client\n- Négliger la documentation des interventions\n\n## Professionnalisme\n- Critiquer d'autres clients ou collègues\n- Arriver en retard aux rendez-vous\n- Négliger son apparence professionnelle\n- Montrer des signes de désintérêt\n\n## Compétences\n- Ne pas se former continuellement\n- Refuser de reconnaître ses limites\n- Négliger de demander de l'aide quand nécessaire\n- Proposer des solutions inadaptées aux besoins réels\n\nAvez-vous besoin de conseils plus spécifiques pour un type de service particulier ?",
+        "tokens_used": 386
+      },
+      {
+        "platform": "Perplexity",
+        "query": "erreurs éviter {service}",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "erreurs éviter {service}",
+        "mentioned": false,
+        "answer": "Pour vous aider à éviter les erreurs courantes lors de l'utilisation d'un service, veuillez me préciser de quel service vous parlez. Par exemple, voulez-vous des conseils pour :\n\n*   **Un service spécifique en ligne** (ex: Google Ads, Facebook Ads, Amazon Seller Central, un logiciel de comptabilité, un CRM, etc.) ?\n*   **Un type de service général** (ex: service client, service de livraison, service de réparation, etc.) ?\n*   **Un service professionnel** (ex: service juridique, service comptable, service de conseil, etc.) ?\n\nPlus vous me donnez de détails, plus je pourrai vous fournir des informations pertinentes et utiles.\n\nEn attendant, voici quelques erreurs générales à éviter, quel que soit le service :\n\n*   **Ne pas lire les conditions générales d'utilisation (CGU) :** C'est crucial pour comprendre vos droits et obligations, ainsi que les limites du service.\n*   **Ne pas sécuriser vos informations personnelles :** Utilisez des mots de passe forts et uniques, activez l'authentification à deux facteurs lorsque c'est possible, et soyez vigilant face aux tentatives de phishing.\n*   **Ne pas sauvegarder vos données :** Si le service implique le stockage de données importantes, assurez-vous d'avoir une sauvegarde externe en cas de problème.\n*   **Ne pas vérifier les avis et témoignages :** Avant de vous engager avec un service, consultez les avis d'autres utilisateurs pour vous faire une idée de sa qualité et de sa fiabilité.\n*   **Ne pas poser de questions :** Si vous avez des doutes ou des interrogations, n'hésitez pas à contacter le service client pour obtenir des éclaircissements.\n*   **Ne pas suivre les instructions :** Lisez attentivement les guides d'utilisation et les tutoriels fournis par le service pour éviter les erreurs d'utilisation.\n*   **Ne pas signaler les problèmes :** Si vous rencontrez un bug ou un dysfonctionnement, signalez-le au service client pour qu'il puisse être corrigé.\n*   **Ne pas surveiller les performances :** Si le service est lié à votre activité professionnelle, suivez de près ses performances pour vous assurer qu'il répond à vos besoins.\n*   **Ne pas comparer les offres :** Avant de choisir un service, comparez les différentes"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "erreurs éviter {service}",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "{service} en ligne vs présentiel",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "{service} en ligne vs présentiel",
+        "mentioned": false,
+        "answer": "# Comparaison entre {service} en ligne et présentiel\n\n## {Service} en ligne\n**Avantages**:\n- Flexibilité horaire (accès 24h/24, 7j/7)\n- Pas de déplacement nécessaire\n- Souvent moins coûteux\n- Accessibilité depuis n'importe où\n- Possibilité d'enregistrement ou de documentation\n\n**Inconvénients**:\n- Interactions humaines limitées\n- Problèmes techniques potentiels\n- Nécessite une connexion internet fiable\n- Peut manquer de personnalisation\n- Distractions potentielles\n\n## {Service} présentiel\n**Avantages**:\n- Contact humain direct\n- Communication non verbale plus riche\n- Environnement dédié et adapté\n- Moins de distractions\n- Expérience sociale et communautaire\n\n**Inconvénients**:\n- Horaires fixes\n- Nécessite des déplacements\n- Généralement plus coûteux\n- Contraintes géographiques\n- Temps de trajet à prévoir\n\nPour choisir entre ces deux options, il est important de considérer vos préférences personnelles, votre emploi du temps, votre budget et la nature spécifique du service dont vous avez besoin.",
+        "tokens_used": 343
+      },
+      {
+        "platform": "Perplexity",
+        "query": "{service} en ligne vs présentiel",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "{service} en ligne vs présentiel",
+        "mentioned": false,
+        "answer": "Pour comparer un service en ligne et un service en présentiel, il faut prendre en compte plusieurs aspects. Voici une analyse comparative générale, suivie de quelques exemples pour illustrer :\n\n**Avantages du service en ligne :**\n\n*   **Commodité et accessibilité :** Disponible 24h/24, 7j/7, depuis n'importe où avec une connexion internet. Pas besoin de se déplacer.\n*   **Coût :** Souvent moins cher car moins de frais généraux (location, personnel, etc.).\n*   **Choix :** Accès à un plus large éventail de prestataires, sans être limité géographiquement.\n*   **Flexibilité :** Possibilité de consommer le service à son propre rythme (cours en ligne, tutoriels, etc.).\n*   **Rapidité :** Accès immédiat à l'information ou au service (achat en ligne, consultation rapide, etc.).\n*   **Personnalisation :** Certains services en ligne peuvent être hautement personnalisés grâce à l'intelligence artificielle et à l'analyse de données.\n\n**Inconvénients du service en ligne :**\n\n*   **Manque d'interaction humaine :** Moins de contact direct avec le prestataire, ce qui peut être un frein pour certains.\n*   **Problèmes techniques :** Dépendance à la technologie et aux connexions internet.\n*   **Sécurité et confidentialité :** Risques liés à la sécurité des données personnelles et financières.\n*   **Difficulté à évaluer la qualité :** Plus difficile de se faire une idée précise de la qualité du service avant de l'utiliser.\n*   **Besoin d'autonomie :** Nécessite une certaine autonomie et discipline pour suivre un cours en ligne ou utiliser un service complexe.\n*   **Moins adapté à certaines situations :** Peut ne pas être adapté aux situations d'urgence ou nécessitant une intervention physique.\n\n**Avantages du service en présentiel :**\n\n*   **Interaction humaine :** Contact direct avec le prestataire, ce qui favorise la confiance et la communication.\n*   **Environnement dédié :** Ambiance propice à l'apprentissage ou à la détente (salle de classe, spa, etc.).\n*   **Accompagnement personnalisé :** Possibilité de poser des questions et d'obtenir des réponses immédiates"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "{service} en ligne vs présentiel",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "combien coûte {service}",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "combien coûte {service}",
+        "mentioned": false,
+        "answer": "Je ne peux pas vous dire combien coûte un service spécifique car vous avez utilisé un placeholder {service} dans votre question. Pour vous donner une réponse précise sur le coût d'un service, j'aurais besoin de savoir de quel service il s'agit exactement. Pourriez-vous me préciser quel service vous intéresse?",
+        "tokens_used": 109
+      },
+      {
+        "platform": "Perplexity",
+        "query": "combien coûte {service}",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "combien coûte {service}",
+        "mentioned": false,
+        "answer": "Pour vous donner une estimation précise du coût de \"{service}\", j'ai besoin de plus d'informations. Le prix peut varier considérablement en fonction de plusieurs facteurs.\n\nPourriez-vous me préciser le type de service dont vous parlez ? Par exemple, s'agit-il de :\n\n*   **Un service spécifique d'une entreprise ?** (Ex: \"combien coûte l'abonnement Netflix ?\", \"combien coûte une consultation chez un médecin généraliste ?\")\n*   **Un type de service général ?** (Ex: \"combien coûte un service de ménage ?\", \"combien coûte un service de traduction ?\")\n*   **Un service dans un lieu géographique précis ?** (Ex: \"combien coûte un service de coiffure à Paris ?\", \"combien coûte un service de plomberie à Lyon ?\")\n\nPlus vous me donnez de détails, plus je pourrai vous donner une réponse pertinente.\n\nPar exemple, si vous me demandez \"combien coûte un service de ménage\", je pourrais vous répondre que le prix peut varier en fonction de la taille de la maison, de la fréquence des visites, et de la région.\n\nJ'attends vos précisions !\n"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "combien coûte {service}",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      },
+      {
+        "platform": "ChatGPT",
+        "query": "avis {service} Québec",
+        "mentioned": false,
+        "error": "Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+      },
+      {
+        "platform": "Claude",
+        "query": "avis {service} Québec",
+        "mentioned": false,
+        "answer": "# Avis sur les services de Québec\n\nSi vous cherchez à donner votre avis sur les services gouvernementaux du Québec, voici quelques informations utiles :\n\n## Services Québec\n\nServices Québec est le guichet unique d'accès aux services gouvernementaux québécois. Pour donner votre avis ou faire part de vos commentaires sur leurs services, vous pouvez :\n\n- Visiter leur site web officiel : [Québec.ca](https://www.quebec.ca)\n- Appeler leur ligne d'information générale : 1-877-644-4545\n- Vous rendre dans un bureau de Services Québec en personne\n\n## Formulaires de satisfaction\n\nDe nombreux services gouvernementaux québécois disposent de formulaires d'évaluation de la satisfaction après utilisation d'un service. Ces formulaires sont généralement disponibles :\n- En ligne après avoir utilisé un service numérique\n- Sur place dans les bureaux de Services Québec\n- Par courriel suite à une interaction avec un service\n\n## Plaintes et suggestions\n\nSi vous souhaitez déposer une plainte formelle ou faire une suggestion d'amélioration, chaque ministère et organisme dispose généralement d'un processus spécifique accessible via leur site web ou en contactant directement leur service à la clientèle.\n\nAvez-vous besoin d'informations sur un service spécifique du gouvernement du Québec?",
+        "tokens_used": 364
+      },
+      {
+        "platform": "Perplexity",
+        "query": "avis {service} Québec",
+        "mentioned": false,
+        "error": "400 Client Error: Bad Request for url: https://api.perplexity.ai/chat/completions"
+      },
+      {
+        "platform": "Gemini",
+        "query": "avis {service} Québec",
+        "mentioned": false,
+        "answer": "Pour vous donner un avis pertinent sur un service du gouvernement du Québec, j'ai besoin de plus d'informations.  Veuillez préciser de quel service vous parlez. Par exemple :\n\n*   **\"Avis [Service Québec] sur le programme de prêts et bourses\"**\n*   **\"Avis [Service Québec] sur la demande de permis de conduire\"**\n*   **\"Avis [Service Québec] sur la recherche d'emploi\"**\n*   **\"Avis [Service Québec] sur le site web de Service Québec\"**\n\nPlus vous serez précis, plus je pourrai vous fournir un avis utile.\n\nEn attendant, voici quelques points généraux sur Service Québec :\n\n**Points positifs potentiels (généraux) :**\n\n*   **Guichet unique :** Service Québec vise à centraliser de nombreux services gouvernementaux, ce qui peut simplifier les démarches pour les citoyens.\n*   **Accessibilité :** Présence de bureaux physiques dans plusieurs régions du Québec, en plus des services en ligne et téléphoniques.\n*   **Information :** Fournit de l'information sur les programmes et services gouvernementaux.\n*   **Aide à l'emploi :** Offre des services d'aide à la recherche d'emploi, de formation et de développement de carrière.\n\n**Points négatifs potentiels (généraux) :**\n\n*   **Complexité :** La bureaucratie gouvernementale peut parfois rendre les démarches complexes et longues.\n*   **Délais :** Les délais de traitement des demandes peuvent être longs.\n*   **Information parfois difficile à trouver :** L'information sur le site web peut parfois être difficile à trouver ou à comprendre.\n*   **Expériences variables :** La qualité du service peut varier d'un bureau à l'autre et d'un agent à l'autre.\n\n**Pour obtenir un avis plus précis, veuillez me donner le nom du service spécifique qui vous intéresse.**\n"
+      },
+      {
+        "platform": "Google AI Overviews",
+        "query": "avis {service} Québec",
+        "mentioned": false,
+        "answer": "Simulation - API non disponible",
+        "note": "Google AI Overviews nécessite du web scraping"
+      }
+    ]
+  },
+  "test_queries": [
+    "meilleurs {service} Québec",
+    "comment choisir {service}",
+    "{service} prix Montréal",
+    "comparatif {service} Québec",
+    "guide {service} débutant",
+    "{service} professionnel vs autonome",
+    "erreurs éviter {service}",
+    "{service} en ligne vs présentiel",
+    "combien coûte {service}",
+    "avis {service} Québec",
+    "avis Data-Driven Digital Growth for Businesses | Sekoia",
+    "comment data-driven digital growth for businesses | sekoia",
+    "avis Data-Driven Digital Growth for Businesses | Sekoia",
+    "comment data-driven digital growth for businesses | sekoia",
+    "avis Optimize Your Digital Strategy with Sekoia’s Methodology",
+    "guide again Québec",
+    "again vs clients",
+    "guide again Québec",
+    "again vs clients",
+    "guide again Québec"
+  ],
+  "pdfUrl": null,
+  "docxUrl": "/reports/2d23c277-deb0-4f51-aec6-2905db438ca7_report.docx",
+  "dashboardUrl": "/dashboards/2d23c277-deb0-4f51-aec6-2905db438ca7_dashboard.html",
+  "createdAt": "2025-11-12T22:09:52.416444+00:00",
+  "competitive_intelligence": {
+    "competitors_analyzed": 1,
+    "analyses": [
+      {
+        "url": "https://www.quebec.ca)",
+        "error": "HTTPSConnectionPool(host='www.quebec.ca)', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0xf96f65ddb810>: Failed to resolve 'www.quebec.ca)' ([Errno -2] Name or service not known)\"))"
+      }
+    ],
+    "comparative_metrics": {
+      "headers": [
+        "Métrique",
+        "Compétiteur 1",
+        "Compétiteur 2",
+        "Compétiteur 3",
+        "NOUS",
+        "GAP"
+      ],
+      "rows": [
+        [
+          "Longueur (mots)",
+          "0",
+          "0",
+          "-0"
+        ],
+        [
+          "Statistiques",
+          "0",
+          "0",
+          "-0"
+        ],
+        [
+          "H2 descriptifs",
+          "0",
+          "0",
+          "-0"
+        ],
+        [
+          "TL;DR",
+          "0",
+          "0",
+          "-0"
+        ],
+        [
+          "Listes",
+          "0",
+          "0",
+          "-0"
+        ],
+        [
+          "Tableaux",
+          "0",
+          "0",
+          "-0"
+        ],
+        [
+          "FAQ",
+          "0",
+          "0",
+          "-0"
+        ],
+        [
+          "Schema markup",
+          "0",
+          "0",
+          "-0"
+        ]
+      ]
+    },
+    "actionable_insights": []
+  },
+  "schemas": {
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Data-Driven Digital Growth for Businesses",
+      "url": "sekoia.ca",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "sekoia.ca/logo.png"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "contactType": "customer service",
+        "areaServed": "CA-QC",
+        "availableLanguage": [
+          "French",
+          "English"
+        ]
+      },
+      "sameAs": []
+    },
+    "website": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Data-Driven Digital Growth for Businesses",
+      "url": "sekoia.ca",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "sekoia.ca/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    "breadcrumb": {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "sekoia.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Data-Driven Digital Growth for Businesses | Sekoia",
+          "item": "https://sekoia.ca"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Data-Driven Digital Growth for Businesses | Sekoia",
+          "item": "https://sekoia.ca/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Optimize Your Digital Strategy with Sekoia’s Methodology",
+          "item": "https://sekoia.ca/methodology/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "B2B Lead Generation & Automation Services | Sekoia",
+          "item": "https://sekoia.ca/b2b-lead-generation/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Accelerate Your eCommerce Sales with Sekoia",
+          "item": "https://sekoia.ca/ecommerce/"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quels sont les mots utilisés par vos clients pour trouver vos produits et services?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nous sommes une agence de croissance qui aide les petites et moyennes entreprises à mieux performer sur des marchés hautement concurrentiels."
+            }
+          }
+        ]
+      }
+    ],
+    "article": [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Accessibilité Web : Conformité et optimisation | Sekoia",
+        "url": "https://sekoia.ca/fr/accessibilite-web/",
+        "datePublished": "2025-11-12T22:09:52.414050",
+        "dateModified": "2025-11-12T22:09:52.414056",
+        "author": {
+          "@type": "Person",
+          "name": "Expert"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Organisation"
+        },
+        "description": "Optimisez votre site pour l’accessibilité avec Sekoia, conforme aux normes ADA, AODA, WCAG 2.1, et plus. Demandez un audit gratuit.",
+        "wordCount": 534
+      }
+    ],
+    "local_business": {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Data-Driven Digital Growth for Businesses",
+      "url": "sekoia.ca",
+      "telephone": "",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Montréal",
+        "addressRegion": "QC",
+        "postalCode": "",
+        "addressCountry": "CA"
+      }
+    },
+    "implementation_guide": "# Guide d'Implémentation des Schemas JSON-LD\n\n## Site: sekoia.ca\n## Date: 2025-11-12\n\n---\n\n## 📋 Résumé\n\n✅ 6 types de schemas générés\n🎯 Impact GEO estimé: +40-50% de visibilité IA\n\n---\n\n## 🚀 Instructions d'Implémentation\n\n### 1. Schema Organization (Page d'accueil)\n\n**Priorité: CRITIQUE**  \n**Impact GEO: +50%**\n\n```html\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Organization\",\n  \"name\": \"Data-Driven Digital Growth for Businesses\",\n  \"url\": \"sekoia.ca\",\n  \"logo\": {\n    \"@type\": \"ImageObject\",\n    \"url\": \"sekoia.ca/logo.png\"\n  },\n  \"contactPoint\": {\n    \"@type\": \"ContactPoint\",\n    \"telephone\": \"+1-XXX-XXX-XXXX\",\n    \"contactType\": \"customer service\",\n    \"areaServed\": \"CA-QC\",\n    \"availableLanguage\": [\n      \"French\",\n      \"English\"\n    ]\n  },\n  \"sameAs\": []\n}\n</script>\n```\n\n**Où placer:** Dans le `<head>` de la page d'accueil uniquement\n\n---\n\n### 2. Schema WebSite (Page d'accueil)\n\n**Priorité: HAUTE**  \n**Impact GEO: +20%**\n\n```html\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebSite\",\n  \"name\": \"Data-Driven Digital Growth for Businesses\",\n  \"url\": \"sekoia.ca\",\n  \"potentialAction\": {\n    \"@type\": \"SearchAction\",\n    \"target\": {\n      \"@type\": \"EntryPoint\",\n      \"urlTemplate\": \"sekoia.ca/search?q={search_term_string}\"\n    },\n    \"query-input\": \"required name=search_term_string\"\n  }\n}\n</script>\n```\n\n**Où placer:** Dans le `<head>` de la page d'accueil\n\n---\n\n### 3. Schema FAQPage (Pages FAQ)\n\n**Priorité: CRITIQUE**  \n**Impact GEO: +60%** (Les IA adorent les FAQs)\n\n```html\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"FAQPage\",\n  \"mainEntity\": [\n    {\n      \"@type\": \"Question\",\n      \"name\": \"Quels sont les mots utilisés par vos clients pour trouver vos produits et services?\",\n      \"acceptedAnswer\": {\n        \"@type\": \"Answer\",\n        \"text\": \"Nous sommes une agence de croissance qui aide les petites et moyennes entreprises à mieux performer sur des marchés hautement concurrentiels.\"\n      }\n    }\n  ]\n}\n</script>\n```\n\n**Où placer:** Sur chaque page contenant une FAQ\n\n---\n\n\n### 4. Schema Article (Pages de contenu)\n\n**Priorité: HAUTE**  \n**Impact GEO: +30%**\n\n```html\n(Voir exemples ci-dessous)\n```\n\n**Où placer:** Sur chaque article de blog ou guide\n\n---\n\n## ⚡ Quick Wins (Impact Immédiat)\n\n1. **Ajouter Organization + WebSite sur la page d'accueil** → 15 minutes → +40% visibilité\n2. **Créer une page FAQ avec FAQPage schema** → 2 heures → +60% chances d'être cité\n3. **Ajouter Article schema sur 5 articles principaux** → 1 heure → +30% indexation\n\n---\n\n## 📊 Validation\n\nAprès implémentation, valider avec:\n- Google Rich Results Test: https://search.google.com/test/rich-results\n- Schema.org Validator: https://validator.schema.org/\n\n---\n\n## 🎯 Résultats Attendus\n\nAprès 2-4 semaines:\n- Visibilité ChatGPT: +50%\n- Citations dans Claude: +40%\n- Apparitions Perplexity: +60%\n- Score GEO global: +2-3 points\n\n"
+  },
+  "alerts": []
+}
