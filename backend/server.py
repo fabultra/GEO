@@ -835,7 +835,7 @@ async def process_analysis_job(job_id: str):
             # Comparer avec analyse précédente
             previous = db_manager.get_previous_analysis(job_doc['url'])
             if previous:
-                alerts = db_manager.generate_alerts(report_dict, previous)
+                alerts = db_manager.generate_alerts(clean_report_dict, previous)
                 if alerts:
                     db_manager.save_alerts(job_doc['url'], alerts)
                     report_dict['alerts'] = alerts
