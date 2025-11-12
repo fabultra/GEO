@@ -180,15 +180,18 @@ backend:
   
   - task: "Word Report Generator (50-70 pages)"
     implemented: true
-    working: true
+    working: false
     file: "/app/backend/word_report_generator.py"
-    stuck_count: 0
+    stuck_count: 1
     priority: "high"
     needs_retesting: true
     status_history:
         - working: true
           agent: "main"
           comment: "Module complet avec génération de rapport de 50-70 pages incluant: cover page, executive summary, introduction GEO, méthodologie, analyse des 8 critères, recommandations, plan d'action 12 mois, ROI estimation, annexes."
+        - working: false
+          agent: "testing"
+          comment: "❌ ERREUR CRITIQUE - Syntax error 'unterminated string literal (detected at line 206)' dans word_report_generator.py. Le pipeline continue mais les téléchargements DOCX échouent avec 404. Fichier Word non généré. DOIT ÊTRE FIXÉ."
   
   - task: "HTML Dashboard Generator"
     implemented: true
