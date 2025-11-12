@@ -313,9 +313,8 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Core Analysis Pipeline Integration"
-    - "Module 3: Competitive Intelligence"
-    - "Module 4: Schema JSON-LD Generator"
+    - "Module 5: Query Expansion (20 → 500+ queries)"
+    - "Module 2: Automatic Content Generation (10 articles GEO-optimized)"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
