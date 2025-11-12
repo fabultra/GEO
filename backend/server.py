@@ -15,6 +15,7 @@ import requests
 from urllib.parse import urljoin, urlparse
 import json
 from anthropic import AsyncAnthropic
+from visibility_tester import VisibilityTester
 from io import BytesIO
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
