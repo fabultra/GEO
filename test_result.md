@@ -101,3 +101,186 @@
 #====================================================================================================
 # Testing Data - Main Agent and testing sub agent both should log testing data below this section
 #====================================================================================================
+
+user_problem_statement: |
+  Développer une plateforme SaaS complète de Generative Engine Optimization (GEO) avec 5 modules avancés:
+  - Module 1: Tests de visibilité actifs dans ChatGPT, Claude, Perplexity, Gemini
+  - Module 2: Génération automatique de 10 articles GEO-optimisés (2000+ mots)
+  - Module 3: Intelligence compétitive - Reverse-engineering des compétiteurs
+  - Module 4: Génération automatique de schemas JSON-LD (Organization, FAQ, Article, etc.)
+  - Module 5: Expansion de requêtes (20 → 500+ variations)
+  Deliverables: Rapport Word 50-70 pages, Dashboard HTML interactif, exports JSON/XLSX/MD
+
+backend:
+  - task: "Module 1: Visibility Testing (ChatGPT, Claude, Perplexity, Gemini)"
+    implemented: true
+    working: true
+    file: "/app/backend/visibility_tester.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: true
+          agent: "main"
+          comment: "Module complet avec analyse détaillée (position, sentiment, contexte). Intégré dans process_analysis_job."
+  
+  - task: "Module 2: Automatic Content Generation (10 articles GEO-optimized)"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/content_generator.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Module créé avec logique complète pour générer 10 articles de 2500-3000 mots via Claude. Pas encore intégré dans le pipeline principal. À tester."
+  
+  - task: "Module 3: Competitive Intelligence"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/competitive_intelligence.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Module complet créé avec analyse des compétiteurs, tableau comparatif et insights actionnables. NOUVELLEMENT intégré dans server.py process_analysis_job. À tester."
+  
+  - task: "Module 4: Schema JSON-LD Generator"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/schema_generator.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Module créé avec génération de 9 types de schemas (Organization, Website, FAQPage, Article, LocalBusiness, Service, HowTo, Review, Breadcrumb). NOUVELLEMENT intégré dans server.py. À tester."
+  
+  - task: "Module 5: Query Expansion (20 → 500+ queries)"
+    implemented: false
+    working: "NA"
+    file: "/app/backend/query_generator.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Le fichier query_generator.py existe mais génère seulement 20 requêtes. L'expansion vers 500+ requêtes n'est pas encore implémentée."
+  
+  - task: "Word Report Generator (50-70 pages)"
+    implemented: true
+    working: true
+    file: "/app/backend/word_report_generator.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: true
+          agent: "main"
+          comment: "Module complet avec génération de rapport de 50-70 pages incluant: cover page, executive summary, introduction GEO, méthodologie, analyse des 8 critères, recommandations, plan d'action 12 mois, ROI estimation, annexes."
+  
+  - task: "HTML Dashboard Generator"
+    implemented: true
+    working: true
+    file: "/app/backend/dashboard_generator.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: true
+          agent: "main"
+          comment: "Dashboard HTML interactif créé avec Chart.js pour graphique radar, barres de progression par plateforme, métriques clés, quick wins et recommandations."
+  
+  - task: "Database Manager (History & Alerts)"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/database_manager.py"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Module existant avec SQLite pour historique des analyses et génération d'alertes. Intégré dans process_analysis_job mais non testé."
+  
+  - task: "Core Analysis Pipeline Integration"
+    implemented: true
+    working: "NA"
+    file: "/app/backend/server.py"
+    stuck_count: 0
+    priority: "critical"
+    needs_retesting: true
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "Pipeline process_analysis_job mis à jour pour inclure: 1) Crawl 2) Query Generation 3) Visibility Testing 4) Competitive Intelligence 5) Schema Generation 6) Claude Analysis 7) Word Report 8) HTML Dashboard 9) History/Alerts. TOUT LE PIPELINE DOIT ÊTRE TESTÉ."
+
+frontend:
+  - task: "Report Page Display - Competitive Intelligence Section"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/pages/ReportPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "ReportPage n'affiche pas encore les données de competitive intelligence. Il faut ajouter un nouvel onglet/section pour afficher le tableau comparatif et les insights actionnables."
+  
+  - task: "Report Page Display - Schema JSON-LD Section"
+    implemented: false
+    working: "NA"
+    file: "/app/frontend/src/pages/ReportPage.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: "NA"
+          agent: "main"
+          comment: "ReportPage n'affiche pas encore les schemas générés ni le guide d'implémentation. Il faut ajouter un nouvel onglet pour afficher les schemas et le guide."
+
+metadata:
+  created_by: "main_agent"
+  version: "2.0"
+  test_sequence: 0
+  run_ui: false
+
+test_plan:
+  current_focus:
+    - "Core Analysis Pipeline Integration"
+    - "Module 3: Competitive Intelligence"
+    - "Module 4: Schema JSON-LD Generator"
+  stuck_tasks: []
+  test_all: false
+  test_priority: "high_first"
+
+agent_communication:
+    - agent: "main"
+      message: |
+        INTÉGRATION DES MODULES 3 & 4 TERMINÉE
+        
+        Travail effectué:
+        1. ✅ Créé schema_generator.py avec 9 types de schemas JSON-LD
+        2. ✅ Intégré competitive_intelligence.py dans le pipeline
+        3. ✅ Intégré schema_generator.py dans le pipeline
+        4. ✅ Ajouté extraction des compétiteurs depuis les résultats de visibilité
+        5. ✅ Mis à jour progress tracking (70% → 80%)
+        6. ✅ Ajouté competitive_intelligence et schemas aux report_dict
+        
+        État actuel:
+        - Le pipeline backend est complet et prêt à être testé
+        - Les modules 1, 3, 4 sont intégrés
+        - Le module 2 (content generation) existe mais n'est pas intégré
+        - Le module 5 (query expansion) est partiellement implémenté
+        
+        Prochaines étapes:
+        1. TESTER le backend complet avec deep_testing_backend_v2
+        2. Mettre à jour le frontend pour afficher competitive intelligence et schemas
+        3. Implémenter module 5 (query expansion) complètement
+        4. Intégrer module 2 (content generation) dans le pipeline si nécessaire
