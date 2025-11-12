@@ -661,10 +661,83 @@ async def process_analysis_job(job_id: str):
         
         await db.analysis_jobs.update_one(
             {"id": job_id},
+            {"$set": {"progress": 70}}
+        )
+        
+        # Step 4.5: Competitive Intelligence Analysis
+        competitive_data = {}
+        try:
+            from competitive_intelligence import CompetitiveIntelligence
+            
+            # Extraire les compétiteurs des résultats de visibilité
+            competitors_urls = []
+            visibility_details = visibility_data.get('details', [])
+            
+            # Identifier les domaines mentionnés dans les réponses IA
+            for detail in visibility_details:
+                answer = detail.get('answer', '')
+                # Extraire les URLs ou domaines mentionnés (logique simple)
+                if 'http' in answer:
+                    # Parser basique pour extraire des URLs
+                    import re
+                    urls = re.findall(r'https?://[^\s<>"]+|www\.[^\s<>"]+', answer)
+                    competitors_urls.extend(urls)
+            
+            # Nettoyer et dédupliquer
+            competitors_urls = list(set(competitors_urls))[:5]  # Top 5 compétiteurs
+            
+            if competitors_urls:
+                logger.info(f"Analyzing {len(competitors_urls)} competitors")
+                comp_intel = CompetitiveIntelligence()
+                competitive_data = comp_intel.analyze_competitors(competitors_urls, visibility_data)
+                logger.info(f"Competitive analysis completed: {competitive_data.get('competitors_analyzed', 0)} analyzed")
+            else:
+                logger.info("No competitors found in visibility results")
+                competitive_data = {
+                    'competitors_analyzed': 0,
+                    'analyses': [],
+                    'comparative_metrics': {},
+                    'actionable_insights': []
+                }
+        except Exception as e:
+            logger.error(f"Competitive intelligence failed: {str(e)}")
+            competitive_data = {'error': str(e)}
+        
+        await db.analysis_jobs.update_one(
+            {"id": job_id},
             {"$set": {"progress": 75}}
         )
         
-        # Step 5: Create report with enriched data and weighted scoring
+        # Step 5: Generate Schema Markup
+        schemas_data = {}
+        try:
+            from schema_generator import SchemaGenerator
+            
+            schema_gen = SchemaGenerator()
+            site_data = {
+                'url': job_doc['url'],
+                'name': crawl_data.get('pages', [{}])[0].get('title', '').split('|')[0].strip() if crawl_data.get('pages') else '',
+                'services': [],
+                'business_type': 'ProfessionalService'
+            }
+            
+            schemas_data = schema_gen.generate_all_schemas(site_data, crawl_data)
+            
+            # Générer le guide d'implémentation
+            implementation_guide = schema_gen.generate_implementation_guide(schemas_data, job_doc['url'])
+            schemas_data['implementation_guide'] = implementation_guide
+            
+            logger.info(f"Schema generation completed: {len(schemas_data)} schema types")
+        except Exception as e:
+            logger.error(f"Schema generation failed: {str(e)}")
+            schemas_data = {'error': str(e)}
+        
+        await db.analysis_jobs.update_one(
+            {"id": job_id},
+            {"$set": {"progress": 80}}
+        )
+        
+        # Step 6: Create report with enriched data and weighted scoring
         scores_dict = analysis_result['scores']
         
         # Appliquer le scoring pondéré
