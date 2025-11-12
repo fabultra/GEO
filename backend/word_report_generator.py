@@ -399,7 +399,7 @@ class WordReportGenerator:
         # Scores
         criteria_names = [
             'Structure & Formatage',
-            'Densité d\\'Information',
+            "Densité d'Information",
             'Lisibilité Machine/SEO',
             'E-E-A-T',
             'Contenu Éducatif',
