@@ -93,11 +93,11 @@ class GEOSaaSAPITester:
     def test_create_lead(self) -> Optional[str]:
         """Test lead creation and return lead ID"""
         test_lead_data = {
-            "firstName": "Jean",
-            "lastName": "Dupont", 
-            "email": "jean.dupont@test.com",
+            "firstName": "Test",
+            "lastName": "User", 
+            "email": "test@example.com",
             "company": "Test Company",
-            "url": "https://example.com",
+            "url": "sekoia.ca",
             "consent": True
         }
         
