@@ -699,6 +699,69 @@ async def process_analysis_job(job_id: str):
         
         await db.analysis_jobs.update_one(
             {"id": job_id},
+            {"$set": {"progress": 85}}
+        )
+        
+        # Step 6: Generate Word Report (50-70 pages)
+        try:
+            from word_report_generator import WordReportGenerator
+            word_generator = WordReportGenerator()
+            word_file_path = f"/app/backend/reports/{report.id}_report.docx"
+            word_generator.generate_report(report_dict, word_file_path)
+            report_dict['docxUrl'] = f"/reports/{report.id}_report.docx"
+            logger.info(f"Word report generated: {word_file_path}")
+        except Exception as e:
+            logger.error(f"Word report generation failed: {str(e)}")
+        
+        await db.analysis_jobs.update_one(
+            {"id": job_id},
+            {"$set": {"progress": 90}}
+        )
+        
+        # Step 7: Generate HTML Dashboard
+        try:
+            from dashboard_generator import generate_dashboard_html
+            dashboard_path = f"/app/backend/dashboards/{report.id}_dashboard.html"
+            generate_dashboard_html(report_dict, dashboard_path)
+            report_dict['dashboardUrl'] = f"/dashboards/{report.id}_dashboard.html"
+            logger.info(f"Dashboard generated: {dashboard_path}")
+        except Exception as e:
+            logger.error(f"Dashboard generation failed: {str(e)}")
+        
+        await db.analysis_jobs.update_one(
+            {"id": job_id},
+            {"$set": {"progress": 95}}
+        )
+        
+        # Step 8: Save to history and generate alerts
+        try:
+            from database_manager import DatabaseManager
+            db_manager = DatabaseManager()
+            db_manager.save_analysis(report_dict)
+            
+            # Comparer avec analyse précédente
+            previous = db_manager.get_previous_analysis(job_doc['url'])
+            if previous:
+                alerts = db_manager.generate_alerts(report_dict, previous)
+                if alerts:
+                    db_manager.save_alerts(job_doc['url'], alerts)
+                    report_dict['alerts'] = alerts
+                    logger.info(f"Generated {len(alerts)} alerts")
+        except Exception as e:
+            logger.error(f"History/alerts failed: {str(e)}")
+        
+        # Update report with all URLs
+        await db.reports.update_one(
+            {"id": report.id},
+            {"$set": {
+                "docxUrl": report_dict.get('docxUrl'),
+                "dashboardUrl": report_dict.get('dashboardUrl'),
+                "alerts": report_dict.get('alerts', [])
+            }}
+        )
+        
+        await db.analysis_jobs.update_one(
+            {"id": job_id},
             {"$set": {
                 "status": "completed",
                 "progress": 100,
