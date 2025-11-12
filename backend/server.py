@@ -692,6 +692,8 @@ async def process_analysis_job(job_id: str):
         report_dict['scores'] = report.scores.model_dump()
         report_dict['recommendations'] = [rec.model_dump() for rec in report.recommendations]
         report_dict['quick_wins'] = [qw.model_dump() for qw in report.quick_wins]
+        report_dict['test_queries'] = test_queries
+        report_dict['visibility_results'] = visibility_data
         
         await db.reports.insert_one(report_dict)
         
