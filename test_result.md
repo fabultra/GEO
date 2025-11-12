@@ -243,28 +243,28 @@ backend:
 
 frontend:
   - task: "Report Page Display - Competitive Intelligence Section"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "/app/frontend/src/pages/ReportPage.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "ReportPage n'affiche pas encore les données de competitive intelligence. Il faut ajouter un nouvel onglet/section pour afficher le tableau comparatif et les insights actionnables."
+          comment: "IMPLÉMENTÉ: Nouvel onglet 🏆 Compétiteurs ajouté dans ReportPage. Affiche: tableau comparatif de métriques, insights actionnables avec priorités (CRITIQUE/HAUTE/MOYENNE), impacts et temps estimé. Design avec code couleur selon priorité."
   
   - task: "Report Page Display - Schema JSON-LD Section"
-    implemented: false
+    implemented: true
     working: "NA"
     file: "/app/frontend/src/pages/ReportPage.js"
     stuck_count: 0
     priority: "high"
-    needs_retesting: false
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "ReportPage n'affiche pas encore les schemas générés ni le guide d'implémentation. Il faut ajouter un nouvel onglet pour afficher les schemas et le guide."
+          comment: "IMPLÉMENTÉ: Nouvel onglet 📋 Schemas ajouté dans ReportPage. Affiche: guide d'implémentation complet, liste des 9 types de schemas générés (Organization, Website, FAQ, Article, etc.), code JSON-LD visualisable, quick wins schemas, liens validation Google/Schema.org."
 
 metadata:
   created_by: "main_agent"
