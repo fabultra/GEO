@@ -531,6 +531,239 @@ const ReportPage = () => {
               </div>
             </div>
           </TabsContent>
+
+          {/* Competitors Tab - NEW */}
+          <TabsContent value="competitors" className="space-y-6">
+            <h3 className="text-2xl font-bold mb-4 flex items-center">
+              <span className="mr-2">🏆</span>
+              Intelligence Compétitive
+            </h3>
+            
+            {report.competitive_intelligence && report.competitive_intelligence.competitors_analyzed > 0 ? (
+              <div className="space-y-6">
+                {/* Summary */}
+                <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-l-4 border-purple-600">
+                  <h4 className="font-bold text-lg mb-2 text-purple-900">Résumé</h4>
+                  <p className="text-gray-700">
+                    <strong>{report.competitive_intelligence.competitors_analyzed}</strong> compétiteurs analysés trouvés dans les réponses des IA génératives.
+                  </p>
+                </div>
+
+                {/* Comparative Metrics Table */}
+                {report.competitive_intelligence.comparative_metrics && 
+                 report.competitive_intelligence.comparative_metrics.rows && 
+                 report.competitive_intelligence.comparative_metrics.rows.length > 0 && (
+                  <div className="overflow-x-auto">
+                    <h4 className="font-bold text-lg mb-3">📊 Tableau Comparatif</h4>
+                    <table className="w-full border-collapse bg-white rounded-lg overflow-hidden shadow">
+                      <thead className="bg-gray-800 text-white">
+                        <tr>
+                          {report.competitive_intelligence.comparative_metrics.headers.map((header, idx) => (
+                            <th key={idx} className="px-4 py-3 text-left text-sm font-semibold">
+                              {header}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {report.competitive_intelligence.comparative_metrics.rows.map((row, idx) => (
+                          <tr key={idx} className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
+                            {row.map((cell, cellIdx) => (
+                              <td key={cellIdx} className="px-4 py-3 text-sm border-b border-gray-200">
+                                {cellIdx === 0 ? (
+                                  <span className="font-semibold text-gray-800">{cell}</span>
+                                ) : (
+                                  <span className="text-gray-700">{cell}</span>
+                                )}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {/* Actionable Insights */}
+                {report.competitive_intelligence.actionable_insights && 
+                 report.competitive_intelligence.actionable_insights.length > 0 && (
+                  <div>
+                    <h4 className="font-bold text-lg mb-4">💡 Recommandations Basées sur l'Analyse Compétitive</h4>
+                    <div className="space-y-4">
+                      {report.competitive_intelligence.actionable_insights.map((insight, idx) => (
+                        <div 
+                          key={idx} 
+                          className={`p-6 rounded-xl border-l-4 ${
+                            insight.priority === 'CRITIQUE' ? 'bg-red-50 border-red-600' :
+                            insight.priority === 'HAUTE' ? 'bg-orange-50 border-orange-600' :
+                            'bg-blue-50 border-blue-600'
+                          }`}
+                        >
+                          <div className="flex items-start justify-between mb-3">
+                            <h5 className="font-bold text-lg">{insight.title}</h5>
+                            <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                              insight.priority === 'CRITIQUE' ? 'bg-red-600 text-white' :
+                              insight.priority === 'HAUTE' ? 'bg-orange-600 text-white' :
+                              'bg-blue-600 text-white'
+                            }`}>
+                              {insight.priority}
+                            </span>
+                          </div>
+                          <div className="space-y-2 text-sm">
+                            <p><strong className="text-gray-700">Problème:</strong> <span className="text-gray-600">{insight.problem}</span></p>
+                            <p><strong className="text-gray-700">Action:</strong> <span className="text-gray-600">{insight.action}</span></p>
+                            <div className="flex justify-between mt-3 pt-3 border-t border-gray-200">
+                              <span className="text-green-600 font-semibold">Impact: {insight.impact}</span>
+                              <span className="text-blue-600">Temps: {insight.time}</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="p-8 text-center bg-gray-50 rounded-xl">
+                <p className="text-gray-600">Aucune donnée de compétiteurs disponible pour cette analyse.</p>
+                <p className="text-sm text-gray-500 mt-2">Les compétiteurs sont extraits automatiquement des réponses des IA génératives.</p>
+              </div>
+            )}
+          </TabsContent>
+
+          {/* Schemas Tab - NEW */}
+          <TabsContent value="schemas" className="space-y-6">
+            <h3 className="text-2xl font-bold mb-4 flex items-center">
+              <span className="mr-2">📋</span>
+              Schemas JSON-LD Générés
+            </h3>
+            
+            {report.schemas && Object.keys(report.schemas).length > 0 ? (
+              <div className="space-y-6">
+                {/* Summary */}
+                <div className="p-6 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl border-l-4 border-blue-600">
+                  <h4 className="font-bold text-lg mb-2 text-blue-900">Impact GEO des Schemas</h4>
+                  <p className="text-gray-700">
+                    <strong>{Object.keys(report.schemas).filter(k => k !== 'implementation_guide' && k !== 'error').length}</strong> types de schemas générés automatiquement.
+                  </p>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Les schemas JSON-LD améliorent votre visibilité dans les IA de <strong>+40-50%</strong> en rendant votre contenu plus facilement compréhensible.
+                  </p>
+                </div>
+
+                {/* Implementation Guide */}
+                {report.schemas.implementation_guide && (
+                  <div className="p-6 bg-yellow-50 rounded-xl border border-yellow-200">
+                    <h4 className="font-bold text-lg mb-3 text-yellow-900 flex items-center">
+                      <Sparkles className="w-5 h-5 mr-2" />
+                      Guide d'Implémentation
+                    </h4>
+                    <div className="prose prose-sm max-w-none">
+                      <pre className="bg-white p-4 rounded-lg text-xs overflow-x-auto border border-gray-200 whitespace-pre-wrap">
+                        {report.schemas.implementation_guide}
+                      </pre>
+                    </div>
+                    <div className="mt-4 p-4 bg-white rounded-lg border border-yellow-300">
+                      <p className="text-sm font-semibold text-yellow-900 mb-2">⚡ Quick Wins Schemas:</p>
+                      <ul className="text-sm text-gray-700 space-y-1 list-disc list-inside">
+                        <li>Ajouter Organization + WebSite sur page d'accueil → <span className="font-semibold text-green-600">+40% visibilité</span></li>
+                        <li>Créer page FAQ avec FAQPage schema → <span className="font-semibold text-green-600">+60% chances citation</span></li>
+                        <li>Ajouter Article schema sur 5 articles → <span className="font-semibold text-green-600">+30% indexation</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+
+                {/* Schema Types List */}
+                <div>
+                  <h4 className="font-bold text-lg mb-4">📦 Schemas Générés</h4>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {Object.keys(report.schemas)
+                      .filter(key => key !== 'implementation_guide' && key !== 'error' && report.schemas[key])
+                      .map((schemaType, idx) => {
+                        const schemaTypeNames = {
+                          'organization': '🏢 Organization',
+                          'website': '🌐 WebSite',
+                          'faq': '❓ FAQPage',
+                          'article': '📄 Article',
+                          'local_business': '📍 LocalBusiness',
+                          'service': '🔧 Service',
+                          'how_to': '📖 HowTo',
+                          'review': '⭐ Review',
+                          'breadcrumb': '🍞 Breadcrumb'
+                        };
+                        
+                        const displayName = schemaTypeNames[schemaType] || schemaType;
+                        const schemaData = report.schemas[schemaType];
+                        const schemaCount = Array.isArray(schemaData) ? schemaData.length : 1;
+                        
+                        return (
+                          <div key={idx} className="p-4 bg-white rounded-lg border-2 border-gray-200 hover:border-blue-400 transition-colors">
+                            <div className="flex items-center justify-between mb-2">
+                              <h5 className="font-semibold text-gray-800">{displayName}</h5>
+                              {schemaCount > 1 && (
+                                <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-semibold rounded-full">
+                                  {schemaCount}
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-xs text-gray-500 mb-3">
+                              {schemaType === 'organization' ? 'Identité de votre organisation' :
+                               schemaType === 'website' ? 'Informations générales du site' :
+                               schemaType === 'faq' ? 'Questions-réponses structurées' :
+                               schemaType === 'article' ? 'Contenu éditorial' :
+                               schemaType === 'local_business' ? 'Informations entreprise locale' :
+                               schemaType === 'service' ? 'Services offerts' :
+                               schemaType === 'how_to' ? 'Guides pratiques étape par étape' :
+                               schemaType === 'review' ? 'Évaluations et avis' :
+                               schemaType === 'breadcrumb' ? 'Navigation hiérarchique' :
+                               'Schema markup'}
+                            </p>
+                            <details className="text-xs">
+                              <summary className="cursor-pointer text-blue-600 hover:text-blue-800 font-medium">
+                                Voir le code JSON-LD
+                              </summary>
+                              <pre className="mt-2 p-3 bg-gray-50 rounded border border-gray-200 overflow-x-auto text-[10px]">
+                                {JSON.stringify(schemaData, null, 2)}
+                              </pre>
+                            </details>
+                          </div>
+                        );
+                      })}
+                  </div>
+                </div>
+
+                {/* Validation Links */}
+                <div className="p-6 bg-gray-50 rounded-xl">
+                  <h4 className="font-bold mb-3">🔍 Valider vos Schemas</h4>
+                  <p className="text-sm text-gray-600 mb-3">Après implémentation, validez vos schemas avec ces outils:</p>
+                  <div className="flex flex-wrap gap-3">
+                    <a 
+                      href="https://search.google.com/test/rich-results" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm hover:bg-blue-700 transition-colors"
+                    >
+                      Google Rich Results Test
+                    </a>
+                    <a 
+                      href="https://validator.schema.org/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="px-4 py-2 bg-green-600 text-white rounded-lg text-sm hover:bg-green-700 transition-colors"
+                    >
+                      Schema.org Validator
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="p-8 text-center bg-gray-50 rounded-xl">
+                <p className="text-gray-600">Aucun schema généré pour cette analyse.</p>
+                <p className="text-sm text-gray-500 mt-2">Les schemas JSON-LD sont générés automatiquement basés sur le contenu de votre site.</p>
+              </div>
+            )}
+          </TabsContent>
         </Tabs>
       </div>
     </div>
