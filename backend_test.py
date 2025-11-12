@@ -161,7 +161,7 @@ class GEOSaaSAPITester:
         return success
     
     def test_get_report(self, report_id: str) -> bool:
-        """Test getting a report"""
+        """Test getting a report and validate new modules"""
         success, response = self.run_test(
             "Get Report",
             "GET",
@@ -177,7 +177,80 @@ class GEOSaaSAPITester:
             self.log(f"   Global Score: {global_score}/10")
             self.log(f"   Recommendations: {recommendations_count}")
             
+            # CRITICAL: Validate new modules are present
+            self.validate_new_modules(response)
+            
         return success
+    
+    def validate_new_modules(self, report_data: Dict[str, Any]) -> bool:
+        """Validate that competitive intelligence and schemas are in the report"""
+        self.log("🔍 Validating new modules in report...")
+        
+        # Test Module 3: Competitive Intelligence
+        competitive_intel = report_data.get('competitive_intelligence', {})
+        if competitive_intel:
+            competitors_analyzed = competitive_intel.get('competitors_analyzed', 0)
+            analyses = competitive_intel.get('analyses', [])
+            comparative_metrics = competitive_intel.get('comparative_metrics', {})
+            actionable_insights = competitive_intel.get('actionable_insights', [])
+            
+            self.log(f"✅ Competitive Intelligence found:")
+            self.log(f"   - Competitors analyzed: {competitors_analyzed}")
+            self.log(f"   - Analyses: {len(analyses)} entries")
+            self.log(f"   - Comparative metrics: {'Present' if comparative_metrics else 'Missing'}")
+            self.log(f"   - Actionable insights: {len(actionable_insights)} insights")
+        else:
+            self.log("❌ Competitive Intelligence module MISSING from report")
+            return False
+        
+        # Test Module 4: Schema Generator
+        schemas = report_data.get('schemas', {})
+        if schemas:
+            schema_types = list(schemas.keys())
+            implementation_guide = schemas.get('implementation_guide', '')
+            
+            self.log(f"✅ Schema Generator found:")
+            self.log(f"   - Schema types: {schema_types}")
+            self.log(f"   - Implementation guide: {'Present' if implementation_guide else 'Missing'}")
+            
+            # Check for key schema types
+            expected_schemas = ['organization', 'website', 'faq', 'article']
+            for schema_type in expected_schemas:
+                if schema_type in schemas:
+                    self.log(f"   - {schema_type}: ✅")
+                else:
+                    self.log(f"   - {schema_type}: ❌ Missing")
+        else:
+            self.log("❌ Schema Generator module MISSING from report")
+            return False
+        
+        # Test existing modules are still present
+        visibility_results = report_data.get('visibility_results', {})
+        if visibility_results:
+            overall_visibility = visibility_results.get('overall_visibility', 0)
+            platform_scores = visibility_results.get('platform_scores', {})
+            self.log(f"✅ Visibility Results: {overall_visibility:.1%} overall")
+            self.log(f"   - Platform scores: {list(platform_scores.keys())}")
+        else:
+            self.log("❌ Visibility Results MISSING")
+            return False
+        
+        scores = report_data.get('scores', {})
+        if scores:
+            self.log(f"✅ Scores present: {len(scores)} criteria")
+        else:
+            self.log("❌ Scores MISSING")
+            return False
+        
+        recommendations = report_data.get('recommendations', [])
+        if recommendations:
+            self.log(f"✅ Recommendations: {len(recommendations)} items")
+        else:
+            self.log("❌ Recommendations MISSING")
+            return False
+        
+        self.log("✅ All modules validation completed")
+        return True
     
     def test_download_pdf(self, report_id: str) -> bool:
         """Test PDF download"""
