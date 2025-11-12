@@ -229,7 +229,7 @@ class WordReportGenerator:
         
         criteria = [
             ('structure', 'Structure & Formatage', 15),
-            ('infoDensity', 'Densité d\\'Information', 20),
+            ('infoDensity', "Densité d'Information", 20),
             ('readability', 'Lisibilité Machine/SEO', 10),
             ('eeat', 'E-E-A-T', 15),
             ('educational', 'Contenu Éducatif', 20),
