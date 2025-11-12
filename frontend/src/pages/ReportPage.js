@@ -99,14 +99,30 @@ const ReportPage = () => {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Retour
           </Button>
-          <Button 
-            onClick={downloadPDF} 
-            className="btn-primary"
-            data-testid="download-pdf-btn"
-          >
-            <Download className="w-4 h-4 mr-2" />
-            Télécharger PDF
-          </Button>
+          <div className="flex space-x-3">
+            <Button 
+              onClick={() => window.open(`${API}/reports/${reportId}/dashboard`, '_blank')}
+              variant="outline"
+              data-testid="view-dashboard-btn"
+            >
+              📊 Dashboard HTML
+            </Button>
+            <Button 
+              onClick={() => window.open(`${API}/reports/${reportId}/docx`, '_blank')}
+              variant="outline"
+              data-testid="download-docx-btn"
+            >
+              📄 Rapport Word
+            </Button>
+            <Button 
+              onClick={downloadPDF} 
+              className="btn-primary"
+              data-testid="download-pdf-btn"
+            >
+              <Download className="w-4 h-4 mr-2" />
+              PDF
+            </Button>
+          </div>
         </div>
 
         {/* Title */}
