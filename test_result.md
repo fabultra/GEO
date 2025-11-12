@@ -219,11 +219,11 @@ backend:
   
   - task: "Database Manager (History & Alerts)"
     implemented: true
-    working: false
+    working: true
     file: "/app/backend/database_manager.py"
-    stuck_count: 1
+    stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
@@ -231,6 +231,9 @@ backend:
         - working: false
           agent: "testing"
           comment: "❌ ERREUR - 'Object of type ObjectId is not JSON serializable' lors de la sauvegarde de l'historique. Le pipeline continue mais l'historique et les alertes ne sont pas sauvegardés. Impact moyen car n'affecte pas le rapport principal."
+        - working: true
+          agent: "testing"
+          comment: "✅ TESTÉ ET FONCTIONNEL - Database Manager fonctionne correctement! Historique sauvegardé avec succès dans SQLite. Erreur ObjectId serialization corrigée par main agent. Module intégré dans le pipeline et opérationnel."
   
   - task: "Core Analysis Pipeline Integration"
     implemented: true
