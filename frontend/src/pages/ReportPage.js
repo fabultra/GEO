@@ -533,6 +533,198 @@ const ReportPage = () => {
             </div>
           </TabsContent>
 
+          {/* Visibility & Queries Tab - NEW */}
+          <TabsContent value="visibility" className="space-y-6">
+            <h3 className="text-2xl font-bold mb-4 flex items-center">
+              <span className="mr-2">🔍</span>
+              Tests de Visibilité IA
+            </h3>
+            
+            {report.visibility_results ? (
+              <div className="space-y-6">
+                {/* Summary Cards */}
+                <div className="grid md:grid-cols-4 gap-4">
+                  <div className="p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+                    <p className="text-sm text-blue-700 font-semibold mb-1">Visibilité Globale</p>
+                    <p className="text-3xl font-bold text-blue-900">
+                      {(report.visibility_results.overall_visibility * 100).toFixed(1)}%
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+                    <p className="text-sm text-green-700 font-semibold mb-1">Requêtes Testées</p>
+                    <p className="text-3xl font-bold text-green-900">
+                      {report.visibility_results.queries_tested || 0}
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl border border-purple-200">
+                    <p className="text-sm text-purple-700 font-semibold mb-1">Tests Effectués</p>
+                    <p className="text-3xl font-bold text-purple-900">
+                      {report.visibility_results.total_tests || 0}
+                    </p>
+                  </div>
+                  
+                  <div className="p-4 bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl border border-orange-200">
+                    <p className="text-sm text-orange-700 font-semibold mb-1">Plateformes</p>
+                    <p className="text-3xl font-bold text-orange-900">5</p>
+                    <p className="text-xs text-orange-600 mt-1">ChatGPT, Claude, Perplexity, Gemini, Google</p>
+                  </div>
+                </div>
+
+                {/* Platform Visibility */}
+                {report.visibility_results.platform_scores && (
+                  <div className="p-6 bg-white rounded-xl border border-gray-200">
+                    <h4 className="font-bold text-lg mb-4">📊 Visibilité par Plateforme IA</h4>
+                    <div className="space-y-4">
+                      {Object.entries(report.visibility_results.platform_scores).map(([platform, score]) => (
+                        <div key={platform} className="space-y-2">
+                          <div className="flex items-center justify-between">
+                            <span className="font-semibold text-gray-800">{platform}</span>
+                            <span className={`font-bold ${score > 0.5 ? 'text-green-600' : score > 0.2 ? 'text-yellow-600' : 'text-red-600'}`}>
+                              {(score * 100).toFixed(1)}%
+                            </span>
+                          </div>
+                          <div className="w-full bg-gray-200 rounded-full h-3">
+                            <div 
+                              className={`h-3 rounded-full transition-all ${
+                                score > 0.5 ? 'bg-green-500' : 
+                                score > 0.2 ? 'bg-yellow-500' : 
+                                score > 0 ? 'bg-orange-500' : 'bg-red-500'
+                              }`}
+                              style={{ width: `${score * 100}%` }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Test Queries with Results */}
+                {report.test_queries && report.test_queries.length > 0 && (
+                  <div>
+                    <h4 className="font-bold text-lg mb-4">📝 Requêtes Testées & Résultats</h4>
+                    <div className="space-y-3">
+                      {report.test_queries.map((query, idx) => {
+                        // Trouver les résultats pour cette requête
+                        const queryResults = report.visibility_results.details?.filter(d => d.query === query) || [];
+                        const mentioned = queryResults.some(r => r.mentioned);
+                        const mentionedPlatforms = queryResults.filter(r => r.mentioned).map(r => r.platform);
+                        
+                        return (
+                          <div key={idx} className={`p-4 rounded-lg border-2 ${
+                            mentioned ? 'bg-green-50 border-green-300' : 'bg-gray-50 border-gray-200'
+                          }`}>
+                            <div className="flex items-start justify-between">
+                              <div className="flex-1">
+                                <p className="font-semibold text-gray-800 mb-1">
+                                  {idx + 1}. {query}
+                                </p>
+                                {mentioned ? (
+                                  <div className="flex flex-wrap gap-2 mt-2">
+                                    <span className="text-xs font-semibold text-green-700">
+                                      ✅ Mentionné dans:
+                                    </span>
+                                    {mentionedPlatforms.map((platform, i) => (
+                                      <span key={i} className="px-2 py-1 bg-green-200 text-green-800 text-xs rounded-full font-semibold">
+                                        {platform}
+                                      </span>
+                                    ))}
+                                  </div>
+                                ) : (
+                                  <p className="text-xs text-gray-500 mt-1">
+                                    ❌ Non mentionné dans aucune plateforme
+                                  </p>
+                                )}
+                              </div>
+                              <div className={`ml-4 px-3 py-1 rounded-full text-xs font-bold ${
+                                mentioned ? 'bg-green-200 text-green-800' : 'bg-gray-200 text-gray-600'
+                              }`}>
+                                {mentioned ? 'VISIBLE' : 'INVISIBLE'}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Recommendations based on queries */}
+                <div className="p-6 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl border-l-4 border-yellow-600">
+                  <h4 className="font-bold text-lg mb-3 text-yellow-900 flex items-center">
+                    <Sparkles className="w-5 h-5 mr-2" />
+                    Recommandations Basées sur les Requêtes
+                  </h4>
+                  <div className="space-y-3">
+                    {(() => {
+                      const visibleQueries = report.test_queries?.filter((query, idx) => {
+                        const queryResults = report.visibility_results.details?.filter(d => d.query === query) || [];
+                        return queryResults.some(r => r.mentioned);
+                      }) || [];
+                      
+                      const invisibleQueries = report.test_queries?.filter((query, idx) => {
+                        const queryResults = report.visibility_results.details?.filter(d => d.query === query) || [];
+                        return !queryResults.some(r => r.mentioned);
+                      }) || [];
+
+                      return (
+                        <>
+                          {visibleQueries.length > 0 && (
+                            <div className="p-4 bg-green-100 rounded-lg">
+                              <p className="font-semibold text-green-900 mb-2">
+                                ✅ Requêtes où vous êtes visible ({visibleQueries.length})
+                              </p>
+                              <p className="text-sm text-green-800">
+                                <strong>Action:</strong> Optimisez davantage ces pages pour consolider votre position. Ajoutez plus de contenu, stats et exemples concrets.
+                              </p>
+                            </div>
+                          )}
+                          
+                          {invisibleQueries.length > 0 && (
+                            <div className="p-4 bg-red-100 rounded-lg">
+                              <p className="font-semibold text-red-900 mb-2">
+                                ❌ Requêtes où vous êtes invisible ({invisibleQueries.length})
+                              </p>
+                              <p className="text-sm text-red-800 mb-2">
+                                <strong>Action prioritaire:</strong> Créez du contenu spécifiquement pour ces requêtes.
+                              </p>
+                              <div className="mt-3">
+                                <p className="text-xs font-semibold text-red-900 mb-1">Top 3 opportunités:</p>
+                                <ul className="text-xs text-red-800 space-y-1 list-disc list-inside">
+                                  {invisibleQueries.slice(0, 3).map((query, i) => (
+                                    <li key={i}>{query}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                          )}
+
+                          {invisibleQueries.length === report.test_queries?.length && (
+                            <div className="p-4 bg-orange-100 rounded-lg">
+                              <p className="font-semibold text-orange-900 mb-2">
+                                🚨 Alerte: Visibilité Nulle
+                              </p>
+                              <p className="text-sm text-orange-800">
+                                Vous n'êtes mentionné dans <strong>aucune</strong> des {report.test_queries.length} requêtes testées. 
+                                Il est URGENT de créer du contenu éducatif et informatif pour améliorer votre présence dans les IA génératives.
+                              </p>
+                            </div>
+                          )}
+                        </>
+                      );
+                    })()}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <div className="p-8 text-center bg-gray-50 rounded-xl">
+                <p className="text-gray-600">Aucune donnée de visibilité disponible.</p>
+              </div>
+            )}
+          </TabsContent>
+
           {/* Competitors Tab - NEW */}
           <TabsContent value="competitors" className="space-y-6">
             <h3 className="text-2xl font-bold mb-4 flex items-center">
