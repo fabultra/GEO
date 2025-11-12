@@ -1,0 +1,94 @@
+<analysis>
+The trajectory documents the development of a Generative Engine Optimization (GEO) SaaS tool from inception to a feature-rich application. The process began with a detailed French prompt outlining a multi-tenant SaaS. The initial development used a FastAPI/React/MongoDB stack, with the AI engineer building a Minimum Viable Product (MVP) that could analyze a URL and generate a basic report.
+
+The project evolved through iterative feedback loops. The first iteration involved debugging the frontend to correctly display individual analysis scores which were initially invisible due to a CSS/style property error. A more significant evolution occurred when the user provided a professional report example, prompting a V2 of the analysis engine. This involved creating a more sophisticated scoring methodology, enriching the data model, and significantly enhancing the LLM prompt for Claude. This phase also included troubleshooting API  errors and JSON parsing issues from the LLM.
+
+A critical juncture was when the platform's shared API key budget was exhausted. The user provided their personal Anthropic key, leading the AI to refactor the backend to use the Anthropic SDK directly instead of a generic provider. Subsequently, the application was rebranded with the user's company (SEKOIA) colors and logo.
+
+The final and most substantial phase began when the user provided an extensive addon prompt detailing five advanced modules: active LLM visibility testing, automatic GEO-optimized content generation, deep competitive intelligence, automatic schema markup generation, and automated query expansion. The AI engineer has started this full implementation, setting up the necessary files and beginning work on the first few modules. The current work is focused on building out the Competitive Intelligence module.
+</analysis>
+
+<product_requirements>
+The goal is to build a comprehensive, multi-tenant Generative Engine Optimization (GEO) SaaS tool. The application analyzes a given website's readiness for generative AI search engines like ChatGPT, Perplexity, and Google AI Overviews.
+
+**Core Functionality (MVP & V2):**
+1.  **Input:** User provides a domain URL.
+2.  **Analysis:** The system crawls the site and uses an LLM (Claude) to score it against 8 criteria: Structure, Info Density, Machine Readability/SEO, E-E-A-T, Educational Content, Thematic Organization, AI Optimization, and Current Visibility.
+3.  **Reporting:** It generates a web-based report displaying a global score and a heatmap of individual criterion scores. It also provides an executive summary, recommendations, and quick wins.
+
+**Advanced Features (Full Implementation):**
+1.  **Active LLM Testing:** Instead of just estimating, the tool actively queries ChatGPT, Claude, Perplexity, and Gemini with a list of test queries to measure real-world visibility, position, and sentiment.
+2.  **Automated Content Generation:** Based on identified content gaps, the tool generates 10 full, 2000+ word, GEO-optimized articles ready for publication.
+3.  **Competitive Intelligence:** It reverse-engineers why competitors rank by analyzing their content structure, data density, and schema markup, providing concrete, actionable recommendations.
+4.  **Schema Markup Generation:** Automatically generates all necessary  schema files (Organization, FAQPage, Article, etc.) for the entire site.
+5.  **Query Expansion:** Expands an initial list of 20 queries into 500+ variations to perform exhaustive visibility testing.
+6.  **Deliverables:** The final output includes a comprehensive 50-70 page  report, an interactive HTML dashboard, and multiple data export files (, , ).
+</product_requirements>
+
+<key_technical_concepts>
+- **Full-Stack Application:** FastAPI backend (Python) and React frontend (JavaScript).
+- **Database:** MongoDB for primary application data; SQLite for storing historical analysis data.
+- **LLM Integration:**
+    - Initial use of  with a universal key.
+    - Refactored to use direct SDKs for Anthropic (Claude), OpenAI (ChatGPT), Google (Gemini), and Perplexity for enhanced analysis and content generation, using user-provided API keys.
+- **Web Scraping:** Using libraries like  to crawl and extract content from target websites.
+- **Report Generation:**  for creating comprehensive Word document reports and static HTML/CSS/JS for interactive dashboards.
+</key_technical_concepts>
+
+<code_architecture>
+The application follows a standard modern full-stack architecture with a decoupled frontend and backend. The backend is a monolithic FastAPI service responsible for all business logic, analysis, and data processing. The frontend is a React single-page application that consumes the backend API.
+
+**Directory Structure:**
+
+
+**Key Files:**
+
+-   ****
+    -   **Importance:** This is the application's central nervous system. It defines all FastAPI endpoints, handles lead capture, and orchestrates the entire GEO analysis pipeline—from job creation to crawling, calling multiple LLM APIs, scoring, and triggering report generation.
+    -   **Changes:** This file has undergone extensive modifications. It was refactored from using  to direct SDKs for Anthropic, OpenAI, etc. Robust error handling and JSON parsing logic were added to manage unreliable LLM outputs. The core  function was expanded significantly to integrate the new advanced modules like visibility testing and multi-format report generation.
+
+-   ****
+    -   **Importance:** This is the primary user-facing component for viewing the results of a GEO analysis. It displays the global score, the detailed 8-criteria heatmap, and all generated textual content like summaries and recommendations.
+    -   **Changes:** This file was edited to fix a critical bug where individual scores were rendered with white text on a white background, making them invisible. The  utility function was corrected. It was also updated to add new tabs and sections to display the richer data from the V2 analysis engine, such as the Synthesis and Quick Wins tabs. Buttons to download the Word and HTML reports were also added.
+
+-   ****
+    -   **Importance:** A new module created to fulfill the Active LLM Testing requirement. It contains the logic to take a list of queries and test them against the APIs of ChatGPT, Claude, Perplexity, and Gemini.
+    -   **Changes:** Created to house the complex logic of querying multiple distinct LLM APIs, handling their different response formats, and parsing the results to determine if the target site was mentioned. The function signature was updated to include detailed analysis of mention position, sentiment, and context.
+
+-   ****
+    -   **Importance:** Created to generate the comprehensive 50-70 page  reports as requested by the user. It uses the  library to programmatically build the document.
+    -   **Changes:** This new file contains functions to structure the Word document, including adding titles, paragraphs, tables (for score breakdowns and competitive analysis), and applying basic styling (colors, fonts) according to the branding.
+
+-   ****
+    -   **Importance:** Stores all secrets and environment-specific configurations, most critically the API keys for the various LLM services (Anthropic, OpenAI, Gemini, Perplexity).
+    -   **Changes:** This file was updated multiple times. Initially, it held the universal Emergent LLM key. It was later updated to include the user's personal Anthropic key when the budget was exhausted, and then further updated with keys for OpenAI, Gemini, and Perplexity to enable the full implementation of the advanced modules.
+</code_architecture>
+
+<pending_tasks>
+- **Automatic Bi-weekly Monitoring:** Implement a scheduler (cron job) to automatically run analyses for configured sites every two weeks.
+- **Email Notifications:** Develop a module to send email notifications with a summary and links to the reports upon analysis completion.
+- **Full Competitor Analysis:** Complete the implementation of the competitive analysis module, which is currently in its initial phase.
+- **Schema Generation Module:** Implement Module 4 for automatic  schema generation.
+- **Query Expansion Module:** Fully implement Module 5 for expanding test queries.
+</pending_tasks>
+
+<current_work>
+The project is in the midst of a major feature expansion based on a highly detailed user prompt containing five active optimization modules. The goal is to evolve the tool from a simple analyzer into a comprehensive GEO suite that performs real-world tests and generates actionable content.
+
+The previous engineer has already:
+1.  Received and confirmed the user's request for the full implementation.
+2.  Obtained and configured the necessary API keys (OpenAI, Gemini, Perplexity) in the  file.
+3.  Installed required Python packages (, , ).
+4.  Created placeholder files and initial logic for several of the new modules:
+    -   : For real-time LLM visibility checks.
+    -   : For the 50-70 page DOCX report.
+    -    and : For history and HTML dashboards.
+    -   : The starting point for the automatic article generation module.
+    -   : The file for the competitive analysis module.
+
+The most recent action was creating the  file to start building **Module 3: Competitive Intelligence**. The immediate focus is on implementing the logic to reverse-engineer why competitors are outperforming the user's site in generative search results. This involves fetching competitor pages, analyzing their content metrics (word count, stats, schema), and generating specific, actionable recommendations.
+</current_work>
+
+<optional_next_step>
+Continue the implementation of **Module 3: Competitive Intelligence** by building out the logic within the  file to fetch and analyze competitor pages as specified in the user's detailed addon prompt.
+</optional_next_step>
