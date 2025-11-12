@@ -210,15 +210,18 @@ backend:
   
   - task: "Database Manager (History & Alerts)"
     implemented: true
-    working: "NA"
+    working: false
     file: "/app/backend/database_manager.py"
-    stuck_count: 0
+    stuck_count: 1
     priority: "medium"
     needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Module existant avec SQLite pour historique des analyses et génération d'alertes. Intégré dans process_analysis_job mais non testé."
+        - working: false
+          agent: "testing"
+          comment: "❌ ERREUR - 'Object of type ObjectId is not JSON serializable' lors de la sauvegarde de l'historique. Le pipeline continue mais l'historique et les alertes ne sont pas sauvegardés. Impact moyen car n'affecte pas le rapport principal."
   
   - task: "Core Analysis Pipeline Integration"
     implemented: true
