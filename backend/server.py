@@ -813,8 +813,24 @@ async def process_analysis_job(job_id: str):
         # Step 8: Save to history and generate alerts
         try:
             from database_manager import DatabaseManager
+            import json
+            
+            # Nettoyer report_dict pour enlever les ObjectId non-serializable
+            def clean_for_json(obj):
+                """Nettoie les ObjectId et autres objets non-sérialisables"""
+                if isinstance(obj, dict):
+                    return {k: clean_for_json(v) for k, v in obj.items() if k != '_id'}
+                elif isinstance(obj, list):
+                    return [clean_for_json(item) for item in obj]
+                elif hasattr(obj, '__dict__'):
+                    return str(obj)
+                else:
+                    return obj
+            
+            clean_report_dict = clean_for_json(report_dict)
+            
             db_manager = DatabaseManager()
-            db_manager.save_analysis(report_dict)
+            db_manager.save_analysis(clean_report_dict)
             
             # Comparer avec analyse précédente
             previous = db_manager.get_previous_analysis(job_doc['url'])
