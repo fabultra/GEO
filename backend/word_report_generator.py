@@ -311,7 +311,7 @@ class WordReportGenerator:
     
     def add_action_plan(self):
         """Plan d'action 12 mois (5 pages)"""
-        self.doc.add_heading('Plan d\\'Action sur 12 Mois', level=1)
+        self.doc.add_heading("Plan d'Action sur 12 Mois", level=1)
         
         phases = [
             ("Phase 1: Fondations (Mois 1-3)", [
