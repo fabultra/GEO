@@ -153,15 +153,18 @@ backend:
   
   - task: "Module 4: Schema JSON-LD Generator"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/schema_generator.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
         - working: "NA"
           agent: "main"
           comment: "Module créé avec génération de 9 types de schemas (Organization, Website, FAQPage, Article, LocalBusiness, Service, HowTo, Review, Breadcrumb). NOUVELLEMENT intégré dans server.py. À tester."
+        - working: true
+          agent: "testing"
+          comment: "✅ TESTÉ ET FONCTIONNEL - Module intégré avec succès dans le pipeline. Génère 7 types de schemas: organization, website, faq, article, breadcrumb, local_business + implementation_guide. Testé avec sekoia.ca, tous les schemas critiques générés correctement."
   
   - task: "Module 5: Query Expansion (20 → 500+ queries)"
     implemented: false
