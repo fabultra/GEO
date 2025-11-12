@@ -759,10 +759,6 @@ async def process_analysis_job(job_id: str):
             test_queries=test_queries
         )
         
-        # Ajouter les données additionnelles au rapport
-        report_dict['competitive_intelligence'] = competitive_data
-        report_dict['schemas'] = schemas_data
-        
         # Save report
         report_dict = report.model_dump()
         report_dict['createdAt'] = report_dict['createdAt'].isoformat()
@@ -771,6 +767,10 @@ async def process_analysis_job(job_id: str):
         report_dict['quick_wins'] = [qw.model_dump() for qw in report.quick_wins]
         report_dict['test_queries'] = test_queries
         report_dict['visibility_results'] = visibility_data
+        
+        # Ajouter les données des modules avancés
+        report_dict['competitive_intelligence'] = competitive_data
+        report_dict['schemas'] = schemas_data
         
         await db.reports.insert_one(report_dict)
         
