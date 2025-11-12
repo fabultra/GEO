@@ -664,18 +664,26 @@ async def process_analysis_job(job_id: str):
             {"$set": {"progress": 75}}
         )
         
-        # Step 3: Create report with enriched data
+        # Step 5: Create report with enriched data and weighted scoring
+        scores_dict = analysis_result['scores']
+        
+        # Appliquer le scoring pondéré
+        weighted_global_score = Score.calculate_weighted_score(scores_dict)
+        scores_dict['global_score'] = weighted_global_score
+        
         report = Report(
             leadId=job_doc['leadId'],
             url=job_doc['url'],
             type="executive",
-            scores=Score(**analysis_result['scores']),
+            scores=Score(**scores_dict),
             recommendations=[Recommendation(**rec) for rec in analysis_result.get('recommendations', [])[:20]],
             quick_wins=[QuickWin(**qw) for qw in analysis_result.get('quick_wins', [])[:10]],
             analysis=analysis_result.get('analysis'),
             detailed_observations=analysis_result.get('detailed_observations'),
             executive_summary=analysis_result.get('executive_summary'),
-            roi_estimation=analysis_result.get('roi_estimation')
+            roi_estimation=analysis_result.get('roi_estimation'),
+            visibility_results=visibility_data,
+            test_queries=test_queries
         )
         
         # Save report
