@@ -26,7 +26,7 @@ class VisibilityTester:
             genai.configure(api_key=gemini_key)
     
     async def test_chatgpt(self, query: str, site_url: str) -> Dict[str, Any]:
-        """Test visibilité dans ChatGPT"""
+        """Test visibilité dans ChatGPT avec analyse détaillée"""
         try:
             response = await self.openai_client.chat.completions.create(
                 model="gpt-4o",
@@ -42,12 +42,44 @@ class VisibilityTester:
             
             # Vérifier si le site est mentionné
             site_domain = site_url.replace('https://', '').replace('http://', '').split('/')[0]
-            is_mentioned = site_domain.lower() in answer.lower()
+            site_name = site_domain.split('.')[0].capitalize()
+            is_mentioned = site_domain.lower() in answer.lower() or site_name.lower() in answer.lower()
+            
+            # Analyse détaillée si mentionné
+            position = None
+            context = None
+            sentiment = "neutral"
+            competitors_found = []
+            
+            if is_mentioned:
+                # Trouver la position (1er, 2ème, 3ème...)
+                sentences = answer.split('.')
+                for i, sentence in enumerate(sentences, 1):
+                    if site_domain.lower() in sentence.lower() or site_name.lower() in sentence.lower():
+                        position = i
+                        context = sentence.strip()
+                        break
+                
+                # Analyser le sentiment
+                if any(word in context.lower() for word in ['meilleur', 'excellent', 'recommandé', 'leader', 'qualité']):
+                    sentiment = "positive"
+                elif any(word in context.lower() for word in ['mais', 'cependant', 'limité', 'cher']):
+                    sentiment = "mixed"
+                
+                # Identifier compétiteurs mentionnés
+                common_competitors = ['desjardins', 'lacapitale', 'intact', 'industrielle', 'ssq', 'bfl', 'aon']
+                for comp in common_competitors:
+                    if comp in answer.lower():
+                        competitors_found.append(comp.capitalize())
             
             return {
                 "platform": "ChatGPT",
                 "query": query,
                 "mentioned": is_mentioned,
+                "position": position,
+                "context": context,
+                "sentiment": sentiment,
+                "competitors_found": competitors_found,
                 "answer": answer,
                 "tokens_used": response.usage.total_tokens
             }
