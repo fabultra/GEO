@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """
-Test script for semantic analysis module
+Test spécifique pour l'analyse sémantique profonde avec Claude 3.5 Sonnet
+Teste les fonctionnalités améliorées demandées dans la review request
 """
 import sys
 import os
+import json
+import requests
+from datetime import datetime
+
 sys.path.append('/app/backend')
 
 from semantic_analyzer import SemanticAnalyzer
