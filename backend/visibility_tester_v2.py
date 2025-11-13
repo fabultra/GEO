@@ -161,7 +161,7 @@ class VisibilityTesterV2:
                 return response.content[0].text
             
             elif platform == 'gemini':
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                model = genai.GenerativeModel('gemini-1.5-pro-002')
                 response = model.generate_content(query)
                 return response.text
             
@@ -188,7 +188,7 @@ class VisibilityTesterV2:
             
             elif platform == 'google_ai':
                 # Google AI Overviews simulation (utilise Gemini)
-                model = genai.GenerativeModel('gemini-1.5-flash')
+                model = genai.GenerativeModel('gemini-1.5-pro-002')
                 response = model.generate_content(query)
                 return response.text
             
