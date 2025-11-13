@@ -192,8 +192,9 @@ Réponds UNIQUEMENT avec un JSON valide:
             response_text = message.content[0].text.strip()
             logger.info(f"Claude industry detection response: {response_text[:200]}...")
             
-            # Parser le JSON
-            result = json.loads(response_text)
+            # Nettoyer et parser le JSON
+            clean_text = clean_json_response(response_text)
+            result = json.loads(clean_text)
             
             return result
             
