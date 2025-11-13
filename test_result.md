@@ -412,5 +412,33 @@ agent_communication:
         - 100 queries with 80/15/5 distribution: ❌ ÉCHEC
         
         RECOMMANDATION: WEBSEARCH REQUIS pour corriger Claude API et implémenter fonctionnalités
+    - agent: "testing"
+      message: |
+        🧠 TESTS FINAUX ANALYSE SÉMANTIQUE - DIAGNOSTIC COMPLET
+        
+        Tests effectués sur sekoia.ca (Report ID: e38b4d21-31d8-410b-9753-fa1268fe823a):
+        
+        1. ✅ CLAUDE API PARTIELLEMENT FONCTIONNEL
+           - claude-3-haiku-20240307: ✅ FONCTIONNE
+           - claude-3-5-sonnet-20240620: ❌ 404 MODEL NOT FOUND
+           - claude-3-5-sonnet-20241022: ❌ 404 MODEL NOT FOUND
+           - claude-3-5-sonnet: ❌ 404 MODEL NOT FOUND
+        
+        2. ✅ CORE SEMANTIC ANALYSIS FONCTIONNEL
+           - Détection industrie: ✅ manufacturing
+           - Extraction offerings: ✅ 10 items
+           - Extraction problems: ✅ 3 items  
+           - LDA Topic modeling: ✅ 8 topics
+           - Génération requêtes: ✅ 68 queries (100% non-branded)
+        
+        3. ❌ ENHANCED FEATURES MANQUANTES (Review Request)
+           - industry_classification: sub_industry=None, positioning=None, maturity=None, geographic_scope=None
+           - offerings: description=N/A, target_segment=N/A, priority=N/A
+           - problems_solved: category/severity/solution_approach manquants
+           - Quantité: 68 au lieu de 100+ requêtes, 10 au lieu de 12 offerings, 3 au lieu de 15 problems
+           - Distribution: 100%/0%/0% au lieu de 80%/15%/5%
+        
+        CONCLUSION: Module fonctionne en mode basique mais enhanced features pas implémentées
+        RECOMMANDATION: Implémenter enhanced features + corriger modèle Claude 3.5 Sonnet
     
 agent_communication:
