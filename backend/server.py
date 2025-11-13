@@ -626,10 +626,15 @@ async def process_analysis_job(job_id: str):
             {"$set": {"progress": 40}}
         )
         
-        # Step 2: Generate test queries (V2 - Intelligent Context-Based)
-        from query_generator_v2 import generate_queries
-        test_queries = generate_queries(crawl_data, num_queries=30)
-        logger.info(f"Generated {len(test_queries)} contextual test queries")
+        # Step 2: Generate test queries (V2 - Semantic Analysis + 100 queries)
+        from query_generator_v2 import generate_queries_with_analysis
+        query_results = generate_queries_with_analysis(crawl_data, num_queries=100)
+        test_queries = query_results.get('queries', [])
+        semantic_analysis = query_results.get('semantic_analysis', {})
+        query_breakdown = query_results.get('breakdown', {})
+        
+        logger.info(f"Generated {len(test_queries)} queries (Non-branded: {query_breakdown.get('non_branded', 0)}, Semi-branded: {query_breakdown.get('semi_branded', 0)}, Branded: {query_breakdown.get('branded', 0)})")
+        logger.info(f"Industry detected: {semantic_analysis.get('industry_classification', {}).get('primary_industry', 'unknown')}")
         
         # Sauvegarder queries_config.json pour personnalisation
         queries_config = {
@@ -637,7 +642,9 @@ async def process_analysis_job(job_id: str):
             'auto_generated_queries': test_queries,
             'manual_queries': [],
             'excluded_queries': [],
-            'query_metadata': {q: {'generated_at': datetime.now(timezone.utc).isoformat()} for q in test_queries}
+            'query_metadata': {q: {'generated_at': datetime.now(timezone.utc).isoformat()} for q in test_queries},
+            'semantic_analysis': semantic_analysis,
+            'query_breakdown': query_breakdown
         }
         queries_config_path = f"/app/backend/queries_config_{job_id}.json"
         with open(queries_config_path, 'w', encoding='utf-8') as f:
