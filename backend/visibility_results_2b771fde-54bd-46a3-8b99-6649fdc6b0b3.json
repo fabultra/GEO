@@ -1,0 +1,1728 @@
+{
+  "site_url": "sekoia.ca",
+  "company_name": "Data-Driven Digital Growth for Businesses",
+  "last_updated": "2025-11-13T22:31:00.147597",
+  "queries": [
+    {
+      "query": "meilleur optimisation de l'écosystème digital complet québec",
+      "timestamp": "2025-11-13T22:31:00.147715",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital complet québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital complet québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Complet Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Optimisation d'un écosystème digital complet au Québec\n\n## 🎯 Stratégie d'optimisation globale\n\n### 1. **Présence web optimisée**\n\n#### Site web performant\n- **Hébergement local** (Québec/Canada) pour meilleure vitesse\n- **Bilingue** (français/anglais) conforme à la loi 96\n- **Mobile-first** et adaptatif\n- **Temps de chargement** < 3 secondes\n- **SEO technique** impeccable (Core Web Vitals)\n\n#### Référencement local (SEO Québec)\n- Optimisation pour **Google.ca**\n- Mots-clés géolocalisés (Montréal, Québec, Laval, etc.)\n- Contenu en français québécois (vocabulaire local)\n- Schema markup local\n- Backlinks québécois de qualité\n\n### 2. **Google My Business & référencement local**\n\n- Fiche GMB complète et optimisée\n- Publications régulières\n- Gestion active des avis clients\n- Photos/vidéos locales\n- Catégories précises\n- Intégration avec Google Maps\n\n### 3. **Réseaux sociaux adaptés au Québec**\n\n#### Plateformes prioritaires\n- **Facebook** (très populaire au Québec)\n- **Instagram** (engagement élevé)\n- **LinkedIn** (B2B)\n- **TikTok** (jeune audience)\n- **YouTube** (contenu vidéo)\n\n#### Stratégie de contenu\n- Ton conversationnel québécois\n- Contenu user-generated\n- Stories et Reels quotidiens\n- Collaborations avec micro-influenceurs locaux\n\n### 4. **Publicité payante optimisée**\n\n#### Google Ads\n- Ciblage géographique précis\n- Mots-clés en français + anglais\n- Extensions d'annonces locales\n- Remarketing intelligent\n\n#### Meta Ads (",
+          "response_length": 1449,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital complet québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital complet québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Complet Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital complet québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital complet québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Complet Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital complet québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital complet québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Complet Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital complet québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital complet québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Complet Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur seo stratégique et technique avancé québec",
+      "timestamp": "2025-11-13T22:31:13.854188",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo stratégique et technique avancé québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo stratégique et technique avancé québec'",
+              "example_title": "Guide Complet: Meilleur Seo Stratégique Et Technique Avancé Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Stratégies SEO Avancées pour le Marché Québécois\n\n## 🎯 Spécificités du SEO au Québec\n\n### 1. Optimisation Bilingue (FR/EN)\n- **Hreflang tags** pour cibler fr-CA et en-CA\n- Contenu adapté au français québécois (pas seulement FR-FR)\n- Structure multilingue sans duplicate content\n\n### 2. SEO Local Québécois\n\n**Google Business Profile optimisé:**\n- Catégories spécifiques au marché québécois\n- Mots-clés locaux (arrondissements, quartiers)\n- Avis clients en français\n\n**Citations locales:**\n- Pages Jaunes Canada\n- 411.ca\n- Yelp Canada\n- Chambres de commerce locales\n\n## 🔧 Techniques SEO Avancées\n\n### Schema Markup Avancé\n```json\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"LocalBusiness\",\n  \"name\": \"Votre Entreprise\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"addressLocality\": \"Montréal\",\n    \"addressRegion\": \"QC\",\n    \"addressCountry\": \"CA\"\n  },\n  \"geo\": {\n    \"@type\": \"GeoCoordinates\",\n    \"latitude\": \"45.5017\",\n    \"longitude\": \"-73.5673\"\n  }\n}\n```\n\n### Core Web Vitals Optimisés\n- **LCP**: < 2.5s (lazy loading, CDN canadien)\n- **FID**: < 100ms (optimisation JavaScript)\n- **CLS**: < 0.1 (dimensions images fixées)\n\n### Architecture Technique\n\n**Structure en silos thématiques:**\n```\nAccueil\n├── Services Montréal\n│   ├── Service A (Plateau-Mont-Royal)\n│   ├── Service B (Ville-Marie)\n│   └── Service",
+          "response_length": 1325,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo stratégique et technique avancé québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo stratégique et technique avancé québec'",
+              "example_title": "Guide Complet: Meilleur Seo Stratégique Et Technique Avancé Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo stratégique et technique avancé québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo stratégique et technique avancé québec'",
+              "example_title": "Guide Complet: Meilleur Seo Stratégique Et Technique Avancé Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo stratégique et technique avancé québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo stratégique et technique avancé québec'",
+              "example_title": "Guide Complet: Meilleur Seo Stratégique Et Technique Avancé Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo stratégique et technique avancé québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo stratégique et technique avancé québec'",
+              "example_title": "Guide Complet: Meilleur Seo Stratégique Et Technique Avancé Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+      "timestamp": "2025-11-13T22:31:26.152925",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Campagnes Publicitaires Payantes (Paid Media) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Meilleures agences de gestion de campagnes publicitaires payantes au Québec\n\n## Agences spécialisées en paid media à Montréal\n\n### **Agences reconnues**\n\n1. **Adviso** (Montréal)\n   - Spécialiste Google Ads, Facebook Ads, programmatique\n   - Expertise en attribution et analytics avancé\n\n2. **Bloom** (Montréal)\n   - Performance marketing et paid social\n   - Approche data-driven\n\n3. **Dialekta** (Montréal)\n   - Médias payants multicanaux\n   - Spécialisation e-commerce\n\n4. **Bygoomi** (Montréal)\n   - Google Ads et Meta Ads\n   - Focus PME\n\n### **Agences à Québec**\n\n- **Diesel** - Marketing de performance\n- **Boîte à Loud** - Médias sociaux payants\n- **Basta communication** - Campagnes 360°\n\n## Critères de sélection\n\n✅ **Certifications** : Google Partner Premier, Meta Business Partner\n✅ **Spécialisation** : Votre industrie et vos plateformes prioritaires\n✅ **Budget minimum** : Varie de 1 000$ à 10 000$+/mois selon l'agence\n✅ **Transparence** : Accès direct aux comptes publicitaires\n✅ **Résultats mesurables** : KPIs clairs et reportings réguliers\n\n## Plateformes principales\n\n- Google Ads (Search, Display, YouTube)\n- Meta Ads (Facebook, Instagram)\n- LinkedIn Ads\n- Programmatique\n- TikTok Ads\n\n**Avez-vous un budget et des objectifs spécifiques en tête?**",
+          "response_length": 1268,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Campagnes Publicitaires Payantes (Paid Media) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Campagnes Publicitaires Payantes (Paid Media) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Campagnes Publicitaires Payantes (Paid Media) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Campagnes Publicitaires Payantes (Paid Media) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur analyse et configuration analytics (ga4) québec",
+      "timestamp": "2025-11-13T22:31:38.843904",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse et configuration analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse et configuration analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Et Configuration Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Meilleur analyse et configuration GA4 au Québec 🇨🇦\n\n## 🏆 Top agences spécialisées GA4 au Québec\n\n### **1. Adviso (Montréal)**\n- Leaders en analytique au Canada\n- Spécialistes certifiés Google Analytics\n- Expertise migration UA → GA4\n- 🌐 adviso.ca\n\n### **2. Dialekta (Montréal)**\n- Spécialistes data et analytique\n- Formation GA4 en français\n- Configuration avancée e-commerce\n- 🌐 dialekta.com\n\n### **3. Bloom (Montréal/Québec)**\n- Agence full-service avec expertise GA4\n- Tableaux de bord personnalisés\n- Intégration BigQuery\n\n### **4. Digitad (Montréal)**\n- Formation GA4 complète\n- Configuration pour PME\n- Support en français\n- 🌐 digitad.ca\n\n## 📊 Configuration GA4 essentielle pour le Québec\n\n### **Paramètres linguistiques**\n```\n- Langue : Français canadien\n- Fuseau horaire : America/Montreal (EST/EDT)\n- Devise : CAD ($)\n```\n\n### **Événements importants à configurer**\n\n**E-commerce :**\n- `purchase` avec taxes (TPS 5% + TVQ 9.975%)\n- `add_to_cart`\n- `begin_checkout`\n- Paramètre personnalisé : `province` (QC)\n\n**Engagement local :**\n- Appels téléphoniques\n- Demandes de soumission\n- Téléchargements de catalogues\n- Formulaires de contact\n\n### **Dimensions personnalisées recommandées**\n1. **Langue de navigation** (FR/EN)\n2. **Type de client** (B2B/B2C)\n3. **Région du Québec** (Montréal, Québec, régions)\n4. **",
+          "response_length": 1321,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse et configuration analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse et configuration analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Et Configuration Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse et configuration analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse et configuration analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Et Configuration Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse et configuration analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse et configuration analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Et Configuration Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse et configuration analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse et configuration analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Et Configuration Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur optimisation du taux de conversion (cro) québec",
+      "timestamp": "2025-11-13T22:31:52.556045",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation du taux de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation du taux de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Du Taux De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Meilleures pratiques CRO pour le marché québécois\n\n## Agences CRO spécialisées au Québec\n\n### Montréal\n- **Dialekta** - Spécialistes en optimisation et analytics\n- **Adviso** - Expertise CRO et expérience utilisateur\n- **NOVATIZE** - Optimisation de conversion e-commerce\n- **Bloom** - Marketing numérique et CRO\n\n### Québec\n- **Phosphore** - Marketing web et optimisation\n- **Bofu Agence Marketing** - CRO et génération de leads\n\n## Spécificités du marché québécois\n\n### 1. **Langue et localisation**\n- Offrir le français ET l'anglais\n- Adaptation culturelle du contenu\n- Respecter la Loi 101 (français prédominant)\n\n### 2. **Préférences de paiement**\n- Interac en ligne (très populaire)\n- Cartes de débit\n- Prix en CAD clairement affichés\n\n### 3. **Éléments de confiance**\n- Badges \"Entreprise québécoise\"\n- Adresse physique au Québec\n- Service client en français\n\n## Tactiques CRO efficaces\n\n### Tests A/B prioritaires\n- ✅ Titres et propositions de valeur\n- ✅ Boutons d'appel à l'action (couleurs, textes)\n- ✅ Formulaires (réduction des champs)\n- ✅ Images de produits/services\n- ✅ Preuves sociales québécoises\n\n### Outils recommandés\n- **Hotjar** - Heatmaps et enregistrements\n- **Google Optimize** - Tests A/B gratuits\n- **VWO** - Plateforme complète\n- **Crazy Egg** - Analyse comportementale\n\nVous cherchez une agence ou des conseils spécifiques?",
+          "response_length": 1353,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation du taux de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation du taux de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Du Taux De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation du taux de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation du taux de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Du Taux De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation du taux de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation du taux de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Du Taux De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation du taux de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation du taux de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Du Taux De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur audit et préparation de l'écosystème digital québec",
+      "timestamp": "2025-11-13T22:32:06.015069",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et préparation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et préparation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Préparation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Meilleur audit et préparation de l'écosystème digital au Québec\n\n## 🔍 Agences et consultants spécialisés en audit digital\n\n### **Agences réputées au Québec**\n\n1. **Dialekta** (Montréal)\n   - Stratégie digitale et transformation numérique\n   - Audit complet d'écosystème\n\n2. **Adviso** (Montréal/Québec)\n   - Analytique web et stratégie data\n   - Audit de performance digital\n\n3. **Bloom** (Montréal)\n   - Stratégie de marque et digital\n   - Audit d'expérience utilisateur\n\n4. **Absolunet (Accenture)** (Montréal)\n   - Commerce électronique\n   - Transformation digitale\n\n5. **Digitad** (Montréal)\n   - Marketing digital\n   - Audit SEO et performance\n\n## 📊 Composantes d'un audit digital complet\n\n### **1. Analyse de présence en ligne**\n- Site web (performance, UX, SEO)\n- Médias sociaux\n- Réputation en ligne\n- Commerce électronique\n\n### **2. Audit technique**\n- Infrastructure technologique\n- Sécurité et conformité (Loi 25)\n- Performance et vitesse\n- Mobile-first\n\n### **3. Données et analytique**\n- Google Analytics / GA4\n- Tracking et conversions\n- Conformité RGPD/Loi 25\n\n### **4. Marketing digital**\n- SEO (référencement naturel)\n- SEM (publicité payante)\n- Médias sociaux\n- Contenu\n- Courriel marketing\n\n### **5. Expérience client**\n- Parcours utilisateur\n- Points de friction\n- Taux de conversion\n- Satisfaction client\n\n## 🎯 Préparation de l'écosystème digital\n\n### **Étapes recommandées**\n\n**Phase 1 :",
+          "response_length": 1411,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et préparation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et préparation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Préparation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et préparation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et préparation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Préparation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et préparation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et préparation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Préparation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et préparation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et préparation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Préparation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur gestion de programmes de marketing automation québec",
+      "timestamp": "2025-11-13T22:32:19.156632",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de programmes de marketing automation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de programmes de marketing automation québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Programmes De Marketing Automation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Meilleurs outils de gestion de marketing automation au Québec\n\nVoici les principales solutions adaptées au marché québécois :\n\n## **Plateformes leaders**\n\n### **1. HubSpot**\n- Interface en français\n- CRM intégré gratuit\n- Excellent support francophone\n- Idéal pour PME québécoises\n\n### **2. ActiveCampaign**\n- Rapport qualité-prix excellent\n- Automatisations avancées\n- Interface disponible en français\n- Populaire auprès des entreprises québécoises\n\n### **3. Zoho Marketing Automation**\n- Prix compétitifs\n- Suite complète d'outils\n- Support en français\n\n### **4. Mailchimp**\n- Facile à utiliser\n- Gratuit jusqu'à 500 contacts\n- Interface partiellement francisée\n\n## **Solutions québécoises/canadiennes**\n\n### **Leadfox** (Québec)\n- Entreprise 100% québécoise\n- Support local en français\n- Spécialisé pour le marché québécois\n\n### **Dialog Insight** (Montréal)\n- Hébergement au Canada\n- Conformité CASL/RGPD\n- Support francophone complet\n\n## **Critères de sélection importants**\n\n✅ Conformité CASL (loi anti-pourriel canadienne)\n✅ Support en français\n✅ Hébergement des données au Canada\n✅ Tarification adaptée aux PME\n\n**Besoin d'aide pour choisir?** Précisez votre budget et vos besoins spécifiques.",
+          "response_length": 1203,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de programmes de marketing automation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de programmes de marketing automation québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Programmes De Marketing Automation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de programmes de marketing automation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de programmes de marketing automation québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Programmes De Marketing Automation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de programmes de marketing automation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de programmes de marketing automation québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Programmes De Marketing Automation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de programmes de marketing automation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de programmes de marketing automation québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Programmes De Marketing Automation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur stratégie de croissance b2b spécialisée québec",
+      "timestamp": "2025-11-13T22:32:32.303686",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie De Croissance B2B Spécialisée Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Meilleures stratégies de croissance B2B au Québec\n\n## 1. **Marketing de contenu bilingue**\n- Créer du contenu en français ET en anglais\n- Adapter le ton au marché québécois (moins agressif qu'aux États-Unis)\n- Blogs, études de cas, livres blancs ciblant les défis locaux\n\n## 2. **LinkedIn hyper-ciblé**\n- Le réseau #1 B2B au Québec\n- Cibler par secteur, titre et région (Montréal, Québec, Gatineau)\n- Contenu authentique et relationnel (pas juste promotionnel)\n\n## 3. **Partenariats stratégiques**\n- Collaborer avec des fournisseurs complémentaires\n- S'associer à des associations professionnelles (CCMM, CCIQ, Réseau Action TI)\n- Co-marketing avec des entreprises non-concurrentes\n\n## 4. **Événements et réseautage**\n- Les Québécois valorisent les relations personnelles\n- Participer aux salons professionnels locaux\n- Organiser des déjeuners-conférences ou webinaires\n\n## 5. **Programmes de recommandation**\n- Le bouche-à-oreille est puissant au Québec\n- Inciter vos clients satisfaits à référer\n- Créer un programme structuré avec incitatifs\n\n## 6. **SEO local + Google Ads**\n- Optimiser pour les recherches québécoises\n- Mots-clés en français québécois (pas France)\n- Campagnes géociblées\n\n## 7. **Account-Based Marketing (ABM)**\n- Identifier 20-50 comptes cibles prioritaires\n- Campagnes ultra-personnalisées\n- Approche multi-touch coordonnée\n\n**Quel est votre secteur d'activité?** Je pourrais affiner ces recommandations.",
+          "response_length": 1430,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie De Croissance B2B Spécialisée Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie De Croissance B2B Spécialisée Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie De Croissance B2B Spécialisée Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie de croissance b2b spécialisée québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie De Croissance B2B Spécialisée Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "optimisation de l'écosystème digital complet professionnel québec",
+      "timestamp": "2025-11-13T22:32:45.679914",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital complet professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital complet professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Complet Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Optimisation de l'Écosystème Digital Complet - Contexte Québécois\n\n## 1. Audit et État des Lieux\n\n### Analyse de présence actuelle\n- **Site web** : Performance, UX, conformité Loi 25\n- **Réseaux sociaux** : LinkedIn, Facebook, Instagram (pertinence au marché québécois)\n- **Référencement** : Position sur Google.ca et mots-clés en français\n- **Outils CRM** : Intégration et exploitation des données\n- **Automatisation marketing** : Niveau de maturité\n\n### Conformité réglementaire québécoise\n- Loi 25 (protection des renseignements personnels)\n- Charte de la langue française (Loi 96)\n- Accessibilité web (WCAG 2.1)\n\n## 2. Optimisation du Site Web\n\n### Performance technique\n- Hébergement canadien (latence réduite)\n- Vitesse de chargement < 3 secondes\n- Version mobile optimisée (60%+ du trafic)\n- Certificat SSL et sécurité renforcée\n\n### Contenu et SEO local\n- Mots-clés québécois et variations linguistiques\n- Contenu bilingue stratégique (selon le secteur)\n- Fiches Google Business Profile optimisées\n- Schema markup pour entreprises locales\n\n### Conversion\n- Parcours utilisateur simplifié\n- Formulaires conformes Loi 25\n- Appels à l'action adaptés à la culture québécoise\n- Chat en direct aux heures ouvrables du Québec\n\n## 3. Stratégie de Contenu\n\n### Plateformes prioritaires au Québec\n- **LinkedIn** : B2B, réseautage professionnel\n- **Facebook** : Communautés locales, 50+ ans\n- **Instagram** : Marques lifestyle, 18-45 ans\n- **YouTube** : Tutoriels, démonstrations\n\n### Calendrier",
+          "response_length": 1494,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital complet professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital complet professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Complet Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital complet professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital complet professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Complet Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital complet professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital complet professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Complet Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital complet professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital complet professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Complet Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "seo stratégique et technique avancé professionnel québec",
+      "timestamp": "2025-11-13T22:32:58.748362",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'seo stratégique et technique avancé professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'seo stratégique et technique avancé professionnel québec'",
+              "example_title": "Guide Complet: Seo Stratégique Et Technique Avancé Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# SEO Stratégique et Technique Avancé - Québec\n\n## 🎯 Stratégies SEO Avancées pour le Marché Québécois\n\n### 1. **SEO Bilingue et Géolocalisation**\n\n#### Optimisation Français/Anglais\n- Balises **hreflang** pour cibler QC (fr-CA, en-CA)\n- Sous-domaines ou sous-répertoires par langue\n- Contenu adapté culturellement (pas juste traduit)\n- Ciblage géographique dans Google Search Console\n\n#### Signaux Locaux Québécois\n```html\n<script type=\"application/ld+json\">\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"LocalBusiness\",\n  \"address\": {\n    \"@type\": \"PostalAddress\",\n    \"addressRegion\": \"QC\",\n    \"addressCountry\": \"CA\"\n  }\n}\n</script>\n```\n\n### 2. **Technical SEO Avancé**\n\n#### Core Web Vitals Optimisés\n- **LCP** < 2.5s (Largest Contentful Paint)\n- **FID** < 100ms (First Input Delay)\n- **CLS** < 0.1 (Cumulative Layout Shift)\n- **INP** < 200ms (Interaction to Next Paint - nouveau metric 2024)\n\n#### Architecture Technique\n```\nOptimisations critiques :\n- Render-tree optimization\n- Critical CSS inline\n- Lazy loading progressif\n- Preconnect/DNS-prefetch\n- Resource hints stratégiques\n```\n\n#### Code Structuré Avancé\n- **Schema.org** multi-types\n- FAQ Schema pour featured snippets\n- Product/Service Schema\n- Organization + LocalBusiness\n- BreadcrumbList\n\n### 3. **Stratégie de Contenu Sémantique**\n\n#### Recherche de Mots-Clés Québécois\n- Expressions typiquement québécoises vs françaises",
+          "response_length": 1395,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'seo stratégique et technique avancé professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'seo stratégique et technique avancé professionnel québec'",
+              "example_title": "Guide Complet: Seo Stratégique Et Technique Avancé Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'seo stratégique et technique avancé professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'seo stratégique et technique avancé professionnel québec'",
+              "example_title": "Guide Complet: Seo Stratégique Et Technique Avancé Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'seo stratégique et technique avancé professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'seo stratégique et technique avancé professionnel québec'",
+              "example_title": "Guide Complet: Seo Stratégique Et Technique Avancé Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'seo stratégique et technique avancé professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'seo stratégique et technique avancé professionnel québec'",
+              "example_title": "Guide Complet: Seo Stratégique Et Technique Avancé Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 100,
+    "global_visibility": 0.0,
+    "by_platform": {
+      "chatgpt": 0.0,
+      "claude": 0.0,
+      "perplexity": 0.0,
+      "gemini": 0.0,
+      "google_ai": 0.0
+    }
+  }
+}
