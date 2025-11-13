@@ -2,13 +2,20 @@
 MODULE D'ANALYSE SÉMANTIQUE PROFONDE
 Détecte automatiquement l'industrie et extrait les entités sémantiques
 100% GÉNÉRIQUE - Fonctionne pour toute industrie
+Utilise Anthropic Claude pour une analyse profonde
 """
 import logging
 import re
+import os
+import json
 from typing import Dict, Any, List
 from collections import Counter
+from anthropic import Anthropic
 
 logger = logging.getLogger(__name__)
+
+# Initialiser Anthropic
+anthropic_client = Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
 
 # Dictionnaire de patterns par industrie
 INDUSTRY_PATTERNS = {
