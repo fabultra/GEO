@@ -544,27 +544,129 @@ Réponds UNIQUEMENT avec un JSON valide:
         return list(set(problems))[:10] if problems else ["optimiser les processus", "améliorer l'efficacité", "réduire les coûts"]
     
     def _identify_topics(self, crawl_data: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """Identifier les topics principaux (simplifié)"""
+        """Identifier les topics principaux avec VRAI Topic Modeling LDA"""
         
-        # Extraire tous les mots
+        try:
+            from sklearn.feature_extraction.text import TfidfVectorizer
+            from sklearn.decomposition import LatentDirichletAllocation
+            
+            # Extraire TOUS les paragraphes de TOUTES les pages
+            documents = []
+            for page in crawl_data.get('pages', [])[:20]:  # 20 pages
+                for paragraph in page.get('paragraphs', []):
+                    if len(paragraph) > 50:  # Au moins 50 caractères
+                        documents.append(paragraph)
+            
+            if len(documents) < 5:
+                logger.warning("Not enough documents for LDA, using fallback")
+                return self._identify_topics_fallback(crawl_data)
+            
+            # Stop words français élargis
+            stop_words_fr = {
+                'dans', 'pour', 'avec', 'vous', 'nous', 'votre', 'notre', 'plus', 'tout', 'tous', 
+                'toute', 'cette', 'sont', 'être', 'avoir', 'faire', 'leur', 'leurs', 'elle', 'elles',
+                'celui', 'celle', 'ceux', 'celles', 'peut', 'peuvent', 'aussi', 'très', 'même',
+                'chez', 'sans', 'sous', 'alors', 'donc', 'mais', 'aussi', 'encore', 'jamais',
+                'toujours', 'souvent', 'parfois', 'ainsi', 'après', 'avant', 'depuis', 'pendant'
+            }
+            
+            # TF-IDF Vectorization
+            vectorizer = TfidfVectorizer(
+                max_features=200,
+                ngram_range=(1, 2),  # Unigrams et bigrams
+                min_df=2,  # Minimum 2 documents
+                max_df=0.8,  # Maximum 80% des documents
+                stop_words=list(stop_words_fr)
+            )
+            
+            doc_term_matrix = vectorizer.fit_transform(documents)
+            
+            # LDA Topic Modeling
+            n_topics = min(8, len(documents) // 3)  # Adaptatif
+            lda = LatentDirichletAllocation(
+                n_components=n_topics,
+                max_iter=20,
+                learning_method='online',
+                random_state=42,
+                n_jobs=-1
+            )
+            
+            lda.fit(doc_term_matrix)
+            
+            # Extraire topics avec contexte Claude
+            feature_names = vectorizer.get_feature_names_out()
+            topics = []
+            
+            for topic_idx, topic in enumerate(lda.components_):
+                # Top 10 mots par topic
+                top_indices = topic.argsort()[-10:][::-1]
+                top_words = [feature_names[i] for i in top_indices]
+                
+                # Demander à Claude de labéliser intelligemment
+                topic_label = self._label_topic_with_claude(top_words)
+                
+                topics.append({
+                    'topic_id': topic_idx,
+                    'label': topic_label,
+                    'keywords': top_words[:8],
+                    'weight': float(topic.sum()),
+                    'top_words_scores': [float(topic[i]) for i in top_indices[:5]]
+                })
+            
+            # Trier par poids
+            topics = sorted(topics, key=lambda x: x['weight'], reverse=True)
+            
+            logger.info(f"LDA identified {len(topics)} topics")
+            return topics
+            
+        except Exception as e:
+            logger.error(f"LDA topic modeling failed: {str(e)}, using fallback")
+            return self._identify_topics_fallback(crawl_data)
+    
+    def _label_topic_with_claude(self, keywords: List[str]) -> str:
+        """Utiliser Claude pour labéliser intelligemment un topic"""
+        try:
+            prompt = f"""Ces mots-clés représentent un thème principal d'un site web:
+{', '.join(keywords)}
+
+Donne un label CONCIS (2-4 mots) qui capture l'essence de ce thème.
+Exemples: "Services financiers", "Gestion de projet", "E-commerce mode"
+
+Réponds UNIQUEMENT avec le label (pas de JSON, pas d'explication):"""
+
+            message = anthropic_client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=20,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            
+            label = message.content[0].text.strip()
+            return label
+            
+        except Exception:
+            # Fallback: utiliser le premier mot-clé
+            return keywords[0] if keywords else "Topic"
+    
+    def _identify_topics_fallback(self, crawl_data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """Fallback simple si LDA échoue"""
+        
         all_text = ""
         for page in crawl_data.get('pages', []):
             all_text += " " + " ".join(page.get('paragraphs', []))
         
         words = re.findall(r'\b[a-zàâäéèêëïîôùûüÿæœç]{4,}\b', all_text.lower())
         
-        # Filtrer stop words
         stop_words = {'dans', 'pour', 'avec', 'vous', 'nous', 'votre', 'notre', 'plus', 'tout', 'tous', 'être', 'avoir', 'faire'}
         filtered_words = [w for w in words if w not in stop_words]
         
-        # Compter fréquence
         word_freq = Counter(filtered_words)
         
-        # Top 10 topics
         topics = []
         for word, count in word_freq.most_common(10):
             topics.append({
+                'topic_id': len(topics),
                 'label': word,
+                'keywords': [word],
                 'weight': count / len(filtered_words) if filtered_words else 0
             })
         
