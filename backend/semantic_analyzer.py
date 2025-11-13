@@ -136,32 +136,46 @@ class SemanticAnalyzer:
         # Prendre les 15000 premiers caractères pour l'analyse (beaucoup plus que 4000)
         all_text_sample = all_text[:15000]
         
-        # Utiliser Claude pour analyser l'industrie
+        # ANALYSE PROFONDE avec Claude - Multi-étapes
         try:
-            prompt = f"""Analyse ce contenu de site web et détermine :
-1. L'industrie principale (choisis parmi: financial_services, saas, ecommerce, construction, professional_services, healthcare, hospitality, real_estate, education, manufacturing, ou 'generic' si aucune ne correspond)
-2. Le type d'entreprise précis (ex: "courtier en assurance", "logiciel de gestion", "boutique en ligne", etc.)
-3. Le business model (B2B, B2C, ou B2B2C)
+            # ÉTAPE 1: Analyse contextuelle approfondie
+            prompt = f"""Tu es un expert en analyse sémantique de sites web. Analyse EN PROFONDEUR ce site web.
 
-CONTENU DU SITE:
-{all_text}
+CONTENU DU SITE (20 pages):
+{all_text_sample}
 
-Réponds UNIQUEMENT avec un JSON valide dans ce format exact:
+ANALYSE DEMANDÉE:
+1. **Industrie principale** - Identifie l'industrie précise parmi: financial_services, saas, ecommerce, construction, professional_services, healthcare, hospitality, real_estate, education, manufacturing, ou generic
+2. **Sous-industrie** - Spécifie la niche exacte (ex: "insurance brokerage", "project management software", "sustainable fashion")
+3. **Type d'entreprise** - Décris précisément ce qu'ils font (ex: "courtier en assurance familiale", "logiciel de gestion de projet cloud")
+4. **Business model** - B2B, B2C ou B2B2C avec justification
+5. **Positionnement** - Comment ils se différencient (premium, volume, spécialisé, etc.)
+6. **Maturité** - startup, scale-up, établi, leader de marché
+7. **Scope géographique** - local, régional, national, international
+
+RÉFLÉCHIS en profondeur sur le contexte métier, les clients cibles, et le positionnement.
+
+Réponds UNIQUEMENT avec un JSON valide:
 {{
-  "primary_industry": "nom_industrie",
-  "company_type": "type précis",
-  "business_model": "B2B ou B2C ou B2B2C",
-  "confidence": 0.85
+  "primary_industry": "industrie",
+  "sub_industry": "sous-niche précise",
+  "company_type": "description détaillée",
+  "business_model": "B2B/B2C/B2B2C",
+  "positioning": "premium/volume/specialized/etc",
+  "maturity": "startup/scaleup/established/leader",
+  "geographic_scope": "local/regional/national/international",
+  "confidence": 0.XX,
+  "reasoning": "Justification de l'analyse en 2-3 phrases"
 }}"""
 
             message = anthropic_client.messages.create(
                 model="claude-3-5-sonnet-20241022",
-                max_tokens=500,
+                max_tokens=1000,
                 messages=[{"role": "user", "content": prompt}]
             )
             
             response_text = message.content[0].text.strip()
-            logger.info(f"Claude industry detection response: {response_text}")
+            logger.info(f"Claude industry detection response: {response_text[:200]}...")
             
             # Parser le JSON
             result = json.loads(response_text)
