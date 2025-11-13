@@ -2,6 +2,7 @@
 TEMPLATES DE REQUÊTES PAR INDUSTRIE
 100% adaptatif selon l'industrie détectée
 """
+from typing import Dict, List
 
 # Templates de requêtes par type d'industrie
 QUERY_TEMPLATES = {
