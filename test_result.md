@@ -192,6 +192,9 @@ backend:
         - working: false
           agent: "testing"
           comment: "❌ CLAUDE API PARTIELLEMENT FONCTIONNEL - Tests complets effectués sur sekoia.ca (Report ID: e38b4d21-31d8-410b-9753-fa1268fe823a). Claude API fonctionne avec claude-3-haiku-20240307 mais PAS avec claude-3-5-sonnet-20240620 (404 model not found). FONCTIONNEL: Détection industrie (manufacturing), extraction 10 offerings, 3 problems solved, 8 topics LDA, génération 68 requêtes 100% non-branded. MANQUANT: Enhanced features demandées - sub_industry/positioning/maturity/geographic_scope (tous None), offerings sans description/target_segment/priority, problems_solved sans category/severity/solution_approach, seulement 68 requêtes au lieu de 100+, distribution 100%/0%/0% au lieu de 80%/15%/5%. CORE FUNCTIONALITY WORKS mais enhanced features pas implémentées."
+        - working: false
+          agent: "testing"
+          comment: "❌ CLAUDE 3.5 SONNET NON ACCESSIBLE - Tests de la review request effectués. CRITIQUE: Tous les modèles Claude 3.5 Sonnet retournent 404 model not found (claude-3-5-sonnet-20241022, claude-3-5-sonnet-latest, claude-3-5-sonnet). Fallback vers claude-3-haiku-20240307 FONCTIONNE. SYSTÈME OPÉRATIONNEL: Pipeline complet fonctionne avec Haiku, génère 82 requêtes, analyse sémantique basique active. MANQUANT CRITIQUE: Enhanced semantic analysis avec sub_industry/positioning/maturity/reasoning, offerings avec description/target_segment/priority, problems_solved avec category/severity/solution_approach, VRAI Topic Modeling LDA avec keywords/top_words_scores, 100+ requêtes avec distribution 80%/15%/5%. RECOMMANDATION: WEBSEARCH requis pour corriger accès Claude 3.5 Sonnet + implémenter enhanced features."
   
   - task: "Word Report Generator (50-70 pages)"
     implemented: true
