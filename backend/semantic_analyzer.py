@@ -169,7 +169,7 @@ Réponds UNIQUEMENT avec un JSON valide:
 }}"""
 
             message = anthropic_client.messages.create(
-                model="claude-3-haiku-20240307",
+                model="claude-sonnet-4-5-20250929",
                 max_tokens=1000,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -369,7 +369,7 @@ Réponds UNIQUEMENT avec un JSON valide:
 }}"""
 
             message = anthropic_client.messages.create(
-                model="claude-3-haiku-20240307",
+                model="claude-sonnet-4-5-20250929",
                 max_tokens=1500,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -511,7 +511,7 @@ Réponds UNIQUEMENT avec un JSON valide:
 }}"""
 
             message = anthropic_client.messages.create(
-                model="claude-3-haiku-20240307",
+                model="claude-sonnet-4-5-20250929",
                 max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
@@ -635,7 +635,7 @@ Exemples: "Services financiers", "Gestion de projet", "E-commerce mode"
 Réponds UNIQUEMENT avec le label (pas de JSON, pas d'explication):"""
 
             message = anthropic_client.messages.create(
-                model="claude-3-haiku-20240307",
+                model="claude-sonnet-4-5-20250929",
                 max_tokens=20,
                 messages=[{"role": "user", "content": prompt}]
             )
