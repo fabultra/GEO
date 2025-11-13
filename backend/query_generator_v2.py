@@ -161,11 +161,13 @@ class IntelligentQueryGeneratorV2:
         if not problem_texts:
             problem_texts = ['améliorer efficacité', 'réduire coûts', 'augmenter revenus', 'gagner temps']
         
-        # 1. INFORMATIONAL QUERIES (45 requêtes) - AUGMENTÉ
+        # 1. INFORMATIONAL QUERIES (60+ requêtes) - MASSIVEMENT AUGMENTÉ
         informational_templates = templates.get('informational', [])
+        
+        # Génération massive avec TOUTES les combinaisons
         for template in informational_templates:  # TOUS les templates
-            for offering in offering_names[:4]:  # Plus d'offerings
-                for location in location_names[:2]:
+            for offering in offering_names:  # TOUS les offerings (jusqu'à 8)
+                for location in location_names:  # TOUTES les locations
                     try:
                         query = template.format(
                             offering=offering,
@@ -174,6 +176,26 @@ class IntelligentQueryGeneratorV2:
                             use_case=segments[0] if segments else 'entreprise',
                             offering1=offering_names[0] if len(offering_names) > 0 else 'service',
                             offering2=offering_names[1] if len(offering_names) > 1 else 'solution',
+                            competitor='alternative',
+                            business_type=company_type
+                        )
+                        if query and len(query) > 10:
+                            queries.append(query)
+                    except Exception:
+                        pass
+        
+        # Ajouter encore plus avec variations de segments
+        for template in informational_templates[:3]:
+            for offering in offering_names[:3]:
+                for segment in segments[:2]:
+                    try:
+                        query = template.format(
+                            offering=offering,
+                            location=location_names[0] if location_names else 'Québec',
+                            segment=segment,
+                            use_case=segment,
+                            offering1=offering,
+                            offering2=offering_names[1] if len(offering_names) > 1 else offering,
                             competitor='alternative',
                             business_type=company_type
                         )
