@@ -391,7 +391,8 @@ Réponds UNIQUEMENT avec un JSON valide:
             )
             
             response_text = message.content[0].text.strip()
-            result = json.loads(response_text)
+            clean_text = clean_json_response(response_text)
+            result = json.loads(clean_text)
             
             return result.get('offerings', [])[:12]
             
