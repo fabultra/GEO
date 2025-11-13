@@ -470,35 +470,56 @@ Réponds UNIQUEMENT avec un JSON valide:
         
         return locations[:3]
     
-    def _extract_problems_solved(self, text: str) -> List[str]:
-        """Extraire problèmes résolus avec Anthropic"""
+    def _extract_problems_solved(self, text: str) -> List[Dict[str, Any]]:
+        """Extraire problèmes résolus avec Anthropic - ANALYSE PROFONDE DES PAIN POINTS"""
         
-        text_sample = text[:3000]
+        text_sample = text[:12000]  # Plus de contexte
         
         try:
-            prompt = f"""Analyse ce contenu de site web et identifie les problèmes/défis que cette entreprise résout pour ses clients.
+            prompt = f"""Tu es un expert en analyse des besoins clients et pain points. Analyse EN PROFONDEUR ce site.
 
-CONTENU:
+CONTENU DU SITE:
 {text_sample}
 
-Liste 5-10 problèmes/défis principaux que cette entreprise aide à résoudre.
-Formule chaque problème de manière concise (ex: "gagner du temps", "réduire les coûts", "protéger contre les risques").
+TÂCHE: Identifie les problèmes/défis/pain points que cette entreprise résout.
 
-Réponds UNIQUEMENT avec un JSON valide dans ce format:
+Pour chaque problème:
+1. **Problème précis** - Formulation claire du pain point
+2. **Catégorie** - operational/financial/strategic/risk/growth/compliance
+3. **Gravité** - critical/high/medium/low
+4. **Segment affecté** - Qui souffre de ce problème
+5. **Solution proposée** - Comment l'entreprise le résout
+
+RÉFLÉCHIS sur:
+- Quels sont les VRAIS problèmes clients (pas juste features)
+- Quelle est la hiérarchie des pain points (urgent vs important)
+- Quel est le coût de l'inaction pour le client
+
+Liste 10-15 problèmes par ordre de gravité.
+
+Réponds UNIQUEMENT avec un JSON valide:
 {{
-  "problems_solved": ["problème 1", "problème 2", "problème 3"]
+  "problems_solved": [
+    {{
+      "problem": "description du problème",
+      "category": "operational/financial/etc",
+      "severity": "critical/high/medium/low",
+      "affected_segment": "qui souffre",
+      "solution_approach": "comment c'est résolu"
+    }}
+  ]
 }}"""
 
             message = anthropic_client.messages.create(
                 model="claude-3-5-sonnet-20241022",
-                max_tokens=600,
+                max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
             
             response_text = message.content[0].text.strip()
             result = json.loads(response_text)
             
-            return result.get('problems_solved', [])[:10]
+            return result.get('problems_solved', [])[:15]
             
         except Exception as e:
             logger.error(f"Claude problems extraction failed: {str(e)}, using fallback")
