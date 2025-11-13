@@ -838,6 +838,8 @@ async def process_analysis_job(job_id: str):
         # Ajouter les données des modules avancés
         report_dict['competitive_intelligence'] = competitive_data
         report_dict['schemas'] = schemas_data
+        report_dict['semantic_analysis'] = semantic_analysis
+        report_dict['query_breakdown'] = query_breakdown
         
         await db.reports.insert_one(report_dict)
         
