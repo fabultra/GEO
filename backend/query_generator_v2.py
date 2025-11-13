@@ -144,7 +144,7 @@ class IntelligentQueryGeneratorV2:
                             competitor='alternative'
                         )
                         queries.append(query)
-                    except:
+                    except Exception:
                         pass
         
         # 2. COMMERCIAL QUERIES (20 requêtes)
