@@ -69,19 +69,29 @@ class IntelligentQueryGeneratorV2:
             # 3.3 BRANDED (5 requêtes)
             queries['branded'] = self._generate_branded_queries(entities)
             
-            # 4. ASSEMBLER ET NETTOYER
+            # 4. NETTOYER CHAQUE CATÉGORIE SÉPARÉMENT (pour garder la distribution)
+            queries['non_branded'] = self._clean_and_deduplicate(queries['non_branded'])
+            queries['semi_branded'] = self._clean_and_deduplicate(queries['semi_branded'])
+            queries['branded'] = self._clean_and_deduplicate(queries['branded'])
+            
+            # 5. COMPLÉTER SI NÉCESSAIRE
+            while len(queries['non_branded']) < 80:
+                queries['non_branded'].extend(self._generate_generic_queries(entities, 20))
+                queries['non_branded'] = self._clean_and_deduplicate(queries['non_branded'])
+                if len(queries['non_branded']) >= 200:  # Éviter boucle infinie
+                    break
+            
+            while len(queries['semi_branded']) < 15:
+                queries['semi_branded'].extend(self._generate_more_semi_branded(entities))
+                queries['semi_branded'] = self._clean_and_deduplicate(queries['semi_branded'])
+                if len(queries['semi_branded']) >= 30:
+                    break
+            
+            # 6. ASSEMBLER FINAL
             final_queries = []
             final_queries.extend(queries['non_branded'][:80])
             final_queries.extend(queries['semi_branded'][:15])
             final_queries.extend(queries['branded'][:5])
-            
-            # Dédupliquer et nettoyer
-            final_queries = self._clean_and_deduplicate(final_queries)
-            
-            # 5. COMPLÉTER SI NÉCESSAIRE
-            if len(final_queries) < num_queries:
-                logger.warning(f"Only {len(final_queries)} queries generated, filling with generic ones")
-                final_queries.extend(self._generate_generic_queries(entities, num_queries - len(final_queries)))
             
             final_queries = final_queries[:num_queries]
             
