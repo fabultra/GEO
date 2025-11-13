@@ -154,7 +154,7 @@ class VisibilityTesterV2:
             
             elif platform == 'claude':
                 response = self.anthropic_client.messages.create(
-                    model="claude-3-5-sonnet-latest",
+                    model="claude-3-5-sonnet",
                     max_tokens=500,
                     messages=[{"role": "user", "content": query}]
                 )
