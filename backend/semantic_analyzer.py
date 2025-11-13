@@ -117,17 +117,24 @@ class SemanticAnalyzer:
             }
     
     def _detect_industry(self, crawl_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Détecter automatiquement l'industrie avec Anthropic"""
+        """Détecter automatiquement l'industrie avec Anthropic - ANALYSE PROFONDE"""
         
-        # Combiner tout le texte (limiter à 10 pages pour ne pas dépasser tokens)
+        # Combiner TOUTES les pages (minimum 20 pages ou tout le site)
         all_text = ""
-        pages = crawl_data.get('pages', [])[:10]
-        for page in pages:
-            all_text += " " + page.get('title', '')
-            all_text += " " + " ".join(page.get('paragraphs', []))
+        pages = crawl_data.get('pages', [])[:20]  # Analyser 20 pages minimum
         
-        # Limiter à 4000 caractères pour l'analyse
-        all_text = all_text[:4000]
+        # Extraire le contenu complet de chaque page
+        page_contents = []
+        for page in pages:
+            page_text = f"URL: {page.get('url', '')}\n"
+            page_text += f"TITRE: {page.get('title', '')}\n"
+            page_text += f"META DESCRIPTION: {page.get('meta_description', '')}\n"
+            page_text += "CONTENU:\n" + "\n".join(page.get('paragraphs', []))
+            page_contents.append(page_text)
+            all_text += " " + page_text
+        
+        # Prendre les 15000 premiers caractères pour l'analyse (beaucoup plus que 4000)
+        all_text_sample = all_text[:15000]
         
         # Utiliser Claude pour analyser l'industrie
         try:
