@@ -189,6 +189,9 @@ backend:
         - working: false
           agent: "testing"
           comment: "❌ ANALYSE SÉMANTIQUE PROFONDE AMÉLIORÉE NON FONCTIONNELLE - Tests révèlent que les fonctionnalités améliorées demandées dans la review ne sont pas implémentées. Claude API échoue (model not found, empty responses), fallback vers méthode basique. MANQUE: sub_industry, positioning, maturity, reasoning dans industry_classification; description, target_segment, priority dans offerings (12 items requis); category, severity, solution_approach dans problems_solved (15 items requis); VRAI Topic Modeling LDA avec keywords et top_words_scores. Génère seulement 68 requêtes au lieu de 100, distribution 100%/0%/0% au lieu de 80%/15%/5%. NÉCESSITE RECHERCHE WEB pour corriger les modèles Claude et implémenter les fonctionnalités manquantes."
+        - working: false
+          agent: "testing"
+          comment: "❌ CLAUDE API PARTIELLEMENT FONCTIONNEL - Tests complets effectués sur sekoia.ca (Report ID: e38b4d21-31d8-410b-9753-fa1268fe823a). Claude API fonctionne avec claude-3-haiku-20240307 mais PAS avec claude-3-5-sonnet-20240620 (404 model not found). FONCTIONNEL: Détection industrie (manufacturing), extraction 10 offerings, 3 problems solved, 8 topics LDA, génération 68 requêtes 100% non-branded. MANQUANT: Enhanced features demandées - sub_industry/positioning/maturity/geographic_scope (tous None), offerings sans description/target_segment/priority, problems_solved sans category/severity/solution_approach, seulement 68 requêtes au lieu de 100+, distribution 100%/0%/0% au lieu de 80%/15%/5%. CORE FUNCTIONALITY WORKS mais enhanced features pas implémentées."
   
   - task: "Word Report Generator (50-70 pages)"
     implemented: true
