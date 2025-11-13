@@ -430,7 +430,42 @@ Réponds UNIQUEMENT avec un JSON valide dans ce format:
         return locations[:3]
     
     def _extract_problems_solved(self, text: str) -> List[str]:
-        """Extraire problèmes résolus"""
+        """Extraire problèmes résolus avec Anthropic"""
+        
+        text_sample = text[:3000]
+        
+        try:
+            prompt = f"""Analyse ce contenu de site web et identifie les problèmes/défis que cette entreprise résout pour ses clients.
+
+CONTENU:
+{text_sample}
+
+Liste 5-10 problèmes/défis principaux que cette entreprise aide à résoudre.
+Formule chaque problème de manière concise (ex: "gagner du temps", "réduire les coûts", "protéger contre les risques").
+
+Réponds UNIQUEMENT avec un JSON valide dans ce format:
+{{
+  "problems_solved": ["problème 1", "problème 2", "problème 3"]
+}}"""
+
+            message = anthropic_client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=600,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            
+            response_text = message.content[0].text.strip()
+            result = json.loads(response_text)
+            
+            return result.get('problems_solved', [])[:10]
+            
+        except Exception as e:
+            logger.error(f"Claude problems extraction failed: {str(e)}, using fallback")
+            # Fallback: extraire par patterns
+            return self._extract_problems_fallback(text)
+    
+    def _extract_problems_fallback(self, text: str) -> List[str]:
+        """Méthode fallback pour extraire problèmes"""
         
         problem_patterns = [
             r'résoudre ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})',
@@ -444,7 +479,7 @@ Réponds UNIQUEMENT avec un JSON valide dans ce format:
             matches = re.findall(pattern, text.lower())
             problems.extend([m.strip() for m in matches if m.strip()])
         
-        return list(set(problems))[:10]
+        return list(set(problems))[:10] if problems else ["optimiser les processus", "améliorer l'efficacité", "réduire les coûts"]
     
     def _identify_topics(self, crawl_data: Dict[str, Any]) -> List[Dict[str, Any]]:
         """Identifier les topics principaux (simplifié)"""
