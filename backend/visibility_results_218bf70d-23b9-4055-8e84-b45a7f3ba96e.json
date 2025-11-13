@@ -1,0 +1,1728 @@
+{
+  "site_url": "https://maibec.com",
+  "company_name": "Maibec",
+  "last_updated": "2025-11-13T17:25:28.344106",
+  "queries": [
+    {
+      "query": "Maibec avis",
+      "timestamp": "2025-11-13T17:25:28.344178",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec avis'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec avis'",
+              "example_title": "Guide Complet: Maibec Avis en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec avis'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec avis'",
+              "example_title": "Guide Complet: Maibec Avis en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec avis'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec avis'",
+              "example_title": "Guide Complet: Maibec Avis en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec avis'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec avis'",
+              "example_title": "Guide Complet: Maibec Avis en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec avis'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec avis'",
+              "example_title": "Guide Complet: Maibec Avis en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "Maibec Québec",
+      "timestamp": "2025-11-13T17:25:30.897411",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec Québec'",
+              "example_title": "Guide Complet: Maibec Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec Québec'",
+              "example_title": "Guide Complet: Maibec Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec Québec'",
+              "example_title": "Guide Complet: Maibec Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec Québec'",
+              "example_title": "Guide Complet: Maibec Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec Québec'",
+              "example_title": "Guide Complet: Maibec Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "pourquoi choisir Maibec",
+      "timestamp": "2025-11-13T17:25:32.969651",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'pourquoi choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'pourquoi choisir Maibec'",
+              "example_title": "Guide Complet: Pourquoi Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'pourquoi choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'pourquoi choisir Maibec'",
+              "example_title": "Guide Complet: Pourquoi Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'pourquoi choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'pourquoi choisir Maibec'",
+              "example_title": "Guide Complet: Pourquoi Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'pourquoi choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'pourquoi choisir Maibec'",
+              "example_title": "Guide Complet: Pourquoi Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'pourquoi choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'pourquoi choisir Maibec'",
+              "example_title": "Guide Complet: Pourquoi Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "Maibec vs concurrent",
+      "timestamp": "2025-11-13T17:25:34.774212",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec vs concurrent'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec vs concurrent'",
+              "example_title": "Guide Complet: Maibec Vs Concurrent en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec vs concurrent'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec vs concurrent'",
+              "example_title": "Guide Complet: Maibec Vs Concurrent en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec vs concurrent'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec vs concurrent'",
+              "example_title": "Guide Complet: Maibec Vs Concurrent en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec vs concurrent'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec vs concurrent'",
+              "example_title": "Guide Complet: Maibec Vs Concurrent en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec vs concurrent'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec vs concurrent'",
+              "example_title": "Guide Complet: Maibec Vs Concurrent en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "avis clients Maibec",
+      "timestamp": "2025-11-13T17:25:36.602763",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'avis clients Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'avis clients Maibec'",
+              "example_title": "Guide Complet: Avis Clients Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'avis clients Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'avis clients Maibec'",
+              "example_title": "Guide Complet: Avis Clients Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'avis clients Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'avis clients Maibec'",
+              "example_title": "Guide Complet: Avis Clients Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'avis clients Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'avis clients Maibec'",
+              "example_title": "Guide Complet: Avis Clients Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'avis clients Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'avis clients Maibec'",
+              "example_title": "Guide Complet: Avis Clients Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "services Maibec",
+      "timestamp": "2025-11-13T17:25:38.306388",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'services Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'services Maibec'",
+              "example_title": "Guide Complet: Services Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'services Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'services Maibec'",
+              "example_title": "Guide Complet: Services Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'services Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'services Maibec'",
+              "example_title": "Guide Complet: Services Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'services Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'services Maibec'",
+              "example_title": "Guide Complet: Services Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'services Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'services Maibec'",
+              "example_title": "Guide Complet: Services Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "comment choisir Maibec",
+      "timestamp": "2025-11-13T17:25:40.124645",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir Maibec'",
+              "example_title": "Guide Complet: Comment Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir Maibec'",
+              "example_title": "Guide Complet: Comment Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir Maibec'",
+              "example_title": "Guide Complet: Comment Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir Maibec'",
+              "example_title": "Guide Complet: Comment Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir Maibec'",
+              "example_title": "Guide Complet: Comment Choisir Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "Maibec prix Québec",
+      "timestamp": "2025-11-13T17:25:41.949558",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec prix Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec prix Québec'",
+              "example_title": "Guide Complet: Maibec Prix Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec prix Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec prix Québec'",
+              "example_title": "Guide Complet: Maibec Prix Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec prix Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec prix Québec'",
+              "example_title": "Guide Complet: Maibec Prix Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec prix Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec prix Québec'",
+              "example_title": "Guide Complet: Maibec Prix Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'Maibec prix Québec'",
+              "action": "Créer une page dédiée ou un article sur 'Maibec prix Québec'",
+              "example_title": "Guide Complet: Maibec Prix Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "comparatif Maibec",
+      "timestamp": "2025-11-13T17:25:43.745425",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comparatif Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comparatif Maibec'",
+              "example_title": "Guide Complet: Comparatif Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comparatif Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comparatif Maibec'",
+              "example_title": "Guide Complet: Comparatif Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comparatif Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comparatif Maibec'",
+              "example_title": "Guide Complet: Comparatif Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comparatif Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comparatif Maibec'",
+              "example_title": "Guide Complet: Comparatif Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comparatif Maibec'",
+              "action": "Créer une page dédiée ou un article sur 'comparatif Maibec'",
+              "example_title": "Guide Complet: Comparatif Maibec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "guide Maibec 2025",
+      "timestamp": "2025-11-13T17:25:45.632074",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide Maibec 2025'",
+              "action": "Créer une page dédiée ou un article sur 'guide Maibec 2025'",
+              "example_title": "Guide Complet: Guide Maibec 2025 en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide Maibec 2025'",
+              "action": "Créer une page dédiée ou un article sur 'guide Maibec 2025'",
+              "example_title": "Guide Complet: Guide Maibec 2025 en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide Maibec 2025'",
+              "action": "Créer une page dédiée ou un article sur 'guide Maibec 2025'",
+              "example_title": "Guide Complet: Guide Maibec 2025 en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide Maibec 2025'",
+              "action": "Créer une page dédiée ou un article sur 'guide Maibec 2025'",
+              "example_title": "Guide Complet: Guide Maibec 2025 en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide Maibec 2025'",
+              "action": "Créer une page dédiée ou un article sur 'guide Maibec 2025'",
+              "example_title": "Guide Complet: Guide Maibec 2025 en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 27,
+    "global_visibility": 0.0,
+    "by_platform": {
+      "chatgpt": 0.0,
+      "claude": 0.0,
+      "perplexity": 0.0,
+      "gemini": 0.0,
+      "google_ai": 0.0
+    }
+  }
+}
