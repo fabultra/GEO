@@ -11,7 +11,7 @@ from datetime import datetime
 from typing import Dict, Any
 
 # Import des modules
-from query_generator_v2 import IntelligentQueryGenerator
+from query_generator_v2 import IntelligentQueryGeneratorV2
 from visibility_tester_v2 import VisibilityTesterV2
 
 logger = logging.getLogger(__name__)
