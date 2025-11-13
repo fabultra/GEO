@@ -116,7 +116,7 @@ class IntelligentQueryGeneratorV2:
         
         # Extraire valeurs
         offering_names = [o.get('name', '') for o in offerings[:5]]
-        location_names = [l.get('city') if l.get('city') else l.get('region', 'Québec') for l in locations[:3]]
+        location_names = [loc.get('city') if loc.get('city') else loc.get('region', 'Québec') for loc in locations[:3]]
         
         # Si pas de données, utiliser des valeurs par défaut
         if not offering_names:
