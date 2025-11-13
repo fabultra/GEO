@@ -326,38 +326,58 @@ Réponds UNIQUEMENT avec un JSON valide:
             return words[0] if words else ''
     
     def _extract_offerings(self, text: str, industry: str) -> List[Dict[str, Any]]:
-        """Extraire services/produits avec Anthropic"""
+        """Extraire services/produits avec Anthropic - ANALYSE PROFONDE"""
         
-        # Limiter le texte
-        text_sample = text[:3000]
+        # Prendre beaucoup plus de texte pour le contexte
+        text_sample = text[:12000]  # 12K au lieu de 3K
         
         try:
             offering_label = "services" if industry not in ['ecommerce', 'manufacturing'] else "produits"
             
-            prompt = f"""Analyse ce contenu de site web et extrais les {offering_label} principaux offerts.
+            prompt = f"""Tu es un expert en analyse d'offres commerciales. Analyse EN PROFONDEUR ce site web.
 
-CONTENU:
+CONTENU DU SITE:
 {text_sample}
 
-Liste les 5-10 {offering_label} les plus importants mentionnés sur ce site.
-Réponds UNIQUEMENT avec un JSON valide dans ce format:
+TÂCHE: Extrais les {offering_label} principaux avec une compréhension CONTEXTUELLE.
+
+Pour chaque {offering_label[:-1]}, identifie:
+1. **Nom clair et précis** (pas de fragments)
+2. **Description courte** (1 phrase)
+3. **Segment cible** (qui en bénéficie)
+4. **Niveau de priorité** (core/secondary/complementary)
+5. **Prix indicatif** si mentionné
+
+RÉFLÉCHIS sur:
+- Quelle est leur offre PRINCIPALE vs complémentaire?
+- Comment ils packagisent leurs {offering_label}?
+- Quel est leur cœur de métier?
+
+Liste 8-12 {offering_label} par ordre d'importance.
+
+Réponds UNIQUEMENT avec un JSON valide:
 {{
   "offerings": [
-    {{"name": "nom du service/produit", "mentions_count": 5}},
-    {{"name": "autre service/produit", "mentions_count": 3}}
+    {{
+      "name": "nom précis du service/produit",
+      "description": "description courte",
+      "target_segment": "PME/particuliers/etc",
+      "priority": "core/secondary/complementary",
+      "mentions_count": 10
+    }}
   ]
 }}"""
 
             message = anthropic_client.messages.create(
                 model="claude-3-5-sonnet-20241022",
-                max_tokens=800,
+                max_tokens=1500,
                 messages=[{"role": "user", "content": prompt}]
             )
             
             response_text = message.content[0].text.strip()
             result = json.loads(response_text)
             
-            return result.get('offerings', [])[:10]
+            return result.get('offerings', [])[:12]
             
         except Exception as e:
             logger.error(f"Claude offerings extraction failed: {str(e)}, using fallback")
