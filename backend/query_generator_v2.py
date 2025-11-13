@@ -1,6 +1,7 @@
 """
-MODULE DE GÉNÉRATION INTELLIGENTE DE REQUÊTES V2
-Génère 30 requêtes contextuelles et pertinentes basées sur l'analyse réelle du site
+MODULE DE GÉNÉRATION INTELLIGENTE DE REQUÊTES V3
+Génère 100 requêtes dont 80% NON-BRANDED basées sur analyse sémantique profonde
+100% ADAPTATIF à toute industrie
 """
 import logging
 import re
