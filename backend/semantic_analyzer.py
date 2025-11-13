@@ -511,7 +511,7 @@ Réponds UNIQUEMENT avec un JSON valide:
 }}"""
 
             message = anthropic_client.messages.create(
-                model="claude-3-5-sonnet-latest",
+                model="claude-3-5-sonnet",
                 max_tokens=2000,
                 messages=[{"role": "user", "content": prompt}]
             )
