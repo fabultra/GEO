@@ -865,6 +865,16 @@ async def process_analysis_job(job_id: str):
         except Exception as e:
             logger.error(f"Dashboard generation failed: {str(e)}")
         
+        # Step 7.5: Generate Interactive Visibility Dashboard (NEW V2)
+        try:
+            from dashboard_visibility_generator import generate_interactive_dashboard
+            visibility_dashboard_path = f"/app/backend/dashboards/{report.id}_visibility_dashboard.html"
+            generate_interactive_dashboard(visibility_data, visibility_dashboard_path)
+            report_dict['visibilityDashboardUrl'] = f"/dashboards/{report.id}_visibility_dashboard.html"
+            logger.info(f"Interactive visibility dashboard generated: {visibility_dashboard_path}")
+        except Exception as e:
+            logger.error(f"Visibility dashboard generation failed: {str(e)}")
+        
         await db.analysis_jobs.update_one(
             {"id": job_id},
             {"$set": {"progress": 95}}
