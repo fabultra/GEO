@@ -245,17 +245,29 @@ class IntelligentQueryGenerator:
         """Générer 8-10 requêtes par service"""
         
         services = self.context.get('services', [])
-        location = self.context.get('locations', ['Québec'])[0]
+        location = self.context.get('locations', ['Québec'])[0] if self.context.get('locations') else 'Québec'
+        company = self.context.get('company_name', 'entreprise')
         
         queries = []
         
-        for service in services[:2]:  # Top 2 services
+        # Si on a des services, les utiliser
+        if services:
+            for service in services[:2]:  # Top 2 services
+                queries.extend([
+                    f"meilleur {service} {location}",
+                    f"comment choisir {service}",
+                    f"{service} prix {location}",
+                    f"comparatif {service} {location}",
+                    f"guide {service} 2025"
+                ])
+        else:
+            # Sinon, requêtes génériques avec le nom de l'entreprise
             queries.extend([
-                f"meilleur {service} {location}",
-                f"comment choisir {service}",
-                f"{service} prix {location}",
-                f"comparatif {service} {location}",
-                f"guide {service} 2025"
+                f"services {company}",
+                f"comment choisir {company}",
+                f"{company} prix {location}",
+                f"comparatif {company}",
+                f"guide {company} 2025"
             ])
         
         return queries[:10]
