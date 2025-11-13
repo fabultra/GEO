@@ -20,9 +20,7 @@ class VisibilityTesterV2:
         # Initialize API clients
         self.anthropic_client = anthropic.Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
         self.openai_client = OpenAI(api_key=os.environ.get('OPENAI_API_KEY'))
-        gen
-
-ai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
+        genai.configure(api_key=os.environ.get('GEMINI_API_KEY'))
         self.perplexity_key = os.environ.get('PERPLEXITY_API_KEY')
     
     def test_all_queries_detailed(self, queries: List[str], site_url: str, company_name: str) -> Dict[str, Any]:
