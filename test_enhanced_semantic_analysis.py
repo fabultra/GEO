@@ -9,9 +9,13 @@ import os
 import json
 import requests
 from datetime import datetime
+from dotenv import load_dotenv
 
 # Add backend to path
 sys.path.append('/app/backend')
+
+# Load environment variables
+load_dotenv('/app/backend/.env')
 
 from semantic_analyzer import SemanticAnalyzer
 from query_generator_v2 import generate_queries_with_analysis
