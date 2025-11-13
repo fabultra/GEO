@@ -37,7 +37,7 @@ def test_claude_api():
         
         # Test with the correct Claude model
         response = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-3-5-sonnet",
             max_tokens=100,
             messages=[
                 {"role": "user", "content": "Test message. Respond with 'API Working' in JSON format: {\"status\": \"API Working\"}"}
