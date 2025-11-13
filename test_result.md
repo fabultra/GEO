@@ -336,10 +336,8 @@ metadata:
   run_ui: false
 
 test_plan:
-  current_focus:
-    - "Module 5: Semantic Analysis & 100 Non-Branded Queries"
-  stuck_tasks:
-    - "Module 5: Semantic Analysis & 100 Non-Branded Queries"
+  current_focus: []
+  stuck_tasks: []
   test_all: false
   test_priority: "high_first"
 
