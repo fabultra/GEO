@@ -215,7 +215,7 @@ class IntelligentQueryGeneratorV2:
         return queries[:80]
     
     def _generate_semi_branded_queries(self, entities: Dict[str, Any]) -> List[str]:
-        """Générer 15 requêtes SEMI-BRANDED (type d'entreprise + localisation)"""
+        """Générer 15 requêtes SEMI-BRANDED (type d'entreprise + localisation) - AMÉLIORÉ"""
         
         queries = []
         
@@ -223,21 +223,43 @@ class IntelligentQueryGeneratorV2:
         offerings = entities.get('offerings', [])
         locations = entities.get('locations', [])
         
-        offering_names = [o.get('name', '') for o in offerings[:3]]
-        location_names = [loc.get('city') if loc.get('city') else loc.get('region', 'Québec') for loc in locations[:3]]
+        # Extraire noms proprement
+        offering_names = []
+        for o in offerings[:5]:
+            if isinstance(o, dict):
+                name = o.get('name', '')
+                if name and len(name) > 3:
+                    offering_names.append(name.strip())
+        
+        location_names = []
+        for loc in locations[:3]:
+            if isinstance(loc, dict):
+                city = loc.get('city')
+                region = loc.get('region')
+                if city:
+                    location_names.append(city)
+                elif region:
+                    location_names.append(region)
         
         if not location_names:
-            location_names = ['Québec', 'Montréal']
+            location_names = ['Québec', 'Montréal', 'Canada']
         
-        # Patterns semi-branded
-        for location in location_names:
+        # Patterns semi-branded VARIÉS
+        for location in location_names[:3]:
             queries.append(f"meilleur {company_type} {location}")
             queries.append(f"{company_type} professionnel {location}")
+            queries.append(f"{company_type} expert {location}")
             queries.append(f"{company_type} près de moi")
+            queries.append(f"top {company_type} {location}")
             
-            for offering in offering_names[:2]:
+        for offering in offering_names[:3]:
+            for location in location_names[:2]:
                 queries.append(f"{company_type} {offering} {location}")
-                queries.append(f"trouver {company_type} {offering}")
+                queries.append(f"{offering} {company_type} {location}")
+        
+        # Nettoyer
+        queries = [q for q in queries if q and len(q) > 10]
+        queries = list(dict.fromkeys(queries))  # Dédupliquer
         
         return queries[:15]
     
