@@ -318,10 +318,40 @@ class IntelligentQueryGeneratorV2:
             f"{company_type} entreprise {location}",
             f"services {company_type}",
             f"{company_type} avis",
-            f"obtenir {company_type}"
+            f"obtenir {company_type}",
+            f"{company_type} recommandé",
+            f"trouver {company_type} {location}",
+            f"{company_type} qualité {location}",
+            f"{company_type} expérimenté",
+            f"contact {company_type}",
+            f"{company_type} certifié {location}",
+            f"devis {company_type}",
+            f"{company_type} fiable",
+            f"top {company_type} {location}",
+            f"{company_type} local {location}"
         ]
         
         return generic[:num]
+    
+    def _generate_more_semi_branded(self, entities: Dict[str, Any]) -> List[str]:
+        """Générer plus de requêtes semi-branded"""
+        
+        company_type = entities.get('company_info', {}).get('type', 'entreprise')
+        locations = entities.get('locations', [])
+        
+        queries = []
+        for loc in locations[:3]:
+            if isinstance(loc, dict):
+                city = loc.get('city') or loc.get('region', 'Québec')
+                queries.extend([
+                    f"{company_type} réputé {city}",
+                    f"{company_type} établi {city}",
+                    f"{company_type} expérience {city}",
+                    f"spécialiste {company_type} {city}",
+                    f"{company_type} certifié {city}"
+                ])
+        
+        return queries
     
     def _clean_and_deduplicate(self, queries: List[str]) -> List[str]:
         """Nettoyer et dédupliquer les requêtes"""
