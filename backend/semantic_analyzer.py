@@ -635,7 +635,7 @@ Exemples: "Services financiers", "Gestion de projet", "E-commerce mode"
 Réponds UNIQUEMENT avec le label (pas de JSON, pas d'explication):"""
 
             message = anthropic_client.messages.create(
-                model="claude-3-5-sonnet-20241022",
+                model="claude-3-haiku-20240307",
                 max_tokens=20,
                 messages=[{"role": "user", "content": prompt}]
             )
