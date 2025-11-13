@@ -374,7 +374,7 @@ IMPORTANT: Remplissez detailed_observations pour CHAQUE critere: structure, info
                 client = AsyncAnthropic(api_key=api_key)
                 
                 response = await client.messages.create(
-                    model="claude-3-5-sonnet-20241022",
+                    model="claude-3-haiku-20240307",
                     max_tokens=8192,
                     temperature=0.3,
                     system="Vous êtes un expert en GEO. Répondez uniquement en JSON valide.",
