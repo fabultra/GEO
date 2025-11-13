@@ -375,7 +375,7 @@ IMPORTANT: Remplissez detailed_observations pour CHAQUE critere: structure, info
                 
                 response = await client.messages.create(
                     model="claude-3-5-sonnet-20241022",
-                    max_tokens=4096,
+                    max_tokens=8192,
                     temperature=0.3,
                     system="Vous êtes un expert en GEO. Répondez uniquement en JSON valide.",
                     messages=[
