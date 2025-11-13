@@ -104,7 +104,7 @@ class IntelligentQueryGeneratorV2:
             return self._generate_fallback_queries(crawl_data, num_queries)
     
     def _generate_non_branded_queries(self, entities: Dict[str, Any], templates: Dict[str, List[str]], industry: str) -> List[str]:
-        """Générer 80 requêtes NON-BRANDED"""
+        """Générer 80 requêtes NON-BRANDED - VERSION AMÉLIORÉE"""
         
         queries = []
         
@@ -114,19 +114,42 @@ class IntelligentQueryGeneratorV2:
         problems = entities.get('problems_solved', [])
         company_type = entities.get('company_info', {}).get('type', 'entreprise')
         
-        # Extraire valeurs
-        offering_names = [o.get('name', '') for o in offerings[:5]]
-        location_names = [loc.get('city') if loc.get('city') else loc.get('region', 'Québec') for loc in locations[:3]]
+        # Extraire valeurs avec plus de profondeur
+        offering_names = []
+        for o in offerings[:8]:  # Prendre plus d'offerings
+            if isinstance(o, dict):
+                name = o.get('name', '')
+                # Nettoyer les noms
+                if name and len(name) > 3 and len(name) < 100:
+                    offering_names.append(name.strip())
         
-        # Si pas de données, utiliser des valeurs par défaut
+        location_names = []
+        for loc in locations[:3]:
+            if isinstance(loc, dict):
+                city = loc.get('city')
+                region = loc.get('region', 'Québec')
+                if city:
+                    location_names.append(city)
+                elif region and region not in location_names:
+                    location_names.append(region)
+        
+        # Extraire problèmes (support nouveau format dict)
+        problem_texts = []
+        for p in problems[:10]:
+            if isinstance(p, dict):
+                problem_texts.append(p.get('problem', ''))
+            else:
+                problem_texts.append(str(p))
+        
+        # Valeurs par défaut si vide
         if not offering_names:
-            offering_names = [company_type, 'service', 'solution']
+            offering_names = [company_type, 'service professionnel', 'solution entreprise']
         if not location_names:
-            location_names = ['Québec', 'Montréal']
+            location_names = ['Québec', 'Montréal', 'Canada']
         if not segments:
-            segments = ['entreprise', 'particulier']
-        if not problems:
-            problems = ['optimiser', 'améliorer', 'simplifier']
+            segments = ['entreprise', 'PME', 'particulier']
+        if not problem_texts:
+            problem_texts = ['améliorer efficacité', 'réduire coûts', 'augmenter revenus', 'gagner temps']
         
         # 1. INFORMATIONAL QUERIES (40 requêtes)
         informational_templates = templates.get('informational', [])
