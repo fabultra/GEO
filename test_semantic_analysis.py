@@ -116,16 +116,27 @@ def test_semantic_analysis():
     print("✅ Industry Classification:")
     industry_class = semantic_results.get('industry_classification', {})
     print(f"   - Primary Industry: {industry_class.get('primary_industry', 'unknown')}")
+    print(f"   - Sub-industry: {industry_class.get('sub_industry', 'N/A')}")
     print(f"   - Company Type: {industry_class.get('company_type', 'unknown')}")
     print(f"   - Business Model: {industry_class.get('business_model', 'unknown')}")
+    print(f"   - Positioning: {industry_class.get('positioning', 'N/A')}")
+    print(f"   - Maturity: {industry_class.get('maturity', 'N/A')}")
+    print(f"   - Geographic Scope: {industry_class.get('geographic_scope', 'N/A')}")
     print(f"   - Confidence: {industry_class.get('confidence', 0):.2f}")
+    print(f"   - Reasoning: {industry_class.get('reasoning', 'N/A')}")
     
     print("\n✅ Entities Extracted:")
     entities = semantic_results.get('entities', {})
     offerings = entities.get('offerings', [])
     print(f"   - Offerings: {len(offerings)} found")
     for i, offering in enumerate(offerings[:5]):
-        print(f"     {i+1}. {offering.get('name', 'N/A')} (mentions: {offering.get('mentions_count', 0)})")
+        if isinstance(offering, dict):
+            print(f"     {i+1}. {offering.get('name', 'N/A')}")
+            print(f"        Description: {offering.get('description', 'N/A')}")
+            print(f"        Target Segment: {offering.get('target_segment', 'N/A')}")
+            print(f"        Priority: {offering.get('priority', 'N/A')}")
+        else:
+            print(f"     {i+1}. {offering}")
     
     locations = entities.get('locations', [])
     print(f"   - Locations: {len(locations)} found")
@@ -134,8 +145,25 @@ def test_semantic_analysis():
     
     problems = entities.get('problems_solved', [])
     print(f"   - Problems Solved: {len(problems)} found")
-    for prob in problems[:3]:
-        print(f"     - {prob}")
+    for i, prob in enumerate(problems[:5]):
+        if isinstance(prob, dict):
+            print(f"     {i+1}. {prob.get('problem', 'N/A')}")
+            print(f"        Category: {prob.get('category', 'N/A')}")
+            print(f"        Severity: {prob.get('severity', 'N/A')}")
+            print(f"        Solution Approach: {prob.get('solution_approach', 'N/A')}")
+        else:
+            print(f"     {i+1}. {prob}")
+    
+    # Test Topics (LDA)
+    topics = semantic_results.get('topics', [])
+    print(f"   - Topics (LDA): {len(topics)} found")
+    for i, topic in enumerate(topics[:3]):
+        if isinstance(topic, dict):
+            print(f"     {i+1}. {topic.get('label', 'N/A')}")
+            print(f"        Keywords: {topic.get('keywords', [])}")
+            print(f"        Top Words Scores: {topic.get('top_words_scores', [])}")
+        else:
+            print(f"     {i+1}. {topic}")
     
     # Test 2: Query Generation
     print("\n🔍 Testing Query Generation (100 queries)")
