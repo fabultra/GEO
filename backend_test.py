@@ -498,11 +498,11 @@ class GEOSaaSAPITester:
             
             client = Anthropic(api_key=api_key)
             
-            # Test claude-3-5-sonnet-20241022 specifically
-            self.log("   Testing claude-3-5-sonnet-20241022...")
+            # Test claude-sonnet-4-5-20250929 specifically (same as backend)
+            self.log("   Testing claude-sonnet-4-5-20250929...")
             
             response = client.messages.create(
-                model="claude-3-5-sonnet-20241022",
+                model="claude-sonnet-4-5-20250929",
                 max_tokens=100,
                 messages=[{
                     "role": "user", 
