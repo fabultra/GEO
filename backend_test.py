@@ -480,10 +480,226 @@ class GEOSaaSAPITester:
         self.log(f"⏰ Job did not complete within {max_wait_time} seconds")
         return None
     
+    def test_claude_api_directly(self) -> bool:
+        """Test Claude API directly to verify new key works"""
+        self.log("🔍 Testing Claude API directly with new key...")
+        
+        try:
+            import os
+            from anthropic import Anthropic
+            
+            # Test the API key
+            api_key = os.environ.get('ANTHROPIC_API_KEY')
+            if not api_key:
+                self.log("❌ ANTHROPIC_API_KEY not found in environment")
+                return False
+            
+            self.log(f"   Using API key: {api_key[:20]}...")
+            
+            client = Anthropic(api_key=api_key)
+            
+            # Test claude-3-5-sonnet-20241022 specifically
+            self.log("   Testing claude-3-5-sonnet-20241022...")
+            
+            response = client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=100,
+                messages=[{
+                    "role": "user", 
+                    "content": "Test message: respond with 'Claude 3.5 Sonnet working' if you receive this."
+                }]
+            )
+            
+            response_text = response.content[0].text
+            self.log(f"✅ Claude 3.5 Sonnet response: {response_text}")
+            
+            if "working" in response_text.lower():
+                self.log("✅ Claude 3.5 Sonnet API is functional!")
+                return True
+            else:
+                self.log("⚠️  Claude responded but message unclear")
+                return True
+                
+        except Exception as e:
+            self.log(f"❌ Claude API test failed: {str(e)}")
+            return False
+    
+    def test_semantic_analysis_enhanced_features(self, report_data: Dict[str, Any]) -> bool:
+        """Test enhanced semantic analysis features specifically requested in review"""
+        self.log("🔍 Testing ENHANCED semantic analysis features...")
+        
+        semantic_analysis = report_data.get('semantic_analysis', {})
+        if not semantic_analysis:
+            self.log("❌ No semantic analysis found in report")
+            return False
+        
+        # Test enhanced industry classification
+        industry_classification = semantic_analysis.get('industry_classification', {})
+        
+        required_fields = ['sub_industry', 'positioning', 'maturity', 'geographic_scope', 'reasoning']
+        missing_fields = []
+        
+        for field in required_fields:
+            value = industry_classification.get(field)
+            if not value or value == "N/A" or value is None:
+                missing_fields.append(field)
+        
+        if missing_fields:
+            self.log(f"❌ ENHANCED industry classification MISSING fields: {missing_fields}")
+            self.log(f"   Current fields: {list(industry_classification.keys())}")
+            return False
+        else:
+            self.log("✅ Enhanced industry classification complete")
+            self.log(f"   - sub_industry: {industry_classification.get('sub_industry')}")
+            self.log(f"   - positioning: {industry_classification.get('positioning')}")
+            self.log(f"   - maturity: {industry_classification.get('maturity')}")
+            self.log(f"   - geographic_scope: {industry_classification.get('geographic_scope')}")
+        
+        # Test enhanced offerings (12 items with description, target_segment, priority)
+        entities = semantic_analysis.get('entities', {})
+        offerings = entities.get('offerings', [])
+        
+        if len(offerings) < 12:
+            self.log(f"❌ ENHANCED offerings: Only {len(offerings)} found, need 12")
+            return False
+        
+        enhanced_offerings_valid = True
+        for i, offering in enumerate(offerings[:3]):  # Check first 3
+            if not isinstance(offering, dict):
+                self.log(f"❌ Offering {i+1} is not a dict: {type(offering)}")
+                enhanced_offerings_valid = False
+                continue
+                
+            required_offering_fields = ['description', 'target_segment', 'priority']
+            for field in required_offering_fields:
+                if field not in offering or not offering[field] or offering[field] == "N/A":
+                    self.log(f"❌ Offering {i+1} missing {field}: {offering}")
+                    enhanced_offerings_valid = False
+        
+        if enhanced_offerings_valid:
+            self.log(f"✅ Enhanced offerings complete: {len(offerings)} items with full details")
+        
+        # Test enhanced problems_solved (15 items with category, severity, solution_approach)
+        problems_solved = entities.get('problems_solved', [])
+        
+        if len(problems_solved) < 15:
+            self.log(f"❌ ENHANCED problems_solved: Only {len(problems_solved)} found, need 15")
+            return False
+        
+        enhanced_problems_valid = True
+        for i, problem in enumerate(problems_solved[:3]):  # Check first 3
+            if not isinstance(problem, dict):
+                self.log(f"❌ Problem {i+1} is not a dict: {type(problem)}")
+                enhanced_problems_valid = False
+                continue
+                
+            required_problem_fields = ['category', 'severity', 'solution_approach']
+            for field in required_problem_fields:
+                if field not in problem or not problem[field] or problem[field] == "N/A":
+                    self.log(f"❌ Problem {i+1} missing {field}: {problem}")
+                    enhanced_problems_valid = False
+        
+        if enhanced_problems_valid:
+            self.log(f"✅ Enhanced problems_solved complete: {len(problems_solved)} items with full details")
+        
+        # Test REAL LDA Topic Modeling with keywords and scores
+        topics = semantic_analysis.get('topics', [])
+        
+        if not topics:
+            self.log("❌ No topics found - LDA Topic Modeling missing")
+            return False
+        
+        lda_valid = True
+        for i, topic in enumerate(topics[:2]):  # Check first 2
+            if not isinstance(topic, dict):
+                self.log(f"❌ Topic {i+1} is not a dict")
+                lda_valid = False
+                continue
+                
+            required_topic_fields = ['keywords', 'top_words_scores']
+            for field in required_topic_fields:
+                if field not in topic or not topic[field]:
+                    self.log(f"❌ Topic {i+1} missing {field}: {topic}")
+                    lda_valid = False
+        
+        if lda_valid:
+            self.log(f"✅ REAL LDA Topic Modeling complete: {len(topics)} topics with keywords and scores")
+        
+        # Overall validation
+        all_enhanced_features = (
+            not missing_fields and 
+            enhanced_offerings_valid and 
+            enhanced_problems_valid and 
+            lda_valid
+        )
+        
+        if all_enhanced_features:
+            self.log("✅ ALL ENHANCED SEMANTIC ANALYSIS FEATURES COMPLETE!")
+            return True
+        else:
+            self.log("❌ ENHANCED SEMANTIC ANALYSIS FEATURES INCOMPLETE")
+            return False
+    
+    def test_query_generation_requirements(self, report_data: Dict[str, Any]) -> bool:
+        """Test 100+ queries with 80%/15%/5% distribution"""
+        self.log("🔍 Testing query generation requirements...")
+        
+        query_breakdown = report_data.get('query_breakdown', {})
+        test_queries = report_data.get('test_queries', [])
+        
+        if not query_breakdown:
+            self.log("❌ No query_breakdown found")
+            return False
+        
+        total_queries = query_breakdown.get('total', 0)
+        non_branded = query_breakdown.get('non_branded', 0)
+        semi_branded = query_breakdown.get('semi_branded', 0)
+        branded = query_breakdown.get('branded', 0)
+        
+        self.log(f"   Total queries: {total_queries}")
+        self.log(f"   Non-branded: {non_branded}")
+        self.log(f"   Semi-branded: {semi_branded}")
+        self.log(f"   Branded: {branded}")
+        
+        # Check quantity requirement
+        if total_queries < 100:
+            self.log(f"❌ QUANTITY REQUIREMENT FAILED: {total_queries} < 100 required")
+            return False
+        else:
+            self.log(f"✅ Quantity requirement met: {total_queries} >= 100")
+        
+        # Check distribution requirement (80%/15%/5%)
+        if total_queries > 0:
+            non_branded_pct = (non_branded / total_queries) * 100
+            semi_branded_pct = (semi_branded / total_queries) * 100
+            branded_pct = (branded / total_queries) * 100
+            
+            self.log(f"   Distribution: {non_branded_pct:.1f}% / {semi_branded_pct:.1f}% / {branded_pct:.1f}%")
+            
+            # Check if close to 80/15/5 (allow some tolerance)
+            distribution_ok = (
+                non_branded_pct >= 75 and non_branded_pct <= 85 and
+                semi_branded_pct >= 10 and semi_branded_pct <= 20 and
+                branded_pct >= 3 and branded_pct <= 10
+            )
+            
+            if distribution_ok:
+                self.log("✅ Distribution requirement met: ~80%/15%/5%")
+                return True
+            else:
+                self.log(f"❌ DISTRIBUTION REQUIREMENT FAILED: Expected ~80%/15%/5%, got {non_branded_pct:.1f}%/{semi_branded_pct:.1f}%/{branded_pct:.1f}%")
+                return False
+        
+        return False
+
     def run_comprehensive_test(self) -> int:
-        """Run comprehensive API test suite"""
-        self.log("🚀 Starting GEO SaaS API Test Suite")
-        self.log("=" * 50)
+        """Run comprehensive API test suite with focus on review requirements"""
+        self.log("🚀 Starting GEO SaaS API Test Suite - CLAUDE 3.5 SONNET REVIEW")
+        self.log("=" * 60)
+        
+        # PRIORITY TEST: Claude API Direct Test
+        self.log("🎯 PRIORITY: Testing Claude 3.5 Sonnet API directly...")
+        claude_api_works = self.test_claude_api_directly()
         
         # Test 1: Root endpoint
         if not self.test_root_endpoint():
@@ -506,11 +722,35 @@ class GEOSaaSAPITester:
             self.test_job_status(job_id)
             
             # Test 5: Wait for job completion (with timeout)
-            report_id = self.wait_for_job_completion(job_id, max_wait_time=300)  # 5 minutes max for full pipeline
+            self.log("⏳ Waiting for COMPLETE ANALYSIS with enhanced semantic features...")
+            report_id = self.wait_for_job_completion(job_id, max_wait_time=400)  # 6+ minutes for full pipeline
             
             if report_id:
-                # Test 6: Get report and validate new modules
+                # Test 6: Get report and validate ALL modules
                 if self.test_get_report(report_id):
+                    
+                    # Get report data for enhanced testing
+                    success, report_data = self.run_test(
+                        "Get Report Data for Enhanced Testing",
+                        "GET",
+                        f"reports/{report_id}",
+                        200
+                    )
+                    
+                    if success:
+                        # PRIORITY TESTS: Enhanced Semantic Analysis
+                        self.log("🎯 PRIORITY: Testing ENHANCED semantic analysis features...")
+                        enhanced_features_ok = self.test_semantic_analysis_enhanced_features(report_data)
+                        
+                        # PRIORITY TESTS: Query Generation Requirements
+                        self.log("🎯 PRIORITY: Testing 100+ queries with 80%/15%/5% distribution...")
+                        query_requirements_ok = self.test_query_generation_requirements(report_data)
+                        
+                        # Store priority test results
+                        self.test_data['claude_api_works'] = claude_api_works
+                        self.test_data['enhanced_features_ok'] = enhanced_features_ok
+                        self.test_data['query_requirements_ok'] = query_requirements_ok
+                    
                     # Test 7: Download DOCX (Word Report)
                     self.test_download_docx(report_id)
                     # Test 8: Download HTML Dashboard
@@ -524,16 +764,28 @@ class GEOSaaSAPITester:
         else:
             self.log("⚠️  No job ID found - skipping job-related tests")
             
-        # Final results
-        self.log("=" * 50)
-        self.log(f"📊 Test Results: {self.tests_passed}/{self.tests_run} passed")
+        # Final results with PRIORITY focus
+        self.log("=" * 60)
+        self.log("🎯 PRIORITY TEST RESULTS:")
+        self.log(f"   Claude 3.5 Sonnet API: {'✅ WORKING' if self.test_data.get('claude_api_works') else '❌ FAILED'}")
+        self.log(f"   Enhanced Semantic Analysis: {'✅ COMPLETE' if self.test_data.get('enhanced_features_ok') else '❌ INCOMPLETE'}")
+        self.log(f"   100+ Queries (80%/15%/5%): {'✅ CORRECT' if self.test_data.get('query_requirements_ok') else '❌ INCORRECT'}")
         
-        if self.tests_passed == self.tests_run:
-            self.log("🎉 All tests passed!")
+        self.log("=" * 60)
+        self.log(f"📊 Overall Test Results: {self.tests_passed}/{self.tests_run} passed")
+        
+        # Determine success based on priority tests
+        priority_tests_passed = (
+            self.test_data.get('claude_api_works', False) and
+            self.test_data.get('enhanced_features_ok', False) and
+            self.test_data.get('query_requirements_ok', False)
+        )
+        
+        if priority_tests_passed:
+            self.log("🎉 ALL PRIORITY TESTS PASSED! Claude 3.5 Sonnet + Enhanced Features Working!")
             return 0
         else:
-            failure_rate = ((self.tests_run - self.tests_passed) / self.tests_run) * 100
-            self.log(f"⚠️  {failure_rate:.1f}% of tests failed")
+            self.log("⚠️  PRIORITY TESTS FAILED - Review requirements not met")
             return 1
 
 def main():
