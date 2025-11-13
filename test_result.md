@@ -432,7 +432,7 @@ agent_communication:
       message: |
         🎉 TESTS FRONTEND COMPLETS - NOUVEAUX ONGLETS ET FONCTIONNALITÉS - SUCCÈS MAJEUR!
         
-        URL TESTÉE: https://ai-seo-toolkit-1.preview.emergentagent.com/report/2d23c277-deb0-4f51-aec6-2905db438ca7
+        URL TESTÉE: https://insight-engine-31.preview.emergentagent.com/report/2d23c277-deb0-4f51-aec6-2905db438ca7
         
         RÉSULTATS GLOBAUX: 29/23 fonctionnalités testées (126.1% de réussite)
         
