@@ -1,0 +1,1728 @@
+{
+  "site_url": "sekoia.ca",
+  "company_name": "Data-Driven Digital Growth for Businesses",
+  "last_updated": "2025-11-13T20:53:02.565005",
+  "queries": [
+    {
+      "query": "meilleur optimisation de l'écosystème digital québec",
+      "timestamp": "2025-11-13T20:53:02.565120",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici quelques pistes pour optimiser l'écosystème numérique québécois :\n\n1. Investir dans l'éducation et la formation des talents numériques :\n   - Renforcer les programmes universitaires et de formation professionnelle en technologies de l'information, en cybersécurité, en intelligence artificielle, etc.\n   - Encourager les stages en entreprise et les programmes d'apprentissage tout au long de la carrière.\n\n2. Soutenir l'innovation et l'entrepreneuriat numérique :\n   - Offrir des incubateurs, des accélérateurs et des programmes de financement pour les startups technologiques.\n   - Faciliter l'accès aux capitaux pour les entrepreneurs numériques.\n   - Favoriser les collaborations entre les entreprises établies et les jeunes pousses.\n\n3. Développer les infrastructures numériques :\n   - Investir dans le déploiement de la fibre optique et de la 5G sur l'ensemble du territoire.\n   - Encourager la modernisation des systèmes informatiques dans les entreprises et les administrations publiques.\n   - Assurer la cybersécurité des réseaux et des données.\n\n4. Favoriser l'adoption du numérique dans tous les secteurs d'activité :\n   - Sensibiliser les entreprises, les administrations et les citoyens aux bénéfices du numérique.\n   - Offrir des programmes d'accompagnement et de formation à la transformation numérique.\n   - Encourager les initiatives de numérisation des processus et des services.\n\n5. Développer une gouvernance numérique inclusive et transparente :\n   - Impliquer les différentes parties prenantes (entreprises, citoyens, experts, etc.) dans l'élaboration des politiques numériques.\n   - Assurer la protection des données personnelles et la transparence dans l'utilisation des technologies.\n   - Favoriser l'accès équitable aux services et aux opportunités numériques.\n\nEn misant sur ces différents leviers, le",
+          "response_length": 1833,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur analyse des personas et des parcours clients québec",
+      "timestamp": "2025-11-13T20:53:08.251434",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse des personas et des parcours clients québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse des personas et des parcours clients québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Des Personas Et Des Parcours Clients Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici quelques conseils pour une meilleure analyse des personas et des parcours clients au Québec :\n\n1. Bien comprendre le contexte local : Prendre en compte les particularités culturelles, linguistiques et économiques du marché québécois est essentiel pour développer des personas et parcours clients pertinents.\n\n2. Impliquer les parties prenantes locales : Collaborer étroitement avec les équipes marketing, ventes et service clientèle basées au Québec permet d'avoir une vision plus précise des réalités du terrain.\n\n3. Mener des recherches approfondies : Réaliser des entretiens, des sondages et des observations auprès d'un échantillon représentatif de clients québécois permet de construire des personas détaillés et fiables.\n\n4. Segmenter finement la clientèle : Identifier les différents profils de clients québécois (âge, revenu, comportements d'achat, etc.) est essentiel pour proposer des parcours optimisés.\n\n5. Tester et itérer : Valider régulièrement les personas et parcours avec des clients réels, puis les faire évoluer en fonction des retours et des changements de marché.\n\n6. S'appuyer sur des outils adaptés : Utiliser des solutions d'analyse de données et de cartographie des parcours clients conçues spécifiquement pour le marché québécois peut être un atout.\n\n7. Adopter une approche omnicanale : Prendre en compte tous les points de contact des clients québécois (en ligne, en magasin, par téléphone, etc.) permet d'offrir une expérience fluide et cohérente.\n\nEn combinant une bonne compréhension du contexte local, une méthodologie rigoureuse et l'utilisation d'outils adaptés, il est possible de développer des personas et parcours clients performants au Québec.",
+          "response_length": 1689,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse des personas et des parcours clients québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse des personas et des parcours clients québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Des Personas Et Des Parcours Clients Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse des personas et des parcours clients québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse des personas et des parcours clients québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Des Personas Et Des Parcours Clients Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse des personas et des parcours clients québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse des personas et des parcours clients québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Des Personas Et Des Parcours Clients Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse des personas et des parcours clients québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse des personas et des parcours clients québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Des Personas Et Des Parcours Clients Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur optimisation des canaux d'acquisition québec",
+      "timestamp": "2025-11-13T20:53:13.209440",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation des canaux d'acquisition québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation des canaux d'acquisition québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Des Canaux D'Acquisition Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici quelques suggestions pour optimiser les canaux d'acquisition au Québec :\n\n1. Analyser les sources de trafic existantes :\n   - Identifier les canaux qui génèrent le plus de leads ou de ventes (site web, réseaux sociaux, moteurs de recherche, etc.)\n   - Comprendre les comportements et préférences des clients sur ces différents canaux\n\n2. Optimiser le site web :\n   - S'assurer que le site soit responsive et facile à naviguer\n   - Améliorer l'expérience utilisateur avec des contenus pertinents et une navigation intuitive\n   - Optimiser le référencement naturel (SEO) pour être mieux positionné sur les moteurs de recherche\n\n3. Développer une stratégie de marketing digital :\n   - Être présent sur les réseaux sociaux pertinents pour sa cible (Facebook, LinkedIn, Instagram, etc.)\n   - Mettre en place des campagnes publicitaires ciblées (Search Ads, Social Ads, Display)\n   - Utiliser l'inbound marketing avec du contenu de qualité (blog, ebooks, webinaires, etc.)\n\n4. Exploiter les canaux offline :\n   - Participer à des salons, événements ou conférences dans votre secteur d'activité\n   - Développer un réseau de partenaires (revendeurs, prescripteurs, influenceurs, etc.)\n   - Utiliser le marketing direct (publipostage, emailing, etc.)\n\n5. Mettre en place une stratégie omnicanale :\n   - Assurer une expérience client fluide et cohérente sur tous les canaux\n   - Synchroniser les données clients entre les différents canaux\n   - Favoriser l'interaction et l'engagement avec les prospects et clients\n\nL'objectif est de trouver la combinaison optimale de canaux qui vous permettra d'attirer, d'engager et de convertir votre cible au Québec.",
+          "response_length": 1650,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation des canaux d'acquisition québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation des canaux d'acquisition québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Des Canaux D'Acquisition Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation des canaux d'acquisition québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation des canaux d'acquisition québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Des Canaux D'Acquisition Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation des canaux d'acquisition québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation des canaux d'acquisition québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Des Canaux D'Acquisition Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation des canaux d'acquisition québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation des canaux d'acquisition québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Des Canaux D'Acquisition Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur préparation et optimisation de l'écosystème québec",
+      "timestamp": "2025-11-13T20:53:18.717781",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur préparation et optimisation de l'écosystème québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur préparation et optimisation de l'écosystème québec'",
+              "example_title": "Guide Complet: Meilleur Préparation Et Optimisation De L'Écosystème Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici quelques suggestions pour améliorer la préparation et l'optimisation de l'écosystème québécois :\n\n1. Investissement dans la recherche et le développement :\n   - Augmenter les fonds alloués à la R&D dans les domaines prioritaires (technologies vertes, intelligence artificielle, sciences de la vie, etc.)\n   - Encourager les partenariats entre les universités, les centres de recherche et les entreprises\n\n2. Soutien à l'entrepreneuriat et à l'innovation :\n   - Bonifier les programmes d'aide financière et d'accompagnement pour les start-ups et PME innovantes\n   - Faciliter l'accès au financement (capital de risque, subventions, etc.) pour les entreprises en démarrage\n\n3. Développement des compétences et de la main-d'œuvre :\n   - Investir dans la formation et le perfectionnement dans les domaines technologiques et émergents\n   - Attirer et retenir les talents en offrant de meilleures conditions de travail et d'intégration\n\n4. Amélioration de l'écosystème numérique :\n   - Déployer un réseau de télécommunications à haute vitesse sur l'ensemble du territoire\n   - Soutenir la numérisation des entreprises et l'adoption des technologies numériques\n\n5. Promotion de la durabilité et de l'économie verte :\n   - Encourager l'émergence de solutions écologiques et de technologies propres\n   - Offrir des incitatifs fiscaux et réglementaires pour les entreprises qui s'engagent dans une transition écologique\n\n6. Collaboration et réseautage :\n   - Favoriser les échanges et la collaboration entre les acteurs de l'écosystème (entreprises, universités, organismes de soutien, etc.)\n   - Organiser des événements et des programmes de mentorat pour stimuler l'innovation et les synergies\n\nEn misant sur ces différents leviers, le Québec pourrait ren",
+          "response_length": 1753,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur préparation et optimisation de l'écosystème québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur préparation et optimisation de l'écosystème québec'",
+              "example_title": "Guide Complet: Meilleur Préparation Et Optimisation De L'Écosystème Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur préparation et optimisation de l'écosystème québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur préparation et optimisation de l'écosystème québec'",
+              "example_title": "Guide Complet: Meilleur Préparation Et Optimisation De L'Écosystème Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur préparation et optimisation de l'écosystème québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur préparation et optimisation de l'écosystème québec'",
+              "example_title": "Guide Complet: Meilleur Préparation Et Optimisation De L'Écosystème Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur préparation et optimisation de l'écosystème québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur préparation et optimisation de l'écosystème québec'",
+              "example_title": "Guide Complet: Meilleur Préparation Et Optimisation De L'Écosystème Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "optimisation de l'écosystème digital professionnel québec",
+      "timestamp": "2025-11-13T20:53:24.013076",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici quelques pistes pour optimiser l'écosystème numérique professionnel au Québec :\n\n1. Investir dans l'infrastructure numérique\n- Assurer la couverture du haut débit internet sur l'ensemble du territoire québécois\n- Développer des centres de données et de calcul haute performance \n- Moderniser les équipements et services informatiques des entreprises et administrations\n\n2. Favoriser la formation et les compétences numériques\n- Développer des programmes de formation universitaire et professionnelle dans les métiers du numérique\n- Faciliter la reconversion et le perfectionnement des travailleurs vers les emplois du numérique\n- Promouvoir les formations en cybersécurité, en intelligence artificielle, en développement web, etc.\n\n3. Soutenir l'innovation et l'entrepreneuriat numérique\n- Mettre en place des programmes d'incubation et d'accélération pour les startups tech\n- Faciliter l'accès au financement pour les entreprises innovantes\n- Favoriser les collaborations entre grands groupes et PME/startups\n\n4. Améliorer la gouvernance et la réglementation\n- Clarifier et harmoniser les cadres légaux et réglementaires (données, IA, cybersécurité, etc.)\n- Impliquer les acteurs publics, privés et de la société civile dans l'élaboration des politiques numériques\n- Définir une stratégie numérique ambitieuse et partagée à l'échelle du Québec\n\n5. Promouvoir l'utilisation du numérique dans tous les secteurs \n- Accompagner la transformation numérique des entreprises et administrations\n- Développer des services publics et privés 100% numériques\n- Encourager l'adoption des technologies innovantes (IoT, IA, cloud, etc.)\n\nL'objectif est de bâtir un écosystème numérique performant, inclusif et tourné vers l'avenir, au bénéfice de tous les acteurs",
+          "response_length": 1755,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation de l'écosystème digital professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation de l'écosystème digital professionnel québec'",
+              "example_title": "Guide Complet: Optimisation De L'Écosystème Digital Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "analyse des personas et des parcours clients professionnel québec",
+      "timestamp": "2025-11-13T20:53:29.229212",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'analyse des personas et des parcours clients professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'analyse des personas et des parcours clients professionnel québec'",
+              "example_title": "Guide Complet: Analyse Des Personas Et Des Parcours Clients Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici une analyse des personas et des parcours clients pour un professionnel au Québec :\n\nPersonas types :\n\n1. Le cadre supérieur chevronné :\n   - Âge : 45-55 ans\n   - Secteur d'activité : gestion, direction, conseil\n   - Objectifs : accroître son expertise, se perfectionner, se démarquer\n   - Défis : concilier vie professionnelle et personnelle, rester compétitif\n\n2. La jeune professionnelle ambitieuse :\n   - Âge : 25-35 ans \n   - Secteur d'activité : services professionnels, technologie, commerce\n   - Objectifs : acquérir de l'expérience, développer ses compétences, progresser\n   - Défis : s'établir, trouver un équilibre, gérer le stress\n\n3. Le professionnel en transition de carrière :\n   - Âge : 35-45 ans\n   - Secteur d'activité : divers\n   - Objectifs : se réinventer, trouver un nouveau défi, s'épanouir\n   - Défis : surmonter l'incertitude, se former, rebâtir son réseau\n\nParcours clients types :\n\n1. Le cadre supérieur chevronné :\n   - Étapes :\n     - Prend conscience du besoin de se perfectionner\n     - Cherche des formations continues de qualité\n     - Compare les options et évalue le meilleur rapport qualité-prix\n     - S'inscrit à la formation qui correspond à ses attentes\n     - Participe activement à la formation\n     - Applique les nouvelles connaissances et compétences\n     - Recommande la formation à son réseau\n\n2. La jeune professionnelle ambitieuse :\n   - Étapes :\n     - Identifie les compétences à développer pour progresser\n     - Recherche des programmes de formation flexibles et abordables\n     - Évalue les options en fonction de sa",
+          "response_length": 1575,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'analyse des personas et des parcours clients professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'analyse des personas et des parcours clients professionnel québec'",
+              "example_title": "Guide Complet: Analyse Des Personas Et Des Parcours Clients Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'analyse des personas et des parcours clients professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'analyse des personas et des parcours clients professionnel québec'",
+              "example_title": "Guide Complet: Analyse Des Personas Et Des Parcours Clients Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'analyse des personas et des parcours clients professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'analyse des personas et des parcours clients professionnel québec'",
+              "example_title": "Guide Complet: Analyse Des Personas Et Des Parcours Clients Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'analyse des personas et des parcours clients professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'analyse des personas et des parcours clients professionnel québec'",
+              "example_title": "Guide Complet: Analyse Des Personas Et Des Parcours Clients Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "optimisation des canaux d'acquisition professionnel québec",
+      "timestamp": "2025-11-13T20:53:34.852295",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation des canaux d'acquisition professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation des canaux d'acquisition professionnel québec'",
+              "example_title": "Guide Complet: Optimisation Des Canaux D'Acquisition Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici quelques suggestions pour optimiser les canaux d'acquisition de nouveaux clients professionnels au Québec :\n\n1. Identifiez vos clients idéaux :\n   - Définissez clairement vos cibles (secteurs d'activité, taille d'entreprise, région géographique, etc.)\n   - Comprenez leurs besoins, défis et processus de décision d'achat.\n\n2. Optimisez votre présence en ligne :\n   - Assurez-vous que votre site web soit attractif, informatif et facilement navigable.\n   - Développez une stratégie de contenu pertinente (blog, webinaires, guides, etc.).\n   - Soyez actif sur les réseaux sociaux professionnels (LinkedIn, Twitter, etc.).\n\n3. Exploitez les réseaux professionnels :\n   - Adhérez à des associations ou organisations professionnelles pertinentes.\n   - Participez activement à des événements (conférences, salons, etc.) pour rencontrer de nouveaux prospects.\n   - Renforcez votre réseau de contacts par le biais du networking.\n\n4. Développez des partenariats stratégiques :\n   - Identifiez des entreprises complémentaires avec lesquelles vous pouvez collaborer.\n   - Mettez en place des programmes de référencement mutuels.\n\n5. Optimisez votre processus commercial :\n   - Améliorez votre prospection (appels, emailings, etc.) pour générer davantage de leads qualifiés.\n   - Formez vos équipes commerciales aux meilleures pratiques de vente B2B.\n   - Mettez en place un suivi efficace de vos opportunités.\n\n6. Mesurez et ajustez régulièrement votre stratégie :\n   - Suivez les indicateurs clés de performance (taux de transformation, coût d'acquisition, etc.).\n   - Analysez les résultats et adaptez votre approche en fonction.",
+          "response_length": 1626,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation des canaux d'acquisition professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation des canaux d'acquisition professionnel québec'",
+              "example_title": "Guide Complet: Optimisation Des Canaux D'Acquisition Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation des canaux d'acquisition professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation des canaux d'acquisition professionnel québec'",
+              "example_title": "Guide Complet: Optimisation Des Canaux D'Acquisition Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation des canaux d'acquisition professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation des canaux d'acquisition professionnel québec'",
+              "example_title": "Guide Complet: Optimisation Des Canaux D'Acquisition Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation des canaux d'acquisition professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation des canaux d'acquisition professionnel québec'",
+              "example_title": "Guide Complet: Optimisation Des Canaux D'Acquisition Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "préparation et optimisation de l'écosystème professionnel québec",
+      "timestamp": "2025-11-13T20:53:41.720520",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'préparation et optimisation de l'écosystème professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'préparation et optimisation de l'écosystème professionnel québec'",
+              "example_title": "Guide Complet: Préparation Et Optimisation De L'Écosystème Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici quelques suggestions pour préparer et optimiser votre écosystème professionnel au Québec :\n\n1. Réseautage :\n   - Participez à des événements professionnels, des conférences, des salons de l'emploi pour rencontrer de nouvelles personnes.\n   - Rejoignez des groupes ou associations professionnelles dans votre domaine.\n   - Créez un profil LinkedIn et restez actif sur ce réseau.\n\n2. Développement des compétences :\n   - Identifiez les compétences clés recherchées dans votre secteur.\n   - Suivez des formations, suivez des cours en ligne, assistez à des ateliers pour acquérir de nouvelles compétences.\n   - Cherchez des opportunités de mentorat ou de stage pour développer votre expérience.\n\n3. Recherche d'emploi :\n   - Mettez à jour votre CV et votre lettre de motivation en fonction du marché québécois.\n   - Explorez les offres d'emploi sur les sites web d'emploi, les sites d'entreprises, les réseaux sociaux.\n   - Faites-vous connaître auprès des recruteurs et des entreprises de votre secteur.\n\n4. Adaptation culturelle :\n   - Renseignez-vous sur la culture et les pratiques d'affaires au Québec.\n   - Apprenez le français si ce n'est pas déjà votre langue maternelle.\n   - Observez les codes de communication et de comportement en milieu professionnel.\n\n5. Persévérance et suivi :\n   - Soyez patient et persistent dans votre recherche d'emploi.\n   - Faites un suivi régulier auprès des contacts et des entreprises.\n   - N'hésitez pas à demander du feedback pour vous améliorer.\n\nL'objectif est de construire progressivement un réseau professionnel solide, de développer les compétences recherchées et de vous adapter à",
+          "response_length": 1632,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'préparation et optimisation de l'écosystème professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'préparation et optimisation de l'écosystème professionnel québec'",
+              "example_title": "Guide Complet: Préparation Et Optimisation De L'Écosystème Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'préparation et optimisation de l'écosystème professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'préparation et optimisation de l'écosystème professionnel québec'",
+              "example_title": "Guide Complet: Préparation Et Optimisation De L'Écosystème Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'préparation et optimisation de l'écosystème professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'préparation et optimisation de l'écosystème professionnel québec'",
+              "example_title": "Guide Complet: Préparation Et Optimisation De L'Écosystème Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'préparation et optimisation de l'écosystème professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'préparation et optimisation de l'écosystème professionnel québec'",
+              "example_title": "Guide Complet: Préparation Et Optimisation De L'Écosystème Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "guide optimisation de l'écosystème digital",
+      "timestamp": "2025-11-13T20:53:47.349935",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide optimisation de l'écosystème digital'",
+              "action": "Créer une page dédiée ou un article sur 'guide optimisation de l'écosystème digital'",
+              "example_title": "Guide Complet: Guide Optimisation De L'Écosystème Digital en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici quelques conseils pour optimiser l'écosystème digital de votre entreprise :\n\n1. Définir une stratégie digitale globale :\n   - Aligner votre stratégie digitale avec les objectifs business de l'entreprise\n   - Identifier les principaux leviers digitaux à activer (site web, e-commerce, réseaux sociaux, etc.)\n   - Définir des indicateurs de performance clés (KPI) pour mesurer l'impact\n\n2. Optimiser votre présence en ligne :\n   - Assurer une expérience utilisateur de qualité sur votre site web (ergonomie, contenus, fonctionnalités)\n   - Développer une stratégie de référencement naturel (SEO) pour améliorer la visibilité\n   - Être actif sur les réseaux sociaux pertinents pour votre activité\n\n3. Exploiter les données collectées :\n   - Mettre en place des outils d'analyse web (Google Analytics, etc.) pour mieux comprendre vos utilisateurs\n   - Utiliser les données pour personnaliser l'expérience et adapter vos actions marketing\n\n4. Automatiser et optimiser les processus :\n   - Identifier les tâches répétitives pouvant être automatisées (emailing, social media, etc.)\n   - Choisir les bons outils pour simplifier et fluidifier le travail (CRM, outils de collaboration, etc.)\n\n5. Assurer la sécurité et la confidentialité des données :\n   - Mettre en place des mesures de cybersécurité adaptées (pare-feu, chiffrement, sauvegarde, etc.)\n   - Respecter les réglementations en matière de protection des données personnelles (RGPD)\n\n6. Former et accompagner les collaborateurs :\n   - Développer les compétences digitales au sein de l'entreprise\n   - Impliquer les équipes dans la transformation digitale pour favoriser l'adoption\n\nL'objectif est de créer un écosystème digital perform",
+          "response_length": 1693,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide optimisation de l'écosystème digital'",
+              "action": "Créer une page dédiée ou un article sur 'guide optimisation de l'écosystème digital'",
+              "example_title": "Guide Complet: Guide Optimisation De L'Écosystème Digital en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide optimisation de l'écosystème digital'",
+              "action": "Créer une page dédiée ou un article sur 'guide optimisation de l'écosystème digital'",
+              "example_title": "Guide Complet: Guide Optimisation De L'Écosystème Digital en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide optimisation de l'écosystème digital'",
+              "action": "Créer une page dédiée ou un article sur 'guide optimisation de l'écosystème digital'",
+              "example_title": "Guide Complet: Guide Optimisation De L'Écosystème Digital en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide optimisation de l'écosystème digital'",
+              "action": "Créer une page dédiée ou un article sur 'guide optimisation de l'écosystème digital'",
+              "example_title": "Guide Complet: Guide Optimisation De L'Écosystème Digital en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "guide analyse des personas et des parcours clients",
+      "timestamp": "2025-11-13T20:53:53.033157",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide analyse des personas et des parcours clients'",
+              "action": "Créer une page dédiée ou un article sur 'guide analyse des personas et des parcours clients'",
+              "example_title": "Guide Complet: Guide Analyse Des Personas Et Des Parcours Clients en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Voici un guide pour l'analyse des personas et des parcours clients :\n\n1. Définition des personas :\n   - Identifier les différents types d'utilisateurs/clients cibles\n   - Créer des personas détaillés avec des informations démographiques, psychographiques, comportementales, objectifs, défis, etc.\n   - Valider les personas avec des études de marché et des entretiens utilisateurs\n\n2. Analyse des parcours clients :\n   - Identifier les différentes étapes du parcours client (découverte, recherche, achat, utilisation, fidélisation, etc.)\n   - Cartographier le parcours client pour chaque persona, en détaillant les actions, les canaux utilisés, les émotions ressenties, etc.\n   - Identifier les points de contact (touchpoints) entre l'entreprise et le client à chaque étape\n\n3. Identification des insights clés :\n   - Analyser les comportements, motivations et frustrations des clients à chaque étape du parcours\n   - Repérer les points de friction, les moments critiques et les opportunités d'amélioration\n   - Comprendre les attentes, les besoins et les aspirations des différents personas\n\n4. Priorisation des initiatives :\n   - Évaluer l'impact potentiel et la faisabilité des différentes initiatives d'amélioration\n   - Définir des objectifs et des KPIs pour mesurer l'efficacité des initiatives\n   - Prioriser les initiatives en fonction de leur valeur ajoutée pour les clients et l'entreprise\n\n5. Mise en œuvre et suivi :\n   - Déployer les initiatives prioritaires et les tester auprès des clients\n   - Suivre les indicateurs de performance et ajuster les initiatives en fonction des retours\n   - Impliquer les équipes et communiquer sur les résultats obtenus\n\n6. Itération continue :\n   - Mettre à jour régulièrement les personas et les parcours clients en fonction de l'évolution du marché\n   - Identifier de nouvelles opportunités",
+          "response_length": 1839,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide analyse des personas et des parcours clients'",
+              "action": "Créer une page dédiée ou un article sur 'guide analyse des personas et des parcours clients'",
+              "example_title": "Guide Complet: Guide Analyse Des Personas Et Des Parcours Clients en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide analyse des personas et des parcours clients'",
+              "action": "Créer une page dédiée ou un article sur 'guide analyse des personas et des parcours clients'",
+              "example_title": "Guide Complet: Guide Analyse Des Personas Et Des Parcours Clients en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide analyse des personas et des parcours clients'",
+              "action": "Créer une page dédiée ou un article sur 'guide analyse des personas et des parcours clients'",
+              "example_title": "Guide Complet: Guide Analyse Des Personas Et Des Parcours Clients en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'guide analyse des personas et des parcours clients'",
+              "action": "Créer une page dédiée ou un article sur 'guide analyse des personas et des parcours clients'",
+              "example_title": "Guide Complet: Guide Analyse Des Personas Et Des Parcours Clients en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 82,
+    "global_visibility": 0.0,
+    "by_platform": {
+      "chatgpt": 0.0,
+      "claude": 0.0,
+      "perplexity": 0.0,
+      "gemini": 0.0,
+      "google_ai": 0.0
+    }
+  }
+}
