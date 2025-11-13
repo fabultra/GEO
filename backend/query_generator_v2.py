@@ -204,11 +204,11 @@ class IntelligentQueryGeneratorV2:
                     except Exception:
                         pass
         
-        # 2. COMMERCIAL QUERIES (20 requêtes)
+        # 2. COMMERCIAL QUERIES (30+ requêtes) - AUGMENTÉ
         commercial_templates = templates.get('commercial', [])
         for template in commercial_templates:  # TOUS
-            for offering in offering_names[:3]:
-                for location in location_names[:2]:
+            for offering in offering_names:  # TOUS les offerings
+                for location in location_names:  # TOUTES les locations
                     try:
                         query = template.format(
                             offering=offering,
