@@ -17,6 +17,21 @@ logger = logging.getLogger(__name__)
 # Initialiser Anthropic
 anthropic_client = Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
 
+def clean_json_response(text: str) -> str:
+    """Nettoyer la réponse JSON de Claude (enlever markdown code blocks)"""
+    text = text.strip()
+    
+    # Enlever les markdown code blocks
+    if text.startswith('```json'):
+        text = text[7:]  # Enlever ```json
+    elif text.startswith('```'):
+        text = text[3:]  # Enlever ```
+    
+    if text.endswith('```'):
+        text = text[:-3]  # Enlever ```
+    
+    return text.strip()
+
 # Dictionnaire de patterns par industrie
 INDUSTRY_PATTERNS = {
     'financial_services': {
