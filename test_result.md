@@ -316,7 +316,6 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Module 5: Semantic Analysis & 100 Non-Branded Queries"
     - "Module 2: Automatic Content Generation (10 articles GEO-optimized)"
   stuck_tasks: []
   test_all: false
