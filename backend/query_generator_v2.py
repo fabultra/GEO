@@ -173,7 +173,7 @@ class IntelligentQueryGeneratorV2:
                             offering=offering_names[0] if offering_names else 'solution'
                         )
                         queries.append(query)
-                    except:
+                    except Exception:
                         pass
         
         return queries[:80]
