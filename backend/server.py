@@ -731,7 +731,7 @@ async def process_analysis_job(job_id: str):
             
             # Extraire les compétiteurs des résultats de visibilité
             competitors_urls = []
-            visibility_details = visibility_data.get('details', [])
+            visibility_details = visibility_data_compat.get('details', [])
             
             # Identifier les domaines mentionnés dans les réponses IA
             for detail in visibility_details:
