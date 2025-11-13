@@ -204,8 +204,58 @@ def test_semantic_analysis():
     print(f"\n🔍 Validation Results:")
     print("=" * 50)
     
+    # Check ENHANCED FEATURES as requested in review
+    print("🔍 ENHANCED FEATURES VALIDATION (Review Request):")
+    enhanced_features_present = True
+    missing_features = []
+    
+    # Check industry classification enhanced fields
+    required_industry_fields = ['sub_industry', 'positioning', 'maturity', 'geographic_scope', 'reasoning']
+    for field in required_industry_fields:
+        if field not in industry_class:
+            enhanced_features_present = False
+            missing_features.append(f"industry_classification.{field}")
+    
+    # Check offerings enhanced fields (12 items required)
+    if offerings:
+        required_offering_fields = ['description', 'target_segment', 'priority']
+        for field in required_offering_fields:
+            if isinstance(offerings[0], dict) and field not in offerings[0]:
+                enhanced_features_present = False
+                missing_features.append(f"offerings.{field}")
+        
+        if len(offerings) < 12:
+            print(f"   ⚠️  Only {len(offerings)} offerings found (target: 12)")
+    
+    # Check problems_solved enhanced fields (15 items required)
+    if problems:
+        required_problem_fields = ['category', 'severity', 'solution_approach']
+        for field in required_problem_fields:
+            if isinstance(problems[0], dict) and field not in problems[0]:
+                enhanced_features_present = False
+                missing_features.append(f"problems_solved.{field}")
+        
+        if len(problems) < 15:
+            print(f"   ⚠️  Only {len(problems)} problems found (target: 15)")
+    
+    # Check LDA topics enhanced fields
+    topics = semantic_results.get('topics', [])
+    if topics:
+        required_topic_fields = ['keywords', 'top_words_scores']
+        for field in required_topic_fields:
+            if isinstance(topics[0], dict) and field not in topics[0]:
+                enhanced_features_present = False
+                missing_features.append(f"topics.{field}")
+    
+    if enhanced_features_present:
+        print("   ✅ ALL enhanced features are present!")
+    else:
+        print("   ❌ Missing enhanced features:")
+        for feature in missing_features:
+            print(f"     - {feature}")
+    
     # Check if semantic analysis has required fields
-    required_fields = ['industry_classification', 'entities']
+    required_fields = ['industry_classification', 'entities', 'topics']
     missing_fields = []
     
     for field in required_fields:
