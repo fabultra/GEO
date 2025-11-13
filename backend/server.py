@@ -626,10 +626,22 @@ async def process_analysis_job(job_id: str):
             {"$set": {"progress": 40}}
         )
         
-        # Step 2: Generate test queries
-        from query_generator import generate_test_queries
-        test_queries = generate_test_queries(job_doc['url'], crawl_data)
-        logger.info(f"Generated {len(test_queries)} test queries")
+        # Step 2: Generate test queries (V2 - Intelligent Context-Based)
+        from query_generator_v2 import generate_queries
+        test_queries = generate_queries(crawl_data, num_queries=30)
+        logger.info(f"Generated {len(test_queries)} contextual test queries")
+        
+        # Sauvegarder queries_config.json pour personnalisation
+        queries_config = {
+            'site_url': job_doc['url'],
+            'auto_generated_queries': test_queries,
+            'manual_queries': [],
+            'excluded_queries': [],
+            'query_metadata': {q: {'generated_at': datetime.now(timezone.utc).isoformat()} for q in test_queries}
+        }
+        queries_config_path = f"/app/backend/queries_config_{job_id}.json"
+        with open(queries_config_path, 'w', encoding='utf-8') as f:
+            json.dump(queries_config, f, indent=2, ensure_ascii=False)
         
         await db.analysis_jobs.update_one(
             {"id": job_id},
