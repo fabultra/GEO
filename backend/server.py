@@ -883,7 +883,6 @@ async def process_analysis_job(job_id: str):
         # Step 8: Save to history and generate alerts
         try:
             from database_manager import DatabaseManager
-            import json
             
             # Nettoyer report_dict pour enlever les ObjectId non-serializable
             def clean_for_json(obj):
