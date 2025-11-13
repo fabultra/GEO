@@ -158,7 +158,7 @@ class IntelligentQueryGeneratorV2:
                             location=location
                         )
                         queries.append(query)
-                    except:
+                    except Exception:
                         pass
         
         # 3. PROBLEM-BASED QUERIES (20 requêtes)
