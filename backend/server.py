@@ -648,14 +648,62 @@ async def process_analysis_job(job_id: str):
             {"$set": {"progress": 50}}
         )
         
-        # Step 3: Test visibility in AI platforms (critère 7 & 8)
+        # Step 3: Test visibility in AI platforms with detailed diagnosis (V2)
         try:
-            tester = VisibilityTester()
-            visibility_data = await tester.test_visibility(job_doc['url'], test_queries)
-            logger.info(f"Visibility test completed: {visibility_data['overall_visibility']:.1%}")
+            from visibility_tester_v2 import test_visibility_with_details
+            
+            # Extraire le nom de l'entreprise
+            company_name = ''
+            if crawl_data.get('pages'):
+                title = crawl_data['pages'][0].get('title', '')
+                if '|' in title:
+                    company_name = title.split('|')[0].strip()
+                elif '-' in title:
+                    company_name = title.split('-')[0].strip()
+                else:
+                    company_name = title.split()[0] if title else ''
+            
+            # Test avec diagnostic détaillé
+            visibility_data = test_visibility_with_details(test_queries, job_doc['url'], company_name)
+            logger.info(f"Visibility test completed with diagnosis: {visibility_data.get('summary', {}).get('global_visibility', 0):.1%}")
+            
+            # Sauvegarder visibility_results.json
+            visibility_results_path = f"/app/backend/visibility_results_{job_id}.json"
+            with open(visibility_results_path, 'w', encoding='utf-8') as f:
+                json.dump(visibility_data, f, indent=2, ensure_ascii=False)
+            
+            # Convertir au format attendu par le reste du code
+            visibility_data_compat = {
+                'overall_visibility': visibility_data.get('summary', {}).get('global_visibility', 0.0),
+                'platform_scores': visibility_data.get('summary', {}).get('by_platform', {}),
+                'queries_tested': len(visibility_data.get('queries', [])),
+                'total_tests': len(visibility_data.get('queries', [])) * 5,
+                'details': []
+            }
+            
+            # Ajouter les détails au format attendu
+            for query_data in visibility_data.get('queries', []):
+                for platform, platform_data in query_data.get('platforms', {}).items():
+                    visibility_data_compat['details'].append({
+                        'query': query_data['query'],
+                        'platform': platform.upper(),
+                        'mentioned': platform_data.get('mentioned', False),
+                        'answer': platform_data.get('full_response', '')[:500]  # Tronquer pour la DB
+                    })
+            
         except Exception as e:
             logger.error(f"Visibility test failed: {str(e)}")
             visibility_data = {
+                'site_url': job_doc['url'],
+                'company_name': '',
+                'queries': [],
+                'summary': {
+                    'total_queries': 0,
+                    'global_visibility': 0.0,
+                    'by_platform': {}
+                }
+            }
+            visibility_data_compat = {
                 'overall_visibility': 0.0,
                 'platform_scores': {},
                 'queries_tested': 0,
