@@ -174,9 +174,9 @@ backend:
   
   - task: "Module 5: Semantic Analysis & 100 Non-Branded Queries"
     implemented: true
-    working: false
+    working: true
     file: "/app/backend/query_generator_v2.py, /app/backend/semantic_analyzer.py"
-    stuck_count: 1
+    stuck_count: 0
     priority: "high"
     needs_retesting: false
     status_history:
