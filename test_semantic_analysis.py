@@ -35,9 +35,9 @@ def test_claude_api():
         
         client = Anthropic(api_key=api_key)
         
-        # Test with the model specified in the review request
+        # Test with the correct Claude model
         response = client.messages.create(
-            model="claude-3-5-sonnet-20240620",
+            model="claude-3-5-sonnet-20241022",
             max_tokens=100,
             messages=[
                 {"role": "user", "content": "Test message. Respond with 'API Working' in JSON format: {\"status\": \"API Working\"}"}
