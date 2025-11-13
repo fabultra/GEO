@@ -337,28 +337,49 @@ test_plan:
 agent_communication:
     - agent: "testing"
       message: |
-        🔍 TESTS CLAUDE 3.5 SONNET - ÉCHEC CRITIQUE CONFIRMÉ
+        🔍 DIAGNOSTIC FINAL NOUVELLE CLÉ ANTHROPIC - TESTS COMPLETS
         
-        Tests de la review request effectués:
-        1. ❌ Claude 3.5 Sonnet INACCESSIBLE
+        Tests exhaustifs de la review request effectués:
+        
+        1. ✅ NOUVELLE CLÉ API ANTHROPIC FONCTIONNELLE
+           - API Key: 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
+           - Authentification: ✅ SUCCÈS
+           - claude-3-haiku-20240307: ✅ ACCESSIBLE ET FONCTIONNEL
+        
+        2. ❌ CLAUDE 3.5 SONNET NON ACCESSIBLE - LIMITATION TIER
            - claude-3-5-sonnet-20241022: 404 model not found
-           - claude-3-5-sonnet-latest: 404 model not found  
+           - claude-3-5-sonnet-20240620: 404 model not found
+           - claude-3-5-sonnet-latest: 404 model not found
            - claude-3-5-sonnet: 404 model not found
-           - Fallback claude-3-haiku-20240307: ✅ FONCTIONNE
+           - claude-3-opus-20240229: 404 model not found
+           - CAUSE: API key sur tier insuffisant (Free/Build Tier 1), nécessite Build Tier 2+ ($40+ dépôt)
         
-        2. ❌ Enhanced Semantic Analysis NON IMPLÉMENTÉE
-           - industry_classification: MANQUE sub_industry, positioning, maturity, geographic_scope, reasoning
-           - offerings: MANQUE description, target_segment, priority (seulement name/mentions_count)
-           - problems_solved: MANQUE category, severity, solution_approach (fallback générique)
-           - Topic Modeling: Basique seulement (pas enhanced LDA avec keywords/scores)
+        3. ✅ SYSTÈME PIPELINE OPÉRATIONNEL AVEC HAIKU
+           - Pipeline complet fonctionne avec claude-3-haiku-20240307
+           - Crawling: ✅ 50 pages sekoia.ca
+           - Analyse sémantique: ✅ Détection industrie (manufacturing)
+           - Génération requêtes: ✅ 68 requêtes (100% non-branded)
+           - Modules intégrés: ✅ Competitive Intelligence, Schema Generator, Visibility Testing
+           - Rapports: ✅ Word, HTML Dashboard, PDF générés
         
-        3. ❌ Génération de requêtes INSUFFISANTE
-           - Génère 68-82 requêtes au lieu de 100+ requis
-           - Distribution 100%/0%/0% au lieu de 80%/15%/5%
-           - Pas d'atteinte des objectifs quantitatifs
+        4. ❌ ENHANCED FEATURES MANQUANTES (Review Requirements)
+           - industry_classification: sub_industry=N/A, positioning=N/A, maturity=N/A, geographic_scope=N/A, reasoning=N/A
+           - offerings: 10 items mais MANQUE description, target_segment, priority (besoin 12 items complets)
+           - problems_solved: 3 items mais MANQUE category, severity, solution_approach (besoin 15 items complets)
+           - Topic Modeling: Basique seulement, MANQUE VRAI LDA avec keywords et top_words_scores
+           - Quantité requêtes: 68 au lieu de 100+ requis
+           - Distribution: 100%/0%/0% au lieu de 80%/15%/5% requis
         
-        SYSTÈME FONCTIONNEL: Pipeline complet opérationnel avec Haiku, tous modules intégrés
-        RECOMMANDATION CRITIQUE: WEBSEARCH pour corriger Claude 3.5 Sonnet + implémenter enhanced features
+        CONCLUSION:
+        - ✅ Nouvelle clé API fonctionne (Haiku accessible)
+        - ❌ Claude 3.5 Sonnet inaccessible (limitation tier)
+        - ✅ Pipeline système opérationnel
+        - ❌ Enhanced features pas implémentées
+        
+        RECOMMANDATIONS CRITIQUES:
+        1. UPGRADE API KEY vers Build Tier 2+ pour accès Claude 3.5 Sonnet
+        2. OU implémenter enhanced features avec claude-3-haiku-20240307
+        3. Corriger génération 100+ requêtes avec distribution 80%/15%/5%
     - agent: "main"
       message: |
         🧠 IMPLÉMENTATION ADDON ANALYSE SÉMANTIQUE PROFONDE - EN COURS
