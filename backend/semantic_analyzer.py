@@ -117,13 +117,57 @@ class SemanticAnalyzer:
             }
     
     def _detect_industry(self, crawl_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Détecter automatiquement l'industrie"""
+        """Détecter automatiquement l'industrie avec Anthropic"""
         
-        # Combiner tout le texte
+        # Combiner tout le texte (limiter à 10 pages pour ne pas dépasser tokens)
         all_text = ""
-        for page in crawl_data.get('pages', []):
+        pages = crawl_data.get('pages', [])[:10]
+        for page in pages:
             all_text += " " + page.get('title', '')
             all_text += " " + " ".join(page.get('paragraphs', []))
+        
+        # Limiter à 4000 caractères pour l'analyse
+        all_text = all_text[:4000]
+        
+        # Utiliser Claude pour analyser l'industrie
+        try:
+            prompt = f"""Analyse ce contenu de site web et détermine :
+1. L'industrie principale (choisis parmi: financial_services, saas, ecommerce, construction, professional_services, healthcare, hospitality, real_estate, education, manufacturing, ou 'generic' si aucune ne correspond)
+2. Le type d'entreprise précis (ex: "courtier en assurance", "logiciel de gestion", "boutique en ligne", etc.)
+3. Le business model (B2B, B2C, ou B2B2C)
+
+CONTENU DU SITE:
+{all_text}
+
+Réponds UNIQUEMENT avec un JSON valide dans ce format exact:
+{{
+  "primary_industry": "nom_industrie",
+  "company_type": "type précis",
+  "business_model": "B2B ou B2C ou B2B2C",
+  "confidence": 0.85
+}}"""
+
+            message = anthropic_client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=500,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            
+            response_text = message.content[0].text.strip()
+            logger.info(f"Claude industry detection response: {response_text}")
+            
+            # Parser le JSON
+            result = json.loads(response_text)
+            
+            return result
+            
+        except Exception as e:
+            logger.error(f"Claude industry detection failed: {str(e)}, falling back to keyword method")
+            # Fallback: méthode par mots-clés
+            return self._detect_industry_fallback(all_text)
+    
+    def _detect_industry_fallback(self, all_text: str) -> Dict[str, Any]:
+        """Méthode fallback par mots-clés si Claude échoue"""
         
         all_text = all_text.lower()
         
