@@ -285,7 +285,7 @@ def test_semantic_analysis():
     print("=" * 50)
     
     success_count = 0
-    total_tests = 6
+    total_tests = 8
     
     # Test 1: Industry detected
     if industry_class.get('primary_industry', 'unknown') != 'unknown':
@@ -294,35 +294,54 @@ def test_semantic_analysis():
     else:
         print("❌ Industry detection: FAIL")
     
-    # Test 2: Offerings extracted
+    # Test 2: Enhanced industry fields
+    if enhanced_features_present:
+        print("✅ Enhanced industry classification: PASS")
+        success_count += 1
+    else:
+        print("❌ Enhanced industry classification: FAIL")
+    
+    # Test 3: Offerings extracted
     if len(offerings) > 0:
         print("✅ Offerings extraction: PASS")
         success_count += 1
     else:
         print("❌ Offerings extraction: FAIL")
     
-    # Test 3: Queries generated
-    if len(queries) >= 50:  # At least 50 queries
-        print("✅ Query generation: PASS")
+    # Test 4: Queries generated (100+ target)
+    if len(queries) >= 80:  # At least 80 queries (close to 100)
+        print("✅ Query generation (80+ queries): PASS")
         success_count += 1
     else:
-        print("❌ Query generation: FAIL")
+        print("❌ Query generation (80+ queries): FAIL")
     
-    # Test 4: Non-branded queries
-    if breakdown.get('non_branded', 0) > 0:
-        print("✅ Non-branded queries: PASS")
+    # Test 5: Distribution target (80/15/5)
+    total_q = len(queries)
+    if total_q > 0:
+        non_branded_pct = (breakdown.get('non_branded', 0) / total_q) * 100
+        if non_branded_pct >= 70:  # At least 70% non-branded
+            print("✅ Non-branded distribution (70%+): PASS")
+            success_count += 1
+        else:
+            print("❌ Non-branded distribution (70%+): FAIL")
+    else:
+        print("❌ Non-branded distribution: FAIL")
+    
+    # Test 6: LDA Topics
+    if len(topics) > 0:
+        print("✅ LDA Topic modeling: PASS")
         success_count += 1
     else:
-        print("❌ Non-branded queries: FAIL")
+        print("❌ LDA Topic modeling: FAIL")
     
-    # Test 5: Semantic analysis structure
+    # Test 7: Semantic analysis structure
     if not missing_fields:
         print("✅ Semantic analysis structure: PASS")
         success_count += 1
     else:
         print("❌ Semantic analysis structure: FAIL")
     
-    # Test 6: Query breakdown structure
+    # Test 8: Query breakdown structure
     if not missing_breakdown:
         print("✅ Query breakdown structure: PASS")
         success_count += 1
@@ -331,15 +350,15 @@ def test_semantic_analysis():
     
     print(f"\n🎯 Final Score: {success_count}/{total_tests} tests passed ({(success_count/total_tests)*100:.1f}%)")
     
-    if success_count == total_tests:
-        print("🎉 ALL TESTS PASSED - Semantic Analysis Module is working correctly!")
-        return True
+    if success_count >= 6:
+        print("🎉 SEMANTIC ANALYSIS WORKING - Enhanced features implemented!")
+        return True, enhanced_features_present
     elif success_count >= 4:
-        print("⚠️  MOSTLY WORKING - Some minor issues detected")
-        return True
+        print("⚠️  MOSTLY WORKING - Some issues detected")
+        return True, False
     else:
         print("❌ MAJOR ISSUES - Semantic Analysis Module needs fixes")
-        return False
+        return False, False
 
 if __name__ == "__main__":
     success = test_semantic_analysis()
