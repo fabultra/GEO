@@ -360,6 +360,62 @@ def test_semantic_analysis():
         print("❌ MAJOR ISSUES - Semantic Analysis Module needs fixes")
         return False, False
 
+def main():
+    """Main test execution for enhanced semantic analysis"""
+    print("🧠 SEMANTIC ANALYSIS DEEP TESTING WITH CLAUDE 3.5 SONNET")
+    print("=" * 80)
+    print(f"⏰ Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("📋 Testing enhanced features as requested in review:")
+    print("   - Claude 3.5 Sonnet model (claude-3-5-sonnet-20240620)")
+    print("   - Enhanced industry classification with sub_industry, positioning, etc.")
+    print("   - Enhanced offerings with description, target_segment, priority (12 items)")
+    print("   - Enhanced problems_solved with category, severity, solution_approach (15 items)")
+    print("   - LDA Topic Modeling with keywords and top_words_scores")
+    print("   - 100+ queries with 80%/15%/5% distribution")
+    print()
+    
+    results = {}
+    
+    # Test 1: Claude API connectivity
+    results['claude_api'] = test_claude_api()
+    
+    # Test 2: Semantic analysis with enhanced features
+    results['semantic_analysis'], enhanced_ok = test_semantic_analysis()
+    
+    # Summary
+    print("\n" + "=" * 80)
+    print("📊 FINAL TEST RESULTS")
+    print("=" * 80)
+    
+    for test_name, result in results.items():
+        if result is True:
+            print(f"✅ {test_name}: PASSED")
+        elif result is False:
+            print(f"❌ {test_name}: FAILED")
+        else:
+            print(f"⏭️  {test_name}: SKIPPED")
+    
+    # Enhanced features assessment
+    if enhanced_ok:
+        print("🎉 ENHANCED FEATURES: ALL IMPLEMENTED!")
+    else:
+        print("⚠️  ENHANCED FEATURES: PARTIALLY IMPLEMENTED")
+    
+    # Overall assessment
+    critical_tests = ['claude_api', 'semantic_analysis']
+    passed_critical = sum(1 for test in critical_tests if results.get(test) is True)
+    
+    print(f"\n🎯 CRITICAL TESTS: {passed_critical}/{len(critical_tests)} passed")
+    
+    if passed_critical == len(critical_tests) and enhanced_ok:
+        print("🎉 ALL TESTS PASSED - ENHANCED SEMANTIC ANALYSIS WORKING!")
+        return 0
+    elif passed_critical == len(critical_tests):
+        print("⚠️  BASIC FUNCTIONALITY WORKING - ENHANCED FEATURES NEED WORK")
+        return 1
+    else:
+        print("❌ CRITICAL TESTS FAILED")
+        return 1
+
 if __name__ == "__main__":
-    success = test_semantic_analysis()
-    sys.exit(0 if success else 1)
+    sys.exit(main())
