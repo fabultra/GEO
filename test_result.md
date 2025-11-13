@@ -172,17 +172,17 @@ backend:
           agent: "testing"
           comment: "✅ TESTÉ ET FONCTIONNEL - Module intégré avec succès dans le pipeline. Génère 7 types de schemas: organization, website, faq, article, breadcrumb, local_business + implementation_guide. Testé avec sekoia.ca, tous les schemas critiques générés correctement."
   
-  - task: "Module 5: Query Expansion (20 → 500+ queries)"
-    implemented: false
+  - task: "Module 5: Semantic Analysis & 100 Non-Branded Queries"
+    implemented: true
     working: "NA"
-    file: "/app/backend/query_generator.py"
+    file: "/app/backend/query_generator_v2.py, /app/backend/semantic_analyzer.py"
     stuck_count: 0
-    priority: "medium"
-    needs_retesting: false
+    priority: "high"
+    needs_retesting: true
     status_history:
         - working: "NA"
           agent: "main"
-          comment: "Le fichier query_generator.py existe mais génère seulement 20 requêtes. L'expansion vers 500+ requêtes n'est pas encore implémentée."
+          comment: "NOUVEAU: Implémentation complète de l'addon d'analyse sémantique profonde. Utilise Anthropic Claude pour détecter automatiquement l'industrie, extraire les entités (services/produits, problèmes résolus, localisations), et générer 100 requêtes dont 80% non-branded adaptées à l'industrie. Intégré dans server.py. À tester."
   
   - task: "Word Report Generator (50-70 pages)"
     implemented: true
