@@ -264,19 +264,32 @@ class IntelligentQueryGeneratorV2:
         return queries[:15]
     
     def _generate_branded_queries(self, entities: Dict[str, Any]) -> List[str]:
-        """Générer 5 requêtes BRANDED (nom de l'entreprise)"""
+        """Générer 5 requêtes BRANDED (nom de l'entreprise) - AMÉLIORÉ"""
         
         company_name = entities.get('company_info', {}).get('name', 'entreprise')
+        offerings = entities.get('offerings', [])
         locations = entities.get('locations', [])
-        location = locations[0].get('city') if locations and locations[0].get('city') else 'Québec'
         
-        return [
+        # Extraire localisation
+        location = 'Québec'
+        if locations and isinstance(locations[0], dict):
+            location = locations[0].get('city') or locations[0].get('region', 'Québec')
+        
+        queries = [
             f"{company_name} avis",
             f"{company_name} {location}",
             f"pourquoi choisir {company_name}",
             f"{company_name} vs concurrent",
             f"avis clients {company_name}"
         ]
+        
+        # Ajouter requête avec premier offering si disponible
+        if offerings:
+            first_offering = offerings[0].get('name') if isinstance(offerings[0], dict) else offerings[0]
+            if first_offering:
+                queries.append(f"{company_name} {first_offering}")
+        
+        return queries[:5]
     
     def _generate_generic_queries(self, entities: Dict[str, Any], num: int) -> List[str]:
         """Générer des requêtes génériques de remplissage"""
