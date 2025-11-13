@@ -274,7 +274,7 @@ class IntelligentQueryGenerator:
                 f"réclamation assurance rapide {location}",
                 f"assurance entreprise PME {location}",
                 f"planification financière retraite {location}",
-                f"assurance vie temporaire vs permanente",
+                "assurance vie temporaire vs permanente",
                 f"courtier assurance famille {location}",
                 f"protection financière complète {location}"
             ],
@@ -284,7 +284,7 @@ class IntelligentQueryGenerator:
                 f"acheter première maison {location}",
                 f"évaluation propriété gratuite {location}",
                 f"frais courtier immobilier {location}",
-                f"inspection maison avant achat",
+                "inspection maison avant achat",
                 f"offre d'achat conditions {location}",
                 f"prix maison {location} 2025"
             ],
