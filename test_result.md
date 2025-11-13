@@ -380,5 +380,34 @@ agent_communication:
         - Extraction entités: ✅ FONCTIONNE
         - Génération requêtes: ✅ FONCTIONNE (quantité à optimiser)
         - Intégration pipeline: ✅ PARFAITE
+    - agent: "testing"
+      message: |
+        🔍 TESTS ANALYSE SÉMANTIQUE PROFONDE AMÉLIORÉE - ÉCHEC CRITIQUE
+        
+        Tests de la review request effectués:
+        1. ❌ Test des fonctionnalités améliorées demandées
+           - Claude API échoue: model not found, empty responses
+           - Fallback vers méthode basique uniquement
+           - MANQUE toutes les fonctionnalités améliorées
+        
+        2. ❌ Fonctionnalités manquantes identifiées:
+           - industry_classification: MANQUE sub_industry, positioning, maturity, reasoning
+           - entities.offerings: MANQUE description, target_segment, priority (12 items requis)
+           - entities.problems_solved: MANQUE category, severity, solution_approach (15 items requis)
+           - topics: MANQUE VRAI LDA avec keywords et top_words_scores
+        
+        3. ❌ Génération de requêtes insuffisante:
+           - Génère 68 requêtes au lieu de 100+ requis
+           - Distribution 100%/0%/0% au lieu de 80%/15%/5%
+           - Pas d'atteinte des objectifs quantitatifs
+        
+        RÉSULTAT: FONCTIONNALITÉS AMÉLIORÉES NON IMPLÉMENTÉES
+        - Enhanced semantic analysis: ❌ ÉCHEC (Claude API broken)
+        - Deep industry classification: ❌ MANQUANT
+        - Enhanced entities extraction: ❌ MANQUANT  
+        - LDA Topic Modeling: ❌ MANQUANT
+        - 100 queries with 80/15/5 distribution: ❌ ÉCHEC
+        
+        RECOMMANDATION: WEBSEARCH REQUIS pour corriger Claude API et implémenter fonctionnalités
     
 agent_communication:
