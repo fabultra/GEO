@@ -14,47 +14,94 @@ sys.path.append('/app/backend')
 from semantic_analyzer import SemanticAnalyzer
 from query_generator_v2 import generate_queries_with_analysis
 
-def test_semantic_analysis():
-    """Test semantic analysis with sample data"""
+def test_claude_api():
+    """Test if Claude API is working with the specified model"""
+    print("🤖 TESTING CLAUDE API CONNECTIVITY")
+    print("=" * 60)
     
-    # Sample crawl data for a marketing agency (like Sekoia)
+    try:
+        from anthropic import Anthropic
+        
+        api_key = os.environ.get('ANTHROPIC_API_KEY')
+        if not api_key:
+            print("❌ ANTHROPIC_API_KEY not found in environment")
+            return False
+        
+        print(f"✅ API Key found: {api_key[:20]}...")
+        
+        client = Anthropic(api_key=api_key)
+        
+        # Test with the model specified in the review request
+        response = client.messages.create(
+            model="claude-3-5-sonnet-20240620",
+            max_tokens=100,
+            messages=[
+                {"role": "user", "content": "Test message. Respond with 'API Working' in JSON format: {\"status\": \"API Working\"}"}
+            ]
+        )
+        
+        response_text = response.content[0].text
+        print(f"✅ Claude API Response: {response_text}")
+        
+        if 'API Working' in response_text or 'working' in response_text.lower():
+            print("✅ Claude API is working correctly!")
+            return True
+        else:
+            print("⚠️  Claude API responded but format unexpected")
+            return True
+        
+    except Exception as e:
+        print(f"❌ Claude API test failed: {str(e)}")
+        return False
+
+def test_semantic_analysis():
+    """Test semantic analysis with enhanced features for sekoia.ca"""
+    
+    # Enhanced sample crawl data for sekoia.ca (more realistic)
     sample_crawl_data = {
         'base_url': 'https://sekoia.ca',
-        'pages_crawled': 3,
+        'pages_crawled': 5,
         'pages': [
             {
                 'url': 'https://sekoia.ca',
-                'title': 'SEKOIA - Agence de marketing numérique | Croissance B2B',
-                'meta_description': 'Agence de marketing numérique spécialisée en croissance B2B, SEO, génération de leads et marketing de performance.',
-                'h1': ['Agence de marketing numérique', 'Croissance B2B'],
-                'h2': ['Services de marketing', 'Génération de leads', 'SEO et référencement'],
-                'h3': ['Marketing de performance', 'Analytics et données'],
+                'title': 'SEKOIA - Cybersécurité et Intelligence des Menaces | Protection Avancée',
+                'meta_description': 'SEKOIA développe des solutions de cybersécurité et d\'intelligence des menaces pour protéger les entreprises contre les cyberattaques sophistiquées.',
+                'h1': ['SEKOIA', 'Cybersécurité Avancée', 'Protection des Entreprises'],
+                'h2': ['Solutions de Sécurité', 'Intelligence des Menaces', 'Services SOC Managés', 'Plateforme SOAR'],
+                'h3': ['SOAR Platform', 'Threat Intelligence', 'SOC Services', 'Formation Cybersécurité'],
                 'paragraphs': [
-                    'SEKOIA est une agence de marketing numérique spécialisée dans la croissance des entreprises B2B.',
-                    'Nous offrons des services de génération de leads, SEO, marketing de performance et analytics.',
-                    'Notre équipe d\'experts accompagne les entreprises dans leur transformation numérique.',
-                    'Nous développons des stratégies de croissance personnalisées pour chaque client.',
-                    'Nos services incluent le référencement organique, la publicité payante et l\'optimisation de conversion.'
+                    'SEKOIA est une entreprise française leader spécialisée dans la cybersécurité et l\'intelligence des menaces avancées. Nous développons des solutions innovantes de sécurité pour protéger les entreprises contre les cyberattaques sophistiquées et les menaces persistantes avancées.',
+                    'Notre plateforme SOAR (Security Orchestration, Automation and Response) révolutionnaire permet aux équipes de sécurité d\'automatiser leurs processus de détection, d\'investigation et de réponse aux incidents de sécurité en temps réel.',
+                    'Nos services d\'intelligence des menaces de pointe fournissent des informations contextuelles critiques sur les acteurs malveillants, leurs techniques d\'attaque, et les indicateurs de compromission pour une protection proactive.',
+                    'Nous proposons également des services SOC (Security Operations Center) managés complets pour les entreprises qui souhaitent externaliser leur surveillance de sécurité 24/7 avec des experts certifiés.',
+                    'Notre équipe d\'experts en cybersécurité, composée d\'analystes certifiés et de chercheurs en sécurité, accompagne les organisations dans leur transformation digitale sécurisée et leur mise en conformité réglementaire.',
+                    'SEKOIA travaille avec des entreprises de toutes tailles, des PME innovantes aux grandes corporations multinationales, dans tous les secteurs d\'activité critiques incluant la finance, la santé, l\'énergie et les télécommunications.',
+                    'Nos solutions de cybersécurité sont déployées dans plus de 50 pays à travers le monde et protègent des millions d\'utilisateurs contre les cybermenaces émergentes et les attaques zero-day.',
+                    'La plateforme SEKOIA.IO intègre des capacités avancées d\'analyse comportementale, de machine learning et d\'intelligence artificielle pour détecter les menaces sophistiquées et les attaques furtives.',
+                    'Nous offrons des programmes de formation spécialisés en cybersécurité pour sensibiliser les équipes IT aux bonnes pratiques de sécurité et développer leurs compétences en réponse aux incidents.',
+                    'Notre centre de recherche et développement développe en permanence de nouvelles techniques de détection, d\'analyse des malwares et de threat hunting pour anticiper les menaces futures.',
+                    'Les entreprises clientes bénéficient d\'un accompagnement personnalisé pour évaluer leur posture de sécurité, identifier les vulnérabilités critiques et mettre en place une stratégie de cybersécurité robuste.',
+                    'SEKOIA propose des services de conseil en cybersécurité, d\'audit de sécurité, de tests d\'intrusion et d\'évaluation des risques pour renforcer la résilience des infrastructures critiques.'
                 ],
                 'json_ld': [],
-                'word_count': 150
+                'word_count': 350
             },
             {
-                'url': 'https://sekoia.ca/services',
-                'title': 'Services - SEKOIA',
-                'meta_description': 'Découvrez nos services de marketing numérique: SEO, génération de leads, marketing de performance.',
-                'h1': ['Nos services'],
-                'h2': ['SEO et référencement', 'Génération de leads B2B', 'Marketing de performance'],
-                'h3': ['Audit SEO', 'Stratégie de contenu', 'Campagnes publicitaires'],
+                'url': 'https://sekoia.ca/solutions',
+                'title': 'Solutions de Cybersécurité - SEKOIA',
+                'meta_description': 'Découvrez nos solutions complètes: plateforme SOAR, intelligence des menaces, SOC managé, formation cybersécurité.',
+                'h1': ['Solutions de Cybersécurité'],
+                'h2': ['Plateforme SOAR', 'Intelligence des Menaces', 'SOC Managé', 'Formation et Conseil'],
+                'h3': ['Automatisation Sécurité', 'Threat Hunting', 'Monitoring 24/7', 'Certification Sécurité'],
                 'paragraphs': [
-                    'Nous proposons une gamme complète de services de marketing numérique.',
-                    'Le SEO est au cœur de notre expertise avec des audits complets et des stratégies personnalisées.',
-                    'La génération de leads B2B permet d\'identifier et convertir vos prospects qualifiés.',
-                    'Le marketing de performance optimise vos investissements publicitaires pour un ROI maximal.',
-                    'Nos consultants analysent vos données pour améliorer continuellement vos résultats.'
+                    'Notre plateforme SOAR automatise la détection, l\'analyse et la réponse aux incidents de sécurité pour réduire les temps de réaction et améliorer l\'efficacité des équipes SOC.',
+                    'Les services d\'intelligence des menaces fournissent une visibilité en temps réel sur le paysage des menaces avec des indicateurs de compromission actualisés et des analyses contextuelles.',
+                    'Le SOC managé offre une surveillance continue 24/7 avec des analystes experts qui monitent, détectent et répondent aux incidents de sécurité pour le compte de nos clients.',
+                    'Nos programmes de formation certifiants développent les compétences en cybersécurité des équipes IT avec des modules pratiques sur la réponse aux incidents et l\'analyse forensique.',
+                    'Les services de conseil accompagnent les organisations dans l\'évaluation de leur maturité sécurité, la définition de leur stratégie de cybersécurité et la mise en conformité réglementaire.'
                 ],
                 'json_ld': [],
-                'word_count': 120
+                'word_count': 180
             }
         ]
     }
