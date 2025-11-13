@@ -305,7 +305,46 @@ Réponds UNIQUEMENT avec un JSON valide dans ce format exact:
             return words[0] if words else ''
     
     def _extract_offerings(self, text: str, industry: str) -> List[Dict[str, Any]]:
-        """Extraire services/produits"""
+        """Extraire services/produits avec Anthropic"""
+        
+        # Limiter le texte
+        text_sample = text[:3000]
+        
+        try:
+            offering_label = "services" if industry not in ['ecommerce', 'manufacturing'] else "produits"
+            
+            prompt = f"""Analyse ce contenu de site web et extrais les {offering_label} principaux offerts.
+
+CONTENU:
+{text_sample}
+
+Liste les 5-10 {offering_label} les plus importants mentionnés sur ce site.
+Réponds UNIQUEMENT avec un JSON valide dans ce format:
+{{
+  "offerings": [
+    {{"name": "nom du service/produit", "mentions_count": 5}},
+    {{"name": "autre service/produit", "mentions_count": 3}}
+  ]
+}}"""
+
+            message = anthropic_client.messages.create(
+                model="claude-3-5-sonnet-20241022",
+                max_tokens=800,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            
+            response_text = message.content[0].text.strip()
+            result = json.loads(response_text)
+            
+            return result.get('offerings', [])[:10]
+            
+        except Exception as e:
+            logger.error(f"Claude offerings extraction failed: {str(e)}, using fallback")
+            # Fallback: extraire par patterns
+            return self._extract_offerings_fallback(text, industry)
+    
+    def _extract_offerings_fallback(self, text: str, industry: str) -> List[Dict[str, Any]]:
+        """Méthode fallback pour extraire offerings"""
         
         offerings = []
         
