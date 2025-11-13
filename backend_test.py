@@ -183,7 +183,7 @@ class GEOSaaSAPITester:
         return success
     
     def validate_new_modules(self, report_data: Dict[str, Any]) -> bool:
-        """Validate that competitive intelligence and schemas are in the report"""
+        """Validate that competitive intelligence, schemas, and semantic analysis are in the report"""
         self.log("🔍 Validating new modules in report...")
         
         # Test Module 3: Competitive Intelligence
@@ -224,6 +224,90 @@ class GEOSaaSAPITester:
             self.log("❌ Schema Generator module MISSING from report")
             return False
         
+        # Test Module 5: Semantic Analysis & 100 Non-Branded Queries (NEW)
+        semantic_analysis = report_data.get('semantic_analysis', {})
+        query_breakdown = report_data.get('query_breakdown', {})
+        
+        if semantic_analysis:
+            industry_classification = semantic_analysis.get('industry_classification', {})
+            entities = semantic_analysis.get('entities', {})
+            topics = semantic_analysis.get('topics', [])
+            
+            self.log(f"✅ Semantic Analysis found:")
+            
+            # Validate industry classification
+            if industry_classification:
+                primary_industry = industry_classification.get('primary_industry', 'unknown')
+                company_type = industry_classification.get('company_type', 'unknown')
+                business_model = industry_classification.get('business_model', 'unknown')
+                confidence = industry_classification.get('confidence', 0)
+                
+                self.log(f"   - Industry detected: {primary_industry} (confidence: {confidence:.2f})")
+                self.log(f"   - Company type: {company_type}")
+                self.log(f"   - Business model: {business_model}")
+            else:
+                self.log("   - ❌ Industry classification MISSING")
+                return False
+            
+            # Validate entities
+            if entities:
+                offerings = entities.get('offerings', [])
+                locations = entities.get('locations', [])
+                problems_solved = entities.get('problems_solved', [])
+                customer_segments = entities.get('customer_segments', [])
+                
+                self.log(f"   - Offerings extracted: {len(offerings)} items")
+                self.log(f"   - Locations found: {len(locations)} items")
+                self.log(f"   - Problems solved: {len(problems_solved)} items")
+                self.log(f"   - Customer segments: {len(customer_segments)} items")
+                
+                # Show sample offerings
+                if offerings:
+                    sample_offerings = [o.get('name', 'N/A') for o in offerings[:3]]
+                    self.log(f"   - Sample offerings: {sample_offerings}")
+            else:
+                self.log("   - ❌ Entities MISSING")
+                return False
+            
+            # Validate topics
+            self.log(f"   - Topics identified: {len(topics)} items")
+            
+        else:
+            self.log("❌ Semantic Analysis module MISSING from report")
+            return False
+        
+        # Validate query breakdown
+        if query_breakdown:
+            non_branded = query_breakdown.get('non_branded', 0)
+            semi_branded = query_breakdown.get('semi_branded', 0)
+            branded = query_breakdown.get('branded', 0)
+            total = query_breakdown.get('total', 0)
+            
+            self.log(f"✅ Query Breakdown found:")
+            self.log(f"   - Non-branded queries: {non_branded}")
+            self.log(f"   - Semi-branded queries: {semi_branded}")
+            self.log(f"   - Branded queries: {branded}")
+            self.log(f"   - Total queries: {total}")
+            
+            # Validate the 80/15/5 distribution
+            if total >= 100:
+                non_branded_pct = (non_branded / total) * 100
+                semi_branded_pct = (semi_branded / total) * 100
+                branded_pct = (branded / total) * 100
+                
+                self.log(f"   - Distribution: {non_branded_pct:.1f}% / {semi_branded_pct:.1f}% / {branded_pct:.1f}%")
+                
+                # Check if distribution is approximately 80/15/5
+                if non_branded_pct >= 70 and semi_branded_pct >= 10 and branded_pct >= 3:
+                    self.log(f"   - ✅ Distribution is correct (target: 80%/15%/5%)")
+                else:
+                    self.log(f"   - ⚠️  Distribution may be off target (expected ~80%/15%/5%)")
+            else:
+                self.log(f"   - ⚠️  Total queries ({total}) is less than expected 100")
+        else:
+            self.log("❌ Query Breakdown MISSING from report")
+            return False
+        
         # Test existing modules are still present
         visibility_results = report_data.get('visibility_results', {})
         if visibility_results:
@@ -247,6 +331,28 @@ class GEOSaaSAPITester:
             self.log(f"✅ Recommendations: {len(recommendations)} items")
         else:
             self.log("❌ Recommendations MISSING")
+            return False
+        
+        # Validate test queries are present and count is correct
+        test_queries = report_data.get('test_queries', [])
+        if test_queries:
+            self.log(f"✅ Test Queries: {len(test_queries)} queries generated")
+            
+            # Show sample queries to verify they are non-branded
+            if len(test_queries) >= 5:
+                sample_queries = test_queries[:5]
+                self.log(f"   - Sample queries: {sample_queries}")
+                
+                # Check if queries look non-branded (simple heuristic)
+                company_name = entities.get('company_info', {}).get('name', '') if entities else ''
+                if company_name:
+                    branded_count = sum(1 for q in sample_queries if company_name.lower() in q.lower())
+                    if branded_count <= 1:  # At most 1 branded in first 5 (which should be mostly non-branded)
+                        self.log(f"   - ✅ Queries appear to be mostly non-branded")
+                    else:
+                        self.log(f"   - ⚠️  {branded_count}/5 sample queries contain company name")
+        else:
+            self.log("❌ Test Queries MISSING")
             return False
         
         self.log("✅ All modules validation completed")
