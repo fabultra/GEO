@@ -220,12 +220,12 @@ class IntelligentQueryGeneratorV2:
                     except Exception:
                         pass
         
-        # 3. PROBLEM-BASED QUERIES (15 requêtes) - AVEC VRAIS PROBLÈMES
+        # 3. PROBLEM-BASED QUERIES (25+ requêtes) - AVEC TOUS LES PROBLÈMES
         problem_templates = templates.get('problem_based', [])
         if problem_templates:
-            for template in problem_templates[:3]:  # 3 templates
-                for problem in problem_texts[:3]:  # 3 problèmes
-                    for location in location_names[:2]:
+            for template in problem_templates:  # TOUS les templates
+                for problem in problem_texts:  # TOUS les problèmes (jusqu'à 10)
+                    for location in location_names:  # TOUTES les locations
                         try:
                             query = template.format(
                                 problem=problem,
