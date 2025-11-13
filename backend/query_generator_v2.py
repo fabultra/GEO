@@ -151,53 +151,66 @@ class IntelligentQueryGeneratorV2:
         if not problem_texts:
             problem_texts = ['améliorer efficacité', 'réduire coûts', 'augmenter revenus', 'gagner temps']
         
-        # 1. INFORMATIONAL QUERIES (40 requêtes)
+        # 1. INFORMATIONAL QUERIES (45 requêtes) - AUGMENTÉ
         informational_templates = templates.get('informational', [])
-        for template in informational_templates[:8]:
-            for offering in offering_names[:3]:
+        for template in informational_templates:  # TOUS les templates
+            for offering in offering_names[:4]:  # Plus d'offerings
                 for location in location_names[:2]:
                     try:
                         query = template.format(
                             offering=offering,
                             location=location,
                             segment=segments[0] if segments else 'entreprise',
-                            use_case='entreprise',
+                            use_case=segments[0] if segments else 'entreprise',
                             offering1=offering_names[0] if len(offering_names) > 0 else 'service',
                             offering2=offering_names[1] if len(offering_names) > 1 else 'solution',
-                            competitor='alternative'
+                            competitor='alternative',
+                            business_type=company_type
                         )
-                        queries.append(query)
+                        if query and len(query) > 10:
+                            queries.append(query)
                     except Exception:
                         pass
         
         # 2. COMMERCIAL QUERIES (20 requêtes)
         commercial_templates = templates.get('commercial', [])
-        for template in commercial_templates[:5]:
-            for offering in offering_names[:2]:
+        for template in commercial_templates:  # TOUS
+            for offering in offering_names[:3]:
                 for location in location_names[:2]:
                     try:
                         query = template.format(
                             offering=offering,
-                            location=location
+                            location=location,
+                            business_type=company_type
                         )
-                        queries.append(query)
+                        if query and len(query) > 10:
+                            queries.append(query)
                     except Exception:
                         pass
         
-        # 3. PROBLEM-BASED QUERIES (20 requêtes)
+        # 3. PROBLEM-BASED QUERIES (15 requêtes) - AVEC VRAIS PROBLÈMES
         problem_templates = templates.get('problem_based', [])
-        for template in problem_templates[:5]:
-            for problem in problems[:2]:
-                for location in location_names[:2]:
-                    try:
-                        query = template.format(
-                            problem=problem,
-                            location=location,
-                            offering=offering_names[0] if offering_names else 'solution'
-                        )
-                        queries.append(query)
-                    except Exception:
-                        pass
+        if problem_templates:
+            for template in problem_templates[:3]:  # 3 templates
+                for problem in problem_texts[:3]:  # 3 problèmes
+                    for location in location_names[:2]:
+                        try:
+                            query = template.format(
+                                problem=problem,
+                                location=location,
+                                offering=offering_names[0] if offering_names else 'solution',
+                                task=problem,
+                                process=problem
+                            )
+                            if query and len(query) > 10:
+                                queries.append(query)
+                        except Exception:
+                            pass
+        
+        # Nettoyer et dédupliquer avant de retourner
+        queries = list(dict.fromkeys(queries))  # Remove duplicates keeping order
+        
+        logger.info(f"Generated {len(queries)} non-branded queries before limit")
         
         return queries[:80]
     
