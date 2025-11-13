@@ -332,6 +332,30 @@ test_plan:
   test_priority: "high_first"
 
 agent_communication:
+    - agent: "testing"
+      message: |
+        🔍 TESTS CLAUDE 3.5 SONNET - ÉCHEC CRITIQUE CONFIRMÉ
+        
+        Tests de la review request effectués:
+        1. ❌ Claude 3.5 Sonnet INACCESSIBLE
+           - claude-3-5-sonnet-20241022: 404 model not found
+           - claude-3-5-sonnet-latest: 404 model not found  
+           - claude-3-5-sonnet: 404 model not found
+           - Fallback claude-3-haiku-20240307: ✅ FONCTIONNE
+        
+        2. ❌ Enhanced Semantic Analysis NON IMPLÉMENTÉE
+           - industry_classification: MANQUE sub_industry, positioning, maturity, geographic_scope, reasoning
+           - offerings: MANQUE description, target_segment, priority (seulement name/mentions_count)
+           - problems_solved: MANQUE category, severity, solution_approach (fallback générique)
+           - Topic Modeling: Basique seulement (pas enhanced LDA avec keywords/scores)
+        
+        3. ❌ Génération de requêtes INSUFFISANTE
+           - Génère 68-82 requêtes au lieu de 100+ requis
+           - Distribution 100%/0%/0% au lieu de 80%/15%/5%
+           - Pas d'atteinte des objectifs quantitatifs
+        
+        SYSTÈME FONCTIONNEL: Pipeline complet opérationnel avec Haiku, tous modules intégrés
+        RECOMMANDATION CRITIQUE: WEBSEARCH pour corriger Claude 3.5 Sonnet + implémenter enhanced features
     - agent: "main"
       message: |
         🧠 IMPLÉMENTATION ADDON ANALYSE SÉMANTIQUE PROFONDE - EN COURS
