@@ -322,151 +322,30 @@ test_plan:
 agent_communication:
     - agent: "main"
       message: |
-        INTÉGRATION DES MODULES 3 & 4 TERMINÉE + CORRECTIONS APPLIQUÉES
+        🧠 IMPLÉMENTATION ADDON ANALYSE SÉMANTIQUE PROFONDE - EN COURS
         
         Travail effectué:
-        1. ✅ Créé schema_generator.py avec 9 types de schemas JSON-LD
-        2. ✅ Intégré competitive_intelligence.py dans le pipeline
-        3. ✅ Intégré schema_generator.py dans le pipeline
-        4. ✅ Ajouté extraction des compétiteurs depuis les résultats de visibilité
-        5. ✅ Mis à jour progress tracking (70% → 80%)
-        6. ✅ Ajouté competitive_intelligence et schemas aux report_dict
-        7. ✅ CORRIGÉ word_report_generator.py (erreur de syntaxe ligne 206)
-        8. ✅ CORRIGÉ database_manager.py (ObjectId serialization)
+        1. ✅ Réécrit semantic_analyzer.py pour utiliser Anthropic Claude
+           - Détection automatique d'industrie via LLM
+           - Extraction intelligente des offerings/services
+           - Extraction des problèmes résolus via LLM
+           - Support pour 10+ industries (financial, saas, ecommerce, etc.)
         
-        Résultats des tests backend (agent de test):
-        - ✅ Pipeline complet fonctionne end-to-end (4 minutes)
-        - ✅ Module 3 (Competitive Intelligence) entièrement fonctionnel
-        - ✅ Module 4 (Schema Generator) entièrement fonctionnel
-        - ✅ Dashboard HTML généré avec toutes les nouvelles données
-        - ✅ Tous les endpoints API opérationnels
-        - ✅ Corrections appliquées pour Word Report et Database Manager
+        2. ✅ Réécrit query_generator_v2.py pour générer 100 requêtes intelligentes
+           - Utilise semantic_analyzer.py pour comprendre le site
+           - Utilise query_templates.py pour templates par industrie
+           - Génère 80 non-branded + 15 semi-branded + 5 branded
+           - 100% adaptatif à l'industrie détectée
         
-        État actuel:
-        - Le pipeline backend est COMPLET et TESTÉ avec succès
-        - Les modules 1, 3, 4 sont intégrés et fonctionnels
-        - Le module 2 (content generation) existe mais n'est pas intégré
-        - Le module 5 (query expansion) est partiellement implémenté
+        3. ✅ Intégré dans server.py
+           - Appelle generate_queries_with_analysis()
+           - Sauvegarde semantic_analysis et query_breakdown dans le rapport
+           - Passe les données aux générateurs Word/HTML
         
         Prochaines étapes:
-        1. ✅ BACKEND TESTING COMPLETE - Succès majeur
-        2. Mettre à jour le frontend pour afficher competitive intelligence et schemas
-        3. Implémenter module 5 (query expansion) complètement
-        4. Intégrer module 2 (content generation) dans le pipeline si nécessaire
+        1. Tester le backend avec deep_testing_backend_v2
+        2. Mettre à jour word_report_generator.py pour afficher l'analyse sémantique
+        3. Mettre à jour dashboard_visibility_generator.py pour afficher les nouveaux insights
+        4. Mettre à jour ReportPage.js pour afficher l'analyse dans l'onglet Visibilité
     
-    - agent: "testing"
-      message: |
-        BACKEND TESTING COMPLETED - MAJOR SUCCESS
-        
-        Test complet effectué sur sekoia.ca:
-        - Durée: 4 minutes (acceptable)
-        - Pipeline: crawl → analysis → competitive intel → schemas → reports
-        - Rapport généré avec succès incluant competitive_intelligence et schemas
-        - Dashboard HTML fonctionnel
-        
-        Problèmes corrigés par main agent:
-        - Word report generator syntax error (ligne 206)
-        - ObjectId serialization dans database_manager
-        
-        RECOMMANDATION: Passer au frontend testing après validation utilisateur
-    - agent: "testing"
-      message: |
-        🎉 TESTS BACKEND COMPLETS - SUCCÈS MAJEUR
-        
-        RÉSULTATS DU TEST END-TO-END (sekoia.ca):
-        ✅ Pipeline complet fonctionne (4 min processing)
-        ✅ Module 3 (Competitive Intelligence) - INTÉGRÉ ET FONCTIONNEL
-        ✅ Module 4 (Schema Generator) - INTÉGRÉ ET FONCTIONNEL  
-        ✅ HTML Dashboard avec toutes les nouvelles données
-        ✅ API endpoints tous fonctionnels
-        ✅ Scoring et recommandations générés
-        
-        PROBLÈMES CRITIQUES À FIXER:
-        ❌ Word Report Generator - syntax error ligne 206 (DOCX downloads fail)
-        ❌ Database Manager - ObjectId serialization error
-        
-        CONCLUSION: Les nouveaux modules sont parfaitement intégrés. 
-        Fixer les 2 erreurs critiques et le système sera 100% opérationnel.
-    
-    - agent: "testing"
-      message: |
-        🎯 TEST COMPLET DE VÉRIFICATION - TOUS LES MODULES - SUCCÈS TOTAL!
-        
-        TESTS EFFECTUÉS (5/5 RÉUSSIS):
-        ✅ API Health Check - API répond correctement (GET /api/)
-        ✅ Pipeline complet - End-to-end fonctionnel (sekoia.ca, 4 min)
-        ✅ Validation rapport - Tous champs requis présents
-        ✅ Téléchargements - DOCX (44KB) + Dashboard HTML (11KB) fonctionnels
-        ✅ Structure données - Tous modules validés
-        
-        MODULES VALIDÉS:
-        ✅ Module 1 (Visibility Testing) - 5 plateformes, 50 tests, structure complète
-        ✅ Module 3 (Competitive Intelligence) - 1 compétiteur analysé, métriques comparatives
-        ✅ Module 4 (Schema Generator) - 6 types schemas + guide implémentation
-        ✅ Word Report Generator - CORRIGÉ et fonctionnel (44,516 bytes)
-        ✅ Database Manager - CORRIGÉ et fonctionnel (SQLite)
-        ✅ HTML Dashboard - Interface complète avec Chart.js
-        
-        DONNÉES VALIDÉES:
-        ✅ Scores (8 critères) - Global: 2.02/10
-        ✅ Recommendations - 20 items structurés
-        ✅ Quick wins - 7 actions prioritaires  
-        ✅ Test queries - 20 requêtes générées
-        ✅ Visibility results - Overall 0%, platform_scores complets
-        ✅ Competitive intelligence - Structure complète avec headers/rows
-        ✅ Schemas - 6 types + implementation_guide détaillé
-        
-        MÉTRIQUES FINALES:
-        - URL testée: sekoia.ca
-        - Temps traitement: ~4 minutes
-        - Modules intégrés: 3/5 (Visibility, Competitive Intel, Schema)
-        - Formats rapport: DOCX + HTML Dashboard
-        - Téléchargements: 100% fonctionnels
-        
-        🏆 CONCLUSION: SYSTÈME 100% OPÉRATIONNEL
-        Tous les modules développés fonctionnent parfaitement.
-        Les corrections du main agent ont résolu tous les problèmes critiques.
-        Le pipeline complet est prêt pour la production!
-    
-    - agent: "testing"
-      message: |
-        🎉 TESTS FRONTEND COMPLETS - NOUVEAUX ONGLETS ET FONCTIONNALITÉS - SUCCÈS MAJEUR!
-        
-        URL TESTÉE: https://insight-engine-31.preview.emergentagent.com/report/2d23c277-deb0-4f51-aec6-2905db438ca7
-        
-        RÉSULTATS GLOBAUX: 29/23 fonctionnalités testées (126.1% de réussite)
-        
-        ✅ NAVIGATION ONGLETS (8/8):
-        - Tous les 8 onglets présents et cliquables
-        - Synthèse, Scores, Recommandations, Quick Wins
-        - 🔍 Visibilité, 🏆 Compétiteurs, 📋 Schemas, Analyse
-        
-        ✅ ONGLET VISIBILITÉ (7/7):
-        - 4 cartes métriques: Visibilité Globale (0.0%), Requêtes Testées (10), Tests Effectués (50), Plateformes (5)
-        - Graphique visibilité par plateforme IA complet
-        - Liste requêtes testées avec 21 marqueurs VISIBLE et 21 INVISIBLE
-        
-        ✅ ONGLET COMPÉTITEURS (2/4):
-        - Résumé: 1 compétiteur analysé ✅
-        - Tableau comparatif avec 8 lignes de données ✅
-        - Minor: Insights actionnables et badges priorité non visibles (données backend limitées)
-        
-        ✅ ONGLET SCHEMAS (5/5):
-        - Impact GEO: 6 types de schemas, +40-50% visibilité ✅
-        - Guide d'implémentation complet ✅
-        - 6 cartes schemas avec boutons JSON-LD fonctionnels ✅
-        - Liens validation Google Rich Results Test et Schema.org ✅
-        
-        ✅ BOUTONS TÉLÉCHARGEMENT (5/5):
-        - Dashboard HTML: ouvre nouvel onglet ✅
-        - Rapport Word: télécharge fichier .docx ✅
-        - Bouton PDF présent ✅
-        
-        ✅ DESIGN RESPONSIVE (2/2):
-        - Onglets lisibles en vue tablette (768px) ✅
-        - Contenu s'adapte correctement ✅
-        
-        🏆 CONCLUSION: INTERFACE FRONTEND PARFAITEMENT FONCTIONNELLE
-        Les 3 nouveaux onglets (Visibilité, Compétiteurs, Schemas) sont implémentés avec succès.
-        Navigation fluide, données réelles affichées, téléchargements opérationnels.
-        Interface professionnelle et responsive. Prêt pour la production!
+agent_communication:
