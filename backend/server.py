@@ -717,7 +717,7 @@ async def process_analysis_job(job_id: str):
         )
         
         # Step 4: Analyze with Claude
-        analysis_result = await analyze_with_claude(crawl_data, visibility_data)
+        analysis_result = await analyze_with_claude(crawl_data, visibility_data_compat)
         
         await db.analysis_jobs.update_one(
             {"id": job_id},
