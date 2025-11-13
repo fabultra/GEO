@@ -826,7 +826,7 @@ async def process_analysis_job(job_id: str):
         report_dict['recommendations'] = [rec.model_dump() for rec in report.recommendations]
         report_dict['quick_wins'] = [qw.model_dump() for qw in report.quick_wins]
         report_dict['test_queries'] = test_queries
-        report_dict['visibility_results'] = visibility_data
+        report_dict['visibility_results'] = visibility_data_compat
         
         # Ajouter les données des modules avancés
         report_dict['competitive_intelligence'] = competitive_data
