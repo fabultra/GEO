@@ -3,7 +3,11 @@
 Test Claude models to see which ones are available with current API key
 """
 import os
+from dotenv import load_dotenv
 from anthropic import Anthropic
+
+# Load environment variables
+load_dotenv('/app/backend/.env')
 
 def test_claude_models():
     """Test different Claude model versions"""
