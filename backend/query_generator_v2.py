@@ -188,7 +188,7 @@ class IntelligentQueryGeneratorV2:
         locations = entities.get('locations', [])
         
         offering_names = [o.get('name', '') for o in offerings[:3]]
-        location_names = [l.get('city') if l.get('city') else l.get('region', 'Québec') for l in locations[:3]]
+        location_names = [loc.get('city') if loc.get('city') else loc.get('region', 'Québec') for loc in locations[:3]]
         
         if not location_names:
             location_names = ['Québec', 'Montréal']
