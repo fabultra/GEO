@@ -327,8 +327,9 @@ class IntelligentQueryGenerator:
     def _generate_consideration_queries(self) -> List[str]:
         """Générer 5 requêtes de considération (milieu du funnel)"""
         
-        service = self.context.get('services', ['service'])[0]
-        location = self.context.get('locations', ['Québec'])[0]
+        services = self.context.get('services', [])
+        service = services[0] if services else self.context.get('company_name', 'service')
+        location = self.context.get('locations', ['Québec'])[0] if self.context.get('locations') else 'Québec'
         
         return [
             f"différence entre {service} options",
