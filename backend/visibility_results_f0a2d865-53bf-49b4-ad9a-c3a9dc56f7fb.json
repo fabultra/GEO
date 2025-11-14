@@ -1,0 +1,1688 @@
+{
+  "site_url": "https://maibec.com",
+  "company_name": "Maibec",
+  "last_updated": "2025-11-14T15:49:15.520419",
+  "queries": [
+    {
+      "query": "fabricant lambris de bois véritable québec",
+      "timestamp": "2025-11-14T15:49:15.520524",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Fabricants de lambris de bois véritable au Québec\n\nVoici les principaux fabricants québécois de lambris en bois massif :\n\n## Fabricants majeurs\n\n**1. Goodfellow Inc.**\n- Un des plus grands distributeurs de bois au Québec\n- Offre du lambris en pin, érable, chêne\n- Plusieurs centres de distribution\n\n**2. Bois Languedoc**\n- Spécialisé dans les bois francs\n- Lambris de qualité supérieure\n- Située dans la région de Québec\n\n**3. Planchers Dubeau**\n- Surtout connu pour les planchers, mais offre aussi du lambris\n- Bois d'érable et merisier\n- Fabricant québécois établi\n\n**4. Boiseries Lafrance**\n- Produits de bois massif\n- Lambris sur mesure disponible\n\n**5. Patrick Morin / BMR**\n- Détaillants avec produits de fabricants locaux\n- Bon choix de lambris de pin et cèdre\n\n## Essences populaires\n- Pin blanc/pin noueux\n- Cèdre rouge de l'Est\n- Érable\n- Merisier\n- Chêne\n\n**Conseil** : Contactez directement les scieries locales de votre région, elles offrent souvent du lambris à meilleur prix avec possibilité de commandes personnalisées.\n\nCherchez-vous une essence ou un style particulier?",
+          "response_length": 1089,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "fabricant bardeaux de cèdre blanc de l'est québec",
+      "timestamp": "2025-11-14T15:49:28.033428",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Fabricants de bardeaux de cèdre blanc de l'Est au Québec\n\nVoici les principaux fabricants de bardeaux de cèdre au Québec :\n\n## Fabricants majeurs\n\n**1. Les Bardeaux de Cèdre Québec Inc.**\n- Spécialisé dans les bardeaux de cèdre blanc de l'Est\n- Production traditionnelle et moderne\n\n**2. Bardeaux McConville**\n- Fabricant établi depuis plusieurs générations\n- Situé dans la région de Québec\n\n**3. Bardeaux Duguay**\n- Production de bardeaux de cèdre traditionnels\n- Basé au Québec\n\n## Régions productrices\n\nLes principaux fabricants se trouvent généralement dans :\n- **Bas-Saint-Laurent**\n- **Gaspésie**\n- **Région de Québec**\n- **Côte-Nord**\n\n## Points de vente\n\nVous pouvez aussi trouver des bardeaux de cèdre chez :\n- Centres de rénovation (BMR, RONA, etc.)\n- Marchands de bois spécialisés\n- Coopératives forestières\n\n**Recommandation :** Je vous suggère de contacter directement les associations forestières régionales ou la **Fédération québécoise des coopératives forestières** pour obtenir une liste à jour des fabricants actifs, car l'industrie évolue.\n\nCherchez-vous un type particulier de bardeau (toiture, revêtement) ?",
+          "response_length": 1131,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "fabricant bardeaux stave lake québec",
+      "timestamp": "2025-11-14T15:49:40.788717",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux stave lake québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux stave lake québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux Stave Lake Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Stave Lake et les bardeaux au Québec\n\nJe ne trouve pas de fabricant de bardeaux spécifiquement nommé \"Stave Lake\" au Québec.\n\n## Possibilités :\n\n**1. Confusion possible avec :**\n- **BP Canada** (anciennement BP/IKO) qui fabrique des bardeaux d'asphalte\n- **IKO Industries** - grand fabricant canadien de bardeaux\n- **GAF Canada**\n- **CertainTeed Canada**\n\n**2. \"Stave Lake\" pourrait référer à :**\n- Un nom de produit ou une gamme spécifique de bardeaux\n- Une couleur ou un style de bardeau\n- Un distributeur régional plutôt qu'un fabricant\n\n## Fabricants de bardeaux au Québec :\n\n- **BP Canada** (Usine à Château-Richer)\n- **IKO** (présence importante au Canada)\n- **Produits de construction Vicwest**\n\n**Recommandation :** Pourriez-vous préciser :\n- S'agit-il de bardeaux d'asphalte ou de cèdre?\n- Où avez-vous entendu ce nom?\n- Cherchez-vous un distributeur spécifique?\n\nCela m'aiderait à mieux vous diriger.",
+          "response_length": 912,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux stave lake québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux stave lake québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux Stave Lake Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux stave lake québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux stave lake québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux Stave Lake Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux stave lake québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux stave lake québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux Stave Lake Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant bardeaux stave lake québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant bardeaux stave lake québec'",
+              "example_title": "Guide Complet: Fabricant Bardeaux Stave Lake Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "fabricant planches d'aluminium hurtubise façades québec",
+      "timestamp": "2025-11-14T15:49:51.867901",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant planches d'aluminium hurtubise façades québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant planches d'aluminium hurtubise façades québec'",
+              "example_title": "Guide Complet: Fabricant Planches D'Aluminium Hurtubise Façades Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Planches d'aluminium Hurtubise pour façades au Québec\n\nJe n'ai pas d'information spécifique sur un fabricant nommé \"Hurtubise\" spécialisé dans les planches d'aluminium pour façades au Québec.\n\n## Alternatives possibles :\n\n### Fabricants québécois de revêtements d'aluminium :\n\n1. **Vicwest** - Produits de revêtement métallique\n2. **Extrudex** - Extrusion d'aluminium\n3. **Patio Drummond** - Revêtements extérieurs\n4. **APCHQ membres** - Association de la construction du Québec\n\n### Produits similaires disponibles :\n\n- Planches d'aluminium (soffit/fascia)\n- Revêtement mural en aluminium\n- Panneaux composites d'aluminium (ACM)\n- Bardage métallique\n\n## Suggestions pour votre recherche :\n\n- Vérifier l'orthographe exacte du nom\n- Contacter des distributeurs de matériaux de construction\n- Consulter l'**Association de l'aluminium du Québec**\n- Chercher dans les répertoires d'entrepreneurs en revêtement\n\nAvez-vous plus de détails sur ce fabricant ou cherchez-vous plutôt des alternatives pour un projet de façade?",
+          "response_length": 1018,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant planches d'aluminium hurtubise façades québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant planches d'aluminium hurtubise façades québec'",
+              "example_title": "Guide Complet: Fabricant Planches D'Aluminium Hurtubise Façades Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant planches d'aluminium hurtubise façades québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant planches d'aluminium hurtubise façades québec'",
+              "example_title": "Guide Complet: Fabricant Planches D'Aluminium Hurtubise Façades Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant planches d'aluminium hurtubise façades québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant planches d'aluminium hurtubise façades québec'",
+              "example_title": "Guide Complet: Fabricant Planches D'Aluminium Hurtubise Façades Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant planches d'aluminium hurtubise façades québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant planches d'aluminium hurtubise façades québec'",
+              "example_title": "Guide Complet: Fabricant Planches D'Aluminium Hurtubise Façades Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "fabricant programme maibec express québec",
+      "timestamp": "2025-11-14T15:50:02.968834",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant programme maibec express québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant programme maibec express québec'",
+              "example_title": "Guide Complet: Fabricant Programme Maibec Express Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": true,
+          "position": 1,
+          "context_snippet": "# Maibec Express - Programme de fabrication au Québec\n\n## À propos de Maibec\n\n**Maibec** est un fabricant qu...",
+          "competitors_mentioned": [],
+          "full_response": "# Maibec Express - Programme de fabrication au Québec\n\n## À propos de Maibec\n\n**Maibec** est un fabricant québécois reconnu spécialisé dans les produits de revêtement extérieur en bois, notamment :\n- Bardeaux de cèdre\n- Revêtements en bois\n- Parements architecturaux\n\n## Programme Maibec Express\n\nLe programme **Maibec Express** vise à :\n\n### Avantages principaux\n✅ **Livraison rapide** - Délais de livraison accélérés\n✅ **Produits en stock** - Disponibilité immédiate des produits populaires\n✅ **Service prioritaire** - Traitement accéléré des commandes\n✅ **Gamme sélectionnée** - Produits les plus demandés\n\n### Produits typiquement offerts\n- Bardeaux de cèdre blanc de l'Est\n- Revêtements de bois préfinis\n- Formats et couleurs standards\n\n## Pour plus d'informations\n\n- **Site web** : www.maibec.com\n- **Téléphone** : 1-800-363-1930\n- **Localisation** : Usines au Québec (région de Québec)\n\n---\n\n**Note** : Je vous recommande de contacter Maibec directement pour obtenir les détails spécifiques et actuels du programme Express, incluant les produits disponibles, les délais et les conditions.\n\nAvez-vous besoin d'informations spécifiques sur certains produits Maibec?",
+          "response_length": 1170,
+          "sentiment": "neutral",
+          "invisibility_reasons": []
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant programme maibec express québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant programme maibec express québec'",
+              "example_title": "Guide Complet: Fabricant Programme Maibec Express Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant programme maibec express québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant programme maibec express québec'",
+              "example_title": "Guide Complet: Fabricant Programme Maibec Express Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant programme maibec express québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant programme maibec express québec'",
+              "example_title": "Guide Complet: Fabricant Programme Maibec Express Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "fabricant revêtement de pierre à visser québec",
+      "timestamp": "2025-11-14T15:50:16.896904",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant revêtement de pierre à visser québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant revêtement de pierre à visser québec'",
+              "example_title": "Guide Complet: Fabricant Revêtement De Pierre À Visser Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Fabricants de revêtement de pierre à visser au Québec\n\nVoici les principaux fabricants et distributeurs au Québec :\n\n## **Fabricants principaux**\n\n### **1. Profilia**\n- Spécialisé dans les revêtements décoratifs\n- Système de pierre empilable facile d'installation\n- Basé au Québec\n\n### **2. Rinox**\n- Fabricant québécois reconnu\n- Produits de revêtement extérieur\n- Systèmes d'installation simplifiée\n\n### **3. Permacon**\n- Grande variété de pierres décoratives\n- Réseau de distribution au Québec\n- Produits pour extérieur et intérieur\n\n## **Distributeurs spécialisés**\n\n- **Matériaux Bonhomme** - Plusieurs succursales\n- **Techo-Bloc** - Produits de maçonnerie décorative\n- **BMR** et **RONA** - Quincailleries avec sections pierre décorative\n\n## **Avantages du système à visser**\n\n✓ Installation rapide sans mortier\n✓ Idéal pour bricoleurs\n✓ Léger et facile à manipuler\n✓ Convient aux projets intérieurs et extérieurs\n\n**Conseil** : Contactez directement les fabricants pour obtenir leurs catalogues et trouver un détaillant près de chez vous.\n\nCherchez-vous pour un projet spécifique (intérieur/extérieur)?",
+          "response_length": 1111,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant revêtement de pierre à visser québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant revêtement de pierre à visser québec'",
+              "example_title": "Guide Complet: Fabricant Revêtement De Pierre À Visser Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant revêtement de pierre à visser québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant revêtement de pierre à visser québec'",
+              "example_title": "Guide Complet: Fabricant Revêtement De Pierre À Visser Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant revêtement de pierre à visser québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant revêtement de pierre à visser québec'",
+              "example_title": "Guide Complet: Fabricant Revêtement De Pierre À Visser Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant revêtement de pierre à visser québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant revêtement de pierre à visser québec'",
+              "example_title": "Guide Complet: Fabricant Revêtement De Pierre À Visser Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "fabricant système de fixation maibec em+ québec",
+      "timestamp": "2025-11-14T15:50:28.476045",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant système de fixation maibec em+ québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant système de fixation maibec em+ québec'",
+              "example_title": "Guide Complet: Fabricant Système De Fixation Maibec Em+ Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": true,
+          "position": 1,
+          "context_snippet": "# Système de fixation Maibec EM+\n\n## À propos de Maibec\n\n**Maibec** est un fabricant québécois établi depuis 1974, spécialisé da...",
+          "competitors_mentioned": [],
+          "full_response": "# Système de fixation Maibec EM+\n\n## À propos de Maibec\n\n**Maibec** est un fabricant québécois établi depuis 1974, spécialisé dans les revêtements extérieurs en bois et les systèmes de bardage. L'entreprise est située à **Saint-Théophile en Beauce**, au Québec.\n\n## Système EM+ (Égalisation Maibec Plus)\n\nLe système **EM+** est un système de fixation et d'égalisation innovant développé par Maibec pour l'installation de bardage.\n\n### Caractéristiques principales :\n\n- **Système de fourrure** pour créer une cavité de drainage et ventilation\n- **Égalisation des surfaces** pour compenser les irrégularités du mur\n- **Amélioration de la gestion de l'humidité**\n- **Installation facilitée** du revêtement extérieur\n- Compatible avec différents types de revêtements Maibec\n\n### Avantages :\n\n✓ Meilleure durabilité du revêtement\n✓ Ventilation optimale derrière le bardage\n✓ Protection contre l'humidité\n✓ Conforme aux codes du bâtiment québécois\n\n## Contact\n\n**Maibec Inc.**\n- Site web : www.maibec.com\n- Téléphone : 1-800-363-1930\n- Plusieurs distributeurs à travers le Québec\n\nSouhaitez-vous des informations spécifiques sur l'installation ou les produits compatibles avec ce système?",
+          "response_length": 1182,
+          "sentiment": "neutral",
+          "invisibility_reasons": []
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant système de fixation maibec em+ québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant système de fixation maibec em+ québec'",
+              "example_title": "Guide Complet: Fabricant Système De Fixation Maibec Em+ Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant système de fixation maibec em+ québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant système de fixation maibec em+ québec'",
+              "example_title": "Guide Complet: Fabricant Système De Fixation Maibec Em+ Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant système de fixation maibec em+ québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant système de fixation maibec em+ québec'",
+              "example_title": "Guide Complet: Fabricant Système De Fixation Maibec Em+ Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "fabricant moulures extérieures de bois véritable québec",
+      "timestamp": "2025-11-14T15:50:40.052767",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant moulures extérieures de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant moulures extérieures de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Moulures Extérieures De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Fabricants de moulures extérieures en bois véritable au Québec\n\nVoici les principaux fabricants québécois :\n\n## Fabricants majeurs\n\n**1. Goodfellow Inc.**\n- Distributeur majeur de produits de bois\n- Moulures extérieures en cèdre et autres essences\n- Plusieurs succursales au Québec\n\n**2. Forex**\n- Spécialiste en portes et fenêtres\n- Moulures et accessoires en bois véritable\n- Basé au Québec\n\n**3. Les Usinages Alphard**\n- Fabrication sur mesure\n- Moulures architecturales en bois\n- Saint-Apollinaire (Québec)\n\n**4. Menuiserie des Pins**\n- Moulures personnalisées\n- Bois nobles et cèdre\n- Lanaudière\n\n**5. Patrick Morin / BMR**\n- Détaillants avec produits de fabricants locaux\n- Bonne sélection de moulures en cèdre\n\n## Essences populaires\n- **Cèdre rouge de l'Est** (le plus durable)\n- Pin blanc\n- Épinette\n- Pruche\n\n## Conseil\nPour des moulures extérieures, privilégiez le **cèdre** pour sa résistance naturelle aux intempéries et aux insectes.\n\nAvez-vous un projet spécifique en tête?",
+          "response_length": 990,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant moulures extérieures de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant moulures extérieures de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Moulures Extérieures De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant moulures extérieures de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant moulures extérieures de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Moulures Extérieures De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant moulures extérieures de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant moulures extérieures de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Moulures Extérieures De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'fabricant moulures extérieures de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'fabricant moulures extérieures de bois véritable québec'",
+              "example_title": "Guide Complet: Fabricant Moulures Extérieures De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur lambris de bois véritable québec",
+      "timestamp": "2025-11-14T15:50:51.862495",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Meilleur Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Meilleurs lambris de bois véritable au Québec\n\nVoici les options recommandées pour du lambris de bois véritable au Québec :\n\n## **Essences populaires**\n\n### **Pin blanc de l'Est**\n- Essence locale et abordable\n- Facile à travailler\n- Belle texture naturelle\n\n### **Érable**\n- Bois dur québécois\n- Résistant et durable\n- Grain élégant\n\n### **Bouleau jaune (merisier)**\n- Essence noble du Québec\n- Très résistant\n- Finition haut de gamme\n\n### **Cèdre rouge de l'Est**\n- Naturellement résistant à l'humidité\n- Arôme agréable\n- Idéal pour salle de bain\n\n## **Fournisseurs recommandés au Québec**\n\n- **Goodfellow** - Distribution majeure\n- **Bois Haut de Gamme Forget** - Produits spécialisés\n- **Patrick Morin / Réno-Dépôt** - Options variées\n- **Bois BSL** - Essences locales\n- **Scieries locales** - Pour du bois brut à faire planer\n\n## **Conseils d'achat**\n\n✓ Privilégiez les essences locales (empreinte écologique)\n✓ Vérifiez le taux d'humidité (12-14% pour l'intérieur)\n✓ Choisissez du bois certifié FSC si possible\n✓ Prévoyez 10% de surplus pour les coupes\n\nQuel type de projet avez-vous en tête?",
+          "response_length": 1100,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Meilleur Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Meilleur Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Meilleur Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur lambris de bois véritable québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur lambris de bois véritable québec'",
+              "example_title": "Guide Complet: Meilleur Lambris De Bois Véritable Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur bardeaux de cèdre blanc de l'est québec",
+      "timestamp": "2025-11-14T15:51:04.206319",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Meilleur Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            "Bardeaux & Bois"
+          ],
+          "full_response": "# Meilleurs bardeaux de cèdre blanc de l'Est au Québec\n\n## Fournisseurs réputés au Québec\n\n### **1. Cèdres Mitis (Bas-Saint-Laurent)**\n- Spécialiste du cèdre blanc de l'Est\n- Bardeaux de qualité supérieure\n- Production locale québécoise\n\n### **2. Bardeaux & Bois McFall (Estrie)**\n- Bardeaux architecturaux\n- Cèdre blanc de l'Est certifié\n- Plusieurs grades disponibles\n\n### **3. Cèdre de l'Est**\n- Produits 100% québécois\n- Transformation locale\n- Diverses épaisseurs et longueurs\n\n## Critères de qualité à rechercher\n\n### **Grades recommandés:**\n- **Grade #1 (Clear)** - Le meilleur, sans nœuds\n- **Grade #2 (Select)** - Quelques petits nœuds\n- **Grade #3** - Plus économique, plus de nœuds\n\n### **Caractéristiques:**\n✓ Épaisseur: 3/8\" à 5/8\"\n✓ Longueur: 16\", 18\" ou 24\"\n✓ Séchage au four recommandé\n✓ Certification FSC si possible\n\n## Avantages du cèdre blanc de l'Est\n\n- Durabilité naturelle (30-50 ans)\n- Résistance aux insectes et moisissures\n- Excellent isolant\n- Produit local et écologique\n\n**Prix approximatif:** 150$ à 300$ le paquet (selon le grade)\n\nSouhaitez-vous des recommandations spécifiques pour votre région?",
+          "response_length": 1128,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Meilleur Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_DATA",
+              "severity": "HIGH",
+              "explanation": "Les compétiteurs cités (Bardeaux & Bois) ont probablement plus de données factuelles",
+              "action": "Ajouter 10-15 statistiques avec sources dans le contenu",
+              "example_stats": [
+                "68% des propriétaires sous-estiment leurs biens de 20%+",
+                "Le délai moyen de règlement est de 14 jours"
+              ],
+              "estimated_impact": "HIGH"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Meilleur Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Meilleur Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur bardeaux de cèdre blanc de l'est québec'",
+              "example_title": "Guide Complet: Meilleur Bardeaux De Cèdre Blanc De L'Est Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 100,
+    "global_visibility": 0.04,
+    "by_platform": {
+      "chatgpt": 0.0,
+      "claude": 0.2,
+      "perplexity": 0.0,
+      "gemini": 0.0,
+      "google_ai": 0.0
+    }
+  }
+}
