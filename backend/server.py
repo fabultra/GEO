@@ -509,7 +509,7 @@ VOUS DEVEZ GÉNÉRER 20 RECOMMENDATIONS VARIÉES COUVRANT:
                         # NOUVEAU : Générer recommendations et quick_wins avec un appel séparé
                         try:
                             logger.info("Génération séparée des recommendations...")
-                            recs_prompt = f"""Basé sur cette analyse GEO d'un site web, génère 20 recommendations concrètes et 8 quick wins.
+                            recs_prompt = f"""Basé sur cette analyse GEO d'un site web, génère 20 recommendations, 8 quick wins, ET detailed_observations pour les 8 critères.
 
 SITE: {crawl_data['base_url']}
 SCORES OBTENUS: {json.dumps(scores, indent=2)}
@@ -528,6 +528,21 @@ Génère EXACTEMENT ce JSON (sans texte avant/après):
     "strengths": ["Force 1", "Force 2", "Force 3"],
     "weaknesses": ["Faiblesse 1", "Faiblesse 2", "Faiblesse 3"],
     "opportunities": ["Opportunité 1", "Opportunité 2", "Opportunité 3"]
+  }},
+  "detailed_observations": {{
+    "structure": {{
+      "score_justification": "Pourquoi ce score?",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }},
+    "infoDensity": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
+    "readability": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
+    "eeat": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
+    "educational": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
+    "thematic": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
+    "aiOptimization": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
+    "visibility": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }}
   }}
 }}"""
 
