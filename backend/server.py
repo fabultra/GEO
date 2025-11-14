@@ -509,28 +509,51 @@ Génère EXACTEMENT ce JSON (sans texte avant/après):
                             
                             logger.info(f"✅ Recommendations générées: {len(rec_data.get('recommendations', []))} recs, {len(rec_data.get('quick_wins', []))} quick wins")
                             
+                            # Générer l'executive summary basé sur les scores et analysis
+                            analysis = rec_data.get('analysis', {})
+                            weaknesses = analysis.get('weaknesses', [])
+                            opportunities = analysis.get('opportunities', [])
+                            
+                            # Calculer score global
+                            global_score = scores.get('global_score', sum(scores.values()) / len(scores))
+                            
+                            # Assessment basé sur le score
+                            if global_score < 4:
+                                assessment = f"Le site présente des lacunes critiques en GEO (score {global_score:.1f}/10). Optimisation urgente nécessaire."
+                            elif global_score < 6:
+                                assessment = f"Le site a des bases correctes (score {global_score:.1f}/10) mais nécessite des améliorations significatives."
+                            else:
+                                assessment = f"Le site est bien optimisé pour le GEO (score {global_score:.1f}/10) avec des opportunités d'amélioration."
+                            
+                            # Estimer perte de visibilité
+                            visibility_score = scores.get('visibility', 0)
+                            if visibility_score < 3:
+                                visibility_loss = "80-90%"
+                            elif visibility_score < 5:
+                                visibility_loss = "60-70%"
+                            elif visibility_score < 7:
+                                visibility_loss = "40-50%"
+                            else:
+                                visibility_loss = "20-30%"
+                            
                             # Construire réponse complète
                             return {
                                 "scores": scores,
                                 "recommendations": rec_data.get('recommendations', [])[:20],
                                 "quick_wins": rec_data.get('quick_wins', [])[:8],
-                                "analysis": rec_data.get('analysis', {
-                                    "strengths": ["Analyse générée"],
-                                    "weaknesses": ["À compléter"],
-                                    "opportunities": ["À explorer"]
-                                }),
+                                "analysis": analysis,
                                 "detailed_observations": {},  # Vide mais présent
                                 "executive_summary": {
-                                    "global_assessment": "Analyse des scores GEO effectuée",
-                                    "critical_issues": [],
-                                    "key_opportunities": [],
-                                    "estimated_visibility_loss": "À déterminer",
-                                    "recommended_investment": "À évaluer"
+                                    "global_assessment": assessment,
+                                    "critical_issues": weaknesses[:3],
+                                    "key_opportunities": opportunities[:3],
+                                    "estimated_visibility_loss": visibility_loss,
+                                    "recommended_investment": f"Phase 1: {15000 + int(global_score * 1000)}€ sur 3-6 mois pour corriger les lacunes critiques"
                                 },
                                 "roi_estimation": {
-                                    "current_situation": "Scores analysés",
-                                    "potential_improvement": "Potentiel identifié",
-                                    "timeline": "3-6 mois"
+                                    "current_situation": f"Score GEO actuel: {global_score:.1f}/10 avec visibilité IA limitée",
+                                    "potential_improvement": f"Potentiel d'atteindre {min(global_score + 3, 10):.1f}/10 avec les optimisations recommandées",
+                                    "timeline": "6-12 mois pour résultats mesurables"
                                 }
                             }
                             
