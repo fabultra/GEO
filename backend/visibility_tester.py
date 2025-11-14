@@ -199,7 +199,7 @@ class VisibilityTester:
             response = model.generate_content(
                 query,
                 generation_config=genai.types.GenerationConfig(
-                    temperature=0.3,
+                    temperature=0,  # ✅ DÉTERMINISTE
                     max_output_tokens=500,
                 )
             )
