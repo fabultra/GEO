@@ -426,7 +426,7 @@ VOUS DEVEZ GÉNÉRER 20 RECOMMENDATIONS VARIÉES COUVRANT:
                 response = await client.messages.create(
                     model="claude-sonnet-4-5-20250929",
                     max_tokens=8192,
-                    temperature=0.3,
+                    temperature=0,  # ✅ DÉTERMINISTE
                     system="Vous êtes un expert en GEO. Répondez uniquement en JSON valide.",
                     messages=[
                         {
