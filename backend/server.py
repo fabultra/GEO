@@ -535,7 +535,7 @@ IMPORTANT: Genere 15 recommendations et 6 quick wins minimum."""
                             rec_response = await client.messages.create(
                                 model="claude-sonnet-4-5-20250929",
                                 max_tokens=3000,
-                                temperature=0.7,
+                                temperature=0,  # ✅ DÉTERMINISTE
                                 messages=[{"role": "user", "content": recs_prompt}]
                             )
                             
