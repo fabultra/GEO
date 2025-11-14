@@ -1015,6 +1015,131 @@ const ReportPage = () => {
           </TabsContent>
         </Tabs>
       </div>
+
+      {/* Modal détails critère */}
+      {showModal && selectedCriterion && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+          onClick={() => setShowModal(false)}
+        >
+          <div 
+            className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div 
+              className="p-6 rounded-t-2xl text-white"
+              style={{
+                background: `linear-gradient(135deg, ${getScoreColor(selectedCriterion.value)} 0%, ${getScoreColor(selectedCriterion.value)}dd 100%)`
+              }}
+            >
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="text-2xl font-bold mb-2">{selectedCriterion.label}</h3>
+                  <div className="flex items-center space-x-4">
+                    <div className="text-4xl font-bold">{selectedCriterion.value?.toFixed(1) || '0.0'}</div>
+                    <div className="text-sm opacity-90">/ 10</div>
+                  </div>
+                </div>
+                <button 
+                  onClick={() => setShowModal(false)}
+                  className="text-white hover:bg-white hover:bg-opacity-20 rounded-full p-2 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            {/* Body */}
+            <div className="p-6 space-y-6">
+              {selectedCriterion.details ? (
+                <>
+                  {/* Justification */}
+                  {selectedCriterion.details.score_justification && (
+                    <div>
+                      <h4 className="font-bold text-lg mb-3 flex items-center text-gray-800">
+                        <span className="mr-2">📊</span> Justification du score
+                      </h4>
+                      <p className="text-gray-700 bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                        {selectedCriterion.details.score_justification}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* Points positifs */}
+                  {selectedCriterion.details.positive_points && selectedCriterion.details.positive_points.length > 0 && (
+                    <div>
+                      <h4 className="font-bold text-lg mb-3 flex items-center text-green-700">
+                        <CheckCircle2 className="w-5 h-5 mr-2" /> Points Positifs
+                      </h4>
+                      <ul className="space-y-2">
+                        {selectedCriterion.details.positive_points.map((point, idx) => (
+                          <li key={idx} className="flex items-start bg-green-50 p-3 rounded-lg">
+                            <span className="text-green-600 mr-2 mt-0.5">✓</span>
+                            <span className="text-gray-700">{point}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Problèmes spécifiques */}
+                  {selectedCriterion.details.specific_problems && selectedCriterion.details.specific_problems.length > 0 && (
+                    <div>
+                      <h4 className="font-bold text-lg mb-3 flex items-center text-red-700">
+                        <AlertCircle className="w-5 h-5 mr-2" /> Problèmes Identifiés
+                      </h4>
+                      <ul className="space-y-2">
+                        {selectedCriterion.details.specific_problems.map((problem, idx) => (
+                          <li key={idx} className="flex items-start bg-red-50 p-3 rounded-lg">
+                            <span className="text-red-600 mr-2 mt-0.5">✕</span>
+                            <span className="text-gray-700">{problem}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Éléments manquants */}
+                  {selectedCriterion.details.missing_elements && selectedCriterion.details.missing_elements.length > 0 && (
+                    <div>
+                      <h4 className="font-bold text-lg mb-3 flex items-center text-orange-700">
+                        <XCircle className="w-5 h-5 mr-2" /> Éléments Manquants
+                      </h4>
+                      <ul className="space-y-2">
+                        {selectedCriterion.details.missing_elements.map((element, idx) => (
+                          <li key={idx} className="flex items-start bg-orange-50 p-3 rounded-lg">
+                            <span className="text-orange-600 mr-2 mt-0.5">⚠</span>
+                            <span className="text-gray-700">{element}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <div className="text-center py-8">
+                  <AlertCircle className="w-12 h-12 mx-auto text-gray-400 mb-3" />
+                  <p className="text-gray-600">Aucun détail disponible pour ce critère.</p>
+                  <p className="text-sm text-gray-500 mt-2">Les détails seront générés dans la prochaine analyse.</p>
+                </div>
+              )}
+
+              {/* Action buttons */}
+              <div className="flex justify-end pt-4 border-t border-gray-200">
+                <Button 
+                  onClick={() => setShowModal(false)}
+                  className="bg-gray-600 hover:bg-gray-700"
+                >
+                  Fermer
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
