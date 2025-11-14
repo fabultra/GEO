@@ -646,6 +646,48 @@ IMPORTANT: Genere 15 recommendations et 6 quick wins minimum."""
                                         weaknesses.append(f"{key.title()}: nécessite amélioration ({score:.1f}/10)")
                                         opportunities.append(f"Optimiser {key}")
                             
+                            # Générer detailed_observations basés sur les scores
+                            detailed_obs = {}
+                            criteria_names = {
+                                'structure': 'Structure & Formatage',
+                                'infoDensity': 'Densité d\'Information',
+                                'readability': 'Lisibilité Machine/SEO',
+                                'eeat': 'E-E-A-T',
+                                'educational': 'Contenu Éducatif',
+                                'thematic': 'Organisation Thématique',
+                                'aiOptimization': 'Optimisation IA',
+                                'visibility': 'Visibilité Actuelle'
+                            }
+                            
+                            for criterion, score in scores.items():
+                                if criterion == 'global_score':
+                                    continue
+                                    
+                                score_val = score if isinstance(score, (int, float)) else 5.0
+                                
+                                if score_val >= 7:
+                                    just = f"{criteria_names.get(criterion, criterion)} bien optimisé avec un score de {score_val:.1f}/10"
+                                    positives = ["Score satisfaisant", "Bonnes pratiques en place"]
+                                    problems = ["Quelques améliorations mineures possibles"]
+                                    missing = ["Optimisations avancées à considérer"]
+                                elif score_val >= 5:
+                                    just = f"{criteria_names.get(criterion, criterion)} correct mais perfectible (score {score_val:.1f}/10)"
+                                    positives = ["Bases correctes"]
+                                    problems = ["Manque d'optimisations avancées", "Potentiel d'amélioration significatif"]
+                                    missing = ["Optimisations GEO recommandées", "Meilleures pratiques à implémenter"]
+                                else:
+                                    just = f"{criteria_names.get(criterion, criterion)} nécessite amélioration urgente (score {score_val:.1f}/10)"
+                                    positives = ["Potentiel d'amélioration élevé"]
+                                    problems = ["Lacunes importantes identifiées", "Non-conformité aux standards GEO", "Impact négatif sur visibilité IA"]
+                                    missing = ["Optimisations critiques requises", "Restructuration nécessaire", "Conformité GEO à établir"]
+                                
+                                detailed_obs[criterion] = {
+                                    "score_justification": just,
+                                    "positive_points": positives,
+                                    "specific_problems": problems,
+                                    "missing_elements": missing
+                                }
+                            
                             return {
                                 "scores": scores,
                                 "recommendations": recs[:15],
@@ -655,7 +697,7 @@ IMPORTANT: Genere 15 recommendations et 6 quick wins minimum."""
                                     "weaknesses": weaknesses[:5] if weaknesses else ["À améliorer"],
                                     "opportunities": opportunities[:5] if opportunities else ["Potentiel d'optimisation"]
                                 },
-                                "detailed_observations": {}
+                                "detailed_observations": detailed_obs
                             }
                     except Exception as score_error:
                         logger.error(f"Extraction scores échouée: {str(score_error)}")
