@@ -100,7 +100,7 @@ class VisibilityTester:
             response = await self.anthropic_client.messages.create(
                 model="claude-3-7-sonnet-20250219",
                 max_tokens=500,
-                temperature=0.3,
+                temperature=0,  # ✅ DÉTERMINISTE
                 messages=[
                     {
                         "role": "user",
