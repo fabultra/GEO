@@ -197,7 +197,12 @@ class VisibilityTesterV2:
             elif platform == 'google_ai':
                 # Google AI Overviews simulation (utilise Gemini)
                 model = genai.GenerativeModel('gemini-1.5-pro-002')
-                response = model.generate_content(query)
+                response = model.generate_content(
+                    query,
+                    generation_config=genai.types.GenerationConfig(
+                        temperature=0,  # ✅ DÉTERMINISTE
+                    )
+                )
                 return response.text
             
         except Exception as e:
