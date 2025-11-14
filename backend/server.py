@@ -977,7 +977,7 @@ async def process_analysis_job(job_id: str):
                     competitors_urls.extend(urls)
             
             # Nettoyer et dédupliquer
-            competitors_urls = list(set(competitors_urls))[:5]  # Top 5 compétiteurs
+            competitors_urls = sorted(list(set(competitors_urls)))[:5]  # ✅ ORDRE DÉTERMINISTE - Top 5 compétiteurs
             
             # Si aucun compétiteur trouvé dans visibility, utiliser semantic_analysis
             if not competitors_urls and semantic_analysis:
