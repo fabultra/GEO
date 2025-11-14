@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard GEO - Tests de Visibilité IA</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+        
+        .header h1 {
+            color: #1a1a1a;
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .header .site-info {
+            font-size: 18px;
+            color: #666;
+            margin: 10px 0;
+        }
+        
+        .score-global {
+            font-size: 72px;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+            padding: 50px;
+            border-radius: 20px;
+            background: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .score-critical { color: #dc3545; }
+        .score-warning { color: #ffc107; }
+        .score-good { color: #28a745; }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .metric-tile {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .metric-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-tile:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+        
+        .metric-tile:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .metric-tile.clickable::after {
+            content: '🔍';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+            opacity: 0.3;
+            transition: opacity 0.3s;
+        }
+        
+        .metric-tile:hover.clickable::after {
+            opacity: 1;
+        }
+        
+        .metric-label {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .metric-value {
+            font-size: 42px;
+            font-weight: 700;
+            margin: 15px 0;
+            color: #1a1a1a;
+        }
+        
+        .metric-change {
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .trend-up { color: #28a745; }
+        .trend-down { color: #dc3545; }
+        .trend-neutral { color: #6c757d; }
+        
+        .platform-table {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .platform-table h2 {
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        th:first-child {
+            border-top-left-radius: 12px;
+        }
+        
+        th:last-child {
+            border-top-right-radius: 12px;
+        }
+        
+        td {
+            padding: 18px;
+            border-bottom: 1px solid #e9ecef;
+            transition: background 0.2s;
+        }
+        
+        tr:hover td {
+            background: #f8f9fa;
+        }
+        
+        td.clickable-cell {
+            cursor: pointer;
+            position: relative;
+        }
+        
+        td.clickable-cell:hover {
+            background: #e9ecef;
+        }
+        
+        .status-visible {
+            color: #28a745;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .status-invisible {
+            color: #dc3545;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 24px;
+            padding: 50px;
+            max-width: 900px;
+            max-height: 85vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp 0.3s ease;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 36px;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.2s, transform 0.2s;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .modal-close:hover {
+            color: #dc3545;
+            background: #fee;
+            transform: rotate(90deg);
+        }
+        
+        .detail-section {
+            margin: 30px 0;
+        }
+        
+        .detail-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .reason-card {
+            background: #f8f9fa;
+            border-left: 5px solid #dc3545;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .reason-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .reason-card.severity-critical {
+            border-color: #dc3545;
+            background: linear-gradient(to right, #fff5f5 0%, #ffffff 100%);
+        }
+        
+        .reason-card.severity-high {
+            border-color: #ff8c00;
+            background: linear-gradient(to right, #fff8f0 0%, #ffffff 100%);
+        }
+        
+        .reason-card.severity-medium {
+            border-color: #ffc107;
+            background: linear-gradient(to right, #fffef0 0%, #ffffff 100%);
+        }
+        
+        .reason-card h4 {
+            margin: 0 0 15px 0;
+            color: #1a1a1a;
+            font-size: 18px;
+        }
+        
+        .reason-card p {
+            margin: 10px 0;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .action-button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+            margin: 12px 8px 12px 0;
+            transition: all 0.3s;
+            font-size: 15px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .action-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+        
+        .action-button:active {
+            transform: translateY(0);
+        }
+        
+        .add-query-form {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+        
+        .add-query-form h2 {
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        
+        .form-group {
+            margin: 25px 0;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 15px;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .query-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .query-item {
+            background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-left: 4px solid #667eea;
+        }
+        
+        .query-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .delete-query {
+            color: #dc3545;
+            cursor: pointer;
+            font-size: 24px;
+            transition: opacity 0.2s, transform 0.2s;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .delete-query:hover {
+            opacity: 0.7;
+            background: #fee;
+            transform: scale(1.1);
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🔍 Tests de Visibilité IA</h1>
+            <div class="site-info"><strong>Site:</strong> https://lussier.co</div>
+            <div class="site-info"><strong>Entreprise:</strong> Lussier</div>
+            <div class="site-info"><strong>Dernière mise à jour:</strong> 14 November 2025 à 19:38</div>
+        </div>
+        
+        <!-- Score Global -->
+        <div class="score-global score-score-critical">
+            Score de Visibilité: <span id="visibility-score">6.0</span>%
+        </div>
+        
+        <!-- Métriques cliquables -->
+        <div class="metrics-grid" id="metrics-grid">
+            <!-- Sera rempli par JavaScript -->
+        </div>
+        
+        <!-- Tableau des requêtes -->
+        <div class="platform-table">
+            <h2>📋 Requêtes Testées & Résultats</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Requête</th>
+                        <th>ChatGPT</th>
+                        <th>Claude</th>
+                        <th>Perplexity</th>
+                        <th>Gemini</th>
+                        <th>Google AI</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="queries-tbody">
+                    <!-- Sera rempli par JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Formulaire ajout de requête -->
+        <div class="add-query-form">
+            <h2>➕ Ajouter une Requête Personnalisée</h2>
+            <p style="color: #666; margin-bottom: 20px;">
+                Ajoutez vos propres requêtes pour tester votre visibilité sur des termes spécifiques.
+            </p>
+            <form id="add-query-form">
+                <div class="form-group">
+                    <label for="new-query">Requête à tester</label>
+                    <input type="text" id="new-query" placeholder="Ex: meilleurs courtiers assurance Montréal" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="query-priority">Priorité</label>
+                    <select id="query-priority">
+                        <option value="high">Haute - Test immédiat</option>
+                        <option value="medium" selected>Moyenne - Test dans 1h</option>
+                        <option value="low">Basse - Test prochain run (2 semaines)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="action-button">
+                    Ajouter et Tester
+                </button>
+            </form>
+            
+            <h3 style="margin-top: 40px; color: #1a1a1a; font-size: 22px;">Requêtes Personnalisées Actives</h3>
+            <ul class="query-list" id="custom-queries-list">
+                <li class="query-item" style="background: #f0f0f0; border-left-color: #999;">
+                    <span style="color: #999;">Aucune requête personnalisée pour le moment</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Modal de détails -->
+    <div class="modal" id="details-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Contenu dynamique -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Charger les données depuis le JSON
+        let queryData = {"site_url": "https://lussier.co", "company_name": "Lussier", "last_updated": "2025-11-14T19:31:31.211801", "queries": [{"query": "meilleur courtage en assurance des particuliers québec", "timestamp": "2025-11-14T19:31:31.211922", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'", "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'", "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": true, "position": 3, "context_snippet": "...**\n- Coopérative québécoise\n- Service personnalisé\n- Bonne réputation pour auto et habitation\n\n**2. Lussier Dale Parizeau**\n- Un des plus grands courtiers au Canada\n- Large gamme de produits\n- Plusieurs succ...", "competitors_mentioned": ["Promutuel Assurance", "Intact Assurance", "Intact"], "full_response": "# Meilleurs courtages en assurance pour particuliers au Québec\n\nVoici les courtiers en assurance les plus réputés au Québec :\n\n## Courtiers multiservices majeurs\n\n**1. Promutuel Assurance**\n- Coopérative québécoise\n- Service personnalisé\n- Bonne réputation pour auto et habitation\n\n**2. Lussier Dale Parizeau**\n- Un des plus grands courtiers au Canada\n- Large gamme de produits\n- Plusieurs succursales\n\n**3. Assurances LEDOR**\n- Courtier indépendant\n- Bon service client\n- Compétitif sur les prix\n\n## Courtiers en ligne populaires\n\n**4. Kanetix.ca / Sonnet**\n- Comparaison en ligne rapide\n- Soumissions instantanées\n\n**5. Desjardin Assurances**\n- Avantages pour membres\n- Réseau étendu au Québec\n\n**6. Intact Assurance**\n- Leader canadien\n- Produits variés\n\n## Conseils pour choisir\n\n✓ Comparez au moins 3-4 soumissions\n✓ Vérifiez la réputation (Google, AMF)\n✓ Privilégiez un courtier qui compare plusieurs assureurs\n✓ Considérez le service client et la proximité\n\n**Besoin spécifique ?** (auto, habitation, vie?) Je peux affiner mes recommandations.", "response_length": 1050, "sentiment": "neutral", "invisibility_reasons": []}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'", "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'", "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'", "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'", "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'", "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'", "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "meilleur assurance automobile québec", "timestamp": "2025-11-14T19:31:44.572532", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'", "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": ["La Capitale", "Intact", "Promutuel Assurance", "Intact Assurance", "Desjardins"], "full_response": "# Meilleures assurances automobile au Québec (2024)\n\n## Assureurs recommandés\n\n### **1. Desjardins Assurances**\n- ✅ Plus grand assureur au Québec\n- Rabais multiples disponibles\n- Excellent service client\n- Programme de fidélité Bonidollars\n\n### **2. Intact Assurance**\n- Rabais jusqu'à 25% pour bonne conduite\n- Application mobile pratique\n- Bon rapport qualité-prix\n\n### **3. La Capitale**\n- Spécialisé pour fonctionnaires et employés publics\n- Tarifs compétitifs\n- Service personnalisé\n\n### **4. Bélairdirect**\n- Soumissions en ligne rapides\n- Tarifs avantageux\n- Service 100% numérique\n\n### **5. Promutuel Assurance**\n- Coopérative québécoise\n- Rabais fidélité\n- Service local\n\n## Conseils pour économiser\n\n🔹 **Comparez les soumissions** - Utilisez des comparateurs comme Kanetix ou PolicyAdvisor\n🔹 **Augmentez votre franchise** - Réduit la prime\n🔹 **Regroupez vos assurances** - Auto + habitation = rabais\n🔹 **Bon dossier de conduite** - Évitez les infractions et accidents\n\n## Facteurs qui influencent le prix\n\n- Âge et expérience du conducteur\n- Lieu de résidence\n- Type de véhicule\n- Usage (personnel/travail)\n- Dossier de conduite\n\n**💡 Conseil:** Demandez plusieurs soumissions annuellement pour obtenir le meilleur prix!", "response_length": 1229, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'", "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "INSUFFICIENT_DATA", "severity": "HIGH", "explanation": "Les compétiteurs cités (La Capitale, Intact, Promutuel Assurance, Intact Assurance, Desjardins) ont probablement plus de données factuelles", "action": "Ajouter 10-15 statistiques avec sources dans le contenu", "example_stats": ["68% des propriétaires sous-estiment leurs biens de 20%+", "Le délai moyen de règlement est de 14 jours"], "estimated_impact": "HIGH"}]}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'", "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'", "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'", "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "meilleur assurance habitation québec", "timestamp": "2025-11-14T19:31:59.006494", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'", "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": ["Promutuel Assurance", "Desjardins", "Intact Assurance", "Intact"], "full_response": "# Meilleures assurances habitation au Québec (2024)\n\n## Top assureurs recommandés\n\n### **1. Desjardins Assurances**\n- ✅ Plus grand assureur au Québec\n- Prix compétitifs\n- Service en français\n- Nombreux rabais disponibles\n\n### **2. Intact Assurance**\n- Excellent service client\n- Couverture complète\n- Programme de fidélité\n\n### **3. La Personnelle**\n- Spécialisée pour fonctionnaires et professionnels\n- Tarifs avantageux\n- Bonnes protections\n\n### **4. Promutuel Assurance**\n- Mutuelle québécoise\n- Service personnalisé\n- Prix compétitifs\n\n### **5. SSQ Assurance**\n- Entreprise québécoise\n- Bon rapport qualité-prix\n\n## Conseils pour économiser\n\n- 📊 **Comparez** plusieurs soumissions\n- 🏠 Combinez auto + habitation (rabais 10-25%)\n- 🔒 Système d'alarme = rabais\n- 💰 Augmentez la franchise pour réduire la prime\n- 🎓 Diplôme universitaire = rabais chez certains\n\n## Utilisez un comparateur\n\n- **Kanetix.ca**\n- **Hardbacon**\n- **Lowestrates.ca**\n\n**Coût moyen :** 600-900$/an pour un appartement, 1000-1500$/an pour une maison\n\nBesoin d'aide pour choisir selon votre situation?", "response_length": 1074, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'", "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "INSUFFICIENT_DATA", "severity": "HIGH", "explanation": "Les compétiteurs cités (Promutuel Assurance, Desjardins, Intact Assurance, Intact) ont probablement plus de données factuelles", "action": "Ajouter 10-15 statistiques avec sources dans le contenu", "example_stats": ["68% des propriétaires sous-estiment leurs biens de 20%+", "Le délai moyen de règlement est de 14 jours"], "estimated_impact": "HIGH"}]}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'", "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'", "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'", "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "meilleur assurance des entreprises québec", "timestamp": "2025-11-14T19:32:13.408519", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'", "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": ["Aviva", "La Capitale", "Intact", "Intact Assurance", "Desjardins"], "full_response": "# Meilleures assurances pour entreprises au Québec\n\nVoici les principaux assureurs d'entreprises au Québec en 2024 :\n\n## Assureurs majeurs\n\n### **Intact Assurance**\n- Plus grand assureur P&C au Canada\n- Gamme complète pour PME\n- Service en français\n\n### **Desjardins Assurances**\n- Institution québécoise\n- Forte présence locale\n- Programmes adaptés aux PME\n\n### **Industrie Alliance**\n- Assurances collectives\n- Assurance vie et invalidité\n- Solutions pour employés\n\n### **Aviva Canada**\n- Assurance responsabilité civile\n- Assurance biens commerciaux\n- Prix compétitifs\n\n### **La Capitale**\n- Assureur québécois\n- Spécialisé PME\n- Service personnalisé\n\n## Types de couvertures essentielles\n\n- **Responsabilité civile générale**\n- **Assurance biens/locaux**\n- **Assurance erreurs et omissions**\n- **Assurance collective employés**\n- **Cyber-assurance**\n- **Interruption des affaires**\n\n## Conseils\n\n✓ Utilisez un **courtier en assurance** pour comparer\n✓ Évaluez vos besoins spécifiques selon votre secteur\n✓ Vérifiez les exclusions\n✓ Comparez plusieurs soumissions\n\n**Besoin d'aide pour un type d'entreprise spécifique?**", "response_length": 1123, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'", "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "INSUFFICIENT_DATA", "severity": "HIGH", "explanation": "Les compétiteurs cités (Aviva, La Capitale, Intact, Intact Assurance, Desjardins) ont probablement plus de données factuelles", "action": "Ajouter 10-15 statistiques avec sources dans le contenu", "example_stats": ["68% des propriétaires sous-estiment leurs biens de 20%+", "Le délai moyen de règlement est de 14 jours"], "estimated_impact": "HIGH"}]}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'", "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'", "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'", "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "meilleur solutions financières et investissements québec", "timestamp": "2025-11-14T19:32:25.175718", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'", "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'", "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": ["Desjardins"], "full_response": "# Meilleures solutions financières et investissements au Québec\n\n## 🏦 Institutions financières principales\n\n### Banques traditionnelles\n- **Desjardins** - Leader coopératif québécois\n- **Banque Nationale** - Forte présence au Québec\n- **Banque Laurentienne**\n- Banques canadiennes (RBC, TD, BMO, Scotia, CIBC)\n\n### Courtiers en ligne (frais réduits)\n- **Wealthsimple** - Interface simple, pas de commissions\n- **Questrade** - Populaire, ETF gratuits à l'achat\n- **Disnat** (Desjardins)\n- **Banque Nationale Courtage Direct**\n\n## 💰 Véhicules d'investissement prioritaires\n\n### 1. **REER** (Régime enregistré d'épargne-retraite)\n- Déductions fiscales immédiates\n- Maximum 18% du revenu (limite ~31 560$ en 2024)\n- Idéal si taux d'imposition élevé\n\n### 2. **CELI** (Compte d'épargne libre d'impôt)\n- Gains non imposables\n- Limite 2024 : 7 000$ (cumul possible)\n- Très flexible pour retrait\n\n### 3. **REEE** (Régime d'épargne-études)\n- Subvention canadienne : 20% (max 500$/an)\n- Bon d'études québécois : 10% supplémentaire\n- Maximum 50 000$ par enfant\n\n### 4. **CELIAPP** (Compte d'épargne libre d'impôt pour l'achat d'une première propriété)\n- Nouveau depuis 2023\n- 8 000$/an (max 40 000$ à vie)\n- Combinaison avantages REER + CELI\n\n## 📊 Stratégies d'invest", "response_length": 1255, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'", "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'", "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "INSUFFICIENT_DATA", "severity": "HIGH", "explanation": "Les compétiteurs cités (Desjardins) ont probablement plus de données factuelles", "action": "Ajouter 10-15 statistiques avec sources dans le contenu", "example_stats": ["68% des propriétaires sous-estiment leurs biens de 20%+", "Le délai moyen de règlement est de 14 jours"], "estimated_impact": "HIGH"}]}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'", "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'", "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'", "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'", "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'", "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'", "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "meilleur assurances collectives pour employés québec", "timestamp": "2025-11-14T19:32:39.496857", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'", "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": ["Desjardins"], "full_response": "# Meilleures assurances collectives pour employés au Québec (2024)\n\n## Principaux assureurs\n\n### 1. **Canada Vie**\n- Leader du marché québécois\n- Excellente flexibilité des régimes\n- Forte présence et service en français\n- Bonne réputation pour les réclamations\n\n### 2. **Desjardins Assurances**\n- Coopérative québécoise\n- Service entièrement en français\n- Bien adapté aux PME québécoises\n- Tarifs compétitifs\n\n### 3. **Croix Bleue Medavie**\n- Réseau de professionnels étendu\n- Bonne couverture médicaments\n- Application mobile performante\n- Service client apprécié\n\n### 4. **Manuvie**\n- Innovante en santé mentale et bien-être\n- Bons programmes de prévention\n- Plateforme numérique avancée\n\n### 5. **Sun Life**\n- Solide pour grandes entreprises\n- Excellents outils de gestion\n- Programme de santé globale\n\n## Critères de sélection\n\n### Pour l'employeur :\n- **Taille de l'entreprise** (nombre d'employés)\n- **Budget disponible**\n- **Stabilité des primes**\n- **Service de gestion**\n\n### Pour les employés :\n- ✅ Couverture médicaments\n- ✅ Soins paramédicaux (physio, psychologue, etc.)\n- ✅ Soins dentaires\n- ✅ Assurance invalidité\n- ✅ Assurance vie\n\n## Conseils\n\n**Utilisez un courtier** en assurances collectives - ils comparent gratuitement et négocient pour vous.\n\nBesoin de recommandations spécifiques selon votre situation?", "response_length": 1326, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'", "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "INSUFFICIENT_DATA", "severity": "HIGH", "explanation": "Les compétiteurs cités (Desjardins) ont probablement plus de données factuelles", "action": "Ajouter 10-15 statistiques avec sources dans le contenu", "example_stats": ["68% des propriétaires sous-estiment leurs biens de 20%+", "Le délai moyen de règlement est de 14 jours"], "estimated_impact": "HIGH"}]}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'", "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'", "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'", "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec", "timestamp": "2025-11-14T19:32:52.996163", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'", "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Moto, Vr, Motoneige) Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": true, "position": 6, "context_snippet": "...mical Assurance**\n- Prix avantageux\n- Couverture adaptée aux besoins\n\n## Courtiers recommandés\n\n- **Lussier Dale Parizeau**\n- **Assurances Francis Perron** (spécialisé VR)\n- **SSQ Assurance**\n\n## Conseils po...", "competitors_mentioned": ["Aviva", "La Capitale", "Intact", "Intact Assurance", "Desjardins"], "full_response": "# Meilleures assurances pour véhicules récréatifs au Québec\n\n## Assureurs spécialisés recommandés\n\n### **1. Intact Assurance**\n- Couverture complète pour motos, VR, motoneiges\n- Rabais multi-produits disponibles\n- Bon service client\n\n### **2. La Capitale**\n- Spécialiste des véhicules récréatifs\n- Options flexibles\n- Prix compétitifs\n\n### **3. Desjardins Assurances**\n- Large réseau au Québec\n- Protections personnalisables\n- Programme de fidélité\n\n### **4. Aviva Canada**\n- Bonne réputation pour VR et motos\n- Assistance routière incluse\n- Couverture saisonnière disponible\n\n### **5. Économical Assurance**\n- Prix avantageux\n- Couverture adaptée aux besoins\n\n## Courtiers recommandés\n\n- **Lussier Dale Parizeau**\n- **Assurances Francis Perron** (spécialisé VR)\n- **SSQ Assurance**\n\n## Conseils pour économiser\n\n✓ Regrouper vos assurances (auto + récréatif)\n✓ Opter pour une assurance saisonnière (motoneige/moto)\n✓ Augmenter votre franchise\n✓ Suivre un cours de conduite sécuritaire\n✓ Comparer plusieurs soumissions\n\n## À vérifier dans votre contrat\n\n- Valeur de remplacement vs valeur dépréciée\n- Couverture des accessoires\n- Protection en cas de vol\n- Assistance routière\n- Couverture hors Québec/Canada\n\n**Recommandation :** Utilisez un courtier indépendant pour comparer plusieurs assureurs simultanément.", "response_length": 1311, "sentiment": "positive", "invisibility_reasons": []}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'", "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Moto, Vr, Motoneige) Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'", "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Moto, Vr, Motoneige) Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'", "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Moto, Vr, Motoneige) Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "meilleur assurance maritime (bateau, yacht, voilier) québec", "timestamp": "2025-11-14T19:33:07.616752", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance maritime (bateau, yacht, voilier) québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance maritime (bateau, yacht, voilier) québec'", "example_title": "Guide Complet: Meilleur Assurance Maritime (Bateau, Yacht, Voilier) Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": true, "position": 4, "context_snippet": "...rtiers au Québec\n- Protection adaptée aux conditions québécoises\n\n## **Courtiers recommandés**\n\n- **Lussier Dale Parizeau Marine** - Spécialiste maritime\n- **Assurances Viau** - Expertise nautique\n- **BFL Ca...", "competitors_mentioned": ["Aviva", "BFL", "Intact", "Intact Assurance", "Northbridge Assurance"], "full_response": "# Meilleures assurances maritimes au Québec\n\nVoici les principaux assureurs pour bateaux, yachts et voiliers au Québec :\n\n## **Assureurs spécialisés**\n\n### **1. Northbridge Assurance**\n- Spécialiste en assurance nautique\n- Couverture complète pour tous types d'embarcations\n- Bonne réputation au Québec\n\n### **2. Aviva Canada**\n- Produits spécialisés pour la navigation de plaisance\n- Options flexibles\n- Service en français\n\n### **3. Intact Assurance**\n- Assurance bateau et embarcations\n- Vaste réseau de courtiers au Québec\n- Protection adaptée aux conditions québécoises\n\n## **Courtiers recommandés**\n\n- **Lussier Dale Parizeau Marine** - Spécialiste maritime\n- **Assurances Viau** - Expertise nautique\n- **BFL Canada** - Division marine\n\n## **Points à vérifier**\n\n✅ Valeur agréée vs valeur réelle\n✅ Navigation hivernale (remisage)\n✅ Territoire de navigation (eaux canadiennes/américaines)\n✅ Responsabilité civile\n✅ Assistance remorquage\n✅ Protection équipement et accessoires\n✅ Franchise\n\n## **Conseil**\nConsultez un **courtier spécialisé en assurance maritime** pour comparer plusieurs soumissions adaptées à votre embarcation spécifique.\n\nQuel type d'embarcation possédez-vous?", "response_length": 1184, "sentiment": "positive", "invisibility_reasons": []}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance maritime (bateau, yacht, voilier) québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance maritime (bateau, yacht, voilier) québec'", "example_title": "Guide Complet: Meilleur Assurance Maritime (Bateau, Yacht, Voilier) Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance maritime (bateau, yacht, voilier) québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance maritime (bateau, yacht, voilier) québec'", "example_title": "Guide Complet: Meilleur Assurance Maritime (Bateau, Yacht, Voilier) Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance maritime (bateau, yacht, voilier) québec'", "action": "Créer une page dédiée ou un article sur 'meilleur assurance maritime (bateau, yacht, voilier) québec'", "example_title": "Guide Complet: Meilleur Assurance Maritime (Bateau, Yacht, Voilier) Québec en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "comment choisir courtage en assurance des particuliers", "timestamp": "2025-11-14T19:33:21.660517", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'", "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'", "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "# Comment choisir un courtage en assurance pour particuliers\n\n## 1. **Vérifier les accréditations et licences**\n- Certification AMF (Autorité des marchés financiers) ou ORIAS en France\n- Membre d'une association professionnelle reconnue\n- Assurance responsabilité civile professionnelle\n\n## 2. **Évaluer l'expertise et l'offre**\n- **Spécialisations** : auto, habitation, vie, santé...\n- Nombre de compagnies partenaires (plus = plus de choix)\n- Expérience dans votre type de besoin spécifique\n- Capacité à comparer plusieurs offres\n\n## 3. **Analyser la qualité du service**\n- **Disponibilité** : horaires, réactivité\n- Accompagnement personnalisé vs automatisé\n- Service après-vente et gestion des sinistres\n- Avis clients et réputation en ligne\n\n## 4. **Comprendre la rémunération**\n- Commission payée par l'assureur (standard)\n- Frais de courtage éventuels\n- Transparence sur les coûts\n- Aucun surcoût par rapport à une souscription directe\n\n## 5. **Tester la relation**\n- Prendre rendez-vous (gratuit généralement)\n- Vérifier l'écoute et la compréhension de vos besoins\n- Qualité des explications et conseils\n- Sentiment de confiance\n\n## 6. **Critères pratiques**\n- Proximité géographique (si important pour vous)\n- Plateforme en ligne accessible\n- Facilité de contact (téléphone, mail, chat)\n\n## ⚠️ Signaux d'alerte\n- Pression à la vente\n- Manque de transparence\n- Promesses irréalistes\n- Absence de comparaison\n\n**Conseil** : N'hésitez pas à consulter 2-3 courtiers avant de chois", "response_length": 1485, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'", "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'", "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'", "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'", "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'", "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'", "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'", "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'", "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}, {"query": "comment choisir assurance automobile", "timestamp": "2025-11-14T19:33:35.917533", "platforms": {"chatgpt": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'", "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'", "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "claude": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "# Comment choisir une assurance automobile\n\nVoici les étapes essentielles pour bien choisir votre assurance auto :\n\n## 1. **Déterminez vos besoins**\n- **Au tiers** : couverture minimale obligatoire (dommages causés aux autres)\n- **Tiers étendu/intermédiaire** : ajoute vol, incendie, bris de glace\n- **Tous risques** : protection maximale (voiture neuve, récente ou de valeur)\n\n## 2. **Comparez les garanties**\n- Responsabilité civile\n- Protection du conducteur\n- Assistance et dépannage\n- Véhicule de remplacement\n- Protection juridique\n- Garanties optionnelles (valeur à neuf, équipements)\n\n## 3. **Évaluez les franchises**\n- Montant qui reste à votre charge en cas de sinistre\n- Plus la franchise est élevée, moins la prime est chère\n\n## 4. **Comparez les prix**\n- Utilisez des comparateurs en ligne\n- Demandez plusieurs devis\n- Vérifiez le rapport qualité/prix\n\n## 5. **Vérifiez la réputation**\n- Avis clients\n- Délais d'indemnisation\n- Qualité du service client\n\n## 6. **Pensez aux réductions**\n- Bonus (si pas de sinistre)\n- Conducteur expérimenté\n- Garage sécurisé\n- Faible kilométrage\n\n**Conseil** : Ne choisissez pas uniquement sur le prix, la qualité des garanties est primordiale !\n\nAvez-vous des questions spécifiques sur votre situation ?", "response_length": 1251, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'", "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'", "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "perplexity": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'", "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'", "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "gemini": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'", "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'", "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}, "google_ai": {"mentioned": false, "position": null, "context_snippet": null, "competitors_mentioned": [], "full_response": "", "response_length": 0, "sentiment": "neutral", "invisibility_reasons": [{"reason": "NO_RELEVANT_CONTENT", "severity": "CRITICAL", "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'", "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'", "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025", "estimated_impact": "HIGH"}, {"reason": "INSUFFICIENT_CONTENT", "severity": "HIGH", "explanation": "Contenu existant trop court (estimé < 1000 mots)", "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques", "estimated_impact": "MEDIUM-HIGH"}, {"reason": "NO_SCHEMA_MARKUP", "severity": "MEDIUM", "explanation": "Schéma markup probablement absent ou incomplet", "action": "Ajouter schema Article + FAQPage + Organization", "estimated_impact": "MEDIUM"}]}}}], "summary": {"total_queries": 100, "global_visibility": 0.06, "by_platform": {"chatgpt": 0.0, "claude": 0.3, "perplexity": 0.0, "gemini": 0.0, "google_ai": 0.0}}};
+        
+        // Initialiser le dashboard
+        document.addEventListener('DOMContentLoaded', function() {
+            renderMetrics();
+            renderTable();
+        });
+        
+        // Afficher les métriques
+        function renderMetrics() {
+            const metrics = document.getElementById('metrics-grid');
+            const summary = queryData.summary || {};
+            const platforms = summary.by_platform || {};
+            
+            // Métrique globale
+            metrics.innerHTML = `
+                <div class="metric-tile clickable" onclick="showGlobalDetails()">
+                    <div class="metric-label">Visibilité Globale</div>
+                    <div class="metric-value">${(summary.global_visibility * 100).toFixed(1)}%</div>
+                    <div class="metric-change trend-neutral">Moyenne 5 plateformes</div>
+                </div>
+            `;
+            
+            // Métriques par plateforme
+            const platformNames = {
+                'chatgpt': 'ChatGPT',
+                'claude': 'Claude',
+                'perplexity': 'Perplexity',
+                'gemini': 'Gemini',
+                'google_ai': 'Google AI'
+            };
+            
+            for (const [key, name] of Object.entries(platformNames)) {
+                const score = (platforms[key] || 0) * 100;
+                const trendClass = score > 20 ? 'trend-up' : score > 0 ? 'trend-neutral' : 'trend-down';
+                
+                metrics.innerHTML += `
+                    <div class="metric-tile clickable" onclick="showPlatformDetails('${key}')">
+                        <div class="metric-label">${name}</div>
+                        <div class="metric-value">${score.toFixed(1)}%</div>
+                        <div class="metric-change ${trendClass}">${score > 0 ? '✓' : '✗'} Testé</div>
+                    </div>
+                `;
+            }
+        }
+        
+        // Afficher le tableau
+        function renderTable() {
+            const tbody = document.getElementById('queries-tbody');
+            tbody.innerHTML = '';
+            
+            const queries = queryData.queries || [];
+            
+            queries.forEach((queryObj, index) => {
+                const platforms = queryObj.platforms || {};
+                
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><strong>${queryObj.query}</strong></td>
+                    ${renderPlatformCell(queryObj.query, 'chatgpt', platforms.chatgpt)}
+                    ${renderPlatformCell(queryObj.query, 'claude', platforms.claude)}
+                    ${renderPlatformCell(queryObj.query, 'perplexity', platforms.perplexity)}
+                    ${renderPlatformCell(queryObj.query, 'gemini', platforms.gemini)}
+                    ${renderPlatformCell(queryObj.query, 'google_ai', platforms.google_ai)}
+                    <td>
+                        <button class="action-button" onclick="retestQuery('${queryObj.query}')" style="padding: 8px 16px; font-size: 13px;">
+                            🔄 Re-tester
+                        </button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+        
+        function renderPlatformCell(query, platform, data) {
+            const mentioned = data && data.mentioned;
+            const statusClass = mentioned ? 'status-visible' : 'status-invisible';
+            const statusText = mentioned ? '✅ Visible' : '❌ Invisible';
+            
+            return `
+                <td class="clickable-cell ${statusClass}" onclick="showQueryDetails('${query}', '${platform}')">
+                    ${statusText}
+                </td>
+            `;
+        }
+        
+        // Afficher détails d'une requête
+        function showQueryDetails(query, platform) {
+            const queryObj = queryData.queries.find(q => q.query === query);
+            if (!queryObj) return;
+            
+            const platformData = queryObj.platforms[platform];
+            if (!platformData) return;
+            
+            let modalContent = `
+                <h2 style="margin-bottom: 10px;">🔍 Détails: "${query}"</h2>
+                <h3 style="color: #666; margin-bottom: 30px;">Plateforme: ${platform.toUpperCase()}</h3>
+                
+                <div class="detail-section">
+                    <div class="detail-title">Statut</div>
+                    <p style="font-size: 24px; font-weight: 600;">
+                        ${platformData.mentioned ? 
+                            `✅ <span style="color: #28a745;">Visible</span>${platformData.position ? ` - Position ${platformData.position}` : ''}` : 
+                            `❌ <span style="color: #dc3545;">Invisible</span>`
+                        }
+                    </p>
+                </div>
+            `;
+            
+            if (platformData.mentioned && platformData.context_snippet) {
+                modalContent += `
+                    <div class="detail-section">
+                        <div class="detail-title">Contexte de la Mention</div>
+                        <p style="background: #f8f9fa; padding: 20px; border-radius: 12px; line-height: 1.8;">
+                            "${platformData.context_snippet}"
+                        </p>
+                    </div>
+                `;
+                
+                if (platformData.competitors_mentioned && platformData.competitors_mentioned.length > 0) {
+                    modalContent += `
+                        <div class="detail-section">
+                            <div class="detail-title">Compétiteurs Également Cités</div>
+                            <ul style="padding-left: 20px;">
+                                ${platformData.competitors_mentioned.map(c => `<li style="margin: 8px 0;">${c}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `;
+                }
+            } else {
+                // Afficher les raisons d'invisibilité
+                const reasons = platformData.invisibility_reasons || [];
+                
+                if (reasons.length > 0) {
+                    modalContent += `
+                        <div class="detail-section">
+                            <div class="detail-title">🚨 Pourquoi Vous Êtes Invisible</div>
+                    `;
+                    
+                    reasons.forEach(reason => {
+                        modalContent += `
+                            <div class="reason-card severity-${reason.severity.toLowerCase()}">
+                                <h4>${reason.explanation}</h4>
+                                <p><strong>Action:</strong> ${reason.action}</p>
+                                ${reason.example_title ? `<p style="font-style: italic; color: #666;">Exemple: ${reason.example_title}</p>` : ''}
+                                <p><strong>Impact estimé:</strong> <span style="color: #28a745; font-weight: 600;">${reason.estimated_impact}</span></p>
+                            </div>
+                        `;
+                    });
+                    
+                    modalContent += `</div>`;
+                }
+                
+                // Compétiteurs qui apparaissent
+                if (platformData.competitors_mentioned && platformData.competitors_mentioned.length > 0) {
+                    modalContent += `
+                        <div class="detail-section">
+                            <div class="detail-title">🏆 Qui Apparaît à Votre Place</div>
+                            <ul style="padding-left: 20px;">
+                                ${platformData.competitors_mentioned.map(c => `<li style="margin: 8px 0;">${c}</li>`).join('')}
+                            </ul>
+                            <p style="margin-top: 15px; color: #666; font-style: italic;">Analysez ces compétiteurs pour comprendre ce qu'ils font mieux.</p>
+                        </div>
+                    `;
+                }
+            }
+            
+            // Réponse complète (collapsible)
+            if (platformData.full_response) {
+                modalContent += `
+                    <div class="detail-section">
+                        <details style="cursor: pointer;">
+                            <summary style="font-weight: 600; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+                                📄 Voir la Réponse Complète du LLM
+                            </summary>
+                            <pre style="background: #f8f9fa; padding: 25px; border-radius: 12px; overflow-x: auto; white-space: pre-wrap; margin-top: 15px; line-height: 1.6;">
+${platformData.full_response}
+                            </pre>
+                        </details>
+                    </div>
+                `;
+            }
+            
+            modalContent += `
+                <button class="action-button" onclick="closeModal()" style="margin-top: 25px;">Fermer</button>
+            `;
+            
+            document.getElementById('modal-body').innerHTML = modalContent;
+            document.getElementById('details-modal').classList.add('active');
+        }
+        
+        // Afficher détails globaux
+        function showGlobalDetails() {
+            const summary = queryData.summary || {};
+            
+            let modalContent = `
+                <h2>📊 Analyse Globale de Visibilité</h2>
+                
+                <div class="detail-section">
+                    <p style="font-size: 18px;"><strong>Visibilité Globale:</strong> ${(summary.global_visibility * 100).toFixed(1)}%</p>
+                    <p style="font-size: 18px;"><strong>Requêtes testées:</strong> ${queryData.queries ? queryData.queries.length : 0}</p>
+                </div>
+                
+                <div class="detail-section">
+                    <div class="detail-title">🎯 Recommandations Prioritaires</div>
+                    <div class="reason-card severity-critical">
+                        <h4>Créer du contenu éducatif</h4>
+                        <p>Votre faible visibilité indique un manque de contenu informatif et éducatif. Créez 10-15 articles de 2000+ mots sur des sujets pertinents.</p>
+                    </div>
+                    <div class="reason-card severity-high">
+                        <h4>Ajouter des statistiques et données</h4>
+                        <p>Les IA privilégient le contenu riche en données. Ajoutez 10-15 statistiques avec sources dans chaque page principale.</p>
+                    </div>
+                    <div class="reason-card severity-high">
+                        <h4>Implémenter des schemas JSON-LD</h4>
+                        <p>Ajoutez Organization, Article et FAQPage schemas pour améliorer la compréhension par les IA.</p>
+                    </div>
+                </div>
+                
+                <button class="action-button" onclick="closeModal()">Fermer</button>
+            `;
+            
+            document.getElementById('modal-body').innerHTML = modalContent;
+            document.getElementById('details-modal').classList.add('active');
+        }
+        
+        // Afficher détails d'une plateforme
+        function showPlatformDetails(platform) {
+            const platformNames = {
+                'chatgpt': 'ChatGPT',
+                'claude': 'Claude',
+                'perplexity': 'Perplexity',
+                'gemini': 'Gemini',
+                'google_ai': 'Google AI'
+            };
+            
+            const summary = queryData.summary || {};
+            const visibility = ((summary.by_platform || {})[platform] || 0) * 100;
+            
+            let modalContent = `
+                <h2>📊 Analyse ${platformNames[platform]}</h2>
+                
+                <div class="detail-section">
+                    <p style="font-size: 20px; font-weight: 600;">Visibilité: ${visibility.toFixed(1)}%</p>
+                </div>
+                
+                <div class="detail-section">
+                    <div class="detail-title">📋 Requêtes Testées</div>
+                    <p>Cliquez sur n'importe quelle requête dans le tableau pour voir les détails spécifiques à ${platformNames[platform]}.</p>
+                </div>
+                
+                <button class="action-button" onclick="closeModal()">Fermer</button>
+            `;
+            
+            document.getElementById('modal-body').innerHTML = modalContent;
+            document.getElementById('details-modal').classList.add('active');
+        }
+        
+        // Fermer modal
+        function closeModal() {
+            document.getElementById('details-modal').classList.remove('active');
+        }
+        
+        // Fermer modal en cliquant en dehors
+        document.getElementById('details-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+        
+        // Ajouter une requête personnalisée
+        document.getElementById('add-query-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const newQuery = document.getElementById('new-query').value;
+            const priority = document.getElementById('query-priority').value;
+            
+            alert(`Fonctionnalité en développement!\n\nRequête "${newQuery}" sera testée avec priorité ${priority}.\n\nPour l'instant, ajoutez manuellement la requête dans queries_config.json et relancez l'analyse.`);
+            
+            document.getElementById('new-query').value = '';
+        });
+        
+        // Re-tester une requête
+        function retestQuery(query) {
+            if (confirm(`Re-tester la requête "${query}" sur toutes les plateformes ?\n\nNote: Cette fonctionnalité nécessite l'API Flask active.`)) {
+                alert('Fonctionnalité en développement!\n\nPour l'instant, relancez une analyse complète pour re-tester les requêtes.');
+            }
+        }
+    </script>
+</body>
+</html>

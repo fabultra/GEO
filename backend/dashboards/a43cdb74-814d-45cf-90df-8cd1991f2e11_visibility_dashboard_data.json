@@ -1,0 +1,1716 @@
+{
+  "site_url": "https://lussier.co",
+  "company_name": "Lussier",
+  "last_updated": "2025-11-14T19:31:31.211801",
+  "queries": [
+    {
+      "query": "meilleur courtage en assurance des particuliers québec",
+      "timestamp": "2025-11-14T19:31:31.211922",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'",
+              "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": true,
+          "position": 3,
+          "context_snippet": "...**\n- Coopérative québécoise\n- Service personnalisé\n- Bonne réputation pour auto et habitation\n\n**2. Lussier Dale Parizeau**\n- Un des plus grands courtiers au Canada\n- Large gamme de produits\n- Plusieurs succ...",
+          "competitors_mentioned": [
+            "Promutuel Assurance",
+            "Intact Assurance",
+            "Intact"
+          ],
+          "full_response": "# Meilleurs courtages en assurance pour particuliers au Québec\n\nVoici les courtiers en assurance les plus réputés au Québec :\n\n## Courtiers multiservices majeurs\n\n**1. Promutuel Assurance**\n- Coopérative québécoise\n- Service personnalisé\n- Bonne réputation pour auto et habitation\n\n**2. Lussier Dale Parizeau**\n- Un des plus grands courtiers au Canada\n- Large gamme de produits\n- Plusieurs succursales\n\n**3. Assurances LEDOR**\n- Courtier indépendant\n- Bon service client\n- Compétitif sur les prix\n\n## Courtiers en ligne populaires\n\n**4. Kanetix.ca / Sonnet**\n- Comparaison en ligne rapide\n- Soumissions instantanées\n\n**5. Desjardin Assurances**\n- Avantages pour membres\n- Réseau étendu au Québec\n\n**6. Intact Assurance**\n- Leader canadien\n- Produits variés\n\n## Conseils pour choisir\n\n✓ Comparez au moins 3-4 soumissions\n✓ Vérifiez la réputation (Google, AMF)\n✓ Privilégiez un courtier qui compare plusieurs assureurs\n✓ Considérez le service client et la proximité\n\n**Besoin spécifique ?** (auto, habitation, vie?) Je peux affiner mes recommandations.",
+          "response_length": 1050,
+          "sentiment": "neutral",
+          "invisibility_reasons": []
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'",
+              "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'",
+              "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'",
+              "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance automobile québec",
+      "timestamp": "2025-11-14T19:31:44.572532",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            "La Capitale",
+            "Intact",
+            "Promutuel Assurance",
+            "Intact Assurance",
+            "Desjardins"
+          ],
+          "full_response": "# Meilleures assurances automobile au Québec (2024)\n\n## Assureurs recommandés\n\n### **1. Desjardins Assurances**\n- ✅ Plus grand assureur au Québec\n- Rabais multiples disponibles\n- Excellent service client\n- Programme de fidélité Bonidollars\n\n### **2. Intact Assurance**\n- Rabais jusqu'à 25% pour bonne conduite\n- Application mobile pratique\n- Bon rapport qualité-prix\n\n### **3. La Capitale**\n- Spécialisé pour fonctionnaires et employés publics\n- Tarifs compétitifs\n- Service personnalisé\n\n### **4. Bélairdirect**\n- Soumissions en ligne rapides\n- Tarifs avantageux\n- Service 100% numérique\n\n### **5. Promutuel Assurance**\n- Coopérative québécoise\n- Rabais fidélité\n- Service local\n\n## Conseils pour économiser\n\n🔹 **Comparez les soumissions** - Utilisez des comparateurs comme Kanetix ou PolicyAdvisor\n🔹 **Augmentez votre franchise** - Réduit la prime\n🔹 **Regroupez vos assurances** - Auto + habitation = rabais\n🔹 **Bon dossier de conduite** - Évitez les infractions et accidents\n\n## Facteurs qui influencent le prix\n\n- Âge et expérience du conducteur\n- Lieu de résidence\n- Type de véhicule\n- Usage (personnel/travail)\n- Dossier de conduite\n\n**💡 Conseil:** Demandez plusieurs soumissions annuellement pour obtenir le meilleur prix!",
+          "response_length": 1229,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_DATA",
+              "severity": "HIGH",
+              "explanation": "Les compétiteurs cités (La Capitale, Intact, Promutuel Assurance, Intact Assurance, Desjardins) ont probablement plus de données factuelles",
+              "action": "Ajouter 10-15 statistiques avec sources dans le contenu",
+              "example_stats": [
+                "68% des propriétaires sous-estiment leurs biens de 20%+",
+                "Le délai moyen de règlement est de 14 jours"
+              ],
+              "estimated_impact": "HIGH"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance habitation québec",
+      "timestamp": "2025-11-14T19:31:59.006494",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            "Promutuel Assurance",
+            "Desjardins",
+            "Intact Assurance",
+            "Intact"
+          ],
+          "full_response": "# Meilleures assurances habitation au Québec (2024)\n\n## Top assureurs recommandés\n\n### **1. Desjardins Assurances**\n- ✅ Plus grand assureur au Québec\n- Prix compétitifs\n- Service en français\n- Nombreux rabais disponibles\n\n### **2. Intact Assurance**\n- Excellent service client\n- Couverture complète\n- Programme de fidélité\n\n### **3. La Personnelle**\n- Spécialisée pour fonctionnaires et professionnels\n- Tarifs avantageux\n- Bonnes protections\n\n### **4. Promutuel Assurance**\n- Mutuelle québécoise\n- Service personnalisé\n- Prix compétitifs\n\n### **5. SSQ Assurance**\n- Entreprise québécoise\n- Bon rapport qualité-prix\n\n## Conseils pour économiser\n\n- 📊 **Comparez** plusieurs soumissions\n- 🏠 Combinez auto + habitation (rabais 10-25%)\n- 🔒 Système d'alarme = rabais\n- 💰 Augmentez la franchise pour réduire la prime\n- 🎓 Diplôme universitaire = rabais chez certains\n\n## Utilisez un comparateur\n\n- **Kanetix.ca**\n- **Hardbacon**\n- **Lowestrates.ca**\n\n**Coût moyen :** 600-900$/an pour un appartement, 1000-1500$/an pour une maison\n\nBesoin d'aide pour choisir selon votre situation?",
+          "response_length": 1074,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_DATA",
+              "severity": "HIGH",
+              "explanation": "Les compétiteurs cités (Promutuel Assurance, Desjardins, Intact Assurance, Intact) ont probablement plus de données factuelles",
+              "action": "Ajouter 10-15 statistiques avec sources dans le contenu",
+              "example_stats": [
+                "68% des propriétaires sous-estiment leurs biens de 20%+",
+                "Le délai moyen de règlement est de 14 jours"
+              ],
+              "estimated_impact": "HIGH"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance des entreprises québec",
+      "timestamp": "2025-11-14T19:32:13.408519",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            "Aviva",
+            "La Capitale",
+            "Intact",
+            "Intact Assurance",
+            "Desjardins"
+          ],
+          "full_response": "# Meilleures assurances pour entreprises au Québec\n\nVoici les principaux assureurs d'entreprises au Québec en 2024 :\n\n## Assureurs majeurs\n\n### **Intact Assurance**\n- Plus grand assureur P&C au Canada\n- Gamme complète pour PME\n- Service en français\n\n### **Desjardins Assurances**\n- Institution québécoise\n- Forte présence locale\n- Programmes adaptés aux PME\n\n### **Industrie Alliance**\n- Assurances collectives\n- Assurance vie et invalidité\n- Solutions pour employés\n\n### **Aviva Canada**\n- Assurance responsabilité civile\n- Assurance biens commerciaux\n- Prix compétitifs\n\n### **La Capitale**\n- Assureur québécois\n- Spécialisé PME\n- Service personnalisé\n\n## Types de couvertures essentielles\n\n- **Responsabilité civile générale**\n- **Assurance biens/locaux**\n- **Assurance erreurs et omissions**\n- **Assurance collective employés**\n- **Cyber-assurance**\n- **Interruption des affaires**\n\n## Conseils\n\n✓ Utilisez un **courtier en assurance** pour comparer\n✓ Évaluez vos besoins spécifiques selon votre secteur\n✓ Vérifiez les exclusions\n✓ Comparez plusieurs soumissions\n\n**Besoin d'aide pour un type d'entreprise spécifique?**",
+          "response_length": 1123,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_DATA",
+              "severity": "HIGH",
+              "explanation": "Les compétiteurs cités (Aviva, La Capitale, Intact, Intact Assurance, Desjardins) ont probablement plus de données factuelles",
+              "action": "Ajouter 10-15 statistiques avec sources dans le contenu",
+              "example_stats": [
+                "68% des propriétaires sous-estiment leurs biens de 20%+",
+                "Le délai moyen de règlement est de 14 jours"
+              ],
+              "estimated_impact": "HIGH"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur solutions financières et investissements québec",
+      "timestamp": "2025-11-14T19:32:25.175718",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            "Desjardins"
+          ],
+          "full_response": "# Meilleures solutions financières et investissements au Québec\n\n## 🏦 Institutions financières principales\n\n### Banques traditionnelles\n- **Desjardins** - Leader coopératif québécois\n- **Banque Nationale** - Forte présence au Québec\n- **Banque Laurentienne**\n- Banques canadiennes (RBC, TD, BMO, Scotia, CIBC)\n\n### Courtiers en ligne (frais réduits)\n- **Wealthsimple** - Interface simple, pas de commissions\n- **Questrade** - Populaire, ETF gratuits à l'achat\n- **Disnat** (Desjardins)\n- **Banque Nationale Courtage Direct**\n\n## 💰 Véhicules d'investissement prioritaires\n\n### 1. **REER** (Régime enregistré d'épargne-retraite)\n- Déductions fiscales immédiates\n- Maximum 18% du revenu (limite ~31 560$ en 2024)\n- Idéal si taux d'imposition élevé\n\n### 2. **CELI** (Compte d'épargne libre d'impôt)\n- Gains non imposables\n- Limite 2024 : 7 000$ (cumul possible)\n- Très flexible pour retrait\n\n### 3. **REEE** (Régime d'épargne-études)\n- Subvention canadienne : 20% (max 500$/an)\n- Bon d'études québécois : 10% supplémentaire\n- Maximum 50 000$ par enfant\n\n### 4. **CELIAPP** (Compte d'épargne libre d'impôt pour l'achat d'une première propriété)\n- Nouveau depuis 2023\n- 8 000$/an (max 40 000$ à vie)\n- Combinaison avantages REER + CELI\n\n## 📊 Stratégies d'invest",
+          "response_length": 1255,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_DATA",
+              "severity": "HIGH",
+              "explanation": "Les compétiteurs cités (Desjardins) ont probablement plus de données factuelles",
+              "action": "Ajouter 10-15 statistiques avec sources dans le contenu",
+              "example_stats": [
+                "68% des propriétaires sous-estiment leurs biens de 20%+",
+                "Le délai moyen de règlement est de 14 jours"
+              ],
+              "estimated_impact": "HIGH"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur assurances collectives pour employés québec",
+      "timestamp": "2025-11-14T19:32:39.496857",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'",
+              "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            "Desjardins"
+          ],
+          "full_response": "# Meilleures assurances collectives pour employés au Québec (2024)\n\n## Principaux assureurs\n\n### 1. **Canada Vie**\n- Leader du marché québécois\n- Excellente flexibilité des régimes\n- Forte présence et service en français\n- Bonne réputation pour les réclamations\n\n### 2. **Desjardins Assurances**\n- Coopérative québécoise\n- Service entièrement en français\n- Bien adapté aux PME québécoises\n- Tarifs compétitifs\n\n### 3. **Croix Bleue Medavie**\n- Réseau de professionnels étendu\n- Bonne couverture médicaments\n- Application mobile performante\n- Service client apprécié\n\n### 4. **Manuvie**\n- Innovante en santé mentale et bien-être\n- Bons programmes de prévention\n- Plateforme numérique avancée\n\n### 5. **Sun Life**\n- Solide pour grandes entreprises\n- Excellents outils de gestion\n- Programme de santé globale\n\n## Critères de sélection\n\n### Pour l'employeur :\n- **Taille de l'entreprise** (nombre d'employés)\n- **Budget disponible**\n- **Stabilité des primes**\n- **Service de gestion**\n\n### Pour les employés :\n- ✅ Couverture médicaments\n- ✅ Soins paramédicaux (physio, psychologue, etc.)\n- ✅ Soins dentaires\n- ✅ Assurance invalidité\n- ✅ Assurance vie\n\n## Conseils\n\n**Utilisez un courtier** en assurances collectives - ils comparent gratuitement et négocient pour vous.\n\nBesoin de recommandations spécifiques selon votre situation?",
+          "response_length": 1326,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'",
+              "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_DATA",
+              "severity": "HIGH",
+              "explanation": "Les compétiteurs cités (Desjardins) ont probablement plus de données factuelles",
+              "action": "Ajouter 10-15 statistiques avec sources dans le contenu",
+              "example_stats": [
+                "68% des propriétaires sous-estiment leurs biens de 20%+",
+                "Le délai moyen de règlement est de 14 jours"
+              ],
+              "estimated_impact": "HIGH"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'",
+              "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'",
+              "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives pour employés québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives pour employés québec'",
+              "example_title": "Guide Complet: Meilleur Assurances Collectives Pour Employés Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec",
+      "timestamp": "2025-11-14T19:32:52.996163",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Moto, Vr, Motoneige) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": true,
+          "position": 6,
+          "context_snippet": "...mical Assurance**\n- Prix avantageux\n- Couverture adaptée aux besoins\n\n## Courtiers recommandés\n\n- **Lussier Dale Parizeau**\n- **Assurances Francis Perron** (spécialisé VR)\n- **SSQ Assurance**\n\n## Conseils po...",
+          "competitors_mentioned": [
+            "Aviva",
+            "La Capitale",
+            "Intact",
+            "Intact Assurance",
+            "Desjardins"
+          ],
+          "full_response": "# Meilleures assurances pour véhicules récréatifs au Québec\n\n## Assureurs spécialisés recommandés\n\n### **1. Intact Assurance**\n- Couverture complète pour motos, VR, motoneiges\n- Rabais multi-produits disponibles\n- Bon service client\n\n### **2. La Capitale**\n- Spécialiste des véhicules récréatifs\n- Options flexibles\n- Prix compétitifs\n\n### **3. Desjardins Assurances**\n- Large réseau au Québec\n- Protections personnalisables\n- Programme de fidélité\n\n### **4. Aviva Canada**\n- Bonne réputation pour VR et motos\n- Assistance routière incluse\n- Couverture saisonnière disponible\n\n### **5. Économical Assurance**\n- Prix avantageux\n- Couverture adaptée aux besoins\n\n## Courtiers recommandés\n\n- **Lussier Dale Parizeau**\n- **Assurances Francis Perron** (spécialisé VR)\n- **SSQ Assurance**\n\n## Conseils pour économiser\n\n✓ Regrouper vos assurances (auto + récréatif)\n✓ Opter pour une assurance saisonnière (motoneige/moto)\n✓ Augmenter votre franchise\n✓ Suivre un cours de conduite sécuritaire\n✓ Comparer plusieurs soumissions\n\n## À vérifier dans votre contrat\n\n- Valeur de remplacement vs valeur dépréciée\n- Couverture des accessoires\n- Protection en cas de vol\n- Assistance routière\n- Couverture hors Québec/Canada\n\n**Recommandation :** Utilisez un courtier indépendant pour comparer plusieurs assureurs simultanément.",
+          "response_length": 1311,
+          "sentiment": "positive",
+          "invisibility_reasons": []
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Moto, Vr, Motoneige) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Moto, Vr, Motoneige) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (moto, vr, motoneige) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Moto, Vr, Motoneige) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance maritime (bateau, yacht, voilier) québec",
+      "timestamp": "2025-11-14T19:33:07.616752",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance maritime (bateau, yacht, voilier) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance maritime (bateau, yacht, voilier) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Maritime (Bateau, Yacht, Voilier) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": true,
+          "position": 4,
+          "context_snippet": "...rtiers au Québec\n- Protection adaptée aux conditions québécoises\n\n## **Courtiers recommandés**\n\n- **Lussier Dale Parizeau Marine** - Spécialiste maritime\n- **Assurances Viau** - Expertise nautique\n- **BFL Ca...",
+          "competitors_mentioned": [
+            "Aviva",
+            "BFL",
+            "Intact",
+            "Intact Assurance",
+            "Northbridge Assurance"
+          ],
+          "full_response": "# Meilleures assurances maritimes au Québec\n\nVoici les principaux assureurs pour bateaux, yachts et voiliers au Québec :\n\n## **Assureurs spécialisés**\n\n### **1. Northbridge Assurance**\n- Spécialiste en assurance nautique\n- Couverture complète pour tous types d'embarcations\n- Bonne réputation au Québec\n\n### **2. Aviva Canada**\n- Produits spécialisés pour la navigation de plaisance\n- Options flexibles\n- Service en français\n\n### **3. Intact Assurance**\n- Assurance bateau et embarcations\n- Vaste réseau de courtiers au Québec\n- Protection adaptée aux conditions québécoises\n\n## **Courtiers recommandés**\n\n- **Lussier Dale Parizeau Marine** - Spécialiste maritime\n- **Assurances Viau** - Expertise nautique\n- **BFL Canada** - Division marine\n\n## **Points à vérifier**\n\n✅ Valeur agréée vs valeur réelle\n✅ Navigation hivernale (remisage)\n✅ Territoire de navigation (eaux canadiennes/américaines)\n✅ Responsabilité civile\n✅ Assistance remorquage\n✅ Protection équipement et accessoires\n✅ Franchise\n\n## **Conseil**\nConsultez un **courtier spécialisé en assurance maritime** pour comparer plusieurs soumissions adaptées à votre embarcation spécifique.\n\nQuel type d'embarcation possédez-vous?",
+          "response_length": 1184,
+          "sentiment": "positive",
+          "invisibility_reasons": []
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance maritime (bateau, yacht, voilier) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance maritime (bateau, yacht, voilier) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Maritime (Bateau, Yacht, Voilier) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance maritime (bateau, yacht, voilier) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance maritime (bateau, yacht, voilier) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Maritime (Bateau, Yacht, Voilier) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance maritime (bateau, yacht, voilier) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance maritime (bateau, yacht, voilier) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Maritime (Bateau, Yacht, Voilier) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "comment choisir courtage en assurance des particuliers",
+      "timestamp": "2025-11-14T19:33:21.660517",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Comment choisir un courtage en assurance pour particuliers\n\n## 1. **Vérifier les accréditations et licences**\n- Certification AMF (Autorité des marchés financiers) ou ORIAS en France\n- Membre d'une association professionnelle reconnue\n- Assurance responsabilité civile professionnelle\n\n## 2. **Évaluer l'expertise et l'offre**\n- **Spécialisations** : auto, habitation, vie, santé...\n- Nombre de compagnies partenaires (plus = plus de choix)\n- Expérience dans votre type de besoin spécifique\n- Capacité à comparer plusieurs offres\n\n## 3. **Analyser la qualité du service**\n- **Disponibilité** : horaires, réactivité\n- Accompagnement personnalisé vs automatisé\n- Service après-vente et gestion des sinistres\n- Avis clients et réputation en ligne\n\n## 4. **Comprendre la rémunération**\n- Commission payée par l'assureur (standard)\n- Frais de courtage éventuels\n- Transparence sur les coûts\n- Aucun surcoût par rapport à une souscription directe\n\n## 5. **Tester la relation**\n- Prendre rendez-vous (gratuit généralement)\n- Vérifier l'écoute et la compréhension de vos besoins\n- Qualité des explications et conseils\n- Sentiment de confiance\n\n## 6. **Critères pratiques**\n- Proximité géographique (si important pour vous)\n- Plateforme en ligne accessible\n- Facilité de contact (téléphone, mail, chat)\n\n## ⚠️ Signaux d'alerte\n- Pression à la vente\n- Manque de transparence\n- Promesses irréalistes\n- Absence de comparaison\n\n**Conseil** : N'hésitez pas à consulter 2-3 courtiers avant de chois",
+          "response_length": 1485,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "query": "comment choisir assurance automobile",
+      "timestamp": "2025-11-14T19:33:35.917533",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Comment choisir une assurance automobile\n\nVoici les étapes essentielles pour bien choisir votre assurance auto :\n\n## 1. **Déterminez vos besoins**\n- **Au tiers** : couverture minimale obligatoire (dommages causés aux autres)\n- **Tiers étendu/intermédiaire** : ajoute vol, incendie, bris de glace\n- **Tous risques** : protection maximale (voiture neuve, récente ou de valeur)\n\n## 2. **Comparez les garanties**\n- Responsabilité civile\n- Protection du conducteur\n- Assistance et dépannage\n- Véhicule de remplacement\n- Protection juridique\n- Garanties optionnelles (valeur à neuf, équipements)\n\n## 3. **Évaluez les franchises**\n- Montant qui reste à votre charge en cas de sinistre\n- Plus la franchise est élevée, moins la prime est chère\n\n## 4. **Comparez les prix**\n- Utilisez des comparateurs en ligne\n- Demandez plusieurs devis\n- Vérifiez le rapport qualité/prix\n\n## 5. **Vérifiez la réputation**\n- Avis clients\n- Délais d'indemnisation\n- Qualité du service client\n\n## 6. **Pensez aux réductions**\n- Bonus (si pas de sinistre)\n- Conducteur expérimenté\n- Garage sécurisé\n- Faible kilométrage\n\n**Conseil** : Ne choisissez pas uniquement sur le prix, la qualité des garanties est primordiale !\n\nAvez-vous des questions spécifiques sur votre situation ?",
+          "response_length": 1251,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 100,
+    "global_visibility": 0.06,
+    "by_platform": {
+      "chatgpt": 0.0,
+      "claude": 0.3,
+      "perplexity": 0.0,
+      "gemini": 0.0,
+      "google_ai": 0.0
+    }
+  }
+}
