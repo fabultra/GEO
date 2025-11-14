@@ -126,8 +126,18 @@ class CompetitiveIntelligence:
         if not analyses:
             return {}
         
+        # Utiliser les vrais noms des compétiteurs (domaines)
+        headers = ["Métrique"]
+        for analysis in analyses[:3]:
+            domain = analysis.get('domain', 'Compétiteur')
+            # Raccourcir si trop long
+            if len(domain) > 25:
+                domain = domain[:22] + '...'
+            headers.append(domain)
+        headers.extend(["NOUS", "GAP"])
+        
         table = {
-            "headers": ["Métrique", "Compétiteur 1", "Compétiteur 2", "Compétiteur 3", "NOUS", "GAP"],
+            "headers": headers,
             "rows": []
         }
         
