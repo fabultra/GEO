@@ -742,6 +742,52 @@ const ReportPage = () => {
                   </p>
                 </div>
 
+                {/* Liste des compétiteurs individuels */}
+                {report.competitive_intelligence.analyses && report.competitive_intelligence.analyses.length > 0 && (
+                  <div>
+                    <h4 className="font-bold text-lg mb-4">🎯 Compétiteurs Identifiés</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {report.competitive_intelligence.analyses.map((competitor, idx) => (
+                        <div key={idx} className="p-4 bg-white rounded-lg border-2 border-gray-200 hover:border-purple-400 transition-all">
+                          {competitor.error ? (
+                            <>
+                              <div className="flex items-center justify-between mb-2">
+                                <h5 className="font-bold text-gray-900">{competitor.domain || competitor.url}</h5>
+                                <span className="px-2 py-1 bg-red-100 text-red-700 text-xs rounded">Erreur</span>
+                              </div>
+                              <a href={competitor.url} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline block mb-2">
+                                {competitor.url}
+                              </a>
+                              <p className="text-xs text-red-600">{competitor.error}</p>
+                            </>
+                          ) : (
+                            <>
+                              <div className="flex items-center justify-between mb-2">
+                                <h5 className="font-bold text-gray-900">{competitor.domain}</h5>
+                                <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Analysé</span>
+                              </div>
+                              <a href={competitor.url} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline block mb-3">
+                                {competitor.url}
+                              </a>
+                              <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
+                                <div>📄 {competitor.word_count} mots</div>
+                                <div>📋 H1: {competitor.h1_count}</div>
+                                <div>❓ FAQ: {competitor.has_faq ? '✅' : '❌'}</div>
+                                <div>🔍 Schema: {competitor.schema_count}</div>
+                              </div>
+                              {competitor.meta_description && (
+                                <p className="text-xs text-gray-500 mt-2 italic line-clamp-2">
+                                  {competitor.meta_description}
+                                </p>
+                              )}
+                            </>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 {/* Comparative Metrics Table */}
                 {report.competitive_intelligence.comparative_metrics && 
                  report.competitive_intelligence.comparative_metrics.rows && 
