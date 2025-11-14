@@ -655,6 +655,7 @@ Réponds UNIQUEMENT avec le label (pas de JSON, pas d'explication):"""
             message = anthropic_client.messages.create(
                 model="claude-sonnet-4-5-20250929",
                 max_tokens=20,
+                temperature=0,  # ✅ DÉTERMINISTE
                 messages=[{"role": "user", "content": prompt}]
             )
             
