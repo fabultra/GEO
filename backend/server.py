@@ -597,7 +597,7 @@ Génère EXACTEMENT ce JSON (sans texte avant/après):
                                 "recommendations": rec_data.get('recommendations', [])[:20],
                                 "quick_wins": rec_data.get('quick_wins', [])[:8],
                                 "analysis": analysis,
-                                "detailed_observations": {},  # Vide mais présent
+                                "detailed_observations": rec_data.get('detailed_observations', {}),  # Depuis Claude
                                 "executive_summary": {
                                     "global_assessment": assessment,
                                     "critical_issues": weaknesses[:3],
