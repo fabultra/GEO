@@ -331,14 +331,54 @@ JSON REQUIS (RESPECTEZ CE FORMAT EXACTEMENT):
 {{
   "scores": {{"structure": 7.5, "infoDensity": 3.0, "readability": 5.0, "eeat": 6.0, "educational": 2.0, "thematic": 4.5, "aiOptimization": 3.5, "visibility": 2.5, "global_score": 4.25}},
   "detailed_observations": {{
-    "structure": {{"score_justification": "Description courte sur UNE ligne", "specific_problems": ["Probleme 1 sans saut de ligne"], "positive_points": ["Point fort 1"], "missing_elements": ["Element manquant 1"]}},
-    "infoDensity": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
-    "readability": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
-    "eeat": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
-    "educational": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
-    "thematic": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
-    "aiOptimization": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}},
-    "visibility": {{"score_justification": "...", "specific_problems": ["..."], "positive_points": ["..."], "missing_elements": ["..."]}}
+    "structure": {{
+      "score_justification": "Justification courte et precise du score",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2", "Probleme 3"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }},
+    "infoDensity": {{
+      "score_justification": "Justification courte",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }},
+    "readability": {{
+      "score_justification": "Justification courte",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }},
+    "eeat": {{
+      "score_justification": "Justification courte",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }},
+    "educational": {{
+      "score_justification": "Justification courte",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }},
+    "thematic": {{
+      "score_justification": "Justification courte",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }},
+    "aiOptimization": {{
+      "score_justification": "Justification courte",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }},
+    "visibility": {{
+      "score_justification": "Justification courte",
+      "positive_points": ["Point fort 1", "Point fort 2"],
+      "specific_problems": ["Probleme 1", "Probleme 2"],
+      "missing_elements": ["Element manquant 1", "Element manquant 2"]
+    }}
   }},
   "recommendations": [
     {{"title": "Ajouter des FAQ structurees", "criterion": "educational", "impact": "high", "effort": "medium", "priority": 1, "description": "Creer une section FAQ avec 20 questions sur une ligne", "example": "Schema FAQPage JSON-LD"}},
