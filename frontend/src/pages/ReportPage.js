@@ -287,15 +287,23 @@ const ReportPage = () => {
               ].map((criterion, idx) => (
                 <div 
                   key={idx} 
-                  className="rounded-xl p-6 text-center transition-transform hover:scale-105 shadow-lg"
+                  className="rounded-xl p-6 text-center transition-all hover:scale-105 shadow-lg cursor-pointer"
                   style={{
                     background: `linear-gradient(135deg, ${getScoreColor(criterion.value)} 0%, ${getScoreColor(criterion.value)}dd 100%)`
                   }}
                   data-testid={`score-${criterion.key}`}
+                  onClick={() => {
+                    setSelectedCriterion({
+                      ...criterion,
+                      details: report.detailed_observations?.[criterion.key]
+                    });
+                    setShowModal(true);
+                  }}
                 >
                   <div className="text-white">
                     <div className="text-3xl font-bold mb-2">{criterion.value?.toFixed(1) || '0.0'}</div>
                     <div className="text-xs font-medium uppercase tracking-wide">{criterion.label}</div>
+                    <div className="text-xs mt-2 opacity-75">Cliquer pour détails</div>
                   </div>
                 </div>
               ))}
