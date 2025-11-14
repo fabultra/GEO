@@ -388,6 +388,7 @@ Réponds UNIQUEMENT avec un JSON valide:
             message = anthropic_client.messages.create(
                 model="claude-sonnet-4-5-20250929",
                 max_tokens=1500,
+                temperature=0,  # ✅ DÉTERMINISTE
                 messages=[{"role": "user", "content": prompt}]
             )
             
