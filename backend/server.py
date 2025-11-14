@@ -551,6 +551,9 @@ IMPORTANT: Genere 15 recommendations et 6 quick wins minimum."""
                             
                             logger.info(f"✅ Recommendations générées: {len(rec_data.get('recommendations', []))} recs, {len(rec_data.get('quick_wins', []))} quick wins")
                             
+                            # TOUJOURS générer detailed_observations (car le prompt ne les demande pas)
+                            logger.info("Génération des detailed_observations basés sur les scores...")
+                            
                             # Générer l'executive summary basé sur les scores et analysis
                             analysis = rec_data.get('analysis', {})
                             weaknesses = analysis.get('weaknesses', [])
