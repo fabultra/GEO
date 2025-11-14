@@ -456,8 +456,8 @@ VOUS DEVEZ GÉNÉRER 20 RECOMMENDATIONS VARIÉES COUVRANT:
                 except:
                     pass
                 
-                # Tentative 3: Parser manuellement les scores au minimum
-                logger.error(f"Impossible de parser le JSON complet. Extraction des scores uniquement.")
+                # Tentative 3: Parser manuellement les scores + générer recommendations séparément
+                logger.error(f"Impossible de parser le JSON complet. Extraction des scores + génération recommendations séparée.")
                 scores_match = re.search(r'"scores":\s*\{([^}]+)\}', response_text)
                 
                 if scores_match:
@@ -466,25 +466,97 @@ VOUS DEVEZ GÉNÉRER 20 RECOMMENDATIONS VARIÉES COUVRANT:
                         scores = json.loads(scores_text)
                         logger.info("Scores extraits avec succès")
                         
-                        # Construire une réponse minimale valide
-                        return {
-                            "scores": scores,
-                            "recommendations": [{
-                                "title": "Analyse partielle - Rapport incomplet",
-                                "criterion": "general",
-                                "impact": "high",
-                                "effort": "medium",
-                                "priority": 1,
-                                "description": "L'analyse complète n'a pas pu être générée. Veuillez relancer l'analyse.",
-                                "example": "Erreur de parsing JSON"
-                            }],
-                            "analysis": {
-                                "strengths": ["Scores générés"],
-                                "weaknesses": ["Rapport incomplet"],
-                                "opportunities": ["Relancer l'analyse"]
+                        # NOUVEAU : Générer recommendations et quick_wins avec un appel séparé
+                        try:
+                            logger.info("Génération séparée des recommendations...")
+                            recs_prompt = f"""Basé sur cette analyse GEO d'un site web, génère 20 recommendations concrètes et 8 quick wins.
+
+SITE: {crawl_data['base_url']}
+SCORES OBTENUS: {json.dumps(scores, indent=2)}
+
+Génère EXACTEMENT ce JSON (sans texte avant/après):
+{{
+  "recommendations": [
+    {{"title": "Titre court", "criterion": "structure", "impact": "high", "effort": "low", "priority": 1, "description": "Description concrete", "example": "Exemple"}},
+    ... (20 items total couvrant tous les critères)
+  ],
+  "quick_wins": [
+    {{"title": "Titre court", "impact": "Impact mesurable", "time_required": "X heures", "description": "Description actionnable"}},
+    ... (8 items total)
+  ],
+  "analysis": {{
+    "strengths": ["Force 1", "Force 2", "Force 3"],
+    "weaknesses": ["Faiblesse 1", "Faiblesse 2", "Faiblesse 3"],
+    "opportunities": ["Opportunité 1", "Opportunité 2", "Opportunité 3"]
+  }}
+}}"""
+
+                            rec_response = await client.messages.create(
+                                model="claude-sonnet-4-5-20250929",
+                                max_tokens=4096,
+                                messages=[{"role": "user", "content": recs_prompt}]
+                            )
+                            
+                            rec_text = rec_response.content[0].text.strip()
+                            
+                            # Nettoyer markdown
+                            if '```json' in rec_text:
+                                rec_text = rec_text.split('```json')[1].split('```')[0]
+                            elif '```' in rec_text:
+                                rec_text = rec_text.split('```')[1].split('```')[0]
+                            
+                            rec_data = json.loads(rec_text.strip())
+                            
+                            logger.info(f"✅ Recommendations générées: {len(rec_data.get('recommendations', []))} recs, {len(rec_data.get('quick_wins', []))} quick wins")
+                            
+                            # Construire réponse complète
+                            return {
+                                "scores": scores,
+                                "recommendations": rec_data.get('recommendations', [])[:20],
+                                "quick_wins": rec_data.get('quick_wins', [])[:8],
+                                "analysis": rec_data.get('analysis', {
+                                    "strengths": ["Analyse générée"],
+                                    "weaknesses": ["À compléter"],
+                                    "opportunities": ["À explorer"]
+                                }),
+                                "detailed_observations": {},  # Vide mais présent
+                                "executive_summary": {
+                                    "global_assessment": "Analyse des scores GEO effectuée",
+                                    "critical_issues": [],
+                                    "key_opportunities": [],
+                                    "estimated_visibility_loss": "À déterminer",
+                                    "recommended_investment": "À évaluer"
+                                },
+                                "roi_estimation": {
+                                    "current_situation": "Scores analysés",
+                                    "potential_improvement": "Potentiel identifié",
+                                    "timeline": "3-6 mois"
+                                }
                             }
-                        }
-                    except:
+                            
+                        except Exception as rec_error:
+                            logger.error(f"Génération recommendations séparée échouée: {str(rec_error)}")
+                            # Fallback minimal
+                            return {
+                                "scores": scores,
+                                "recommendations": [{
+                                    "title": "Analyse partielle - Rapport incomplet",
+                                    "criterion": "general",
+                                    "impact": "high",
+                                    "effort": "medium",
+                                    "priority": 1,
+                                    "description": "L'analyse complète n'a pas pu être générée. Veuillez relancer l'analyse.",
+                                    "example": "Erreur de parsing JSON"
+                                }],
+                                "quick_wins": [],
+                                "analysis": {
+                                    "strengths": ["Scores générés"],
+                                    "weaknesses": ["Rapport incomplet"],
+                                    "opportunities": ["Relancer l'analyse"]
+                                }
+                            }
+                    except Exception as score_error:
+                        logger.error(f"Extraction scores échouée: {str(score_error)}")
                         pass
                 
                 # Dernier fallback
