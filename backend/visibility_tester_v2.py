@@ -148,7 +148,9 @@ class VisibilityTesterV2:
                 response = self.openai_client.chat.completions.create(
                     model="gpt-4o",
                     messages=[{"role": "user", "content": query}],
-                    max_tokens=500
+                    max_tokens=500,
+                    temperature=0,  # ✅ DÉTERMINISTE
+                    seed=42         # ✅ REPRODUCTIBLE
                 )
                 return response.choices[0].message.content
             
@@ -156,13 +158,19 @@ class VisibilityTesterV2:
                 response = self.anthropic_client.messages.create(
                     model="claude-sonnet-4-5-20250929",
                     max_tokens=500,
+                    temperature=0,  # ✅ DÉTERMINISTE
                     messages=[{"role": "user", "content": query}]
                 )
                 return response.content[0].text
             
             elif platform == 'gemini':
                 model = genai.GenerativeModel('gemini-1.5-pro-002')
-                response = model.generate_content(query)
+                response = model.generate_content(
+                    query,
+                    generation_config=genai.types.GenerationConfig(
+                        temperature=0,  # ✅ DÉTERMINISTE
+                    )
+                )
                 return response.text
             
             elif platform == 'perplexity':
