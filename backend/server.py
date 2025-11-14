@@ -509,42 +509,28 @@ VOUS DEVEZ GÉNÉRER 20 RECOMMENDATIONS VARIÉES COUVRANT:
                         # NOUVEAU : Générer recommendations et quick_wins avec un appel séparé
                         try:
                             logger.info("Génération séparée des recommendations...")
-                            recs_prompt = f"""Basé sur cette analyse GEO d'un site web, génère 20 recommendations, 8 quick wins, ET detailed_observations pour les 8 critères.
+                            recs_prompt = f"""Genere 15 recommendations et 6 quick wins pour ce site GEO.
 
-SITE: {crawl_data['base_url']}
-SCORES OBTENUS: {json.dumps(scores, indent=2)}
+SCORES: {json.dumps(scores, indent=2)}
 
-Génère EXACTEMENT ce JSON (sans texte avant/après):
+Reponds en JSON valide (pas de markdown, pas de texte):
 {{
   "recommendations": [
-    {{"title": "Titre court", "criterion": "structure", "impact": "high", "effort": "low", "priority": 1, "description": "Description concrete", "example": "Exemple"}},
-    ... (20 items total couvrant tous les critères)
+    {{"title": "Ajouter FAQ", "criterion": "structure", "impact": "high", "effort": "low", "priority": 1, "description": "Creer FAQ avec 20 questions", "example": "Schema FAQPage"}},
+    {{"title": "Optimiser meta", "criterion": "readability", "impact": "high", "effort": "low", "priority": 2, "description": "Recrire meta descriptions", "example": "Meta factuelle 120 char"}}
   ],
   "quick_wins": [
-    {{"title": "Titre court", "impact": "Impact mesurable", "time_required": "X heures", "description": "Description actionnable"}},
-    ... (8 items total)
+    {{"title": "Schema Organization", "impact": "Visibilite IA immediate", "time_required": "1h", "description": "Ajouter JSON-LD Organization"}},
+    {{"title": "Section TLDR", "impact": "Meilleur taux extraction", "time_required": "2h", "description": "Resume 40-60 mots debut pages"}}
   ],
   "analysis": {{
-    "strengths": ["Force 1", "Force 2", "Force 3"],
-    "weaknesses": ["Faiblesse 1", "Faiblesse 2", "Faiblesse 3"],
-    "opportunities": ["Opportunité 1", "Opportunité 2", "Opportunité 3"]
-  }},
-  "detailed_observations": {{
-    "structure": {{
-      "score_justification": "Pourquoi ce score?",
-      "positive_points": ["Point fort 1", "Point fort 2"],
-      "specific_problems": ["Probleme 1", "Probleme 2"],
-      "missing_elements": ["Element manquant 1", "Element manquant 2"]
-    }},
-    "infoDensity": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
-    "readability": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
-    "eeat": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
-    "educational": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
-    "thematic": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
-    "aiOptimization": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }},
-    "visibility": {{ "score_justification": "...", "positive_points": ["..."], "specific_problems": ["..."], "missing_elements": ["..."] }}
+    "strengths": ["Bon contenu technique", "Structure claire"],
+    "weaknesses": ["Manque FAQ", "Pas de schema"],
+    "opportunities": ["Ajouter FAQ", "Optimiser IA"]
   }}
-}}"""
+}}
+
+IMPORTANT: Genere 15 recommendations et 6 quick wins minimum."""
 
                             rec_response = await client.messages.create(
                                 model="claude-sonnet-4-5-20250929",
