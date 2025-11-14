@@ -274,7 +274,7 @@ async def analyze_with_claude(crawl_data: Dict[str, Any], visibility_data: Dict[
         api_key = os.environ.get('ANTHROPIC_API_KEY', os.environ.get('EMERGENT_LLM_KEY'))
         
         # Limiter la taille du contenu envoyé à Claude pour éviter les timeouts
-        max_pages_to_analyze = 3  # Réduire de 5 à 3 pages pour éviter les timeouts
+        max_pages_to_analyze = 8  # Augmenté à 8 pages pour meilleure analyse
         
         # Prepare content summary for Claude (limité pour éviter timeouts)
         pages_summary = []
