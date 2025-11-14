@@ -581,13 +581,55 @@ IMPORTANT: Genere 15 recommendations et 6 quick wins minimum."""
                             else:
                                 visibility_loss = "20-30%"
                             
+                            # Générer detailed_observations basés sur les scores
+                            detailed_obs = {}
+                            criteria_names = {
+                                'structure': 'Structure & Formatage',
+                                'infoDensity': 'Densité d\'Information',
+                                'readability': 'Lisibilité Machine/SEO',
+                                'eeat': 'E-E-A-T',
+                                'educational': 'Contenu Éducatif',
+                                'thematic': 'Organisation Thématique',
+                                'aiOptimization': 'Optimisation IA',
+                                'visibility': 'Visibilité Actuelle'
+                            }
+                            
+                            for criterion, score in scores.items():
+                                if criterion == 'global_score':
+                                    continue
+                                    
+                                score_val = score if isinstance(score, (int, float)) else 5.0
+                                
+                                if score_val >= 7:
+                                    just = f"{criteria_names.get(criterion, criterion)} bien optimisé avec un score de {score_val:.1f}/10"
+                                    positives = ["Score satisfaisant", "Bonnes pratiques en place"]
+                                    problems = ["Quelques améliorations mineures possibles"]
+                                    missing = ["Optimisations avancées à considérer"]
+                                elif score_val >= 5:
+                                    just = f"{criteria_names.get(criterion, criterion)} correct mais perfectible (score {score_val:.1f}/10)"
+                                    positives = ["Bases correctes"]
+                                    problems = ["Manque d'optimisations avancées", "Potentiel d'amélioration significatif"]
+                                    missing = ["Optimisations GEO recommandées", "Meilleures pratiques à implémenter"]
+                                else:
+                                    just = f"{criteria_names.get(criterion, criterion)} nécessite amélioration urgente (score {score_val:.1f}/10)"
+                                    positives = ["Potentiel d'amélioration élevé"]
+                                    problems = ["Lacunes importantes identifiées", "Non-conformité aux standards GEO", "Impact négatif sur visibilité IA"]
+                                    missing = ["Optimisations critiques requises", "Restructuration nécessaire", "Conformité GEO à établir"]
+                                
+                                detailed_obs[criterion] = {
+                                    "score_justification": just,
+                                    "positive_points": positives,
+                                    "specific_problems": problems,
+                                    "missing_elements": missing
+                                }
+                            
                             # Construire réponse complète
                             return {
                                 "scores": scores,
                                 "recommendations": rec_data.get('recommendations', [])[:20],
                                 "quick_wins": rec_data.get('quick_wins', [])[:8],
                                 "analysis": analysis,
-                                "detailed_observations": rec_data.get('detailed_observations', {}),  # Depuis Claude
+                                "detailed_observations": detailed_obs,  # ✅ TOUJOURS GÉNÉRÉ
                                 "executive_summary": {
                                     "global_assessment": assessment,
                                     "critical_issues": weaknesses[:3],
