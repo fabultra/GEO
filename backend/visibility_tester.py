@@ -34,7 +34,8 @@ class VisibilityTester:
                     {"role": "system", "content": "Vous êtes un assistant qui répond aux questions avec des sources."},
                     {"role": "user", "content": query}
                 ],
-                temperature=0.3,
+                temperature=0,  # ✅ DÉTERMINISTE
+                seed=42,        # ✅ REPRODUCTIBLE
                 max_tokens=500
             )
             
