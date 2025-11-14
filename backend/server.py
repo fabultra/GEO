@@ -763,13 +763,51 @@ async def process_analysis_job(job_id: str):
             # Nettoyer et dédupliquer
             competitors_urls = list(set(competitors_urls))[:5]  # Top 5 compétiteurs
             
+            # Si aucun compétiteur trouvé dans visibility, utiliser semantic_analysis
+            if not competitors_urls and semantic_analysis:
+                logger.info("No competitors in visibility results, extracting from semantic analysis")
+                industry = semantic_analysis.get('industry_classification', {}).get('primary_industry', '')
+                company_type = semantic_analysis.get('industry_classification', {}).get('company_type', '')
+                
+                # Demander à Claude de suggérer des compétiteurs basés sur l'industrie
+                if industry and company_type:
+                    try:
+                        from anthropic import Anthropic
+                        anthropic_client = Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
+                        
+                        prompt = f"""Suggère 5 URLs de sites web compétiteurs directs pour une entreprise de type "{company_type}" dans l'industrie "{industry}".
+                        
+Réponds UNIQUEMENT avec un JSON valide:
+{{
+  "competitors": ["https://competitor1.com", "https://competitor2.com", "https://competitor3.com", "https://competitor4.com", "https://competitor5.com"]
+}}"""
+                        
+                        response = anthropic_client.messages.create(
+                            model="claude-sonnet-4-5-20250929",
+                            max_tokens=500,
+                            messages=[{"role": "user", "content": prompt}]
+                        )
+                        
+                        response_text = response.content[0].text.strip()
+                        # Nettoyer markdown
+                        if '```json' in response_text:
+                            response_text = response_text.split('```json')[1].split('```')[0]
+                        elif '```' in response_text:
+                            response_text = response_text.split('```')[1].split('```')[0]
+                        
+                        result = json.loads(response_text.strip())
+                        competitors_urls = result.get('competitors', [])[:5]
+                        logger.info(f"Found {len(competitors_urls)} competitors from Claude suggestion")
+                    except Exception as e:
+                        logger.error(f"Failed to get competitors from Claude: {str(e)}")
+            
             if competitors_urls:
                 logger.info(f"Analyzing {len(competitors_urls)} competitors")
                 comp_intel = CompetitiveIntelligence()
                 competitive_data = comp_intel.analyze_competitors(competitors_urls, visibility_data)
                 logger.info(f"Competitive analysis completed: {competitive_data.get('competitors_analyzed', 0)} analyzed")
             else:
-                logger.info("No competitors found in visibility results")
+                logger.info("No competitors found")
                 competitive_data = {
                     'competitors_analyzed': 0,
                     'analyses': [],
