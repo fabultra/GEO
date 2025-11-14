@@ -14,6 +14,8 @@ const ReportPage = () => {
   const navigate = useNavigate();
   const [report, setReport] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [selectedCriterion, setSelectedCriterion] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const fetchReport = async () => {
