@@ -356,12 +356,22 @@ JSON REQUIS (RESPECTEZ CE FORMAT EXACTEMENT):
 RAPPEL CRITIQUE:
 - JSON valide UNIQUEMENT (pas de texte avant/apres)
 - Descriptions sur UNE seule ligne
-- MINIMUM 15 recommendations (donnez-en 15-20!)
-- MINIMUM 5 quick_wins (donnez-en 5-7!)
+- **OBLIGATOIRE: Exactement 20 recommendations** (pas moins!)
+- **OBLIGATOIRE: Exactement 8 quick_wins** (pas moins!)
 - Observations detaillees pour LES 8 criteres (pas seulement structure!)
 - Guillemets echappes avec \\"
+- Chaque recommendation doit etre CONCRETE et ACTIONNABLE
 
 IMPORTANT: Remplissez detailed_observations pour CHAQUE critere: structure, infoDensity, readability, eeat, educational, thematic, aiOptimization, visibility
+
+VOUS DEVEZ GÉNÉRER 20 RECOMMENDATIONS VARIÉES COUVRANT:
+- Structure et format (3-4 recs)
+- Contenu et densité info (3-4 recs)
+- Schema et données structurées (3-4 recs)
+- E-E-A-T et crédibilité (2-3 recs)
+- Contenu éducatif (2-3 recs)
+- Organisation thématique (2-3 recs)
+- Optimisation IA (2-3 recs)
 """
         
         # Retry logic avec backoff exponentiel
