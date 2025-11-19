@@ -1015,6 +1015,207 @@ const ReportPage = () => {
               </div>
             )}
           </TabsContent>
+
+          {/* Data Gaps Tab */}
+          <TabsContent value="data-gaps" className="space-y-6">
+            <h3 className="text-2xl font-bold mb-4">📊 Analyse des Gaps de Données</h3>
+            
+            {report.data_gap_analysis ? (
+              <div className="space-y-6">
+                {/* Stats globales */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border-2 border-blue-200">
+                    <div className="text-sm text-blue-600 font-medium mb-2">Stats Trouvées</div>
+                    <div className="text-3xl font-bold text-blue-900">{report.data_gap_analysis.global_stats.total_stats_found}</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200">
+                    <div className="text-sm text-purple-600 font-medium mb-2">Attendu Minimum</div>
+                    <div className="text-3xl font-bold text-purple-900">{report.data_gap_analysis.global_stats.expected_minimum}</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border-2 border-orange-200">
+                    <div className="text-sm text-orange-600 font-medium mb-2">Sévérité</div>
+                    <div className={`text-2xl font-bold ${
+                      report.data_gap_analysis.global_stats.gap_severity === 'CRITICAL' ? 'text-red-600' :
+                      report.data_gap_analysis.global_stats.gap_severity === 'HIGH' ? 'text-orange-600' :
+                      report.data_gap_analysis.global_stats.gap_severity === 'MEDIUM' ? 'text-yellow-600' :
+                      'text-green-600'
+                    }`}>{report.data_gap_analysis.global_stats.gap_severity}</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-200">
+                    <div className="text-sm text-green-600 font-medium mb-2">Pages Analysées</div>
+                    <div className="text-3xl font-bold text-green-900">{report.data_gap_analysis.global_stats.pages_analyzed}</div>
+                  </div>
+                </div>
+
+                {/* Pires pages */}
+                {report.data_gap_analysis.by_page && report.data_gap_analysis.by_page.length > 0 && (
+                  <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+                    <h4 className="font-bold text-lg mb-4">🔴 Pages avec le plus de gaps</h4>
+                    <div className="space-y-3">
+                      {report.data_gap_analysis.by_page.map((page, idx) => (
+                        <div key={idx} className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                          <div className="flex justify-between items-start mb-2">
+                            <a href={page.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-sm flex-1 mr-4">
+                              {page.url}
+                            </a>
+                            <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                              page.gap_score < 3 ? 'bg-red-100 text-red-700' :
+                              page.gap_score < 6 ? 'bg-orange-100 text-orange-700' :
+                              'bg-green-100 text-green-700'
+                            }`}>
+                              Score: {page.gap_score.toFixed(1)}/10
+                            </span>
+                          </div>
+                          <div className="grid grid-cols-3 gap-4 text-sm text-gray-600">
+                            <div>Stats trouvées: <strong>{page.stats_found}</strong></div>
+                            <div>Attendu: <strong>{page.expected}</strong></div>
+                            <div>Manquants: <strong className="text-red-600">{page.missing_stats}</strong></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Recommendations */}
+                {report.data_gap_analysis.recommendations && report.data_gap_analysis.recommendations.length > 0 && (
+                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border-2 border-blue-300">
+                    <h4 className="font-bold text-lg mb-4">💡 Actions Recommandées</h4>
+                    <div className="space-y-4">
+                      {report.data_gap_analysis.recommendations.map((rec, idx) => (
+                        <div key={idx} className="bg-white p-4 rounded-lg border-2 border-blue-200">
+                          <div className="flex justify-between items-start mb-2">
+                            <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                              rec.priority === 'CRITICAL' ? 'bg-red-600 text-white' : 'bg-orange-600 text-white'
+                            }`}>
+                              {rec.priority}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-600 mb-2">{rec.page}</p>
+                          <p className="font-semibold text-gray-900 mb-2">{rec.action}</p>
+                          <div className="mt-3 p-3 bg-blue-50 rounded">
+                            <div className="text-xs text-blue-600 font-medium mb-1">Exemples:</div>
+                            {rec.examples.map((ex, i) => (
+                              <div key={i} className="text-sm text-gray-700">• {ex}</div>
+                            ))}
+                          </div>
+                          <div className="mt-2 text-sm text-green-600 font-semibold">{rec.estimated_impact}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="p-8 text-center bg-gray-50 rounded-xl">
+                <p className="text-gray-600">Aucune analyse de gaps disponible.</p>
+              </div>
+            )}
+          </TabsContent>
+
+          {/* Tokens Tab */}
+          <TabsContent value="tokens" className="space-y-6">
+            <h3 className="text-2xl font-bold mb-4">🔤 Analyse Tokens & Densité</h3>
+            
+            {report.token_analysis ? (
+              <div className="space-y-6">
+                {/* Stats globales */}
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border-2 border-purple-200">
+                    <div className="text-sm text-purple-600 font-medium mb-2">Tokens Moyens/Page</div>
+                    <div className="text-3xl font-bold text-purple-900">{report.token_analysis.global_analysis.avg_tokens_per_page}</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl border-2 border-red-200">
+                    <div className="text-sm text-red-600 font-medium mb-2">Pages Tronquées</div>
+                    <div className="text-3xl font-bold text-red-900">{report.token_analysis.global_analysis.pages_will_truncate}</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border-2 border-blue-200">
+                    <div className="text-sm text-blue-600 font-medium mb-2">Densité Info Moyenne</div>
+                    <div className="text-2xl font-bold text-blue-900">{report.token_analysis.global_analysis.info_density_avg}</div>
+                  </div>
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border-2 border-green-200">
+                    <div className="text-sm text-green-600 font-medium mb-2">Rating Densité</div>
+                    <div className={`text-2xl font-bold ${
+                      report.token_analysis.global_analysis.density_rating === 'EXCELLENT' ? 'text-green-600' :
+                      report.token_analysis.global_analysis.density_rating === 'GOOD' ? 'text-blue-600' :
+                      report.token_analysis.global_analysis.density_rating === 'FAIR' ? 'text-yellow-600' :
+                      'text-red-600'
+                    }`}>{report.token_analysis.global_analysis.density_rating}</div>
+                  </div>
+                </div>
+
+                {/* Top pages */}
+                {report.token_analysis.by_page && report.token_analysis.by_page.length > 0 && (
+                  <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+                    <h4 className="font-bold text-lg mb-4">📄 Top Pages par Tokens</h4>
+                    <div className="space-y-3">
+                      {report.token_analysis.by_page.map((page, idx) => (
+                        <div key={idx} className="p-4 bg-gray-50 rounded-lg border border-gray-200">
+                          <div className="flex justify-between items-start mb-2">
+                            <a href={page.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline text-sm flex-1 mr-4">
+                              {page.url}
+                            </a>
+                            {page.will_truncate && (
+                              <span className="px-3 py-1 bg-red-100 text-red-700 rounded-full text-xs font-bold">
+                                ⚠️ TRONQUÉ
+                              </span>
+                            )}
+                          </div>
+                          <div className="grid grid-cols-4 gap-4 text-sm text-gray-600">
+                            <div>Tokens: <strong>{page.tokens}</strong></div>
+                            <div>Facts: <strong>{page.facts_found}</strong></div>
+                            <div>Densité: <strong>{page.info_density}</strong></div>
+                            <div className={page.density_rating === 'EXCELLENT' || page.density_rating === 'GOOD' ? 'text-green-600 font-bold' : 'text-orange-600 font-bold'}>
+                              {page.density_rating}
+                            </div>
+                          </div>
+                          {page.tokens_lost > 0 && (
+                            <div className="mt-2 text-xs text-red-600">
+                              ⚠️ {page.tokens_lost} tokens seront perdus lors de l'analyse par les IA
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Recommendations */}
+                {report.token_analysis.recommendations && report.token_analysis.recommendations.length > 0 && (
+                  <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 border-2 border-purple-300">
+                    <h4 className="font-bold text-lg mb-4">💡 Actions Recommandées</h4>
+                    <div className="space-y-4">
+                      {report.token_analysis.recommendations.map((rec, idx) => (
+                        <div key={idx} className="bg-white p-4 rounded-lg border-2 border-purple-200">
+                          <div className="flex justify-between items-start mb-2">
+                            <span className={`px-3 py-1 rounded-full text-xs font-bold ${
+                              rec.priority === 'CRITICAL' ? 'bg-red-600 text-white' : 'bg-orange-600 text-white'
+                            }`}>
+                              {rec.priority}
+                            </span>
+                          </div>
+                          <p className="text-sm text-gray-600 mb-2">{rec.page}</p>
+                          <p className="text-sm text-red-600 mb-2"><strong>Problème:</strong> {rec.issue}</p>
+                          <p className="font-semibold text-gray-900 mb-2">{rec.action}</p>
+                          <div className="mt-3 p-3 bg-purple-50 rounded">
+                            <div className="text-xs text-purple-600 font-medium mb-1">Comment faire:</div>
+                            {rec.how_to.map((step, i) => (
+                              <div key={i} className="text-sm text-gray-700">• {step}</div>
+                            ))}
+                          </div>
+                          <div className="mt-2 text-sm text-green-600 font-semibold">{rec.estimated_impact}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="p-8 text-center bg-gray-50 rounded-xl">
+                <p className="text-gray-600">Aucune analyse de tokens disponible.</p>
+              </div>
+            )}
+          </TabsContent>
         </Tabs>
       </div>
 
