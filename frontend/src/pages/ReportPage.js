@@ -159,13 +159,15 @@ const ReportPage = () => {
 
         {/* Tabs */}
         <Tabs defaultValue="summary" className="glass-effect rounded-2xl p-6">
-          <TabsList className="grid w-full grid-cols-8 mb-6 text-sm">
+          <TabsList className="grid w-full grid-cols-10 mb-6 text-sm">
             <TabsTrigger value="summary" data-testid="summary-tab">Synthèse</TabsTrigger>
             <TabsTrigger value="scores" data-testid="scores-tab">Scores</TabsTrigger>
             <TabsTrigger value="recommendations" data-testid="recommendations-tab">Recommandations</TabsTrigger>
             <TabsTrigger value="quickwins" data-testid="quickwins-tab">Quick Wins</TabsTrigger>
             <TabsTrigger value="visibility" data-testid="visibility-tab">🔍 Visibilité</TabsTrigger>
             <TabsTrigger value="competitors" data-testid="competitors-tab">🏆 Compétiteurs</TabsTrigger>
+            <TabsTrigger value="data-gaps" data-testid="data-gaps-tab">📊 Data Gaps</TabsTrigger>
+            <TabsTrigger value="tokens" data-testid="tokens-tab">🔤 Tokens</TabsTrigger>
             <TabsTrigger value="schemas" data-testid="schemas-tab">📋 Schemas</TabsTrigger>
             <TabsTrigger value="analysis" data-testid="analysis-tab">Analyse</TabsTrigger>
           </TabsList>
