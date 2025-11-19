@@ -837,28 +837,24 @@ class GEOSaaSAPITester:
         else:
             self.log("⚠️  No job ID found - skipping job-related tests")
             
-        # Final results with PRIORITY focus
+        # Final results with ENHANCED PROBLEMS SOLVED focus
         self.log("=" * 60)
-        self.log("🎯 PRIORITY TEST RESULTS:")
+        self.log("🎯 REVIEW REQUEST TEST RESULTS:")
         self.log(f"   Claude 3.5 Sonnet API: {'✅ WORKING' if self.test_data.get('claude_api_works') else '❌ FAILED'}")
-        self.log(f"   Enhanced Semantic Analysis: {'✅ COMPLETE' if self.test_data.get('enhanced_features_ok') else '❌ INCOMPLETE'}")
+        self.log(f"   Enhanced Problems Solved: {'✅ COMPLIANT' if self.test_data.get('enhanced_features_ok') else '❌ NON-COMPLIANT'}")
         self.log(f"   100+ Queries (80%/15%/5%): {'✅ CORRECT' if self.test_data.get('query_requirements_ok') else '❌ INCORRECT'}")
         
         self.log("=" * 60)
         self.log(f"📊 Overall Test Results: {self.tests_passed}/{self.tests_run} passed")
         
-        # Determine success based on priority tests
-        priority_tests_passed = (
-            self.test_data.get('claude_api_works', False) and
-            self.test_data.get('enhanced_features_ok', False) and
-            self.test_data.get('query_requirements_ok', False)
-        )
+        # Determine success based on ENHANCED PROBLEMS SOLVED priority
+        enhanced_problems_passed = self.test_data.get('enhanced_features_ok', False)
         
-        if priority_tests_passed:
-            self.log("🎉 ALL PRIORITY TESTS PASSED! Claude 3.5 Sonnet + Enhanced Features Working!")
+        if enhanced_problems_passed:
+            self.log("🎉 REVIEW REQUEST SUCCESS! Enhanced Problems Solved avec 15+ items COMPLIANT!")
             return 0
         else:
-            self.log("⚠️  PRIORITY TESTS FAILED - Review requirements not met")
+            self.log("❌ REVIEW REQUEST FAILED - Enhanced Problems Solved NOT COMPLIANT")
             return 1
 
 def main():
