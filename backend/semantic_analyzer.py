@@ -547,22 +547,62 @@ Réponds UNIQUEMENT avec un JSON valide:
             # Fallback: extraire par patterns
             return self._extract_problems_fallback(text)
     
-    def _extract_problems_fallback(self, text: str) -> List[str]:
-        """Méthode fallback pour extraire problèmes"""
+    def _extract_problems_fallback(self, text: str) -> List[Dict[str, Any]]:
+        """Méthode fallback pour extraire problèmes avec structure complète"""
         
         problem_patterns = [
             r'résoudre ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})',
             r'solution pour ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})',
             r'éliminer ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})',
-            r'éviter ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})'
+            r'éviter ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})',
+            r'problème[s]? ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})',
+            r'défi[s]? ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})',
+            r'difficulté[s]? ([a-zàâäéèêëïîôùûüÿÿæœç\s]{5,30})'
         ]
         
-        problems = []
+        problems_raw = []
         for pattern in problem_patterns:
             matches = re.findall(pattern, text.lower())
-            problems.extend([m.strip() for m in matches if m.strip()])
+            problems_raw.extend([m.strip() for m in matches if m.strip()])
         
-        return list(set(problems))[:10] if problems else ["optimiser les processus", "améliorer l'efficacité", "réduire les coûts"]
+        # Dédupliquer et limiter
+        problems_raw = list(set(problems_raw))[:15]
+        
+        # Si rien trouvé, utiliser des problèmes génériques
+        if not problems_raw:
+            problems_raw = [
+                "optimiser les processus",
+                "améliorer l'efficacité",
+                "réduire les coûts",
+                "augmenter la productivité",
+                "améliorer la qualité",
+                "accélérer la croissance",
+                "réduire les risques",
+                "améliorer la satisfaction client",
+                "automatiser les tâches",
+                "améliorer la visibilité",
+                "optimiser les ressources",
+                "améliorer la collaboration",
+                "réduire le temps de traitement",
+                "améliorer la conformité",
+                "réduire les erreurs"
+            ]
+        
+        # Convertir en objets structurés avec tous les champs requis
+        problems_structured = []
+        categories = ['operational', 'financial', 'strategic', 'risk', 'growth', 'compliance']
+        severities = ['critical', 'high', 'medium', 'low']
+        
+        for i, problem in enumerate(problems_raw[:15]):
+            problems_structured.append({
+                'problem': problem,
+                'category': categories[i % len(categories)],
+                'severity': severities[min(i // 4, len(severities) - 1)],
+                'affected_segment': 'Tous les segments',
+                'solution_approach': 'Optimisation via nos services'
+            })
+        
+        return problems_structured
     
     def _identify_topics(self, crawl_data: Dict[str, Any]) -> List[Dict[str, Any]]:
         """Identifier les topics principaux avec VRAI Topic Modeling LDA"""
