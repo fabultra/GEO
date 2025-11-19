@@ -907,6 +907,27 @@ async def process_analysis_job(job_id: str):
         logger.info(f"Generated {len(test_queries)} queries (Non-branded: {query_breakdown.get('non_branded', 0)}, Semi-branded: {query_breakdown.get('semi_branded', 0)}, Branded: {query_breakdown.get('branded', 0)})")
         logger.info(f"Industry detected: {semantic_analysis.get('industry_classification', {}).get('primary_industry', 'unknown')}")
         
+        # Quick Win 1: Data Gap Detector
+        data_gaps = None
+        try:
+            from data_gap_detector import DataGapDetector
+            data_gap_detector = DataGapDetector()
+            industry = semantic_analysis.get('industry_classification', {}).get('primary_industry', 'default')
+            data_gaps = data_gap_detector.analyze_data_gaps(crawl_data, industry)
+            logger.info(f"Data Gaps: {data_gaps['global_stats']['total_stats_found']}/{data_gaps['global_stats']['expected_minimum']} stats - Severity: {data_gaps['global_stats']['gap_severity']}")
+        except Exception as e:
+            logger.error(f"Data gap analysis failed: {str(e)}")
+        
+        # Quick Win 2: Token Budget Simulator
+        token_analysis = None
+        try:
+            from token_analyzer import TokenAnalyzer
+            token_analyzer = TokenAnalyzer()
+            token_analysis = token_analyzer.analyze_token_budget(crawl_data, 8000)
+            logger.info(f"Tokens: {token_analysis['global_analysis']['avg_tokens_per_page']:.0f} avg/page, {token_analysis['global_analysis']['pages_will_truncate']} will truncate - Density: {token_analysis['global_analysis']['density_rating']}")
+        except Exception as e:
+            logger.error(f"Token analysis failed: {str(e)}")
+        
         # Sauvegarder queries_config.json pour personnalisation
         queries_config = {
             'site_url': job_doc['url'],
