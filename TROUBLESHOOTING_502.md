@@ -100,7 +100,7 @@ for page in crawl_data['pages'][:max_pages_to_analyze]:
 
 ### Test de l'API:
 ```bash
-curl -X POST https://insight-engine-31.preview.emergentagent.com/api/leads \
+curl -X POST https://quickwinseo.preview.emergentagent.com/api/leads \
   -H "Content-Type: application/json" \
   -d '{
     "firstName": "Test",

@@ -11,7 +11,7 @@ from datetime import datetime
 
 class ComprehensiveGEOTest:
     def __init__(self):
-        self.base_url = "https://insight-engine-31.preview.emergentagent.com"
+        self.base_url = "https://quickwinseo.preview.emergentagent.com"
         self.api_url = f"{self.base_url}/api"
         self.results = {
             "api_health": False,

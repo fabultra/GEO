@@ -10,7 +10,7 @@ from datetime import datetime
 def test_semantic_analysis_api():
     """Test semantic analysis through the full API"""
     
-    base_url = "https://insight-engine-31.preview.emergentagent.com"
+    base_url = "https://quickwinseo.preview.emergentagent.com"
     api_url = f"{base_url}/api"
     
     print("🧠 Testing Semantic Analysis Module via API")

@@ -268,7 +268,7 @@ class EnhancedSemanticAnalysisTester:
         
         try:
             # Get a recent report
-            response = requests.get("https://insight-engine-31.preview.emergentagent.com/api/leads", timeout=10)
+            response = requests.get("https://quickwinseo.preview.emergentagent.com/api/leads", timeout=10)
             if response.status_code != 200:
                 self.log(f"❌ Failed to get leads: {response.status_code}")
                 return False
@@ -291,7 +291,7 @@ class EnhancedSemanticAnalysisTester:
                 return False
             
             # Get the report
-            response = requests.get(f"https://insight-engine-31.preview.emergentagent.com/api/reports/{report_id}", timeout=10)
+            response = requests.get(f"https://quickwinseo.preview.emergentagent.com/api/reports/{report_id}", timeout=10)
             if response.status_code != 200:
                 self.log(f"❌ Failed to get report: {response.status_code}")
                 return False
