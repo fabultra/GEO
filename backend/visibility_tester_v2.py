@@ -86,6 +86,33 @@ class VisibilityTesterV2:
             
             results['summary']['global_visibility'] = sum(platform_scores.values()) / len(platforms)
             results['summary']['by_platform'] = platform_scores
+            
+            # Calculer stats sentiment et Share of Voice
+            sentiment_stats = {'positive': 0, 'neutral': 0, 'negative': 0}
+            avg_sov = 0
+            mentions_with_comp = 0
+            
+            for query_result in results['queries']:
+                for platform, platform_result in query_result['platforms'].items():
+                    if platform_result.get('mentioned'):
+                        sentiment = platform_result.get('sentiment', 'neutral')
+                        sentiment_stats[sentiment] += 1
+                        
+                        sov = platform_result.get('share_of_voice', 0)
+                        if sov > 0:
+                            avg_sov += sov
+                            mentions_with_comp += 1
+            
+            if mentions_with_comp > 0:
+                avg_sov = avg_sov / mentions_with_comp
+            
+            results['summary']['sentiment_breakdown'] = sentiment_stats
+            results['summary']['avg_share_of_voice'] = round(avg_sov, 2)
+            results['insights'] = {
+                'dominant_sentiment': max(sentiment_stats, key=sentiment_stats.get) if sum(sentiment_stats.values()) > 0 else 'neutral',
+                'share_of_voice_rating': 'HIGH' if avg_sov > 0.5 else 'MEDIUM' if avg_sov > 0.3 else 'LOW',
+                'competitive_position': 'Leader' if avg_sov > 0.6 else 'Challenger' if avg_sov > 0.4 else 'Follower'
+            }
         
         logger.info(f"Testing complete. Global visibility: {results['summary']['global_visibility']*100:.1f}%")
         
