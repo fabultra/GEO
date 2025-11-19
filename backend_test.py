@@ -524,6 +524,98 @@ class GEOSaaSAPITester:
             self.log(f"❌ Claude API test failed: {str(e)}")
             return False
     
+    def test_enhanced_problems_solved_review_request(self, report_data: Dict[str, Any]) -> bool:
+        """Test ENHANCED PROBLEMS SOLVED specifically for review request"""
+        self.log("🎯 REVIEW REQUEST: Testing Enhanced Problems Solved Structure...")
+        
+        semantic_analysis = report_data.get('semantic_analysis', {})
+        if not semantic_analysis:
+            self.log("❌ No semantic analysis found in report")
+            return False
+        
+        entities = semantic_analysis.get('entities', {})
+        if not entities:
+            self.log("❌ No entities found in semantic analysis")
+            return False
+        
+        problems_solved = entities.get('problems_solved', [])
+        
+        # CRITÈRE 1: Exactement 15 items (ou plus)
+        if len(problems_solved) < 15:
+            self.log(f"❌ CRITICAL: Only {len(problems_solved)} problems found, NEED EXACTLY 15+")
+            return False
+        else:
+            self.log(f"✅ Quantity requirement met: {len(problems_solved)} problems (≥15)")
+        
+        # CRITÈRE 2: Chaque item DOIT avoir TOUS les champs requis
+        required_fields = ['problem', 'category', 'severity', 'affected_segment', 'solution_approach']
+        
+        valid_problems = 0
+        invalid_problems = []
+        
+        for i, problem in enumerate(problems_solved):
+            if not isinstance(problem, dict):
+                self.log(f"❌ Problem {i+1} is not a dict: {type(problem)}")
+                invalid_problems.append(f"Problem {i+1}: Not a dict")
+                continue
+            
+            missing_fields = []
+            invalid_values = []
+            
+            for field in required_fields:
+                if field not in problem:
+                    missing_fields.append(field)
+                else:
+                    value = problem[field]
+                    # CRITÈRE 3: Aucun champ ne doit être null/undefined/N/A
+                    if not value or value == "N/A" or value is None or value == "null" or value == "undefined":
+                        invalid_values.append(f"{field}={value}")
+                    # Check for "MISSING" values
+                    elif isinstance(value, str) and value.upper() == "MISSING":
+                        invalid_values.append(f"{field}=MISSING")
+            
+            if missing_fields or invalid_values:
+                problem_issues = []
+                if missing_fields:
+                    problem_issues.append(f"Missing: {missing_fields}")
+                if invalid_values:
+                    problem_issues.append(f"Invalid: {invalid_values}")
+                invalid_problems.append(f"Problem {i+1}: {'; '.join(problem_issues)}")
+            else:
+                valid_problems += 1
+                
+                # Log first 3 valid problems as examples
+                if i < 3:
+                    self.log(f"   ✅ Problem {i+1}: {problem.get('problem', '')[:50]}...")
+                    self.log(f"      Category: {problem.get('category')}, Severity: {problem.get('severity')}")
+                    self.log(f"      Affected: {problem.get('affected_segment')}")
+                    self.log(f"      Solution: {problem.get('solution_approach', '')[:50]}...")
+        
+        # Results summary
+        self.log(f"📊 Problems Solved Validation Results:")
+        self.log(f"   Total problems: {len(problems_solved)}")
+        self.log(f"   Valid problems: {valid_problems}")
+        self.log(f"   Invalid problems: {len(invalid_problems)}")
+        
+        if invalid_problems:
+            self.log("❌ INVALID PROBLEMS FOUND:")
+            for issue in invalid_problems[:5]:  # Show first 5 issues
+                self.log(f"   - {issue}")
+            if len(invalid_problems) > 5:
+                self.log(f"   ... and {len(invalid_problems) - 5} more issues")
+        
+        # CRITÈRE DE SUCCÈS: Tous les problèmes doivent être valides
+        if valid_problems == len(problems_solved) and len(problems_solved) >= 15:
+            self.log("🎉 REVIEW REQUEST SUCCESS: Enhanced Problems Solved FULLY COMPLIANT!")
+            self.log(f"   ✅ {len(problems_solved)} problems with complete structure")
+            self.log("   ✅ All required fields present: problem, category, severity, affected_segment, solution_approach")
+            self.log("   ✅ No null/undefined/N/A values")
+            self.log("   ✅ Coherent and relevant data")
+            return True
+        else:
+            self.log("❌ REVIEW REQUEST FAILED: Enhanced Problems Solved NOT COMPLIANT")
+            return False
+
     def test_semantic_analysis_enhanced_features(self, report_data: Dict[str, Any]) -> bool:
         """Test enhanced semantic analysis features specifically requested in review"""
         self.log("🔍 Testing ENHANCED semantic analysis features...")
@@ -579,28 +671,8 @@ class GEOSaaSAPITester:
         if enhanced_offerings_valid:
             self.log(f"✅ Enhanced offerings complete: {len(offerings)} items with full details")
         
-        # Test enhanced problems_solved (15 items with category, severity, solution_approach)
-        problems_solved = entities.get('problems_solved', [])
-        
-        if len(problems_solved) < 15:
-            self.log(f"❌ ENHANCED problems_solved: Only {len(problems_solved)} found, need 15")
-            return False
-        
-        enhanced_problems_valid = True
-        for i, problem in enumerate(problems_solved[:3]):  # Check first 3
-            if not isinstance(problem, dict):
-                self.log(f"❌ Problem {i+1} is not a dict: {type(problem)}")
-                enhanced_problems_valid = False
-                continue
-                
-            required_problem_fields = ['category', 'severity', 'solution_approach']
-            for field in required_problem_fields:
-                if field not in problem or not problem[field] or problem[field] == "N/A":
-                    self.log(f"❌ Problem {i+1} missing {field}: {problem}")
-                    enhanced_problems_valid = False
-        
-        if enhanced_problems_valid:
-            self.log(f"✅ Enhanced problems_solved complete: {len(problems_solved)} items with full details")
+        # PRIORITY: Test enhanced problems_solved with REVIEW REQUEST focus
+        problems_solved_valid = self.test_enhanced_problems_solved_review_request(report_data)
         
         # Test REAL LDA Topic Modeling with keywords and scores
         topics = semantic_analysis.get('topics', [])
@@ -625,11 +697,11 @@ class GEOSaaSAPITester:
         if lda_valid:
             self.log(f"✅ REAL LDA Topic Modeling complete: {len(topics)} topics with keywords and scores")
         
-        # Overall validation
+        # Overall validation - PROBLEMS_SOLVED is now PRIORITY
         all_enhanced_features = (
             not missing_fields and 
             enhanced_offerings_valid and 
-            enhanced_problems_valid and 
+            problems_solved_valid and  # This is the CRITICAL test for review
             lda_valid
         )
         
