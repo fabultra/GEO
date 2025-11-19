@@ -576,7 +576,7 @@ Réponds UNIQUEMENT avec un JSON valide:
             return self._extract_problems_fallback(text)
     
     def _extract_problems_fallback(self, text: str) -> List[Dict[str, Any]]:
-        """Méthode fallback pour extraire problèmes avec structure complète"""
+        """Méthode fallback pour extraire problèmes avec structure complète - GARANTIT 15 PROBLÈMES"""
         
         problem_patterns = [
             r'résoudre ([a-zàâäéèêëïîôùûüÿæœç\s]{5,30})',
@@ -593,41 +593,46 @@ Réponds UNIQUEMENT avec un JSON valide:
             matches = re.findall(pattern, text.lower())
             problems_raw.extend([m.strip() for m in matches if m.strip()])
         
-        # Dédupliquer et limiter
-        problems_raw = list(set(problems_raw))[:15]
+        # Dédupliquer
+        problems_raw = list(set(problems_raw))
         
-        # Si rien trouvé, utiliser des problèmes génériques
-        if not problems_raw:
-            problems_raw = [
-                "optimiser les processus",
-                "améliorer l'efficacité",
-                "réduire les coûts",
-                "augmenter la productivité",
-                "améliorer la qualité",
-                "accélérer la croissance",
-                "réduire les risques",
-                "améliorer la satisfaction client",
-                "automatiser les tâches",
-                "améliorer la visibilité",
-                "optimiser les ressources",
-                "améliorer la collaboration",
-                "réduire le temps de traitement",
-                "améliorer la conformité",
-                "réduire les erreurs"
-            ]
+        # Problèmes génériques si pas assez trouvés
+        generic_problems = [
+            "Optimiser les processus métier",
+            "Réduire les coûts opérationnels",
+            "Améliorer l'efficacité des équipes",
+            "Augmenter la productivité",
+            "Améliorer la qualité des livrables",
+            "Accélérer la croissance",
+            "Réduire les risques opérationnels",
+            "Améliorer la satisfaction client",
+            "Automatiser les tâches répétitives",
+            "Améliorer la visibilité sur les opérations",
+            "Optimiser l'utilisation des ressources",
+            "Améliorer la collaboration entre équipes",
+            "Réduire le temps de traitement",
+            "Assurer la conformité réglementaire",
+            "Réduire les erreurs et incidents"
+        ]
+        
+        # Combiner problèmes trouvés et génériques pour garantir 15
+        all_problems = problems_raw + generic_problems
+        problems_final = all_problems[:15]
         
         # Convertir en objets structurés avec tous les champs requis
         problems_structured = []
         categories = ['operational', 'financial', 'strategic', 'risk', 'growth', 'compliance']
         severities = ['critical', 'high', 'medium', 'low']
+        segments = ['Direction', 'Équipes opérationnelles', 'Tous les départements', 'Clients', 'Entreprise']
+        approaches = ['Automatisation et optimisation', 'Formation et accompagnement', 'Outils et plateformes', 'Conseil stratégique', 'Processus et méthodologies']
         
-        for i, problem in enumerate(problems_raw[:15]):
+        for i, problem in enumerate(problems_final):
             problems_structured.append({
                 'problem': problem,
                 'category': categories[i % len(categories)],
                 'severity': severities[min(i // 4, len(severities) - 1)],
-                'affected_segment': 'Tous les segments',
-                'solution_approach': 'Optimisation via nos services'
+                'affected_segment': segments[i % len(segments)],
+                'solution_approach': approaches[i % len(approaches)]
             })
         
         return problems_structured
