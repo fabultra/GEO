@@ -765,8 +765,9 @@ class GEOSaaSAPITester:
         return False
 
     def run_comprehensive_test(self) -> int:
-        """Run comprehensive API test suite with focus on review requirements"""
-        self.log("🚀 Starting GEO SaaS API Test Suite - CLAUDE 3.5 SONNET REVIEW")
+        """Run comprehensive API test suite with focus on ENHANCED PROBLEMS SOLVED review"""
+        self.log("🚀 Starting GEO SaaS API Test Suite - ENHANCED PROBLEMS SOLVED REVIEW")
+        self.log("🎯 FOCUS: Testing Enhanced Problems Solved avec 15+ items et structure complète")
         self.log("=" * 60)
         
         # PRIORITY TEST: Claude API Direct Test
