@@ -540,7 +540,35 @@ Réponds UNIQUEMENT avec un JSON valide:
             clean_text = clean_json_response(response_text)
             result = json.loads(clean_text)
             
-            return result.get('problems_solved', [])[:15]
+            problems = result.get('problems_solved', [])
+            
+            # S'assurer qu'on a EXACTEMENT 15 problèmes minimum
+            if len(problems) < 15:
+                logger.warning(f"Claude returned only {len(problems)} problems, padding to 15")
+                # Compléter avec des problèmes génériques si nécessaire
+                generic_problems = [
+                    {"problem": "Optimiser les processus métier", "category": "operational", "severity": "high", "affected_segment": "Tous", "solution_approach": "Automatisation"},
+                    {"problem": "Réduire les coûts opérationnels", "category": "financial", "severity": "high", "affected_segment": "Direction", "solution_approach": "Optimisation"},
+                    {"problem": "Améliorer l'efficacité", "category": "operational", "severity": "medium", "affected_segment": "Équipes", "solution_approach": "Formation"},
+                    {"problem": "Accélérer la croissance", "category": "growth", "severity": "critical", "affected_segment": "Entreprise", "solution_approach": "Stratégie"},
+                    {"problem": "Gérer les risques", "category": "risk", "severity": "high", "affected_segment": "Direction", "solution_approach": "Prévention"},
+                    {"problem": "Améliorer la qualité", "category": "operational", "severity": "medium", "affected_segment": "Production", "solution_approach": "Contrôle qualité"},
+                    {"problem": "Réduire le time-to-market", "category": "strategic", "severity": "high", "affected_segment": "Développement", "solution_approach": "Agilité"},
+                    {"problem": "Améliorer la satisfaction client", "category": "growth", "severity": "critical", "affected_segment": "Clients", "solution_approach": "Expérience client"},
+                    {"problem": "Automatiser les tâches répétitives", "category": "operational", "severity": "medium", "affected_segment": "Équipes", "solution_approach": "Automatisation"},
+                    {"problem": "Améliorer la visibilité", "category": "strategic", "severity": "high", "affected_segment": "Direction", "solution_approach": "Tableaux de bord"},
+                    {"problem": "Optimiser les ressources", "category": "financial", "severity": "medium", "affected_segment": "Tous", "solution_approach": "Planning"},
+                    {"problem": "Améliorer la collaboration", "category": "operational", "severity": "medium", "affected_segment": "Équipes", "solution_approach": "Outils collaboratifs"},
+                    {"problem": "Réduire les erreurs", "category": "risk", "severity": "high", "affected_segment": "Opérations", "solution_approach": "Contrôles"},
+                    {"problem": "Assurer la conformité", "category": "compliance", "severity": "critical", "affected_segment": "Entreprise", "solution_approach": "Audits"},
+                    {"problem": "Améliorer la scalabilité", "category": "growth", "severity": "high", "affected_segment": "Infrastructure", "solution_approach": "Architecture"}
+                ]
+                
+                # Ajouter les problèmes manquants
+                while len(problems) < 15:
+                    problems.append(generic_problems[len(problems) - len(result.get('problems_solved', []))])
+            
+            return problems[:15]
             
         except Exception as e:
             logger.error(f"Claude problems extraction failed: {str(e)}, using fallback")
