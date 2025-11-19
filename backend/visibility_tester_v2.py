@@ -249,25 +249,39 @@ class VisibilityTesterV2:
         return context
     
     def _analyze_sentiment(self, response: str, company_name: str) -> str:
-        """Analyser le sentiment autour de la mention"""
-        
-        context = self._extract_context(response, company_name, chars=100)
+        """Analyse le sentiment de la mention (amélioré)"""
+        context = self._extract_context(response, company_name, chars=300)
         context_lower = context.lower()
         
-        # Mots positifs
-        positive_words = ['meilleur', 'excellent', 'recommandé', 'professionnel', 'qualité', 'fiable', 'expérimenté']
-        # Mots négatifs
-        negative_words = ['problème', 'mauvais', 'décevant', 'éviter', 'attention']
+        positive_keywords = [
+            'excellent', 'meilleur', 'leader', 'recommandé', 'recommande',
+            'fiable', 'qualité', 'expertise', 'professionnel', 'efficace',
+            'rapide', 'performant', 'innovant', 'spécialisé', 'reconnu',
+            'primé', 'certifié', 'expert', 'top', 'idéal', 'optimal'
+        ]
         
-        positive_count = sum(1 for word in positive_words if word in context_lower)
-        negative_count = sum(1 for word in negative_words if word in context_lower)
+        negative_keywords = [
+            'problème', 'éviter', 'déconseillé', 'déconseille', 'mauvais',
+            'limité', 'lent', 'cher', 'coûteux', 'manque', 'défaut',
+            'insatisfait', 'déçu', 'erreur', 'bug', 'défaillance'
+        ]
+        
+        positive_count = sum(1 for kw in positive_keywords if kw in context_lower)
+        negative_count = sum(1 for kw in negative_keywords if kw in context_lower)
         
         if positive_count > negative_count:
             return 'positive'
         elif negative_count > positive_count:
             return 'negative'
-        else:
-            return 'neutral'
+        return 'neutral'
+    
+    def _calculate_share_of_voice(self, response: str, company_name: str, competitors: List[str]) -> float:
+        """Calcule le Share of Voice vs compétiteurs"""
+        response_lower = response.lower()
+        company_mentions = response_lower.count(company_name.lower())
+        competitor_mentions = sum(response_lower.count(c.lower()) for c in competitors)
+        total = company_mentions + competitor_mentions
+        return company_mentions / total if total > 0 else 0.0
     
     def _extract_competitors(self, response: str) -> List[str]:
         """Extraire les noms de compétiteurs mentionnés"""
