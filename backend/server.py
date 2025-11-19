@@ -1172,6 +1172,12 @@ Réponds UNIQUEMENT avec un JSON valide:
         report_dict['semantic_analysis'] = semantic_analysis
         report_dict['query_breakdown'] = query_breakdown
         
+        # Ajouter Quick Wins (Phase 1)
+        if data_gaps:
+            report_dict['data_gap_analysis'] = data_gaps
+        if token_analysis:
+            report_dict['token_analysis'] = token_analysis
+        
         await db.reports.insert_one(report_dict)
         
         await db.analysis_jobs.update_one(
