@@ -1015,12 +1015,22 @@ async def process_analysis_job(job_id: str):
                 
                 if competitor_urls:
                     ci = CompetitiveIntelligence()
+                    
+                    # Préparer nos données pour comparaison
+                    our_data = {
+                        'crawl_data': crawl_data,
+                        'semantic_analysis': semantic_analysis,
+                        'data_gap_analysis': data_gaps,
+                        'visibility_data': visibility_data
+                    }
+                    
                     competitive_analysis = ci.analyze_competitors(
                         competitors_urls=competitor_urls[:5],
-                        visibility_data=visibility_data
+                        visibility_data=visibility_data,
+                        our_data=our_data
                     )
                     visibility_data['competitive_intelligence'] = competitive_analysis
-                    logger.info(f"✅ CI: {competitive_analysis.get('competitors_analyzed', 0)} analyzed")
+                    logger.info(f"✅ CI: {competitive_analysis.get('competitors_analyzed', 0)} analyzed, GEO comparatif calculé")
                 else:
                     visibility_data['competitive_intelligence'] = {'competitors_analyzed': 0}
             except Exception as e:
