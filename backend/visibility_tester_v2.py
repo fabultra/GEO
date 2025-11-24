@@ -319,23 +319,54 @@ class VisibilityTesterV2:
         total = company_mentions + competitor_mentions
         return company_mentions / total if total > 0 else 0.0
     
-    def _extract_competitors(self, response: str) -> List[str]:
-        """Extraire les noms de compétiteurs mentionnés"""
+    def _extract_competitors(self, response: str, industry: str = "generic") -> List[Dict[str, Any]]:
+        """Extraire TOUS les compétiteurs avec Claude (extraction structurée)"""
+        if not response or len(response) < 50:
+            return []
         
-        # Patterns courants de compétiteurs au Québec
-        competitor_patterns = [
-            r'\b[A-Z][a-zéèêà]+ (?:Assurance|Insurance|Immobilier|Finance)\b',
-            r'\b(?:Desjardins|La Capitale|Intact|Aviva|BFL|AON)\b',
-            r'\b[A-Z][a-zéèêà]+ & [A-Z][a-zéèêà]+\b'
-        ]
+        response_sample = response[:3000] if len(response) > 3000 else response
         
-        competitors = []
-        for pattern in competitor_patterns:
-            matches = re.findall(pattern, response)
-            competitors.extend(matches)
-        
-        # Dédupliquer
-        return list(set(competitors))[:5]  # Top 5
+        prompt = f"""Analyse cette réponse d'un LLM et identifie TOUS les compétiteurs/entreprises mentionnés.
+
+INDUSTRIE : {industry}
+
+RÉPONSE DU LLM :
+{response_sample}
+
+Pour CHAQUE compétiteur trouvé, extrait :
+1. Nom exact de l'entreprise
+2. URLs/domaines mentionnés si présents
+3. Contexte de la mention (1 phrase courte)
+4. Type de mention : "recommendation", "comparison", "neutral", ou "negative"
+5. Force perçue : 1 phrase décrivant ce qui est dit de positif
+
+Réponds UNIQUEMENT avec un JSON valide (array). Si AUCUN compétiteur, retourne []
+
+Format:
+[{{"name": "Nom", "urls": ["domain.com"], "context": "Raison", "mention_type": "recommendation", "perceived_strength": "Force"}}]
+
+IMPORTANT: Ne retourne QUE les vraies entreprises compétitrices."""
+
+        try:
+            message = self.anthropic_client.messages.create(
+                model="claude-sonnet-4-5-20250929",
+                max_tokens=1000,
+                temperature=0,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            
+            response_text = message.content[0].text.strip().replace('```json', '').replace('```', '').strip()
+            competitors = json.loads(response_text)
+            
+            if not isinstance(competitors, list):
+                logger.warning("Extraction returned non-list, using fallback")
+                return self._extract_competitors_fallback(response)
+            
+            logger.info(f"✅ Extracted {len(competitors)} competitors dynamically")
+            return competitors[:10]
+        except Exception as e:
+            logger.error(f"LLM extraction failed: {str(e)}, using fallback")
+            return self._extract_competitors_fallback(response)
     
     def _diagnose_invisibility(self, query: str, response: str, site_url: str, company_name: str) -> List[Dict[str, Any]]:
         """
