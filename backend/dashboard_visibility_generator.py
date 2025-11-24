@@ -477,6 +477,340 @@ def generate_interactive_dashboard(visibility_results: Dict[str, Any], output_pa
         @keyframes spin {{
             to {{ transform: rotate(360deg); }}
         }}
+        
+        /* Nouveaux styles pour analyse compétitive enrichie */
+        .analysis-section {{
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }}
+        
+        .analysis-section h2 {{
+            color: #1f2937;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 15px;
+        }}
+        
+        .query-types-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }}
+        
+        .query-type-card {{
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }}
+        
+        .query-type-card h3 {{
+            margin: 0 0 10px 0;
+            color: #1e40af;
+            text-transform: capitalize;
+        }}
+        
+        .metric-large {{
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #3b82f6;
+            margin: 10px 0;
+        }}
+        
+        .metric-label {{
+            color: #64748b;
+            font-size: 0.9em;
+        }}
+        
+        .queries-list {{
+            margin-top: 15px;
+            font-size: 0.9em;
+        }}
+        
+        .queries-list ul {{
+            margin: 5px 0;
+            padding-left: 20px;
+        }}
+        
+        .queries-list li {{
+            margin: 3px 0;
+            color: #475569;
+        }}
+        
+        .competitors-mini {{
+            margin-top: 15px;
+        }}
+        
+        .competitor-badge {{
+            display: inline-block;
+            background: #e0f2fe;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin: 2px;
+            font-size: 0.85em;
+            color: #0369a1;
+        }}
+        
+        .competitive-summary {{
+            text-align: center;
+            margin-bottom: 30px;
+        }}
+        
+        .metric-box {{
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }}
+        
+        .metric-box .metric-large {{
+            color: white;
+            font-size: 3em;
+        }}
+        
+        .metric-box p {{
+            margin-top: 10px;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }}
+        
+        .competitor-card-detailed {{
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #10b981;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }}
+        
+        .competitor-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+        }}
+        
+        .competitor-header h3 {{
+            margin: 0;
+            color: #1f2937;
+        }}
+        
+        .visibility-badge {{
+            background: #10b981;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+        }}
+        
+        .competitor-metrics {{
+            display: flex;
+            gap: 30px;
+            margin: 15px 0;
+        }}
+        
+        .competitor-metrics .metric {{
+            color: #475569;
+        }}
+        
+        .urls-section, .strengths-section {{
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 6px;
+        }}
+        
+        .urls-list, .strengths-list {{
+            margin: 10px 0;
+            padding-left: 20px;
+        }}
+        
+        .urls-list li {{
+            margin: 8px 0;
+        }}
+        
+        .urls-list a {{
+            color: #2563eb;
+            text-decoration: none;
+            word-break: break-all;
+        }}
+        
+        .urls-list a:hover {{
+            text-decoration: underline;
+        }}
+        
+        .strengths-list li {{
+            margin: 8px 0;
+            color: #059669;
+        }}
+        
+        .mention-breakdown {{
+            margin: 15px 0;
+        }}
+        
+        .mention-types {{
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }}
+        
+        .badge {{
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }}
+        
+        .badge-success {{
+            background: #d1fae5;
+            color: #065f46;
+        }}
+        
+        .badge-info {{
+            background: #dbeafe;
+            color: #1e40af;
+        }}
+        
+        .badge-neutral {{
+            background: #f1f5f9;
+            color: #475569;
+        }}
+        
+        .queries-details {{
+            margin-top: 15px;
+            padding: 10px;
+            background: #fafafa;
+            border-radius: 4px;
+            cursor: pointer;
+        }}
+        
+        .queries-details summary {{
+            font-weight: 500;
+            color: #3b82f6;
+        }}
+        
+        .queries-details ul {{
+            margin: 10px 0;
+            padding-left: 20px;
+        }}
+        
+        .insights-section {{
+            margin-top: 30px;
+        }}
+        
+        .insight-card {{
+            background: white;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid #f59e0b;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }}
+        
+        .insight-card.severity-critical {{
+            border-left-color: #ef4444;
+            background: #fef2f2;
+        }}
+        
+        .insight-card.severity-high {{
+            border-left-color: #f59e0b;
+            background: #fffbeb;
+        }}
+        
+        .insight-card.severity-medium {{
+            border-left-color: #3b82f6;
+            background: #eff6ff;
+        }}
+        
+        .insight-header {{
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }}
+        
+        .severity-badge {{
+            background: #ef4444;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }}
+        
+        .insight-type {{
+            background: #e5e7eb;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: #374151;
+        }}
+        
+        .insight-card h3 {{
+            margin: 10px 0;
+            color: #1f2937;
+        }}
+        
+        .insight-details {{
+            color: #4b5563;
+            margin: 10px 0;
+        }}
+        
+        .insight-action {{
+            background: #f0fdf4;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+            border-left: 3px solid #10b981;
+        }}
+        
+        .insight-action p {{
+            margin: 5px 0;
+            color: #065f46;
+        }}
+        
+        .urls-to-analyze {{
+            margin: 15px 0;
+            padding: 15px;
+            background: #eff6ff;
+            border-radius: 6px;
+        }}
+        
+        .urls-to-analyze ul {{
+            margin: 10px 0;
+            padding-left: 20px;
+        }}
+        
+        .insight-example {{
+            margin: 15px 0;
+            padding: 10px;
+            background: #f9fafb;
+            border-left: 3px solid #6b7280;
+            font-style: italic;
+            color: #374151;
+        }}
+        
+        .perceived-strengths {{
+            margin: 15px 0;
+            padding: 15px;
+            background: #fef3c7;
+            border-radius: 6px;
+        }}
+        
+        .perceived-strengths ul {{
+            margin: 10px 0;
+            padding-left: 20px;
+        }}
     </style>
 </head>
 <body>
