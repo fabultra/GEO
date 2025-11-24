@@ -1,4 +1,8 @@
-"""Analyse le budget de tokens et la densité informationnelle"""
+"""
+Analyse GEO du budget de tokens et risque de troncature pour les moteurs génératifs.
+Estime la consommation de tokens par page et identifie les risques de troncature dans les LLMs.
+La densité informationnelle est une métrique technique, PAS un score de qualité GEO.
+"""
 import re
 import logging
 from typing import Dict, Any, List
@@ -13,6 +17,15 @@ except ImportError:
 logger = logging.getLogger(__name__)
 
 class TokenAnalyzer:
+    """
+    Analyse le budget de tokens pour moteurs génératifs (ChatGPT, Claude, etc.).
+    Identifie les pages à risque de troncature et mesure la densité informationnelle.
+    
+    IMPORTANT GEO: La densité n'est PAS un indicateur de qualité. Ce qui compte:
+    - Éviter la troncature des pages clés
+    - Structurer le contenu pour extraction facile par IA
+    - Placer l'info critique en début de page
+    """
     def __init__(self):
         self.encoder = tiktoken.encoding_for_model("gpt-4") if TIKTOKEN_AVAILABLE else None
     
