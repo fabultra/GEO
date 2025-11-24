@@ -92,15 +92,17 @@ class TokenAnalyzer:
         return facts
     
     def _rate_density(self, density: float) -> str:
+        """
+        Labellise la densité informationnelle (faits/tokens) de façon descriptive.
+        IMPORTANT GEO: Ce n'est PAS un score de qualité, juste un indicateur technique.
+        """
+        if density >= 0.030:
+            return 'DENSITÉ TRÈS ÉLEVÉE'
         if density >= 0.020:
-            return 'EXCELLENT'
-        if density >= 0.015:
-            return 'GOOD'
+            return 'DENSITÉ ÉLEVÉE'
         if density >= 0.010:
-            return 'FAIR'
-        if density >= 0.005:
-            return 'LOW'
-        return 'VERY_LOW'
+            return 'DENSITÉ MOYENNE'
+        return 'DENSITÉ FAIBLE'
     
     def _generate_recs(self, pages: List[Dict], limit: int) -> List[Dict]:
         recs = []
