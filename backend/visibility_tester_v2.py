@@ -10,6 +10,8 @@ from datetime import datetime
 import anthropic
 from openai import OpenAI
 import google.generativeai as genai
+import json
+from collections import Counter
 
 logger = logging.getLogger(__name__)
 
