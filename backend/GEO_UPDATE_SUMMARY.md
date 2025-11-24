@@ -260,11 +260,15 @@ Les métriques clés sont:
 - [x] Étape 3c: Refonte _rate_density avec labels descriptifs
 - [x] Étape 3d: Ajout truncation_risk et density_explanation
 
-### 🔄 PHASE 2 - Competitive Intelligence 2.0 (À VENIR)
-- [ ] Étape 4: Analyse 5 compétiteurs au lieu de 3
-- [ ] Étape 5: Multi-pages par compétiteur (_analyze_competitor_page)
-- [ ] Étape 6: GEO Power Score (compute_geo_power_score)
-- [ ] Étape 8: Confidence level (_compute_confidence_level)
+### ✅ PHASE 2 - Competitive Intelligence 2.0 (COMPLÉTÉ)
+- [x] Étape 4: Analyse 5 compétiteurs au lieu de 3 (refactoré analyze_competitors)
+- [x] Étape 5: Multi-pages par compétiteur (_analyze_competitor_page implémenté)
+- [x] Étape 5b: Extraction URLs internes avec mots-clés GEO (guides, FAQ, how-to, etc.)
+- [x] Étape 5c: Analyse multi-pages (page principale + 4-5 pages internes)
+- [x] Étape 5d: Calcul agrégats (avg_word_count, direct_answer_rate, tldr_rate, etc.)
+- [x] Étape 6: GEO Power Score (compute_geo_power_score implémenté, pondération 0-10)
+- [x] Étape 8: Confidence level (_compute_confidence_level implémenté HIGH/MEDIUM/LOW)
+- [x] Étape 8b: Normalisation URLs compétiteurs dans server.py (www, protocoles)
 
 ### 🔄 PHASE 3 - Comparatif NOUS vs COMPÉTITEURS (À VENIR)
 - [ ] Étape 7: Comparatif NOUS vs COMPÉTITEURS (refonte generate_comparative_table)
