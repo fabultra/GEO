@@ -60,8 +60,8 @@ class CompetitiveIntelligence:
             "pages_analyzed": pages_analyzed,
             "confidence_level": confidence,
             "analyses": analyses,
-            "comparative_metrics": self.generate_comparative_table(analyses),
-            "actionable_insights": self.generate_actionable_insights(analyses)
+            "comparative_metrics": self.generate_comparative_table(analyses, our_data),
+            "actionable_insights": self.generate_actionable_insights(analyses, our_data)
         }
     
     def _compute_confidence_level(self, competitors_analyzed: int, pages_analyzed: int) -> str:
