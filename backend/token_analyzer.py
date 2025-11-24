@@ -61,6 +61,7 @@ class TokenAnalyzer:
         }
     
     def _analyze_page(self, page: Dict[str, Any], limit: int) -> Dict[str, Any]:
+        """Analyse une page: tokens, densité informationnelle, risque troncature pour LLMs."""
         content = page.get('title', '') + ' ' + page.get('meta_description', '') + ' '
         content += ' '.join(page.get('paragraphs', []))
         
