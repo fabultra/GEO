@@ -19,18 +19,24 @@ class CompetitiveIntelligence:
     Extrait les patterns de contenu, structure, données factuelles qui plaisent aux IA.
     """
     
-    def analyze_competitors(self, competitors_urls: List[str], visibility_data: Dict[str, Any]) -> Dict[str, Any]:
+    def analyze_competitors(
+        self, 
+        competitors_urls: List[str], 
+        visibility_data: Dict[str, Any],
+        our_data: Dict[str, Any] = None
+    ) -> Dict[str, Any]:
         """
         Analyse approfondie jusqu'à 5 compétiteurs qui apparaissent dans les réponses des LLMs.
-        Détermine leurs forces GEO (structure, données, réponses directes, schémas, FAQ).
+        Détermine leurs forces GEO et compare avec NOTRE site.
         
         Args:
             competitors_urls: URLs des compétiteurs à analyser (max 5)
             visibility_data: Données de visibilité avec mentions des compétiteurs
+            our_data: Nos propres données (crawl_data, semantic_analysis, etc.) pour comparaison
         
         Returns:
             Analyse GEO détaillée avec geo_power_score, confidence_level, pages_analyzed,
-            comparative_metrics (NOUS vs eux), et insights actionnables
+            comparative_metrics (NOUS vs AVERAGE_COMPETITORS vs GAP), et insights actionnables
         """
         analyses = []
         
