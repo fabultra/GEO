@@ -30,6 +30,10 @@ class TokenAnalyzer:
         self.encoder = tiktoken.encoding_for_model("gpt-4") if TIKTOKEN_AVAILABLE else None
     
     def analyze_token_budget(self, crawl_data: Dict[str, Any], token_limit: int = 8000) -> Dict[str, Any]:
+        """
+        Analyse GEO du budget de tokens par page et identification des risques de troncature.
+        Retourne truncation_risk avec risk_level (HIGH/MEDIUM/LOW) et density_explanation.
+        """
         pages_analysis = []
         total_tokens = 0
         pages_truncate = 0
