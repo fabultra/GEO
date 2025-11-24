@@ -69,8 +69,87 @@ class CompetitiveIntelligence:
             return "MEDIUM"
         return "LOW"
     
+    def _analyze_competitor_page(self, url: str) -> Dict[str, Any]:
+        """
+        Analyse une page de compétiteur pour métriques GEO.
+        Extrait: word_count, headers, direct answer, TL;DR, lists, tables, FAQ, stats, schemas.
+        """
+        try:
+            response = requests.get(url, timeout=10, headers={
+                'User-Agent': 'Mozilla/5.0 (compatible; GEOBot/1.0)'
+            })
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Extraire texte
+            text_content = soup.get_text()
+            words = text_content.split()
+            
+            # Détecter réponse directe (premiers 100 mots contiennent info clé)
+            first_100_words = ' '.join(words[:100])
+            has_direct_answer = any(marker in first_100_words.lower() for marker in [
+                'est un', 'est une', 'consiste à', 'permet de', 'signifie', 
+                'définition', 'c\'est', 'il s\'agit'
+            ])
+            
+            # Détecter TL;DR / résumé
+            has_tldr = bool(soup.find(string=lambda text: text and any(
+                marker in text.upper() for marker in ['TL;DR', 'EN BREF', 'RÉSUMÉ', 'KEY TAKEAWAYS', 'À RETENIR']
+            )))
+            
+            # Compter éléments structurels
+            h1_count = len(soup.find_all('h1'))
+            h2_count = len(soup.find_all('h2'))
+            h3_count = len(soup.find_all('h3'))
+            lists_count = len(soup.find_all(['ul', 'ol']))
+            tables_count = len(soup.find_all('table'))
+            
+            # Détecter FAQ
+            has_faq = bool(soup.find(string=lambda text: text and 'FAQ' in text.upper()))
+            faq_count = len(soup.find_all(string=lambda text: text and '?' in text))
+            
+            # Compter statistiques (chiffres + indicateurs)
+            stats_count = (
+                text_content.count('%') +
+                text_content.count('$') +
+                len(re.findall(r'\b\d+\s*(millions?|milliards?|k\b|M\b)', text_content, re.IGNORECASE))
+            )
+            
+            # Compter schémas structurés
+            schema_count = len(soup.find_all('script', {'type': 'application/ld+json'}))
+            
+            return {
+                'url': url,
+                'word_count': len(words),
+                'h1_count': h1_count,
+                'h2_count': h2_count,
+                'h3_count': h3_count,
+                'has_direct_answer': has_direct_answer,
+                'has_tldr': has_tldr,
+                'lists_count': lists_count,
+                'tables_count': tables_count,
+                'faq_count': faq_count,
+                'stats_count': stats_count,
+                'schema_count': schema_count
+            }
+            
+        except Exception as e:
+            logger.warning(f"Failed to analyze page {url}: {str(e)}")
+            return {
+                'url': url,
+                'error': str(e),
+                'word_count': 0,
+                'has_direct_answer': False,
+                'has_tldr': False,
+                'stats_count': 0,
+                'schema_count': 0
+            }
+    
     def analyze_single_competitor(self, comp_url: str, visibility_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Analyse un compétiteur en profondeur"""
+        """
+        Analyse approfondie GEO d'un compétiteur: page principale + 4-5 pages internes.
+        Identifie pourquoi il performe dans les IA (structure, données, FAQ, guides).
+        """
         
         # Fetch la page principale
         try:
