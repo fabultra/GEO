@@ -42,24 +42,26 @@ SCORING_GRIDS = {
         }
     },
     "readability": {
-        "name": "Lisibilité Machine/SEO",
+        "name": "Lisibilité Machine/IA",
         "weight": 1.0,
         "elements_to_check": [
             "Meta descriptions factuelles (<120 caractères)",
             "Schema.org Organization implémenté",
-            "Schema.org LocalBusiness pour succursales",
-            "Schema.org FAQPage pour FAQ",
-            "Schema.org Article pour contenu éditorial",
+            "Schema.org FAQPage pour sections Q&A critiques IA",
+            "Schema.org Article pour contenu éditorial approfondi",
+            "Schema.org HowTo pour guides pratiques",
+            "Schema.org QAPage pour pages question-réponse",
+            "Résumé ou TL;DR structuré en début de page",
             "JSON-LD structuré et valide",
             "Balisage sémantique (Open Graph, Twitter Cards)",
             "URLs descriptives et propres"
         ],
         "scoring_rules": {
-            "9-10": "Excellence: Schema complet, JSON-LD partout, meta factuelles, balisage impeccable",
-            "7-8": "Très bon: Schema principal OK, quelques JSON-LD, bonnes meta",
-            "5-6": "Moyen: Schema basique, meta acceptables mais pas optimales",
-            "3-4": "Insuffisant: Schema incomplet, meta marketing, balisage faible",
-            "0-2": "Critique: Aucun schema, meta inutiles, pas de structured data"
+            "9-10": "Excellence: Schémas GEO complets (FAQPage, Article, HowTo), JSON-LD partout, TL;DR systématiques, meta factuelles",
+            "7-8": "Très bon: Schémas GEO principaux OK (FAQPage, Article), quelques TL;DR, bonnes meta",
+            "5-6": "Moyen: Schema basique Organization, meta acceptables mais manque schémas GEO avancés",
+            "3-4": "Insuffisant: Schema incomplet, meta marketing, pas de schémas GEO spécifiques",
+            "0-2": "Critique: Aucun schema, meta inutiles, aucune structured data pour IA"
         }
     },
     "eeat": {
