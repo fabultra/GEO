@@ -155,7 +155,8 @@ class VisibilityTesterV2:
                 result['sentiment'] = self._analyze_sentiment(response, company_name)
             
             # Extraire compétiteurs mentionnés
-            competitors = self._extract_competitors(response)
+            industry = "generic"
+            competitors = self._extract_competitors(response, industry)
             result['competitors_mentioned'] = competitors
             
             # Calculer Share of Voice si mentionné et compétiteurs présents
