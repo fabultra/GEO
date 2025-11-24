@@ -270,8 +270,14 @@ Les métriques clés sont:
 - [x] Étape 8: Confidence level (_compute_confidence_level implémenté HIGH/MEDIUM/LOW)
 - [x] Étape 8b: Normalisation URLs compétiteurs dans server.py (www, protocoles)
 
-### 🔄 PHASE 3 - Comparatif NOUS vs COMPÉTITEURS (À VENIR)
-- [ ] Étape 7: Comparatif NOUS vs COMPÉTITEURS (refonte generate_comparative_table)
+### ✅ PHASE 3 - Comparatif NOUS vs COMPÉTITEURS (COMPLÉTÉ)
+- [x] Étape 7a: Refonte generate_comparative_table avec structure NOUS/AVERAGE_COMPETITORS/GAP
+- [x] Étape 7b: Implémenté _extract_our_metrics (extrait nos métriques GEO)
+- [x] Étape 7c: Implémenté _calculate_competitor_averages (moyennes compétiteurs)
+- [x] Étape 7d: Calcul GAP pour 7 métriques (word_count, stats, direct_answer, tldr, schema, faq, geo_score)
+- [x] Étape 7e: Refonte generate_actionable_insights basé sur comparatif réel
+- [x] Étape 7f: 7 insights prioritisés par GAP (CRITIQUE/HAUTE/MOYENNE)
+- [x] Étape 7g: Modification server.py pour passer our_data à analyze_competitors
 
 ### 🔄 PHASE 4-6 - Frontend, Rapports, Validation (À VENIR)
 - [ ] Étape 10: Mise à jour frontend et rapports
