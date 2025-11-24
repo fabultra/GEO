@@ -78,28 +78,46 @@ class AnalysisJob(BaseModel):
     updatedAt: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
 class Score(BaseModel):
-    structure: float = 0.0
-    infoDensity: float = 0.0
-    readability: float = 0.0
-    eeat: float = 0.0
-    educational: float = 0.0
-    thematic: float = 0.0
-    aiOptimization: float = 0.0
-    visibility: float = 0.0
-    global_score: float = 0.0
+    """
+    Modèle de scoring GEO (Generative Engine Optimization).
+    Focus sur performance dans les moteurs génératifs (ChatGPT, Claude, Perplexity, etc.)
+    """
+    structure: float = 0.0          # Structure sémantique optimisée IA
+    answerability: float = 0.0      # Capacité à répondre clairement aux questions (NOUVEAU - priorité GEO)
+    readability: float = 0.0        # Lisibilité machine/IA avec schémas structurés
+    eeat: float = 0.0              # Expertise, Expérience, Autorité, Fiabilité
+    educational: float = 0.0        # Valeur éducative et profondeur du contenu
+    thematic: float = 0.0          # Cohérence thématique pour compréhension IA
+    aiOptimization: float = 0.0    # Optimisation spécifique pour extraction IA
+    visibility: float = 0.0         # Visibilité réelle mesurée dans les LLMs
+    infoDensity: float = 0.0       # Métrique technique (N'INFLUENCE PLUS le score global GEO)
+    global_score: float = 0.0      # Score GEO global pondéré
     
     @staticmethod
     def calculate_weighted_score(scores: dict) -> float:
-        """Calcule le score global pondéré selon la méthodologie GEO"""
+        """
+        Calcule le score GEO global pondéré - 100% Generative Engine Optimization.
+        
+        Pondération GEO pure (infoDensity exclus volontairement):
+        - answerability: 20% (capacité à répondre = priorité #1 pour IA)
+        - structure: 15% (formatage extractible par LLM)
+        - eeat: 15% (crédibilité pour citation par IA)
+        - educational: 15% (profondeur = meilleure compréhension IA)
+        - readability: 10% (schémas structurés FAQPage, Article, HowTo)
+        - aiOptimization: 10% (TL;DR, réponses directes, listes)
+        - thematic: 10% (cohérence thématique)
+        - visibility: 5% (performance réelle mesurée)
+        """
         weights = {
             'structure': 0.15,
-            'infoDensity': 0.20,
+            'answerability': 0.20,     # Nouvelle dimension prioritaire
             'readability': 0.10,
             'eeat': 0.15,
-            'educational': 0.20,
-            'thematic': 0.05,
+            'educational': 0.15,
+            'thematic': 0.10,
             'aiOptimization': 0.10,
             'visibility': 0.05
+            # infoDensity: EXCLUS du score global GEO
         }
         
         weighted_sum = sum(scores.get(key, 0) * weight for key, weight in weights.items())
