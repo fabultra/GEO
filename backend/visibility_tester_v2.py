@@ -118,6 +118,49 @@ class VisibilityTesterV2:
         
         logger.info(f"Testing complete. Global visibility: {results['summary']['global_visibility']*100:.1f}%")
         
+        logger.info("Analyzing by query type...")
+        query_type_analysis = {}
+        
+        for query_result in results['queries']:
+            query_text = query_result.get('query', '')
+            query_type = self._classify_query_type(query_text, company_name)
+            
+            if query_type not in query_type_analysis:
+                query_type_analysis[query_type] = {
+                    'queries': [], 'visibility': 0, 'mentions': 0, 'total_tests': 0,
+                    'competitors': Counter(), 'avg_position': []
+                }
+            
+            query_type_analysis[query_type]['queries'].append(query_text)
+            query_type_analysis[query_type]['total_tests'] += len(query_result['platforms'])
+            
+            for platform, platform_result in query_result['platforms'].items():
+                if platform_result.get('mentioned'):
+                    query_type_analysis[query_type]['mentions'] += 1
+                    pos = platform_result.get('position')
+                    if pos and pos > 0:
+                        query_type_analysis[query_type]['avg_position'].append(pos)
+                
+                for comp in platform_result.get('competitors_mentioned', []):
+                    comp_name = comp.get('name', comp) if isinstance(comp, dict) else comp
+                    query_type_analysis[query_type]['competitors'][comp_name] += 1
+        
+        for qtype in query_type_analysis:
+            total = query_type_analysis[qtype]['total_tests']
+            query_type_analysis[qtype]['visibility'] = query_type_analysis[qtype]['mentions'] / total if total > 0 else 0
+            positions = query_type_analysis[qtype]['avg_position']
+            query_type_analysis[qtype]['avg_position'] = sum(positions) / len(positions) if positions else None
+            query_type_analysis[qtype]['top_competitors'] = [
+                {'name': name, 'mentions': count}
+                for name, count in query_type_analysis[qtype]['competitors'].most_common(5)
+            ]
+            del query_type_analysis[qtype]['competitors']
+        
+        results['query_type_analysis'] = query_type_analysis
+        logger.info("Running competitive analysis...")
+        results['competitive_analysis'] = self.analyze_competitor_performance(results)
+        logger.info(f"✅ Complete with {results['competitive_analysis']['total_unique_competitors']} competitors")
+        
         return results
     
     def _test_single_query(self, query: str, platform: str, site_url: str, company_name: str) -> Dict[str, Any]:
