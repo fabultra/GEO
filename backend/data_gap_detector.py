@@ -1,4 +1,7 @@
-"""Détecte le manque de données chiffrées critiques pour les IA"""
+"""
+Détecte le manque de données chiffrées et statistiques critiques pour la performance GEO.
+Les moteurs génératifs privilégient les contenus riches en faits mesurables et sources vérifiables.
+"""
 import re
 import logging
 from typing import Dict, Any, List
@@ -12,6 +15,11 @@ INDUSTRY_THRESHOLDS = {
 }
 
 class DataGapDetector:
+    """
+    Détecte les manques de données quantitatives qui limitent la performance dans les IA.
+    Les LLMs favorisent les contenus avec statistiques, pourcentages, chiffres factuels.
+    Mesure l'écart entre le nombre de stats présentes vs attendu par industrie.
+    """
     def analyze_data_gaps(self, crawl_data: Dict[str, Any], industry: str = 'default') -> Dict[str, Any]:
         threshold = INDUSTRY_THRESHOLDS.get(industry, 5)
         pages_analysis = []
