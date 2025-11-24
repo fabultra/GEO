@@ -252,15 +252,24 @@ Les métriques clés sont:
 
 ## Status d'Implémentation
 
-- [ ] Étape 1: Documentation et docstrings GEO
-- [ ] Étape 2: Purge SEO local dans scoring_grids.py
-- [ ] Étape 3: Refonte modèle Score avec answerability
+### ✅ PHASE 1 - Core GEO Refactoring (COMPLÉTÉ)
+- [x] Étape 1: Documentation et docstrings GEO (CompetitiveIntelligence, TokenAnalyzer, VisibilityTesterV2, DataGapDetector, Score)
+- [x] Étape 2: Purge SEO local dans scoring_grids.py (LocalBusiness supprimé, schémas GEO ajoutés)
+- [x] Étape 3: Refonte modèle Score avec answerability (priorité 20%)
+- [x] Étape 3b: calculate_weighted_score refactoré (infoDensity exclus)
+- [x] Étape 3c: Refonte _rate_density avec labels descriptifs
+- [x] Étape 3d: Ajout truncation_risk et density_explanation
+
+### 🔄 PHASE 2 - Competitive Intelligence 2.0 (À VENIR)
 - [ ] Étape 4: Analyse 5 compétiteurs au lieu de 3
-- [ ] Étape 5: Multi-pages par compétiteur
-- [ ] Étape 6: GEO Power Score
-- [ ] Étape 7: Comparatif NOUS vs COMPÉTITEURS
-- [ ] Étape 8: Confidence level
-- [ ] Étape 9: Refonte token_analyzer
+- [ ] Étape 5: Multi-pages par compétiteur (_analyze_competitor_page)
+- [ ] Étape 6: GEO Power Score (compute_geo_power_score)
+- [ ] Étape 8: Confidence level (_compute_confidence_level)
+
+### 🔄 PHASE 3 - Comparatif NOUS vs COMPÉTITEURS (À VENIR)
+- [ ] Étape 7: Comparatif NOUS vs COMPÉTITEURS (refonte generate_comparative_table)
+
+### 🔄 PHASE 4-6 - Frontend, Rapports, Validation (À VENIR)
 - [ ] Étape 10: Mise à jour frontend et rapports
 - [ ] Étape 11: Validation complète
 
