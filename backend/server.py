@@ -967,6 +967,40 @@ async def process_analysis_job(job_id: str):
             visibility_data = test_visibility_with_details(test_queries, job_doc['url'], company_name)
             logger.info(f"Visibility test completed with diagnosis: {visibility_data.get('summary', {}).get('global_visibility', 0):.1%}")
             
+            logger.info("🏆 Running competitive intelligence...")
+            try:
+                competitor_urls = []
+                competitor_domains = set()
+                
+                for query_result in visibility_data.get('queries', []):
+                    for platform, platform_result in query_result.get('platforms', {}).items():
+                        competitors = platform_result.get('competitors_mentioned', [])
+                        for comp in competitors:
+                            if isinstance(comp, dict) and 'urls' in comp:
+                                for url in comp['urls']:
+                                    if not url.startswith('http'):
+                                        url = f"https://{url}"
+                                    domain = url.split('//')[1].split('/')[0] if '//' in url else url.split('/')[0]
+                                    if domain not in competitor_domains:
+                                        competitor_domains.add(domain)
+                                        competitor_urls.append(url)
+                
+                logger.info(f"📊 Found {len(competitor_urls)} URLs")
+                
+                if competitor_urls:
+                    ci = CompetitiveIntelligence()
+                    competitive_analysis = ci.analyze_competitors(
+                        competitors_urls=competitor_urls[:5],
+                        visibility_data=visibility_data
+                    )
+                    visibility_data['competitive_intelligence'] = competitive_analysis
+                    logger.info(f"✅ CI: {competitive_analysis.get('competitors_analyzed', 0)} analyzed")
+                else:
+                    visibility_data['competitive_intelligence'] = {'competitors_analyzed': 0}
+            except Exception as e:
+                logger.error(f"❌ CI failed: {str(e)}")
+                visibility_data['competitive_intelligence'] = {'error': str(e), 'competitors_analyzed': 0}
+            
             # Sauvegarder visibility_results.json
             visibility_results_path = f"/app/backend/visibility_results_{job_id}.json"
             with open(visibility_results_path, 'w', encoding='utf-8') as f:
