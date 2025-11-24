@@ -996,14 +996,22 @@ async def process_analysis_job(job_id: str):
                         for comp in competitors:
                             if isinstance(comp, dict) and 'urls' in comp:
                                 for url in comp['urls']:
+                                    # Normalisation URL
                                     if not url.startswith('http'):
                                         url = f"https://{url}"
+                                    
+                                    # Extraire et normaliser domaine
                                     domain = url.split('//')[1].split('/')[0] if '//' in url else url.split('/')[0]
+                                    domain = domain.replace('www.', '')  # Uniformiser www/non-www
+                                    
+                                    # Dédupliquer par domaine
                                     if domain not in competitor_domains:
                                         competitor_domains.add(domain)
                                         competitor_urls.append(url)
                 
-                logger.info(f"📊 Found {len(competitor_urls)} URLs")
+                # Trier pour déterminisme et garder top 5
+                competitor_urls = sorted(competitor_urls)[:5]
+                logger.info(f"📊 Found {len(competitor_urls)} unique competitor URLs (top 5)")
                 
                 if competitor_urls:
                     ci = CompetitiveIntelligence()
