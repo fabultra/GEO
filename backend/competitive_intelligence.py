@@ -34,7 +34,7 @@ class CompetitiveIntelligence:
         """
         analyses = []
         
-        for comp_url in competitors_urls[:5]:  # Top 5 compétiteurs (plus 3)
+        for comp_url in competitors_urls[:5]:  # Top 5 compétiteurs (était 3)
             logger.info(f"Analyzing competitor: {comp_url}")
             
             try:
@@ -44,12 +44,30 @@ class CompetitiveIntelligence:
                 logger.error(f"Failed to analyze {comp_url}: {str(e)}")
                 continue
         
+        # Calculer confidence level basé sur échantillon
+        competitors_analyzed = len(analyses)
+        pages_analyzed = sum(len(a.get("pages_analyzed", [])) for a in analyses)
+        confidence = self._compute_confidence_level(competitors_analyzed, pages_analyzed)
+        
         return {
-            "competitors_analyzed": len(analyses),
+            "competitors_analyzed": competitors_analyzed,
+            "pages_analyzed": pages_analyzed,
+            "confidence_level": confidence,
             "analyses": analyses,
             "comparative_metrics": self.generate_comparative_table(analyses),
             "actionable_insights": self.generate_actionable_insights(analyses)
         }
+    
+    def _compute_confidence_level(self, competitors_analyzed: int, pages_analyzed: int) -> str:
+        """
+        Calcule le niveau de confiance GEO basé sur l'échantillon d'analyse compétitive.
+        Plus de compétiteurs et pages = meilleure fiabilité des insights.
+        """
+        if competitors_analyzed >= 3 and pages_analyzed >= 12:
+            return "HIGH"
+        if competitors_analyzed >= 2 and pages_analyzed >= 6:
+            return "MEDIUM"
+        return "LOW"
     
     def analyze_single_competitor(self, comp_url: str, visibility_data: Dict[str, Any]) -> Dict[str, Any]:
         """Analyse un compétiteur en profondeur"""
