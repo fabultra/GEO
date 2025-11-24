@@ -774,23 +774,56 @@ const ReportPage = () => {
                             </>
                           ) : (
                             <>
-                              <div className="flex items-center justify-between mb-2">
+                              <div className="flex items-center justify-between mb-3">
                                 <h5 className="font-bold text-gray-900">{competitor.domain}</h5>
-                                <span className="px-2 py-1 bg-green-100 text-green-700 text-xs rounded">Analysé</span>
+                                {competitor.geo_power_score !== undefined && (
+                                  <span className={`px-3 py-1 text-sm font-bold rounded-full ${
+                                    competitor.geo_power_score >= 7 ? 'bg-green-100 text-green-800' :
+                                    competitor.geo_power_score >= 5 ? 'bg-yellow-100 text-yellow-800' :
+                                    'bg-red-100 text-red-800'
+                                  }`}>
+                                    ⚡ {competitor.geo_power_score}/10
+                                  </span>
+                                )}
                               </div>
-                              <a href={competitor.url} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline block mb-3">
-                                {competitor.url}
+                              
+                              <a href={competitor.main_url || competitor.url} target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline block mb-3">
+                                {competitor.main_url || competitor.url}
                               </a>
-                              <div className="grid grid-cols-2 gap-2 text-xs text-gray-600">
-                                <div>📄 {competitor.word_count} mots</div>
-                                <div>📋 H1: {competitor.h1_count}</div>
-                                <div>❓ FAQ: {competitor.has_faq ? '✅' : '❌'}</div>
-                                <div>🔍 Schema: {competitor.schema_count}</div>
-                              </div>
-                              {competitor.meta_description && (
-                                <p className="text-xs text-gray-500 mt-2 italic line-clamp-2">
-                                  {competitor.meta_description}
-                                </p>
+                              
+                              {/* Nouvelles métriques GEO */}
+                              {competitor.aggregate && (
+                                <div className="space-y-2 mb-3">
+                                  <div className="text-xs bg-blue-50 p-2 rounded">
+                                    <span className="font-semibold">📄 Contenu:</span> {Math.round(competitor.aggregate.avg_word_count)} mots/page
+                                    {competitor.pages_analyzed && ` • ${competitor.pages_analyzed.length} pages`}
+                                  </div>
+                                  <div className="text-xs bg-purple-50 p-2 rounded">
+                                    <span className="font-semibold">📊 Données:</span> {Math.round(competitor.aggregate.avg_stats_per_page)} stats/page
+                                    {competitor.aggregate.total_faq > 0 && ` • ${competitor.aggregate.total_faq} FAQ`}
+                                  </div>
+                                  <div className="grid grid-cols-3 gap-1 text-xs">
+                                    <div className={`p-1 rounded text-center ${competitor.aggregate.direct_answer_rate > 0.5 ? 'bg-green-50 text-green-700' : 'bg-gray-50 text-gray-600'}`}>
+                                      💬 {Math.round(competitor.aggregate.direct_answer_rate * 100)}%
+                                    </div>
+                                    <div className={`p-1 rounded text-center ${competitor.aggregate.tldr_rate > 0.3 ? 'bg-green-50 text-green-700' : 'bg-gray-50 text-gray-600'}`}>
+                                      📝 {Math.round(competitor.aggregate.tldr_rate * 100)}%
+                                    </div>
+                                    <div className={`p-1 rounded text-center ${competitor.aggregate.schema_presence_rate > 0.5 ? 'bg-green-50 text-green-700' : 'bg-gray-50 text-gray-600'}`}>
+                                      🔍 {Math.round(competitor.aggregate.schema_presence_rate * 100)}%
+                                    </div>
+                                  </div>
+                                  <div className="text-xs text-gray-500 text-center mt-1">
+                                    Direct Answer • TL;DR • Schémas
+                                  </div>
+                                </div>
+                              )}
+                              
+                              {/* LLM Visibility */}
+                              {competitor.llm_visibility && (
+                                <div className="text-xs bg-indigo-50 p-2 rounded">
+                                  <span className="font-semibold">🤖 Visibilité LLM:</span> {Math.round((competitor.llm_visibility.overall || 0) * 100)}%
+                                </div>
                               )}
                             </>
                           )}
