@@ -749,9 +749,32 @@ const ReportPage = () => {
                 {/* Summary */}
                 <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-l-4 border-purple-600">
                   <h4 className="font-bold text-lg mb-2 text-purple-900">Résumé</h4>
-                  <p className="text-gray-700">
-                    <strong>{report.competitive_intelligence.competitors_analyzed}</strong> compétiteurs analysés trouvés dans les réponses des IA génératives.
-                  </p>
+                  <div className="mb-6 space-y-3">
+                    <div className="flex items-center gap-4 flex-wrap">
+                      <span className="text-lg">
+                        <strong className="text-purple-700">{report.competitive_intelligence.competitors_analyzed}</strong> compétiteurs analysés
+                      </span>
+                      <span className="text-sm text-gray-600">
+                        • <strong>{report.competitive_intelligence.pages_analyzed || 0}</strong> pages analysées
+                      </span>
+                      {report.competitive_intelligence.confidence_level && (
+                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
+                          report.competitive_intelligence.confidence_level === 'HIGH' ? 'bg-green-100 text-green-800' :
+                          report.competitive_intelligence.confidence_level === 'MEDIUM' ? 'bg-yellow-100 text-yellow-800' :
+                          'bg-orange-100 text-orange-800'
+                        }`}>
+                          {report.competitive_intelligence.confidence_level === 'HIGH' ? '✅ Confiance élevée' :
+                           report.competitive_intelligence.confidence_level === 'MEDIUM' ? '⚠️ Confiance moyenne' :
+                           '⚠️ Confiance faible'}
+                        </span>
+                      )}
+                    </div>
+                    {report.competitive_intelligence.confidence_level === 'LOW' && (
+                      <div className="text-xs text-orange-600 bg-orange-50 p-2 rounded">
+                        ⚠️ Échantillon limité : les insights sont indicatifs. Plus de compétiteurs analysés = meilleure fiabilité.
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 {/* Liste des compétiteurs individuels */}
