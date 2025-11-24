@@ -521,40 +521,79 @@ class CompetitiveIntelligence:
                 "time": "2-3h par page"
             })
         
-        # Insight 2: TL;DR
-        tldr_count = sum([1 for a in analyses if a.get('has_tldr')])
-        if tldr_count >= 2:
+        # Insight 3: Statistiques / Données
+        our_stats = our_metrics.get('avg_stats_per_page', 0)
+        comp_stats = competitor_metrics.get('avg_stats_per_page', 0)
+        stats_gap = comp_stats - our_stats
+        
+        if stats_gap > 3:
+            insights.append({
+                "priority": "HAUTE",
+                "title": f"Manque {stats_gap:.0f} statistiques par page",
+                "problem": f"NOUS: {our_stats:.0f} stats/page | COMPÉTITEURS: {comp_stats:.0f} stats/page",
+                "action": "Ajouter 10-15 statistiques chiffrées avec sources par page",
+                "impact": "Crédibilité +40%, Visibilité IA +20%",
+                "time": "1h de recherche par page"
+            })
+        
+        # Insight 4: Direct Answer Rate
+        our_direct = our_metrics.get('direct_answer_rate', 0)
+        comp_direct = competitor_metrics.get('direct_answer_rate', 0)
+        direct_gap = comp_direct - our_direct
+        
+        if direct_gap > 0.2:
             insights.append({
                 "priority": "CRITIQUE",
-                "title": "Ajouter TL;DR en début de page",
-                "problem": f"{tldr_count}/{len(analyses)} compétiteurs ont un TL;DR",
-                "action": "Ajouter un résumé de 40-60 mots au début de chaque page principale",
-                "impact": "Visibilité ChatGPT +25%",
-                "time": "15 minutes par page"
+                "title": f"Réponses directes {direct_gap*100:.0f}% en retard",
+                "problem": f"NOUS: {our_direct*100:.0f}% | COMPÉTITEURS: {comp_direct*100:.0f}%",
+                "action": "Réécrire les premiers paragraphes pour répondre immédiatement à la question",
+                "impact": "Visibilité ChatGPT/Claude +35%",
+                "time": "30 min par page"
             })
         
-        # Insight 3: Statistiques
-        avg_stats = sum([a.get('stats_count', 0) for a in analyses]) / len(analyses)
-        if avg_stats > 5:
+        # Insight 5: TL;DR Rate
+        our_tldr = our_metrics.get('tldr_rate', 0)
+        comp_tldr = competitor_metrics.get('tldr_rate', 0)
+        tldr_gap = comp_tldr - our_tldr
+        
+        if tldr_gap > 0.2:
             insights.append({
                 "priority": "HAUTE",
-                "title": "Augmenter la densité de statistiques",
-                "problem": f"Compétiteurs ont en moyenne {avg_stats:.0f} stats par page",
-                "action": "Ajouter 10-15 statistiques par page avec sources",
-                "impact": "Crédibilité +40%, Visibilité +20%",
-                "time": "1 heure de recherche par page"
+                "title": f"Ajouter des TL;DR ({tldr_gap*100:.0f}% de retard)",
+                "problem": f"NOUS: {our_tldr*100:.0f}% | COMPÉTITEURS: {comp_tldr*100:.0f}%",
+                "action": "Ajouter un résumé TL;DR de 40-60 mots en début de chaque page clé",
+                "impact": "Extractibilité IA +25%",
+                "time": "15 min par page"
             })
         
-        # Insight 4: Schema markup
-        avg_schema = sum([a.get('schema_count', 0) for a in analyses]) / len(analyses)
-        if avg_schema > 0:
+        # Insight 6: Schema Markup
+        our_schema = our_metrics.get('schema_presence_rate', 0)
+        comp_schema = competitor_metrics.get('schema_presence_rate', 0)
+        schema_gap = comp_schema - our_schema
+        
+        if schema_gap > 0.3:
             insights.append({
                 "priority": "HAUTE",
-                "title": "Implémenter Schema markup",
-                "problem": f"Compétiteurs ont en moyenne {avg_schema:.1f} schemas par page",
-                "action": "Ajouter Organization, FAQPage, LocalBusiness schemas",
-                "impact": "Indexation LLM +50%",
-                "time": "30 minutes par page"
+                "title": f"Schémas structurés {schema_gap*100:.0f}% en retard",
+                "problem": f"NOUS: {our_schema*100:.0f}% | COMPÉTITEURS: {comp_schema*100:.0f}%",
+                "action": "Implémenter FAQPage, Article, HowTo schemas (JSON-LD)",
+                "impact": "Compréhension IA +50%",
+                "time": "30 min par page"
+            })
+        
+        # Insight 7: FAQ
+        our_faq = our_metrics.get('avg_faq_per_page', 0)
+        comp_faq = competitor_metrics.get('avg_faq_per_page', 0)
+        faq_gap = comp_faq - our_faq
+        
+        if faq_gap > 3:
+            insights.append({
+                "priority": "MOYENNE",
+                "title": f"Ajouter {faq_gap:.0f} FAQ par page",
+                "problem": f"NOUS: {our_faq:.0f} FAQ/page | COMPÉTITEURS: {comp_faq:.0f} FAQ/page",
+                "action": "Créer sections FAQ avec 5-10 questions par page",
+                "impact": "Visibilité requêtes questions +30%",
+                "time": "45 min par page"
             })
         
         return insights
