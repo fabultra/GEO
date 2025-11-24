@@ -16,7 +16,11 @@ from collections import Counter
 logger = logging.getLogger(__name__)
 
 class VisibilityTesterV2:
-    """Teste la visibilité avec diagnostic approfondi"""
+    """
+    Teste la visibilité réelle dans les moteurs génératifs (ChatGPT, Claude, Perplexity, Gemini, Google AI).
+    Mesure si le site est mentionné, cité, recommandé par les LLMs sur des requêtes ciblées.
+    Extrait dynamiquement les compétiteurs mentionnés pour comprendre pourquoi ils dominent.
+    """
     
     def __init__(self):
         # Initialize API clients
@@ -26,6 +30,11 @@ class VisibilityTesterV2:
         self.perplexity_key = os.environ.get('PERPLEXITY_API_KEY')
     
     def test_all_queries_detailed(self, queries: List[str], site_url: str, company_name: str) -> Dict[str, Any]:
+        """
+        Teste toutes les requêtes sur 5 plateformes IA avec diagnostic complet GEO.
+        Identifie les compétiteurs mentionnés, calcule Share of Voice, analyse sentiment,
+        et classe les requêtes par type (branded, informational, comparison, etc.)
+        """
         """
         Test toutes les requêtes avec diagnostic complet
         
