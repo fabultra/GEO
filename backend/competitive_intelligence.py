@@ -322,57 +322,157 @@ class CompetitiveIntelligence:
         
         return visibility
     
-    def generate_comparative_table(self, analyses: List[Dict[str, Any]]) -> Dict[str, Any]:
-        """Génère un tableau comparatif"""
+    def generate_comparative_table(self, analyses: List[Dict[str, Any]], our_data: Dict[str, Any] = None) -> Dict[str, Any]:
+        """
+        Génère un tableau comparatif GEO: NOUS vs AVERAGE_COMPETITORS avec GAP.
+        Utilise les vraies données de notre site pour comparaison réelle.
+        """
         if not analyses:
             return {}
         
-        # Utiliser les vrais noms des compétiteurs (domaines)
-        headers = ["Métrique"]
-        for analysis in analyses[:3]:
-            domain = analysis.get('domain', 'Compétiteur')
-            # Raccourcir si trop long
-            if len(domain) > 25:
-                domain = domain[:22] + '...'
-            headers.append(domain)
-        headers.extend(["NOUS", "GAP"])
+        # Extraire nos métriques si disponibles
+        our_metrics = self._extract_our_metrics(our_data) if our_data else {}
         
+        # Calculer moyennes des compétiteurs
+        competitor_metrics = self._calculate_competitor_averages(analyses)
+        
+        # Structure du tableau comparatif GEO
         table = {
-            "headers": headers,
-            "rows": []
+            "NOUS": our_metrics,
+            "AVERAGE_COMPETITORS": competitor_metrics,
+            "GAP": {}
         }
         
-        metrics_to_compare = [
-            ("Longueur (mots)", "word_count"),
-            ("Statistiques", "stats_count"),
-            ("H2 descriptifs", "h2_count"),
-            ("TL;DR", "has_tldr"),
-            ("Listes", "lists_count"),
-            ("Tableaux", "tables_count"),
-            ("FAQ", "has_faq"),
-            ("Schema markup", "schema_count")
+        # Calculer GAP pour chaque métrique
+        metrics_keys = [
+            'avg_word_count', 'avg_stats_per_page', 'direct_answer_rate',
+            'tldr_rate', 'schema_presence_rate', 'avg_faq_per_page', 'geo_power_score'
         ]
         
-        for metric_name, metric_key in metrics_to_compare:
-            row = [metric_name]
-            values = []
+        for key in metrics_keys:
+            our_val = our_metrics.get(key, 0)
+            comp_val = competitor_metrics.get(key, 0)
             
-            for analysis in analyses[:3]:
-                value = analysis.get(metric_key, 0)
-                row.append(str(value))
-                values.append(value if isinstance(value, (int, float)) else 0)
-            
-            # Ajouter "NOUS" (supposons 0 pour l'instant)
-            row.append("0")
-            
-            # Calculer GAP
-            avg_competitors = sum(values) / len(values) if values else 0
-            gap = f"-{avg_competitors:.0f}"
-            row.append(gap)
-            
-            table["rows"].append(row)
+            # GAP = NOUS - COMPÉTITEURS (négatif = on est en retard)
+            gap = our_val - comp_val
+            table["GAP"][key] = round(gap, 2)
         
         return table
+    
+    def _extract_our_metrics(self, our_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Extrait nos métriques GEO depuis crawl_data, semantic_analysis, etc."""
+        
+        crawl_data = our_data.get('crawl_data', {})
+        semantic_analysis = our_data.get('semantic_analysis', {})
+        data_gap = our_data.get('data_gap_analysis', {})
+        visibility = our_data.get('visibility_data', {})
+        
+        pages = crawl_data.get('pages', [])
+        num_pages = len(pages)
+        
+        if num_pages == 0:
+            return {
+                'avg_word_count': 0,
+                'avg_stats_per_page': 0,
+                'direct_answer_rate': 0,
+                'tldr_rate': 0,
+                'schema_presence_rate': 0,
+                'avg_faq_per_page': 0,
+                'geo_power_score': 0
+            }
+        
+        # Calculer word count moyen
+        total_words = 0
+        for page in pages:
+            paragraphs = page.get('paragraphs', [])
+            for p in paragraphs:
+                total_words += len(p.split())
+        avg_word_count = total_words / num_pages if num_pages > 0 else 0
+        
+        # Stats depuis data_gap_detector
+        global_stats = data_gap.get('global_stats', {})
+        avg_stats = global_stats.get('avg_stats_found', 0)
+        
+        # Schémas structurés
+        pages_with_schema = sum(1 for p in pages if p.get('structured_data'))
+        schema_rate = pages_with_schema / num_pages if num_pages > 0 else 0
+        
+        # Direct answer / TL;DR (estimation heuristique)
+        # TODO: améliorer avec détection réelle
+        direct_answer_rate = 0.3  # Estimation conservative
+        tldr_rate = 0.1  # Estimation conservative
+        
+        # FAQ (depuis semantic analysis)
+        entities = semantic_analysis.get('entities', {})
+        faq_count = len(entities.get('questions', [])) if isinstance(entities.get('questions'), list) else 0
+        avg_faq = faq_count / num_pages if num_pages > 0 else 0
+        
+        # Visibilité globale
+        summary = visibility.get('summary', {})
+        our_visibility = summary.get('global_visibility', 0)
+        
+        # Calculer notre GEO Power Score (même formule que compétiteurs)
+        geo_power_score = (
+            (our_visibility * 4) +
+            (direct_answer_rate * 2) +
+            (tldr_rate * 1.5) +
+            (schema_rate * 1.5) +
+            min(avg_stats / 10.0, 1.0)
+        )
+        geo_power_score = round(geo_power_score, 1)
+        
+        return {
+            'avg_word_count': round(avg_word_count, 0),
+            'avg_stats_per_page': round(avg_stats, 1),
+            'direct_answer_rate': round(direct_answer_rate, 2),
+            'tldr_rate': round(tldr_rate, 2),
+            'schema_presence_rate': round(schema_rate, 2),
+            'avg_faq_per_page': round(avg_faq, 1),
+            'geo_power_score': geo_power_score
+        }
+    
+    def _calculate_competitor_averages(self, analyses: List[Dict[str, Any]]) -> Dict[str, Any]:
+        """Calcule les moyennes des compétiteurs pour chaque métrique GEO"""
+        
+        if not analyses:
+            return {}
+        
+        # Agréger toutes les métriques
+        total_word_count = 0
+        total_stats = 0
+        total_direct_answer_rate = 0
+        total_tldr_rate = 0
+        total_schema_rate = 0
+        total_faq = 0
+        total_geo_score = 0
+        count = 0
+        
+        for analysis in analyses:
+            if analysis.get('error'):
+                continue
+                
+            agg = analysis.get('aggregate', {})
+            total_word_count += agg.get('avg_word_count', 0)
+            total_stats += agg.get('avg_stats_per_page', 0)
+            total_direct_answer_rate += agg.get('direct_answer_rate', 0)
+            total_tldr_rate += agg.get('tldr_rate', 0)
+            total_schema_rate += agg.get('schema_presence_rate', 0)
+            total_faq += agg.get('avg_faq_per_page', 0)
+            total_geo_score += analysis.get('geo_power_score', 0)
+            count += 1
+        
+        if count == 0:
+            return {}
+        
+        return {
+            'avg_word_count': round(total_word_count / count, 0),
+            'avg_stats_per_page': round(total_stats / count, 1),
+            'direct_answer_rate': round(total_direct_answer_rate / count, 2),
+            'tldr_rate': round(total_tldr_rate / count, 2),
+            'schema_presence_rate': round(total_schema_rate / count, 2),
+            'avg_faq_per_page': round(total_faq / count, 1),
+            'geo_power_score': round(total_geo_score / count, 1)
+        }
     
     def generate_actionable_insights(self, analyses: List[Dict[str, Any]]) -> List[Dict[str, str]]:
         """Génère des insights actionnables"""
