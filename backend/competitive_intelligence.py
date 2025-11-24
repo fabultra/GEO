@@ -151,45 +151,96 @@ class CompetitiveIntelligence:
         Identifie pourquoi il performe dans les IA (structure, données, FAQ, guides).
         """
         
-        # Fetch la page principale
         try:
+            # 1. Analyser la page principale
+            main_page = self._analyze_competitor_page(comp_url)
+            
+            # 2. Extraire URLs internes pertinentes pour GEO
             response = requests.get(comp_url, timeout=10, headers={
                 'User-Agent': 'Mozilla/5.0 (compatible; GEOBot/1.0)'
             })
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Extraire métriques
-            metrics = {
-                "url": comp_url,
-                "domain": comp_url.split('//')[1].split('/')[0],
-                "word_count": len(soup.get_text().split()),
-                "h1_count": len(soup.find_all('h1')),
-                "h2_count": len(soup.find_all('h2')),
-                "h3_count": len(soup.find_all('h3')),
-                "has_tldr": bool(soup.find(string=lambda text: text and ('TL;DR' in text or 'En bref' in text))),
-                "lists_count": len(soup.find_all(['ul', 'ol'])),
-                "tables_count": len(soup.find_all('table')),
-                "has_faq": bool(soup.find(string=lambda text: text and 'FAQ' in text)),
-                "schema_count": len(soup.find_all('script', {'type': 'application/ld+json'})),
-                "meta_description": soup.find('meta', {'name': 'description'}).get('content', '') if soup.find('meta', {'name': 'description'}) else '',
-                "images_with_alt": len([img for img in soup.find_all('img') if img.get('alt')])
+            domain = comp_url.split('//')[1].split('/')[0] if '//' in comp_url else comp_url.split('/')[0]
+            
+            # Mots-clés GEO pertinents
+            geo_keywords = [
+                'guide', 'comment', 'how-to', 'faq', 'questions', 'prix', 'tarifs',
+                'compare', 'vs', 'fonctionnalites', 'features', 'ressources', 'resources',
+                'blog', 'article', 'tutoriel', 'tutorial'
+            ]
+            
+            internal_urls = []
+            for link in soup.find_all('a', href=True):
+                href = link['href']
+                # Convertir en URL absolue
+                if href.startswith('/'):
+                    href = urljoin(comp_url, href)
+                
+                # Vérifier que c'est le même domaine
+                if domain in href and any(keyword in href.lower() for keyword in geo_keywords):
+                    if href not in internal_urls and href != comp_url:
+                        internal_urls.append(href)
+            
+            # Garder maximum 4-5 pages
+            internal_urls = list(set(internal_urls))[:5]
+            
+            # 3. Analyser les pages internes
+            pages_analyzed = [main_page]
+            for internal_url in internal_urls:
+                page_analysis = self._analyze_competitor_page(internal_url)
+                pages_analyzed.append(page_analysis)
+            
+            # 4. Calculer agrégats
+            total_word_count = sum(p.get('word_count', 0) for p in pages_analyzed)
+            total_stats = sum(p.get('stats_count', 0) for p in pages_analyzed)
+            total_faq = sum(p.get('faq_count', 0) for p in pages_analyzed)
+            pages_with_schema = sum(1 for p in pages_analyzed if p.get('schema_count', 0) > 0)
+            pages_with_direct_answer = sum(1 for p in pages_analyzed if p.get('has_direct_answer', False))
+            pages_with_tldr = sum(1 for p in pages_analyzed if p.get('has_tldr', False))
+            
+            num_pages = len(pages_analyzed)
+            
+            aggregate = {
+                'total_word_count': total_word_count,
+                'avg_word_count': total_word_count / num_pages if num_pages > 0 else 0,
+                'total_stats': total_stats,
+                'avg_stats_per_page': total_stats / num_pages if num_pages > 0 else 0,
+                'total_faq': total_faq,
+                'avg_faq_per_page': total_faq / num_pages if num_pages > 0 else 0,
+                'schema_presence_rate': pages_with_schema / num_pages if num_pages > 0 else 0,
+                'direct_answer_rate': pages_with_direct_answer / num_pages if num_pages > 0 else 0,
+                'tldr_rate': pages_with_tldr / num_pages if num_pages > 0 else 0
             }
             
-            # Statistiques dans le contenu
-            text_content = soup.get_text()
-            metrics['stats_count'] = text_content.count('%') + text_content.count('$') + text_content.count(' millions')
+            # 5. Calculer visibilité LLM
+            llm_visibility = self.calculate_competitor_visibility(domain, visibility_data)
             
-            # Calculer visibilité LLM
-            comp_domain = metrics['domain']
-            llm_visibility = self.calculate_competitor_visibility(comp_domain, visibility_data)
-            metrics['llm_visibility'] = llm_visibility
+            # 6. Calculer GEO Power Score
+            competitor = {
+                'domain': domain,
+                'main_url': comp_url,
+                'pages_analyzed': pages_analyzed,
+                'aggregate': aggregate,
+                'llm_visibility': llm_visibility
+            }
+            geo_power_score = self.compute_geo_power_score(competitor)
+            competitor['geo_power_score'] = geo_power_score
             
-            return metrics
+            return competitor
             
         except Exception as e:
             logger.error(f"Error analyzing {comp_url}: {str(e)}")
-            return {"url": comp_url, "error": str(e)}
+            return {
+                "domain": comp_url,
+                "main_url": comp_url,
+                "error": str(e),
+                "pages_analyzed": [],
+                "aggregate": {},
+                "llm_visibility": {},
+                "geo_power_score": 0.0
+            }
     
     def calculate_competitor_visibility(self, comp_domain: str, visibility_data: Dict[str, Any]) -> Dict[str, float]:
         """Calcule la visibilité d'un compétiteur dans les LLMs"""
