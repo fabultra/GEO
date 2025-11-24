@@ -1149,6 +1149,15 @@ def generate_interactive_dashboard(visibility_results: Dict[str, Any], output_pa
             </table>
         </div>
         
+        <!-- Analyse par type de requête -->
+        {generate_query_type_analysis_html(visibility_results.get('query_type_analysis', {{}}))}
+        
+        <!-- Analyse compétitive détaillée -->
+        {generate_competitive_analysis_html(visibility_results.get('competitive_analysis', {{}}))}
+        
+        <!-- Insights actionnables -->
+        {generate_insights_html(visibility_results.get('competitive_analysis', {{}}))}
+        
         <!-- Formulaire ajout de requête -->
         <div class="add-query-form">
             <h2>➕ Ajouter une Requête Personnalisée</h2>
