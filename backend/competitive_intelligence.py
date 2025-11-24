@@ -242,6 +242,45 @@ class CompetitiveIntelligence:
                 "geo_power_score": 0.0
             }
     
+    def compute_geo_power_score(self, competitor: Dict[str, Any]) -> float:
+        """
+        Calcule le GEO Power Score (0-10) basé sur les facteurs clés de performance IA.
+        
+        Pondération:
+        - llm_visibility (40%): visibilité réelle dans les moteurs génératifs
+        - direct_answer_rate (20%): capacité à fournir réponses claires
+        - tldr_rate (15%): présence de résumés extractibles
+        - schema_presence_rate (15%): structured data pour IA
+        - avg_stats_per_page (10%): richesse en données factuelles
+        """
+        agg = competitor.get('aggregate', {})
+        visibility = competitor.get('llm_visibility', {})
+        
+        # Visibilité LLM (0-4 points)
+        v = visibility.get('overall', 0.0)
+        visibility_score = v * 4
+        
+        # Direct answer rate (0-2 points)
+        direct = agg.get('direct_answer_rate', 0.0)
+        direct_score = direct * 2
+        
+        # TL;DR rate (0-1.5 points)
+        tldr = agg.get('tldr_rate', 0.0)
+        tldr_score = tldr * 1.5
+        
+        # Schema presence (0-1.5 points)
+        schema = agg.get('schema_presence_rate', 0.0)
+        schema_score = schema * 1.5
+        
+        # Stats density (0-1 point, normalisé)
+        stats = agg.get('avg_stats_per_page', 0.0)
+        stats_score = min(stats / 10.0, 1.0)  # 10 stats/page = optimal
+        
+        # Score total (max 10)
+        total_score = visibility_score + direct_score + tldr_score + schema_score + stats_score
+        
+        return round(total_score, 1)
+    
     def calculate_competitor_visibility(self, comp_domain: str, visibility_data: Dict[str, Any]) -> Dict[str, float]:
         """Calcule la visibilité d'un compétiteur dans les LLMs"""
         visibility = {
