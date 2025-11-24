@@ -9,6 +9,301 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
+def generate_query_type_analysis_html(query_type_analysis: Dict[str, Any]) -> str:
+    """Génère le HTML pour l'analyse par type de requête"""
+    if not query_type_analysis:
+        return ""
+    
+    html = """
+        <div class="analysis-section">
+            <h2>📊 Performance par Type de Requête</h2>
+            <div class="query-types-grid">
+    """
+    
+    for qtype, data in query_type_analysis.items():
+        visibility = data.get('visibility', 0) * 100
+        queries_count = len(data.get('queries', []))
+        avg_position = data.get('avg_position')
+        top_competitors = data.get('top_competitors', [])
+        
+        html += f"""
+                <div class="query-type-card">
+                    <h3>{qtype.title()}</h3>
+                    <div class="metric-large">{visibility:.1f}%</div>
+                    <p class="metric-label">Visibilité</p>
+        """
+        
+        if avg_position:
+            html += f"""
+                    <div class="metric">Position moyenne: {avg_position:.1f}</div>
+            """
+        
+        html += f"""
+                    <div class="queries-list">
+                        <strong>Requêtes ({queries_count}):</strong>
+                        <ul>
+        """
+        
+        for query in data.get('queries', [])[:3]:
+            html += f"""
+                            <li>{query}</li>
+            """
+        
+        html += """
+                        </ul>
+                    </div>
+        """
+        
+        if top_competitors:
+            html += """
+                    <div class="competitors-mini">
+                        <strong>Top compétiteurs:</strong>
+            """
+            for comp in top_competitors[:3]:
+                html += f"""
+                        <div class="competitor-badge">
+                            {comp.get('name', 'N/A')} ({comp.get('mentions', 0)})
+                        </div>
+                """
+            html += """
+                    </div>
+            """
+        
+        html += """
+                </div>
+        """
+    
+    html += """
+            </div>
+        </div>
+    """
+    
+    return html
+
+def generate_competitive_analysis_html(competitive_analysis: Dict[str, Any]) -> str:
+    """Génère le HTML pour l'analyse compétitive détaillée"""
+    if not competitive_analysis or not competitive_analysis.get('competitors'):
+        return ""
+    
+    total_competitors = competitive_analysis.get('total_unique_competitors', 0)
+    
+    html = f"""
+        <div class="analysis-section">
+            <h2>🏆 Analyse Compétitive Détaillée</h2>
+            
+            <div class="competitive-summary">
+                <div class="metric-box">
+                    <div class="metric-large">{total_competitors}</div>
+                    <p>Compétiteurs uniques identifiés</p>
+                </div>
+            </div>
+    """
+    
+    for idx, competitor in enumerate(competitive_analysis.get('competitors', [])[:5], 1):
+        comp_name = competitor.get('name', 'N/A')
+        visibility_rate = competitor.get('visibility_rate', 0) * 100
+        total_mentions = competitor.get('total_mentions', 0)
+        queries_count = len(competitor.get('queries_present_in', []))
+        urls_cited = competitor.get('urls_cited', [])
+        perceived_strengths = competitor.get('perceived_strengths', [])
+        mention_breakdown = competitor.get('mention_breakdown', {})
+        
+        html += f"""
+            <div class="competitor-card-detailed">
+                <div class="competitor-header">
+                    <h3>{idx}. {comp_name}</h3>
+                    <div class="visibility-badge">
+                        {visibility_rate:.1f}% visibilité
+                    </div>
+                </div>
+                
+                <div class="competitor-metrics">
+                    <div class="metric">
+                        <strong>{total_mentions}</strong> mentions totales
+                    </div>
+                    <div class="metric">
+                        Présent dans <strong>{queries_count}</strong> requêtes
+                    </div>
+                </div>
+        """
+        
+        if urls_cited:
+            html += """
+                <div class="urls-section">
+                    <strong>📎 URLs citées par les LLMs:</strong>
+                    <ul class="urls-list">
+            """
+            for url in urls_cited[:3]:
+                html += f"""
+                        <li><a href="https://{url}" target="_blank">{url}</a></li>
+                """
+            html += """
+                    </ul>
+                </div>
+            """
+        
+        if perceived_strengths:
+            html += """
+                <div class="strengths-section">
+                    <strong>💪 Forces perçues:</strong>
+                    <ul class="strengths-list">
+            """
+            for strength in perceived_strengths[:3]:
+                html += f"""
+                        <li>{strength}</li>
+                """
+            html += """
+                    </ul>
+                </div>
+            """
+        
+        html += """
+                <div class="mention-breakdown">
+                    <strong>Types de mentions:</strong>
+                    <div class="mention-types">
+        """
+        
+        if mention_breakdown.get('recommendation', 0) > 0:
+            html += f"""
+                        <span class="badge badge-success">
+                            ✅ {mention_breakdown['recommendation']} recommandations
+                        </span>
+            """
+        if mention_breakdown.get('comparison', 0) > 0:
+            html += f"""
+                        <span class="badge badge-info">
+                            ⚖️ {mention_breakdown['comparison']} comparaisons
+                        </span>
+            """
+        if mention_breakdown.get('neutral', 0) > 0:
+            html += f"""
+                        <span class="badge badge-neutral">
+                            ⚪ {mention_breakdown['neutral']} neutres
+                        </span>
+            """
+        
+        html += """
+                    </div>
+                </div>
+        """
+        
+        queries_present = competitor.get('queries_present_in', [])
+        if queries_present:
+            html += f"""
+                <details class="queries-details">
+                    <summary>Voir les requêtes où {comp_name} apparaît</summary>
+                    <ul>
+            """
+            for query in queries_present[:10]:
+                html += f"""
+                        <li>{query}</li>
+                """
+            html += """
+                    </ul>
+                </details>
+            """
+        
+        html += """
+            </div>
+        """
+    
+    html += """
+        </div>
+    """
+    
+    return html
+
+def generate_insights_html(competitive_analysis: Dict[str, Any]) -> str:
+    """Génère le HTML pour les insights actionnables"""
+    if not competitive_analysis or not competitive_analysis.get('competitive_insights'):
+        return ""
+    
+    insights = competitive_analysis.get('competitive_insights', [])
+    
+    html = """
+        <div class="analysis-section insights-section">
+            <h2>💡 Insights Actionnables</h2>
+    """
+    
+    for insight in insights:
+        severity = insight.get('severity', 'MEDIUM').lower()
+        insight_type = insight.get('type', 'N/A')
+        title = insight.get('title', '')
+        details = insight.get('details', '')
+        action = insight.get('action', '')
+        urls_to_analyze = insight.get('urls_to_analyze', [])
+        example = insight.get('example', '')
+        perceived_strengths = insight.get('perceived_strengths', [])
+        
+        html += f"""
+            <div class="insight-card severity-{severity}">
+                <div class="insight-header">
+                    <span class="severity-badge">{severity.upper()}</span>
+                    <span class="insight-type">{insight_type}</span>
+                </div>
+                
+                <h3>{title}</h3>
+        """
+        
+        if details:
+            html += f"""
+                <p class="insight-details">{details}</p>
+            """
+        
+        html += f"""
+                <div class="insight-action">
+                    <strong>🎯 Action recommandée:</strong>
+                    <p>{action}</p>
+                </div>
+        """
+        
+        if urls_to_analyze:
+            html += """
+                <div class="urls-to-analyze">
+                    <strong>URLs à analyser en priorité:</strong>
+                    <ul>
+            """
+            for url in urls_to_analyze:
+                html += f"""
+                        <li><a href="https://{url}" target="_blank">{url}</a></li>
+                """
+            html += """
+                    </ul>
+                </div>
+            """
+        
+        if example:
+            html += f"""
+                <div class="insight-example">
+                    <strong>Exemple:</strong> {example}
+                </div>
+            """
+        
+        if perceived_strengths:
+            html += """
+                <div class="perceived-strengths">
+                    <strong>Leurs forces identifiées:</strong>
+                    <ul>
+            """
+            for strength in perceived_strengths:
+                html += f"""
+                        <li>{strength}</li>
+                """
+            html += """
+                    </ul>
+                </div>
+            """
+        
+        html += """
+            </div>
+        """
+    
+    html += """
+        </div>
+    """
+    
+    return html
+
 def generate_interactive_dashboard(visibility_results: Dict[str, Any], output_path: str) -> str:
     """
     Génère un dashboard HTML interactif complet
