@@ -312,11 +312,20 @@ class VisibilityTesterV2:
             return 'negative'
         return 'neutral'
     
-    def _calculate_share_of_voice(self, response: str, company_name: str, competitors: List[str]) -> float:
+    def _calculate_share_of_voice(self, response: str, company_name: str, competitors: List) -> float:
         """Calcule le Share of Voice vs compétiteurs"""
         response_lower = response.lower()
         company_mentions = response_lower.count(company_name.lower())
-        competitor_mentions = sum(response_lower.count(c.lower()) for c in competitors)
+        
+        # Gérer les deux formats: liste de strings ou liste de dicts
+        competitor_mentions = 0
+        for c in competitors:
+            if isinstance(c, dict):
+                comp_name = c.get('name', '')
+            else:
+                comp_name = c
+            competitor_mentions += response_lower.count(comp_name.lower())
+        
         total = company_mentions + competitor_mentions
         return company_mentions / total if total > 0 else 0.0
     
