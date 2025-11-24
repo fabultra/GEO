@@ -1,32 +1,40 @@
 """
-Module 3: Competitive Intelligence Active
-Reverse-engineer exactement pourquoi les compétiteurs apparaissent dans les LLMs
+Module 3: Competitive Intelligence Active - GEO Focus
+Analyse pourquoi les compétiteurs sont favoris des moteurs génératifs (ChatGPT, Claude, Perplexity, etc.)
+Reverse-engineering des patterns de contenu qui font performer dans les IA
 """
 import logging
 import requests
 from bs4 import BeautifulSoup
 from typing import List, Dict, Any
 import json
+import re
+from urllib.parse import urljoin, urlparse
 
 logger = logging.getLogger(__name__)
 
 class CompetitiveIntelligence:
-    """Analyse détaillée des compétiteurs"""
+    """
+    Analyse détaillée des compétiteurs pour comprendre pourquoi ils dominent dans les moteurs génératifs.
+    Extrait les patterns de contenu, structure, données factuelles qui plaisent aux IA.
+    """
     
     def analyze_competitors(self, competitors_urls: List[str], visibility_data: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Analyse approfondie des compétiteurs qui apparaissent dans les LLMs
+        Analyse approfondie jusqu'à 5 compétiteurs qui apparaissent dans les réponses des LLMs.
+        Détermine leurs forces GEO (structure, données, réponses directes, schémas, FAQ).
         
         Args:
-            competitors_urls: URLs des compétiteurs à analyser
+            competitors_urls: URLs des compétiteurs à analyser (max 5)
             visibility_data: Données de visibilité avec mentions des compétiteurs
         
         Returns:
-            Analyse détaillée avec actions concrètes
+            Analyse GEO détaillée avec geo_power_score, confidence_level, pages_analyzed,
+            comparative_metrics (NOUS vs eux), et insights actionnables
         """
         analyses = []
         
-        for comp_url in competitors_urls[:3]:  # Top 3 compétiteurs
+        for comp_url in competitors_urls[:5]:  # Top 5 compétiteurs (plus 3)
             logger.info(f"Analyzing competitor: {comp_url}")
             
             try:
