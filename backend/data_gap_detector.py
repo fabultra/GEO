@@ -21,6 +21,10 @@ class DataGapDetector:
     Mesure l'écart entre le nombre de stats présentes vs attendu par industrie.
     """
     def analyze_data_gaps(self, crawl_data: Dict[str, Any], industry: str = 'default') -> Dict[str, Any]:
+        """
+        Analyse GEO des manques de données quantitatives page par page.
+        Identifie les pages déficientes en statistiques pour améliorer leur citabilité par les IA.
+        """
         threshold = INDUSTRY_THRESHOLDS.get(industry, 5)
         pages_analysis = []
         total_stats = 0
