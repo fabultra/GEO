@@ -474,23 +474,51 @@ class CompetitiveIntelligence:
             'geo_power_score': round(total_geo_score / count, 1)
         }
     
-    def generate_actionable_insights(self, analyses: List[Dict[str, Any]]) -> List[Dict[str, str]]:
-        """Génère des insights actionnables"""
+    def generate_actionable_insights(self, analyses: List[Dict[str, Any]], our_data: Dict[str, Any] = None) -> List[Dict[str, str]]:
+        """
+        Génère des insights actionnables GEO basés sur le comparatif réel NOUS vs COMPÉTITEURS.
+        Priorise les gaps les plus critiques pour la performance dans les IA.
+        """
         insights = []
         
         if not analyses:
             return insights
         
-        # Insight 1: Longueur de contenu
-        avg_words = sum([a.get('word_count', 0) for a in analyses]) / len(analyses)
-        if avg_words > 2000:
+        # Calculer métriques comparatives
+        our_metrics = self._extract_our_metrics(our_data) if our_data else {}
+        competitor_metrics = self._calculate_competitor_averages(analyses)
+        
+        if not competitor_metrics:
+            return insights
+        
+        # Insight 1: GEO Power Score Gap
+        our_score = our_metrics.get('geo_power_score', 0)
+        comp_score = competitor_metrics.get('geo_power_score', 0)
+        score_gap = comp_score - our_score
+        
+        if score_gap > 2:
+            insights.append({
+                "priority": "CRITIQUE",
+                "title": f"GEO Power Score en retard de {score_gap:.1f} points",
+                "problem": f"NOUS: {our_score}/10 | COMPÉTITEURS: {comp_score}/10",
+                "action": "Prioriser les 3 gaps les plus importants ci-dessous",
+                "impact": "Performance globale dans les IA",
+                "time": "2-4 semaines"
+            })
+        
+        # Insight 2: Longueur de contenu
+        our_words = our_metrics.get('avg_word_count', 0)
+        comp_words = competitor_metrics.get('avg_word_count', 0)
+        word_gap = comp_words - our_words
+        
+        if word_gap > 500:
             insights.append({
                 "priority": "HAUTE",
-                "title": "Augmenter la longueur du contenu",
-                "problem": f"Les compétiteurs ont en moyenne {avg_words:.0f} mots par page",
-                "action": f"Passer nos pages de ~800 mots à {avg_words:.0f} mots minimum",
+                "title": f"Contenu {word_gap:.0f} mots trop court",
+                "problem": f"NOUS: {our_words:.0f} mots/page | COMPÉTITEURS: {comp_words:.0f} mots/page",
+                "action": f"Enrichir chaque page de {word_gap:.0f} mots minimum avec données factuelles",
                 "impact": "Visibilité LLM +30-40%",
-                "time": "2-3 heures par page"
+                "time": "2-3h par page"
             })
         
         # Insight 2: TL;DR
