@@ -368,6 +368,149 @@ IMPORTANT: Ne retourne QUE les vraies entreprises compétitrices."""
             logger.error(f"LLM extraction failed: {str(e)}, using fallback")
             return self._extract_competitors_fallback(response)
     
+    def _extract_competitors_fallback(self, response: str) -> List[Dict[str, Any]]:
+        """Fallback regex si LLM échoue"""
+        competitor_patterns = [
+            r'\b[A-Z][a-zéèêà]+ (?:Assurance|Insurance|Bank|Banque)\b',
+            r'\b(?:Desjardins|Intact|Shopify|Salesforce|Wix)\b',
+            r'\b([a-z0-9-]+\.(com|ca|org|net|io))\b'
+        ]
+        competitors_found = []
+        seen_names = set()
+        
+        for pattern in competitor_patterns:
+            matches = re.findall(pattern, response, re.IGNORECASE)
+            for match in matches:
+                name = match[0] if isinstance(match, tuple) else match
+                name = name.strip()
+                if name.lower() not in seen_names:
+                    seen_names.add(name.lower())
+                    competitors_found.append({
+                        'name': name,
+                        'urls': [name] if '.' in name else [],
+                        'context': 'Mentionné',
+                        'mention_type': 'neutral',
+                        'perceived_strength': ''
+                    })
+        return competitors_found[:10]
+    
+    def _classify_query_type(self, query: str, company_name: str) -> str:
+        """Classifier: branded, informational, comparison, transactional, navigational"""
+        query_lower = query.lower()
+        company_lower = company_name.lower()
+        
+        if company_lower in query_lower:
+            return "branded"
+        
+        comparison_keywords = ['vs', 'versus', 'comparatif', 'comparer', 'meilleur', 'meilleure', 'top', 'choisir', 'quel']
+        if any(kw in query_lower for kw in comparison_keywords):
+            return "comparison"
+        
+        transactional_keywords = ['prix', 'coût', 'tarif', 'soumission', 'acheter', 'devis', 'gratuit']
+        if any(kw in query_lower for kw in transactional_keywords):
+            return "transactional"
+        
+        navigational_keywords = ['site', 'contact', 'adresse', 'téléphone']
+        if any(kw in query_lower for kw in navigational_keywords):
+            return "navigational"
+        
+        return "informational"
+    
+    def analyze_competitor_performance(self, results: Dict[str, Any]) -> Dict[str, Any]:
+        """Analyser chaque compétiteur et générer insights"""
+        competitor_data = {}
+        
+        for query_result in results.get('queries', []):
+            query_text = query_result.get('query', '')
+            for platform, platform_result in query_result.get('platforms', {}).items():
+                competitors = platform_result.get('competitors_mentioned', [])
+                for comp in competitors:
+                    comp_name = comp.get('name', comp) if isinstance(comp, dict) else comp
+                    if comp_name not in competitor_data:
+                        competitor_data[comp_name] = {
+                            'name': comp_name, 'mentions': [], 'urls_cited': set(),
+                            'perceived_strengths': [], 'queries_present_in': set(),
+                            'mention_types': {'recommendation': 0, 'comparison': 0, 'neutral': 0, 'negative': 0}
+                        }
+                    
+                    competitor_data[comp_name]['mentions'].append({'query': query_text, 'platform': platform})
+                    competitor_data[comp_name]['queries_present_in'].add(query_text)
+                    
+                    if isinstance(comp, dict):
+                        if 'urls' in comp:
+                            competitor_data[comp_name]['urls_cited'].update(comp['urls'])
+                        if 'perceived_strength' in comp and comp['perceived_strength']:
+                            competitor_data[comp_name]['perceived_strengths'].append(comp['perceived_strength'])
+                        mention_type = comp.get('mention_type', 'neutral')
+                        if mention_type in competitor_data[comp_name]['mention_types']:
+                            competitor_data[comp_name]['mention_types'][mention_type] += 1
+        
+        competitors_analyzed = []
+        total_tests = len(results.get('queries', [])) * 5
+        
+        for comp_name, comp_info in competitor_data.items():
+            competitors_analyzed.append({
+                'name': comp_name,
+                'total_mentions': len(comp_info['mentions']),
+                'visibility_rate': len(comp_info['mentions']) / total_tests if total_tests > 0 else 0,
+                'urls_cited': list(comp_info['urls_cited']),
+                'perceived_strengths': list(set([s for s in comp_info['perceived_strengths'] if s])),
+                'mention_breakdown': comp_info['mention_types'],
+                'queries_present_in': list(comp_info['queries_present_in'])
+            })
+        
+        competitors_analyzed.sort(key=lambda x: x['total_mentions'], reverse=True)
+        
+        return {
+            'total_unique_competitors': len(competitors_analyzed),
+            'competitors': competitors_analyzed[:10],
+            'competitive_insights': self._generate_competitive_insights(competitors_analyzed, results)
+        }
+    
+    def _generate_competitive_insights(self, competitors: List[Dict], results: Dict) -> List[Dict]:
+        """Générer insights actionnables"""
+        insights = []
+        if not competitors:
+            return insights
+        
+        top_competitor = competitors[0]
+        insights.append({
+            'type': 'DOMINANT_COMPETITOR',
+            'severity': 'HIGH',
+            'title': f"{top_competitor['name']} domine avec {top_competitor['total_mentions']} mentions",
+            'details': f"Visibilité : {top_competitor['visibility_rate']*100:.1f}%",
+            'perceived_strengths': top_competitor.get('perceived_strengths', []),
+            'action': f"Analyser leurs {len(top_competitor.get('urls_cited', []))} URLs citées",
+            'urls_to_analyze': top_competitor.get('urls_cited', [])
+        })
+        
+        your_visibility = results.get('summary', {}).get('global_visibility', 0)
+        top_visibility = top_competitor['visibility_rate']
+        
+        if top_visibility > 0:
+            gap_ratio = top_visibility / your_visibility if your_visibility > 0 else float('inf')
+            if gap_ratio > 2 or your_visibility == 0:
+                insights.append({
+                    'type': 'VISIBILITY_GAP',
+                    'severity': 'CRITICAL',
+                    'title': f"Vous êtes {gap_ratio:.1f}x MOINS visible que {top_competitor['name']}" if your_visibility > 0 else f"{top_competitor['name']} visible, vous invisible",
+                    'details': f"Leur: {top_visibility*100:.1f}% | Vous: {your_visibility*100:.1f}%",
+                    'action': "Reverse-engineer leurs pages citées"
+                })
+        
+        total_urls = sum(len(c.get('urls_cited', [])) for c in competitors)
+        if total_urls > 0:
+            insights.append({
+                'type': 'URL_CITATION_GAP',
+                'severity': 'HIGH',
+                'title': f"LLMs citent {total_urls} URLs de compétiteurs",
+                'details': f"Top: {', '.join(competitors[0].get('urls_cited', [])[:3])}",
+                'action': "Créer pages avec stats pour être cité",
+                'example': "Ajouter 15+ statistiques par page"
+            })
+        
+        return insights
+    
     def _diagnose_invisibility(self, query: str, response: str, site_url: str, company_name: str) -> List[Dict[str, Any]]:
         """
         Diagnostiquer POURQUOI le site n'apparaît pas
