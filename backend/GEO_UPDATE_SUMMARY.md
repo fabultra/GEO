@@ -279,9 +279,18 @@ Les métriques clés sont:
 - [x] Étape 7f: 7 insights prioritisés par GAP (CRITIQUE/HAUTE/MOYENNE)
 - [x] Étape 7g: Modification server.py pour passer our_data à analyze_competitors
 
-### 🔄 PHASE 4-6 - Frontend, Rapports, Validation (À VENIR)
-- [ ] Étape 10: Mise à jour frontend et rapports
-- [ ] Étape 11: Validation complète
+### ✅ PHASE 5 - Frontend & Rapports (COMPLÉTÉ)
+- [x] Étape 10a: Tableau comparatif NOUS/AVERAGE/GAP affiché (7 métriques)
+- [x] Étape 10b: Section "Diagnostic GEO de la Compétition" ajoutée
+- [x] Étape 10c: Insights actionnables prioritisés affichés
+- [x] Étape 10d: Légende GAP (négatif=retard, positif=avance)
+- [x] Étape 10e: Design gradient et badges colorés par priorité
+
+### 🔄 PHASE 6 - Testing & Validation (À VENIR)
+- [ ] Étape 11: Générer nouveau rapport complet avec toutes les phases
+- [ ] Étape 11b: Valider affichage tableau NOUS/AVERAGE/GAP
+- [ ] Étape 11c: Valider insights basés sur GAP réel
+- [ ] Étape 11d: Documentation finale utilisateur
 
 ---
 Date: 2025-01-XX
