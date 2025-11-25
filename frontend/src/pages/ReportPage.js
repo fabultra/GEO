@@ -856,23 +856,23 @@ const ReportPage = () => {
                   </div>
                 )}
 
-                {/* Comparative Metrics Table */}
+                {/* Tableau Comparatif GEO: NOUS vs COMPÉTITEURS */}
                 {report.competitive_intelligence.comparative_metrics && 
-                 report.competitive_intelligence.comparative_metrics.rows && 
-                 report.competitive_intelligence.comparative_metrics.rows.length > 0 && (
-                  <div className="overflow-x-auto">
-                    <h4 className="font-bold text-lg mb-3">📊 Tableau Comparatif</h4>
-                    <table className="w-full border-collapse bg-white rounded-lg overflow-hidden shadow">
-                      <thead className="bg-gray-800 text-white">
-                        <tr>
-                          {report.competitive_intelligence.comparative_metrics.headers.map((header, idx) => (
-                            <th key={idx} className="px-4 py-3 text-left text-sm font-semibold">
-                              {header}
-                            </th>
-                          ))}
-                        </tr>
-                      </thead>
-                      <tbody>
+                 report.competitive_intelligence.comparative_metrics.NOUS && (
+                  <div className="overflow-x-auto mt-6">
+                    <h4 className="font-bold text-xl mb-4 text-purple-900">📊 Comparatif GEO: NOUS vs COMPÉTITEURS</h4>
+                    
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                      <table className="w-full border-collapse">
+                        <thead>
+                          <tr className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
+                            <th className="px-4 py-3 text-left text-sm font-bold">Métrique GEO</th>
+                            <th className="px-4 py-3 text-center text-sm font-bold bg-blue-700">🏠 NOUS</th>
+                            <th className="px-4 py-3 text-center text-sm font-bold bg-orange-600">🏆 COMPÉTITEURS (Moy.)</th>
+                            <th className="px-4 py-3 text-center text-sm font-bold bg-red-700">📉 GAP</th>
+                          </tr>
+                        </thead>
+                        <tbody>
                         {report.competitive_intelligence.comparative_metrics.rows.map((row, idx) => (
                           <tr key={idx} className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
                             {row.map((cell, cellIdx) => (
