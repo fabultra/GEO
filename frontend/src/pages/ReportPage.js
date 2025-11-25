@@ -873,21 +873,116 @@ const ReportPage = () => {
                           </tr>
                         </thead>
                         <tbody>
-                        {report.competitive_intelligence.comparative_metrics.rows.map((row, idx) => (
-                          <tr key={idx} className={idx % 2 === 0 ? 'bg-gray-50' : 'bg-white'}>
-                            {row.map((cell, cellIdx) => (
-                              <td key={cellIdx} className="px-4 py-3 text-sm border-b border-gray-200">
-                                {cellIdx === 0 ? (
-                                  <span className="font-semibold text-gray-800">{cell}</span>
-                                ) : (
-                                  <span className="text-gray-700">{cell}</span>
-                                )}
-                              </td>
-                            ))}
+                          {/* GEO Power Score */}
+                          <tr className="border-b-2 border-purple-200">
+                            <td className="px-4 py-3 font-bold text-gray-900">⚡ GEO Power Score</td>
+                            <td className="px-4 py-3 text-center bg-blue-50">
+                              <span className="text-lg font-bold text-blue-700">
+                                {report.competitive_intelligence.comparative_metrics.NOUS.geo_power_score}/10
+                              </span>
+                            </td>
+                            <td className="px-4 py-3 text-center bg-orange-50">
+                              <span className="text-lg font-bold text-orange-700">
+                                {report.competitive_intelligence.comparative_metrics.AVERAGE_COMPETITORS.geo_power_score}/10
+                              </span>
+                            </td>
+                            <td className="px-4 py-3 text-center bg-red-50">
+                              <span className={`text-lg font-bold ${
+                                report.competitive_intelligence.comparative_metrics.GAP.geo_power_score < 0 ? 'text-red-700' : 'text-green-700'
+                              }`}>
+                                {report.competitive_intelligence.comparative_metrics.GAP.geo_power_score > 0 ? '+' : ''}
+                                {report.competitive_intelligence.comparative_metrics.GAP.geo_power_score}
+                              </span>
+                            </td>
                           </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                          
+                          {/* Longueur Contenu */}
+                          <tr className="bg-gray-50">
+                            <td className="px-4 py-3 font-semibold">📄 Mots par page</td>
+                            <td className="px-4 py-3 text-center">{report.competitive_intelligence.comparative_metrics.NOUS.avg_word_count}</td>
+                            <td className="px-4 py-3 text-center">{report.competitive_intelligence.comparative_metrics.AVERAGE_COMPETITORS.avg_word_count}</td>
+                            <td className={`px-4 py-3 text-center font-semibold ${
+                              report.competitive_intelligence.comparative_metrics.GAP.avg_word_count < 0 ? 'text-red-600' : 'text-green-600'
+                            }`}>
+                              {report.competitive_intelligence.comparative_metrics.GAP.avg_word_count > 0 ? '+' : ''}
+                              {report.competitive_intelligence.comparative_metrics.GAP.avg_word_count}
+                            </td>
+                          </tr>
+                          
+                          {/* Statistiques */}
+                          <tr className="bg-white">
+                            <td className="px-4 py-3 font-semibold">📊 Stats par page</td>
+                            <td className="px-4 py-3 text-center">{report.competitive_intelligence.comparative_metrics.NOUS.avg_stats_per_page}</td>
+                            <td className="px-4 py-3 text-center">{report.competitive_intelligence.comparative_metrics.AVERAGE_COMPETITORS.avg_stats_per_page}</td>
+                            <td className={`px-4 py-3 text-center font-semibold ${
+                              report.competitive_intelligence.comparative_metrics.GAP.avg_stats_per_page < 0 ? 'text-red-600' : 'text-green-600'
+                            }`}>
+                              {report.competitive_intelligence.comparative_metrics.GAP.avg_stats_per_page > 0 ? '+' : ''}
+                              {report.competitive_intelligence.comparative_metrics.GAP.avg_stats_per_page}
+                            </td>
+                          </tr>
+                          
+                          {/* Direct Answer */}
+                          <tr className="bg-gray-50">
+                            <td className="px-4 py-3 font-semibold">💬 Réponses directes</td>
+                            <td className="px-4 py-3 text-center">{Math.round(report.competitive_intelligence.comparative_metrics.NOUS.direct_answer_rate * 100)}%</td>
+                            <td className="px-4 py-3 text-center">{Math.round(report.competitive_intelligence.comparative_metrics.AVERAGE_COMPETITORS.direct_answer_rate * 100)}%</td>
+                            <td className={`px-4 py-3 text-center font-semibold ${
+                              report.competitive_intelligence.comparative_metrics.GAP.direct_answer_rate < 0 ? 'text-red-600' : 'text-green-600'
+                            }`}>
+                              {report.competitive_intelligence.comparative_metrics.GAP.direct_answer_rate > 0 ? '+' : ''}
+                              {Math.round(report.competitive_intelligence.comparative_metrics.GAP.direct_answer_rate * 100)}%
+                            </td>
+                          </tr>
+                          
+                          {/* TL;DR */}
+                          <tr className="bg-white">
+                            <td className="px-4 py-3 font-semibold">📝 TL;DR présents</td>
+                            <td className="px-4 py-3 text-center">{Math.round(report.competitive_intelligence.comparative_metrics.NOUS.tldr_rate * 100)}%</td>
+                            <td className="px-4 py-3 text-center">{Math.round(report.competitive_intelligence.comparative_metrics.AVERAGE_COMPETITORS.tldr_rate * 100)}%</td>
+                            <td className={`px-4 py-3 text-center font-semibold ${
+                              report.competitive_intelligence.comparative_metrics.GAP.tldr_rate < 0 ? 'text-red-600' : 'text-green-600'
+                            }`}>
+                              {report.competitive_intelligence.comparative_metrics.GAP.tldr_rate > 0 ? '+' : ''}
+                              {Math.round(report.competitive_intelligence.comparative_metrics.GAP.tldr_rate * 100)}%
+                            </td>
+                          </tr>
+                          
+                          {/* Schémas */}
+                          <tr className="bg-gray-50">
+                            <td className="px-4 py-3 font-semibold">🔍 Schémas structurés</td>
+                            <td className="px-4 py-3 text-center">{Math.round(report.competitive_intelligence.comparative_metrics.NOUS.schema_presence_rate * 100)}%</td>
+                            <td className="px-4 py-3 text-center">{Math.round(report.competitive_intelligence.comparative_metrics.AVERAGE_COMPETITORS.schema_presence_rate * 100)}%</td>
+                            <td className={`px-4 py-3 text-center font-semibold ${
+                              report.competitive_intelligence.comparative_metrics.GAP.schema_presence_rate < 0 ? 'text-red-600' : 'text-green-600'
+                            }`}>
+                              {report.competitive_intelligence.comparative_metrics.GAP.schema_presence_rate > 0 ? '+' : ''}
+                              {Math.round(report.competitive_intelligence.comparative_metrics.GAP.schema_presence_rate * 100)}%
+                            </td>
+                          </tr>
+                          
+                          {/* FAQ */}
+                          <tr className="bg-white">
+                            <td className="px-4 py-3 font-semibold">❓ FAQ par page</td>
+                            <td className="px-4 py-3 text-center">{report.competitive_intelligence.comparative_metrics.NOUS.avg_faq_per_page}</td>
+                            <td className="px-4 py-3 text-center">{report.competitive_intelligence.comparative_metrics.AVERAGE_COMPETITORS.avg_faq_per_page}</td>
+                            <td className={`px-4 py-3 text-center font-semibold ${
+                              report.competitive_intelligence.comparative_metrics.GAP.avg_faq_per_page < 0 ? 'text-red-600' : 'text-green-600'
+                            }`}>
+                              {report.competitive_intelligence.comparative_metrics.GAP.avg_faq_per_page > 0 ? '+' : ''}
+                              {report.competitive_intelligence.comparative_metrics.GAP.avg_faq_per_page}
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                      {/* Légende */}
+                      <div className="p-4 bg-gray-50 text-xs text-gray-600 space-y-1">
+                        <div><strong>Interprétation:</strong></div>
+                        <div>• <span className="text-red-600 font-semibold">Négatif (rouge)</span> = Nous sommes en retard par rapport aux compétiteurs</div>
+                        <div>• <span className="text-green-600 font-semibold">Positif (vert)</span> = Nous sommes en avance par rapport aux compétiteurs</div>
+                      </div>
+                    </div>
                   </div>
                 )}
 
