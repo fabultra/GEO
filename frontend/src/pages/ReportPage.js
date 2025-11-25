@@ -986,11 +986,14 @@ const ReportPage = () => {
                   </div>
                 )}
 
-                {/* Actionable Insights */}
+                {/* Actionable Insights GEO */}
                 {report.competitive_intelligence.actionable_insights && 
                  report.competitive_intelligence.actionable_insights.length > 0 && (
-                  <div>
-                    <h4 className="font-bold text-lg mb-4">💡 Recommandations Basées sur l'Analyse Compétitive</h4>
+                  <div className="mt-8">
+                    <h4 className="font-bold text-xl mb-4 text-purple-900">🎯 Actions Prioritaires GEO (Basées sur vos GAPS)</h4>
+                    <p className="text-sm text-gray-600 mb-4">
+                      Ces recommandations sont générées en comparant vos métriques avec celles de vos compétiteurs qui dominent dans les IA.
+                    </p>
                     <div className="space-y-4">
                       {report.competitive_intelligence.actionable_insights.map((insight, idx) => (
                         <div 
