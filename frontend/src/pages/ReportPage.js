@@ -749,31 +749,52 @@ const ReportPage = () => {
                 {/* Summary */}
                 <div className="p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border-l-4 border-purple-600">
                   <h4 className="font-bold text-lg mb-2 text-purple-900">Résumé</h4>
-                  <div className="mb-6 space-y-3">
-                    <div className="flex items-center gap-4 flex-wrap">
-                      <span className="text-lg">
-                        <strong className="text-purple-700">{report.competitive_intelligence.competitors_analyzed}</strong> compétiteurs analysés
-                      </span>
-                      <span className="text-sm text-gray-600">
-                        • <strong>{report.competitive_intelligence.pages_analyzed || 0}</strong> pages analysées
-                      </span>
-                      {report.competitive_intelligence.confidence_level && (
-                        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                          report.competitive_intelligence.confidence_level === 'HIGH' ? 'bg-green-100 text-green-800' :
-                          report.competitive_intelligence.confidence_level === 'MEDIUM' ? 'bg-yellow-100 text-yellow-800' :
-                          'bg-orange-100 text-orange-800'
-                        }`}>
-                          {report.competitive_intelligence.confidence_level === 'HIGH' ? '✅ Confiance élevée' :
-                           report.competitive_intelligence.confidence_level === 'MEDIUM' ? '⚠️ Confiance moyenne' :
-                           '⚠️ Confiance faible'}
-                        </span>
+                  {/* Diagnostic GEO Global */}
+                  <div className="mb-6 space-y-4">
+                    <div className="bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 p-6 rounded-xl border-2 border-purple-300">
+                      <h4 className="font-bold text-xl mb-3 text-purple-900">🔬 Diagnostic GEO de la Compétition</h4>
+                      <p className="text-gray-700 mb-3">
+                        Nous avons analysé <strong className="text-purple-700">{report.competitive_intelligence.competitors_analyzed} compétiteurs</strong> qui 
+                        dominent dans les réponses des moteurs génératifs (ChatGPT, Claude, Perplexity, Gemini) pour comprendre 
+                        <strong> pourquoi ils performent</strong> et identifier vos gaps critiques.
+                      </p>
+                      
+                      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                        <div className="bg-white p-4 rounded-lg shadow">
+                          <div className="text-2xl font-bold text-purple-600">{report.competitive_intelligence.competitors_analyzed}</div>
+                          <div className="text-sm text-gray-600">Compétiteurs</div>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg shadow">
+                          <div className="text-2xl font-bold text-indigo-600">{report.competitive_intelligence.pages_analyzed || 0}</div>
+                          <div className="text-sm text-gray-600">Pages analysées</div>
+                        </div>
+                        <div className="bg-white p-4 rounded-lg shadow">
+                          {report.competitive_intelligence.confidence_level && (
+                            <>
+                              <div className={`text-2xl font-bold ${
+                                report.competitive_intelligence.confidence_level === 'HIGH' ? 'text-green-600' :
+                                report.competitive_intelligence.confidence_level === 'MEDIUM' ? 'text-yellow-600' :
+                                'text-orange-600'
+                              }`}>
+                                {report.competitive_intelligence.confidence_level === 'HIGH' ? '✅' :
+                                 report.competitive_intelligence.confidence_level === 'MEDIUM' ? '⚠️' : '⚠️'}
+                              </div>
+                              <div className="text-sm text-gray-600">
+                                {report.competitive_intelligence.confidence_level === 'HIGH' ? 'Confiance élevée' :
+                                 report.competitive_intelligence.confidence_level === 'MEDIUM' ? 'Confiance moyenne' :
+                                 'Confiance faible'}
+                              </div>
+                            </>
+                          )}
+                        </div>
+                      </div>
+                      
+                      {report.competitive_intelligence.confidence_level === 'LOW' && (
+                        <div className="text-sm text-orange-700 bg-orange-100 p-3 rounded-lg mt-4">
+                          ⚠️ <strong>Échantillon limité :</strong> Les insights sont indicatifs. Une analyse de plus de compétiteurs et pages améliorerait la fiabilité.
+                        </div>
                       )}
                     </div>
-                    {report.competitive_intelligence.confidence_level === 'LOW' && (
-                      <div className="text-xs text-orange-600 bg-orange-50 p-2 rounded">
-                        ⚠️ Échantillon limité : les insights sont indicatifs. Plus de compétiteurs analysés = meilleure fiabilité.
-                      </div>
-                    )}
                   </div>
                 </div>
 
