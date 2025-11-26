@@ -207,16 +207,58 @@ class CompetitiveIntelligence:
             return "MEDIUM"
         return "LOW"
     
+    def _extract_domain(self, url: str) -> str:
+        """
+        Extrait le domaine d'une URL de manière robuste
+        
+        Args:
+            url: URL à parser
+            
+        Returns:
+            Domaine normalisé (sans www.)
+        """
+        try:
+            parsed = urlparse(url)
+            domain = parsed.netloc.lower()
+            # Supprimer www. pour uniformiser
+            domain = domain.replace('www.', '')
+            return domain
+        except:
+            return url.split('//')[1].split('/')[0] if '//' in url else url.split('/')[0]
+    
     def _analyze_competitor_page(self, url: str) -> Dict[str, Any]:
         """
         Analyse une page de compétiteur pour métriques GEO.
         Extrait: word_count, headers, direct answer, TL;DR, lists, tables, FAQ, stats, schemas.
         """
+        # Valider l'URL d'abord
+        url = self._validate_url(url)
+        if not url:
+            return {
+                'url': url,
+                'error': 'Invalid URL',
+                'word_count': 0,
+                'has_direct_answer': False,
+                'has_tldr': False,
+                'stats_count': 0,
+                'schema_count': 0
+            }
+        
         try:
-            response = requests.get(url, timeout=10, headers={
-                'User-Agent': 'Mozilla/5.0 (compatible; GEOBot/1.0)'
-            })
-            response.raise_for_status()
+            # Utiliser la méthode avec retry
+            response = self._make_request_with_retry(url)
+            
+            if not response:
+                return {
+                    'url': url,
+                    'error': 'Failed to fetch page after retries',
+                    'word_count': 0,
+                    'has_direct_answer': False,
+                    'has_tldr': False,
+                    'stats_count': 0,
+                    'schema_count': 0
+                }
+            
             soup = BeautifulSoup(response.content, 'html.parser')
             
             # Extraire texte
