@@ -1088,23 +1088,19 @@ async def process_analysis_job(job_id: str):
         competitive_data = {}
         try:
             from competitive_intelligence import CompetitiveIntelligence
+            from utils.competitor_extractor import CompetitorExtractor
             
             # Extraire les compétiteurs des résultats de visibilité
-            competitors_urls = []
-            visibility_details = visibility_data_compat.get('details', [])
+            competitors_urls = CompetitorExtractor.extract_from_visibility_results(
+                visibility_data_compat, 
+                max_competitors=5
+            )
             
-            # Identifier les domaines mentionnés dans les réponses IA
-            for detail in visibility_details:
-                answer = detail.get('answer', '')
-                # Extraire les URLs ou domaines mentionnés (logique simple)
-                if 'http' in answer:
-                    # Parser basique pour extraire des URLs
-                    import re
-                    urls = re.findall(r'https?://[^\s<>"]+|www\.[^\s<>"]+', answer)
-                    competitors_urls.extend(urls)
-            
-            # Nettoyer et dédupliquer
-            competitors_urls = sorted(list(set(competitors_urls)))[:5]  # ✅ ORDRE DÉTERMINISTE - Top 5 compétiteurs
+            # Filtrer notre propre domaine
+            competitors_urls = CompetitorExtractor.filter_self_domain(
+                competitors_urls, 
+                job_doc['url']
+            )
             
             # Si aucun compétiteur trouvé dans visibility, utiliser semantic_analysis
             if not competitors_urls and semantic_analysis:
@@ -1118,30 +1114,15 @@ async def process_analysis_job(job_id: str):
                         from anthropic import Anthropic
                         anthropic_client = Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
                         
-                        prompt = f"""Suggère 5 URLs de sites web compétiteurs directs pour une entreprise de type "{company_type}" dans l'industrie "{industry}".
-                        
-Réponds UNIQUEMENT avec un JSON valide:
-{{
-  "competitors": ["https://competitor1.com", "https://competitor2.com", "https://competitor3.com", "https://competitor4.com", "https://competitor5.com"]
-}}"""
-                        
-                        response = anthropic_client.messages.create(
-                            model="claude-sonnet-4-5-20250929",
-                            max_tokens=500,
-                            temperature=0,  # ✅ DÉTERMINISTE
-                            messages=[{"role": "user", "content": prompt}]
+                        competitors_urls = await CompetitorExtractor.suggest_competitors_with_claude(
+                            industry=industry,
+                            company_type=company_type,
+                            anthropic_client=anthropic_client,
+                            max_competitors=5
                         )
                         
-                        response_text = response.content[0].text.strip()
-                        # Nettoyer markdown
-                        if '```json' in response_text:
-                            response_text = response_text.split('```json')[1].split('```')[0]
-                        elif '```' in response_text:
-                            response_text = response_text.split('```')[1].split('```')[0]
-                        
-                        result = json.loads(response_text.strip())
-                        competitors_urls = result.get('competitors', [])[:5]
-                        logger.info(f"Found {len(competitors_urls)} competitors from Claude suggestion")
+                        if competitors_urls:
+                            logger.info(f"✅ Found {len(competitors_urls)} competitors from Claude suggestion")
                     except Exception as e:
                         logger.error(f"Failed to get competitors from Claude: {str(e)}")
             
