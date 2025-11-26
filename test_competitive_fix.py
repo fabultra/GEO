@@ -30,7 +30,9 @@ def test_url_validation():
     for url in test_urls:
         validated = ci._validate_url(url)
         status = "✅" if validated else "❌"
-        print(f"{status} Input: {url:40} → Output: {validated}")
+        url_str = str(url) if url is not None else "None"
+        validated_str = str(validated) if validated is not None else "None"
+        print(f"{status} Input: {url_str:40} → Output: {validated_str}")
     
     print()
 
