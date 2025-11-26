@@ -1102,29 +1102,50 @@ async def process_analysis_job(job_id: str):
                 job_doc['url']
             )
             
-            # Si aucun compétiteur trouvé dans visibility, utiliser semantic_analysis
-            if not competitors_urls and semantic_analysis:
-                logger.info("No competitors in visibility results, extracting from semantic analysis")
-                industry = semantic_analysis.get('industry_classification', {}).get('primary_industry', '')
-                company_type = semantic_analysis.get('industry_classification', {}).get('company_type', '')
+            # Si aucun ou peu de compétiteurs trouvés dans visibility, utiliser la découverte intelligente
+            if (not competitors_urls or len(competitors_urls) < 3) and semantic_analysis:
+                logger.info("🔍 Using intelligent competitor discovery (Google search + semantic analysis)")
                 
-                # Demander à Claude de suggérer des compétiteurs basés sur l'industrie
-                if industry and company_type:
+                try:
+                    from services.competitor_discovery import competitor_discovery
+                    
+                    # Découvrir de VRAIS compétiteurs via recherche Google
+                    discovered_urls = competitor_discovery.discover_real_competitors(
+                        semantic_analysis=semantic_analysis,
+                        our_url=job_doc['url'],
+                        max_competitors=5
+                    )
+                    
+                    if discovered_urls:
+                        # Combiner avec les URLs déjà trouvées
+                        all_urls = list(set(competitors_urls + discovered_urls))
+                        competitors_urls = all_urls[:5]  # Garder top 5
+                        logger.info(f"✅ Total competitors after discovery: {len(competitors_urls)}")
+                    
+                except Exception as e:
+                    logger.error(f"Competitor discovery failed: {str(e)}")
+                    
+                    # Fallback sur Claude si la découverte échoue
+                    logger.info("Fallback: Using Claude for competitor suggestions")
                     try:
                         from anthropic import Anthropic
                         anthropic_client = Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
                         
-                        competitors_urls = await CompetitorExtractor.suggest_competitors_with_claude(
-                            industry=industry,
-                            company_type=company_type,
-                            anthropic_client=anthropic_client,
-                            max_competitors=5
-                        )
+                        industry = semantic_analysis.get('industry_classification', {}).get('primary_industry', '')
+                        company_type = semantic_analysis.get('industry_classification', {}).get('company_type', '')
                         
-                        if competitors_urls:
-                            logger.info(f"✅ Found {len(competitors_urls)} competitors from Claude suggestion")
-                    except Exception as e:
-                        logger.error(f"Failed to get competitors from Claude: {str(e)}")
+                        if industry and company_type:
+                            competitors_urls = await CompetitorExtractor.suggest_competitors_with_claude(
+                                industry=industry,
+                                company_type=company_type,
+                                anthropic_client=anthropic_client,
+                                max_competitors=5
+                            )
+                            
+                            if competitors_urls:
+                                logger.info(f"✅ Found {len(competitors_urls)} competitors from Claude fallback")
+                    except Exception as e2:
+                        logger.error(f"Claude fallback also failed: {str(e2)}")
             
             if competitors_urls:
                 logger.info(f"Analyzing {len(competitors_urls)} competitors")
