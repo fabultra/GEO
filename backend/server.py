@@ -988,8 +988,9 @@ async def process_analysis_job(job_id: str):
             logger.info("🏆 Running competitive intelligence...")
             try:
                 from utils.competitor_extractor import CompetitorExtractor
+                from services.competitor_discovery import competitor_discovery
                 
-                # Utiliser CompetitorExtractor pour extraire les URLs
+                # Étape 1: Extraire depuis les résultats de visibilité
                 competitor_urls = CompetitorExtractor.extract_from_visibility_results(
                     visibility_data, 
                     max_competitors=5
@@ -1001,7 +1002,28 @@ async def process_analysis_job(job_id: str):
                     job_doc['url']
                 )
                 
-                logger.info(f"📊 Found {len(competitor_urls)} unique competitor URLs (top 5)")
+                logger.info(f"📊 Found {len(competitor_urls)} competitor URLs from visibility results")
+                
+                # Étape 2: Si pas assez de compétiteurs, utiliser la découverte intelligente
+                if len(competitor_urls) < 3:
+                    logger.info("🔍 Not enough competitors from visibility, using intelligent discovery...")
+                    
+                    try:
+                        discovered_urls = competitor_discovery.discover_real_competitors(
+                            semantic_analysis=semantic_analysis,
+                            our_url=job_doc['url'],
+                            max_competitors=5
+                        )
+                        
+                        # Combiner et dédupliquer
+                        all_urls = list(set(competitor_urls + discovered_urls))
+                        competitor_urls = all_urls[:5]
+                        
+                        logger.info(f"✅ Total competitors after discovery: {len(competitor_urls)}")
+                    except Exception as e:
+                        logger.error(f"Competitor discovery failed: {e}")
+                
+                logger.info(f"📊 Final competitor count: {len(competitor_urls)}")
                 
                 if competitor_urls:
                     ci = CompetitiveIntelligence()
