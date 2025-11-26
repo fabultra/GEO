@@ -987,30 +987,20 @@ async def process_analysis_job(job_id: str):
             
             logger.info("🏆 Running competitive intelligence...")
             try:
-                competitor_urls = []
-                competitor_domains = set()
+                from utils.competitor_extractor import CompetitorExtractor
                 
-                for query_result in visibility_data.get('queries', []):
-                    for platform, platform_result in query_result.get('platforms', {}).items():
-                        competitors = platform_result.get('competitors_mentioned', [])
-                        for comp in competitors:
-                            if isinstance(comp, dict) and 'urls' in comp:
-                                for url in comp['urls']:
-                                    # Normalisation URL
-                                    if not url.startswith('http'):
-                                        url = f"https://{url}"
-                                    
-                                    # Extraire et normaliser domaine
-                                    domain = url.split('//')[1].split('/')[0] if '//' in url else url.split('/')[0]
-                                    domain = domain.replace('www.', '')  # Uniformiser www/non-www
-                                    
-                                    # Dédupliquer par domaine
-                                    if domain not in competitor_domains:
-                                        competitor_domains.add(domain)
-                                        competitor_urls.append(url)
+                # Utiliser CompetitorExtractor pour extraire les URLs
+                competitor_urls = CompetitorExtractor.extract_from_visibility_results(
+                    visibility_data, 
+                    max_competitors=5
+                )
                 
-                # Trier pour déterminisme et garder top 5
-                competitor_urls = sorted(competitor_urls)[:5]
+                # Filtrer notre propre domaine
+                competitor_urls = CompetitorExtractor.filter_self_domain(
+                    competitor_urls, 
+                    job_doc['url']
+                )
+                
                 logger.info(f"📊 Found {len(competitor_urls)} unique competitor URLs (top 5)")
                 
                 if competitor_urls:
