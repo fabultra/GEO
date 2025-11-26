@@ -331,18 +331,54 @@ class CompetitiveIntelligence:
         Identifie pourquoi il performe dans les IA (structure, données, FAQ, guides).
         """
         
+        # Valider l'URL principale
+        comp_url = self._validate_url(comp_url)
+        if not comp_url:
+            return {
+                "domain": "unknown",
+                "main_url": comp_url,
+                "error": "Invalid URL",
+                "pages_analyzed": [],
+                "aggregate": {},
+                "llm_visibility": {},
+                "geo_power_score": 0.0
+            }
+        
         try:
             # 1. Analyser la page principale
             main_page = self._analyze_competitor_page(comp_url)
             
+            # Si erreur sur la page principale, retourner immédiatement
+            if main_page.get('error'):
+                domain = self._extract_domain(comp_url)
+                return {
+                    "domain": domain,
+                    "main_url": comp_url,
+                    "error": f"Failed to analyze main page: {main_page['error']}",
+                    "pages_analyzed": [main_page],
+                    "aggregate": {},
+                    "llm_visibility": {},
+                    "geo_power_score": 0.0
+                }
+            
             # 2. Extraire URLs internes pertinentes pour GEO
-            response = requests.get(comp_url, timeout=10, headers={
-                'User-Agent': 'Mozilla/5.0 (compatible; GEOBot/1.0)'
-            })
-            response.raise_for_status()
+            response = self._make_request_with_retry(comp_url)
+            
+            if not response:
+                domain = self._extract_domain(comp_url)
+                return {
+                    "domain": domain,
+                    "main_url": comp_url,
+                    "error": "Failed to fetch page for internal links",
+                    "pages_analyzed": [main_page],
+                    "aggregate": {},
+                    "llm_visibility": {},
+                    "geo_power_score": 0.0
+                }
+            
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            domain = comp_url.split('//')[1].split('/')[0] if '//' in comp_url else comp_url.split('/')[0]
+            domain = self._extract_domain(comp_url)
             
             # Mots-clés GEO pertinents
             geo_keywords = [
