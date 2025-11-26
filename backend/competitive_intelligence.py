@@ -10,6 +10,7 @@ from typing import List, Dict, Any, Optional
 import json
 import re
 import time
+import socket
 from urllib.parse import urljoin, urlparse
 
 logger = logging.getLogger(__name__)
@@ -18,6 +19,7 @@ logger = logging.getLogger(__name__)
 REQUEST_TIMEOUT = 15  # Augmenté de 10 à 15 secondes
 MAX_RETRIES = 2
 RETRY_DELAY = 1  # secondes
+HEAD_REQUEST_TIMEOUT = 5  # Timeout rapide pour vérification
 
 class CompetitiveIntelligence:
     """
@@ -31,12 +33,65 @@ class CompetitiveIntelligence:
         self.max_retries = MAX_RETRIES
         self.retry_delay = RETRY_DELAY
     
-    def _validate_url(self, url: str) -> Optional[str]:
+    def _check_domain_exists(self, domain: str) -> bool:
         """
-        Valide et normalise une URL
+        Vérifie qu'un domaine existe via DNS lookup
+        
+        Args:
+            domain: Domaine à vérifier
+            
+        Returns:
+            True si le domaine existe, False sinon
+        """
+        try:
+            socket.gethostbyname(domain)
+            return True
+        except socket.gaierror:
+            logger.warning(f"❌ Domain does not exist: {domain}")
+            return False
+        except Exception as e:
+            logger.warning(f"❌ Failed to check domain {domain}: {e}")
+            return False
+    
+    def _check_url_responds(self, url: str) -> bool:
+        """
+        Vérifie qu'une URL répond via HEAD request rapide
+        
+        Args:
+            url: URL à vérifier
+            
+        Returns:
+            True si l'URL répond (status < 400), False sinon
+        """
+        try:
+            response = requests.head(
+                url, 
+                timeout=HEAD_REQUEST_TIMEOUT,
+                allow_redirects=True,
+                headers={'User-Agent': 'Mozilla/5.0 (compatible; GEOBot/1.0)'}
+            )
+            
+            # Accepter tous les codes < 400
+            if response.status_code < 400:
+                return True
+            else:
+                logger.warning(f"❌ URL returned {response.status_code}: {url}")
+                return False
+                
+        except requests.exceptions.Timeout:
+            logger.warning(f"❌ URL timeout (HEAD request): {url}")
+            return False
+        except requests.exceptions.RequestException as e:
+            logger.warning(f"❌ URL not reachable: {url} - {e}")
+            return False
+    
+    def _validate_url(self, url: str, check_reachable: bool = False) -> Optional[str]:
+        """
+        Valide et normalise une URL avec vérification optionnelle de disponibilité
         
         Args:
             url: URL à valider
+            check_reachable: Si True, vérifie que l'URL est accessible
             
         Returns:
             URL normalisée ou None si invalide
@@ -55,7 +110,12 @@ class CompetitiveIntelligence:
         try:
             parsed = urlparse(url)
             if not parsed.netloc:
-                logger.warning(f"Invalid URL (no domain): {url}")
+                logger.warning(f"❌ Invalid URL (no domain): {url}")
+                return None
+            
+            # Vérifier que le domaine existe
+            domain = parsed.netloc
+            if not self._check_domain_exists(domain):
                 return None
             
             # Reconstruire l'URL proprement
@@ -64,10 +124,16 @@ class CompetitiveIntelligence:
             path = parsed.path or '/'
             
             normalized_url = f"{scheme}://{netloc}{path}"
+            
+            # Vérification optionnelle de disponibilité
+            if check_reachable:
+                if not self._check_url_responds(normalized_url):
+                    return None
+            
             return normalized_url
             
         except Exception as e:
-            logger.error(f"Failed to parse URL {url}: {e}")
+            logger.error(f"❌ Failed to parse URL {url}: {e}")
             return None
     
     def _make_request_with_retry(self, url: str) -> Optional[requests.Response]:
@@ -131,16 +197,23 @@ class CompetitiveIntelligence:
         analyses = []
         failed_urls = []
         
-        # Valider et filtrer les URLs
+        # Valider et filtrer les URLs avec vérification de disponibilité
         valid_urls = []
+        logger.info(f"🔍 Validating {len(competitors_urls[:5])} competitor URLs...")
+        
         for url in competitors_urls[:5]:  # Top 5 compétiteurs
-            validated_url = self._validate_url(url)
+            # Validation complète : structure + DNS + disponibilité
+            validated_url = self._validate_url(url, check_reachable=True)
+            
             if validated_url:
                 valid_urls.append(validated_url)
-                logger.info(f"✅ Valid competitor URL: {validated_url}")
+                logger.info(f"✅ Valid and reachable competitor URL: {validated_url}")
             else:
-                logger.warning(f"❌ Invalid competitor URL skipped: {url}")
-                failed_urls.append({'url': url, 'reason': 'Invalid URL format'})
+                logger.warning(f"❌ Invalid or unreachable competitor URL skipped: {url}")
+                failed_urls.append({
+                    'url': url, 
+                    'reason': 'Invalid URL format, domain does not exist, or site not reachable'
+                })
         
         # Analyser chaque compétiteur
         for comp_url in valid_urls:
