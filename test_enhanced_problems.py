@@ -15,7 +15,7 @@ def log(message: str, level: str = "INFO"):
 
 def test_enhanced_problems_solved():
     """Test enhanced problems solved with a specific report"""
-    base_url = "https://quickwinseo.preview.emergentagent.com"
+    base_url = "https://geo-fix-roadmap.preview.emergentagent.com"
     api_url = f"{base_url}/api"
     
     log("🎯 REVIEW REQUEST: Testing Enhanced Problems Solved Structure")
