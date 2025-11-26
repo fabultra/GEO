@@ -1,0 +1,2468 @@
+{
+  "site_url": "https://lussier.co",
+  "company_name": "Lussier",
+  "last_updated": "2025-11-26T19:35:43.413085",
+  "queries": [
+    {
+      "query": "meilleur courtage en assurance des particuliers québec",
+      "timestamp": "2025-11-26T19:35:43.413196",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": true,
+          "position": 13,
+          "context_snippet": "...** - Un des plus grands courtiers indépendants au Canada, offrant des services personnalisés.\n\n6. **Lussier Dale Parizeau** - Un courtier bien établi au Québec, offrant une large gamme de produits d'assuranc...",
+          "competitors_mentioned": [
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Mentionné comme assureur travaillant avec des courtiers pour offrir des produits adaptés",
+              "mention_type": "recommendation",
+              "perceived_strength": "Offre des produits adaptés aux besoins des clients"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Présenté comme offrant une gamme complète de produits d'assurance",
+              "mention_type": "recommendation",
+              "perceived_strength": "Bien établis au Québec avec une gamme complète de produits"
+            },
+            {
+              "name": "Promutuel Assurance",
+              "urls": [],
+              "context": "Mentionné pour son service aux particuliers au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Approche personnalisée et service à la clientèle de qualité"
+            },
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Présenté comme assureur direct offrant aussi des services de courtage",
+              "mention_type": "recommendation",
+              "perceived_strength": "Offre des services de courtage pour certains produits"
+            },
+            {
+              "name": "BFL Canada",
+              "urls": [],
+              "context": "Identifié comme un des plus grands courtiers indépendants au Canada",
+              "mention_type": "recommendation",
+              "perceived_strength": "Un des plus grands courtiers indépendants au Canada avec services personnalisés"
+            },
+            {
+              "name": "Lussier Dale Parizeau",
+              "urls": [],
+              "context": "Présenté comme courtier bien établi au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Bien établi au Québec avec une large gamme de produits d'assurance"
+            }
+          ],
+          "full_response": "Choisir le meilleur courtier en assurance pour particuliers au Québec dépend de plusieurs facteurs, notamment vos besoins spécifiques, votre budget et le type d'assurance que vous recherchez (auto, habitation, vie, etc.). Voici quelques courtiers bien connus et respectés au Québec qui pourraient vous intéresser :\n\n1. **Intact Assurance** - Bien qu'ils soient principalement un assureur, ils travaillent avec des courtiers pour offrir des produits adaptés aux besoins des clients.\n\n2. **La Capitale** - Offrant une gamme complète de produits d'assurance, ils sont bien établis au Québec.\n\n3. **Promutuel Assurance** - Connu pour son approche personnalisée et son service à la clientèle de qualité.\n\n4. **Desjardins Assurances** - Bien qu'ils soient aussi un assureur direct, ils offrent des services de courtage pour certains produits.\n\n5. **BFL Canada** - Un des plus grands courtiers indépendants au Canada, offrant des services personnalisés.\n\n6. **Lussier Dale Parizeau** - Un courtier bien établi au Québec, offrant une large gamme de produits d'assurance.\n\nIl est important de comparer les offres et de lire les avis des clients pour trouver le courtier qui répond le mieux à vos besoins. N'hésitez pas à demander des recommandations à votre entourage et à consulter les évaluations en ligne pour vous faire une idée plus précise.",
+          "response_length": 1337,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.14285714285714285
+        },
+        "claude": {
+          "mentioned": true,
+          "position": 3,
+          "context_snippet": "...ssurance**\n- Coopérative québécoise établie\n- Auto, habitation, vie\n- Réseau étendu au Québec\n\n**2. Lussier Dale Parizeau**\n- Un des plus grands courtiers canadiens\n- Service personnalisé\n- Tous types d'assu...",
+          "competitors_mentioned": [
+            {
+              "name": "Promutuel Assurance",
+              "urls": [],
+              "context": "Présenté comme coopérative québécoise établie offrant auto, habitation et vie",
+              "mention_type": "recommendation",
+              "perceived_strength": "Coopérative québécoise établie avec réseau étendu au Québec"
+            },
+            {
+              "name": "Lussier Dale Parizeau",
+              "urls": [],
+              "context": "Décrit comme un des plus grands courtiers canadiens avec service personnalisé",
+              "mention_type": "recommendation",
+              "perceived_strength": "Un des plus grands courtiers canadiens offrant service personnalisé pour tous types d'assurances"
+            },
+            {
+              "name": "Assurances BFL Canada",
+              "urls": [],
+              "context": "Mentionné pour sa présence importante au Québec et expertise variée",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présence importante au Québec avec expertise variée pour particuliers et entreprises"
+            },
+            {
+              "name": "Kanetix",
+              "urls": [],
+              "context": "Présenté comme courtier en ligne pour comparaison rapide et gratuite",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme de comparaison en ligne rapide et gratuite offrant plusieurs soumissions simultanées"
+            },
+            {
+              "name": "Assurance.ca",
+              "urls": [
+                "assurance.ca"
+              ],
+              "context": "Mentionné avec Kanetix comme service de comparaison en ligne",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme de comparaison en ligne rapide et gratuite offrant plusieurs soumissions simultanées"
+            },
+            {
+              "name": "Soumissions Assurances",
+              "urls": [],
+              "context": "Présenté comme plateforme québécoise avec courtiers partenaires locaux",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme québécoise connectant avec des courtiers partenaires locaux"
+            }
+          ],
+          "full_response": "# Meilleurs courtiers en assurance pour particuliers au Québec\n\nVoici les principaux courtiers reconnus au Québec :\n\n## Courtiers multi-produits majeurs\n\n**1. Promutuel Assurance**\n- Coopérative québécoise établie\n- Auto, habitation, vie\n- Réseau étendu au Québec\n\n**2. Lussier Dale Parizeau**\n- Un des plus grands courtiers canadiens\n- Service personnalisé\n- Tous types d'assurances\n\n**3. Assurances BFL Canada**\n- Présence importante au Québec\n- Expertise variée\n- Service aux particuliers et entreprises\n\n## Courtiers en ligne populaires\n\n**4. Kanetix / Assurance.ca**\n- Comparaison en ligne\n- Rapide et gratuit\n- Plusieurs soumissions simultanées\n\n**5. Soumissions Assurances**\n- Plateforme québécoise\n- Courtiers partenaires locaux\n\n## Conseils pour choisir\n\n- ✅ Comparez au moins 3 soumissions\n- ✅ Vérifiez les avis clients\n- ✅ Privilégiez un courtier membre de la ChAD (Chambre de l'assurance de dommages)\n- ✅ Assurez-vous qu'il représente plusieurs assureurs\n\n**Besoin spécifique ?** (auto, habitation, vie) Je peux affiner mes recommandations.",
+          "response_length": 1052,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.14285714285714285
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'",
+              "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'",
+              "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur courtage en assurance des particuliers québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur courtage en assurance des particuliers québec'",
+              "example_title": "Guide Complet: Meilleur Courtage En Assurance Des Particuliers Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance automobile québec",
+      "timestamp": "2025-11-26T19:36:15.559423",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Desjardins",
+              "urls": [],
+              "context": "Mentionné comme une des compagnies d'assurance populaires au Québec à comparer",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme une compagnie populaire et établie au Québec pour l'assurance automobile"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Mentionné comme une des compagnies d'assurance populaires au Québec à comparer",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme une compagnie populaire et établie au Québec pour l'assurance automobile"
+            },
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Mentionné comme une des compagnies d'assurance populaires au Québec à comparer",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme une compagnie populaire et établie au Québec pour l'assurance automobile"
+            },
+            {
+              "name": "belairdirect",
+              "urls": [],
+              "context": "Mentionné comme une des compagnies d'assurance populaires au Québec à comparer",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme une compagnie populaire et établie au Québec pour l'assurance automobile"
+            }
+          ],
+          "full_response": "Choisir la meilleure assurance automobile au Québec dépend de plusieurs facteurs, notamment de vos besoins personnels, de votre budget et des types de couverture que vous recherchez. Voici quelques étapes pour vous aider à trouver la meilleure assurance automobile :\n\n1. **Évaluation des besoins** : Déterminez le type de couverture dont vous avez besoin. Cela peut inclure la responsabilité civile, la protection contre le vol, le vandalisme, les accidents sans collision, etc.\n\n2. **Comparer les compagnies** : Recherchez et comparez les offres de plusieurs compagnies d'assurance. Certaines des compagnies populaires au Québec incluent Desjardins, La Capitale, Intact Assurance, et belairdirect.\n\n3. **Lire les avis** : Consultez les avis des clients pour avoir une idée de la satisfaction des clients et de la qualité du service à la clientèle.\n\n4. **Demander des soumissions** : Obtenez des soumissions de plusieurs assureurs pour comparer les prix et les couvertures offertes.\n\n5. **Vérifier les rabais** : Renseignez-vous sur les rabais possibles, comme ceux pour les bons conducteurs, les véhicules hybrides, ou si vous regroupez plusieurs polices d'assurance.\n\n6. **Consulter un courtier** : Un courtier en assurance peut vous aider à naviguer dans les différentes options et à trouver une police qui correspond à vos besoins.\n\n7. **Examiner les conditions** : Lisez attentivement les termes et conditions de chaque police pour comprendre les exclusions et les limitations.\n\nEn fin de compte, la meilleure assurance automobile est celle qui offre la couverture dont vous avez besoin à un prix que vous pouvez vous permettre, tout en offrant un bon service à la clientèle.",
+          "response_length": 1680,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Présenté comme le plus grand assureur au Québec avec rabais multiples et excellent service client",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plus grand assureur au Québec, rabais multiples disponibles, excellent service client et réseau étendu"
+            },
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Recommandé pour ses tarifs compétitifs et son application mobile performante",
+              "mention_type": "recommendation",
+              "perceived_strength": "Tarifs compétitifs, application mobile performante et bonne gestion des réclamations"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Mis en avant comme spécialisé au Québec avec bon rapport qualité-prix",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialisé au Québec, bon rapport qualité-prix et service personnalisé"
+            },
+            {
+              "name": "Promutuel",
+              "urls": [],
+              "context": "Recommandé comme assureur mutualiste avec tarifs avantageux en région",
+              "mention_type": "recommendation",
+              "perceived_strength": "Assureur mutualiste, tarifs avantageux en région et service de proximité"
+            },
+            {
+              "name": "Belairdirect",
+              "urls": [],
+              "context": "Présenté pour sa soumission en ligne rapide et service 100% numérique",
+              "mention_type": "recommendation",
+              "perceived_strength": "Soumission en ligne rapide, prix compétitifs et service 100% numérique"
+            },
+            {
+              "name": "Kanetix",
+              "urls": [
+                "Kanetix.ca"
+              ],
+              "context": "Mentionné comme courtier en ligne pour comparer les assurances",
+              "mention_type": "recommendation",
+              "perceived_strength": "Courtier en ligne permettant de comparer les offres d'assurance"
+            },
+            {
+              "name": "LowestRates",
+              "urls": [
+                "LowestRates.ca"
+              ],
+              "context": "Mentionné comme courtier en ligne pour comparer les assurances",
+              "mention_type": "recommendation",
+              "perceived_strength": "Courtier en ligne permettant de comparer les offres d'assurance"
+            },
+            {
+              "name": "Assurance.ca",
+              "urls": [
+                "Assurance.ca"
+              ],
+              "context": "Mentionné comme courtier en ligne pour comparer les assurances",
+              "mention_type": "recommendation",
+              "perceived_strength": "Courtier en ligne permettant de comparer les offres d'assurance"
+            }
+          ],
+          "full_response": "# Meilleures assurances automobile au Québec (2024)\n\n## Assureurs recommandés\n\n### **1. Desjardins Assurances**\n- ✅ Plus grand assureur au Québec\n- Rabais multiples disponibles\n- Excellent service client\n- Réseau étendu\n\n### **2. Intact Assurance**\n- ✅ Tarifs compétitifs\n- Application mobile performante\n- Bonne gestion des réclamations\n\n### **3. La Capitale**\n- ✅ Spécialisé au Québec\n- Bon rapport qualité-prix\n- Service personnalisé\n\n### **4. Promutuel**\n- ✅ Assureur mutualiste\n- Tarifs avantageux en région\n- Service de proximité\n\n### **5. Belairdirect**\n- ✅ Soumission en ligne rapide\n- Prix compétitifs\n- Service 100% numérique\n\n## Courtiers en ligne pour comparer\n\n- **Kanetix.ca**\n- **LowestRates.ca**\n- **Assurance.ca**\n\n## Conseils pour économiser\n\n1. **Comparer** au moins 3-4 soumissions\n2. **Regrouper** auto + habitation\n3. **Augmenter** la franchise\n4. **Demander** tous les rabais (bon dossier, alarme, etc.)\n5. **Revoir** annuellement votre police\n\n## Important\nAu Québec, l'assurance responsabilité civile est **obligatoire** (minimum 50 000$).\n\n**Besoin d'aide spécifique?** Je peux vous orienter selon votre profil!",
+          "response_length": 1137,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance automobile québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance automobile québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Automobile Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance habitation québec",
+      "timestamp": "2025-11-26T19:37:04.035496",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Desjardins",
+              "urls": [],
+              "context": "Mentionné comme un des assureurs populaires au Québec pour l'assurance habitation",
+              "mention_type": "comparison",
+              "perceived_strength": "Présenté comme un assureur populaire et établi au Québec"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Mentionné comme un des assureurs populaires au Québec pour l'assurance habitation",
+              "mention_type": "comparison",
+              "perceived_strength": "Présenté comme un assureur populaire et établi au Québec"
+            },
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Mentionné comme un des assureurs populaires au Québec pour l'assurance habitation",
+              "mention_type": "comparison",
+              "perceived_strength": "Présenté comme un assureur populaire et établi au Québec"
+            },
+            {
+              "name": "Promutuel",
+              "urls": [],
+              "context": "Mentionné comme un des assureurs populaires au Québec pour l'assurance habitation",
+              "mention_type": "comparison",
+              "perceived_strength": "Présenté comme un assureur populaire et établi au Québec"
+            }
+          ],
+          "full_response": "Choisir la meilleure assurance habitation au Québec dépend de plusieurs facteurs, notamment vos besoins spécifiques, votre budget et les caractéristiques de votre propriété. Voici quelques étapes et conseils pour vous aider à trouver la meilleure assurance habitation :\n\n1. **Évaluation de vos besoins** : Avant de commencer à chercher, évaluez vos besoins en matière de couverture. Considérez la valeur de vos biens, le type de logement (maison, condo, appartement) et les risques spécifiques à votre région.\n\n2. **Comparer les assureurs** : Il est important de comparer plusieurs compagnies d'assurance pour trouver celle qui offre le meilleur rapport qualité-prix. Parmi les assureurs populaires au Québec, on trouve Desjardins, La Capitale, Intact Assurance, et Promutuel.\n\n3. **Consulter les avis et évaluations** : Recherchez des avis en ligne et des évaluations de clients pour avoir une idée de la satisfaction des clients et de la qualité du service à la clientèle.\n\n4. **Vérifier les couvertures offertes** : Assurez-vous que la police d'assurance couvre tous les aspects importants pour vous, tels que les dommages causés par l'eau, le vol, l'incendie, et la responsabilité civile.\n\n5. **Demander des devis** : Obtenez des devis de plusieurs assureurs pour comparer les prix. Assurez-vous que les devis sont basés sur les mêmes niveaux de couverture pour une comparaison équitable.\n\n6. **Considérer les rabais** : Renseignez-vous sur les rabais possibles, comme ceux pour les systèmes de sécurité, les détecteurs de fumée, ou si vous regroupez plusieurs polices d'assurance (auto et habitation, par exemple).\n\n7. **Lire les petits caractères** : Avant de signer, lisez attentivement les termes et conditions de la police pour comprendre les exclusions et les limites de couverture.\n\n8. **Consulter un courtier** : Un courtier en assurance peut vous aider à naviguer dans les différentes options et à trouver une police qui correspond à vos besoins.\n\nEn suivant ces étapes, vous serez mieux équipé pour choisir une assurance habitation qui vous offre la protection dont vous avez besoin au meilleur prix possible.",
+          "response_length": 2123,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Présenté comme le plus grand assureur au Québec avec rabais multi-produits et excellent service client",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plus grand assureur au Québec, rabais multi-produits intéressants, excellent service client en français et réseau étendu"
+            },
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Recommandé pour ses tarifs compétitifs et son application mobile performante",
+              "mention_type": "recommendation",
+              "perceived_strength": "Tarifs compétitifs, application mobile performante et bonne gestion des réclamations"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Spécialisé pour les employés du secteur public avec tarifs avantageux",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialisé pour les employés du secteur public avec tarifs avantageux et service personnalisé"
+            },
+            {
+              "name": "Promutuel",
+              "urls": [],
+              "context": "Assureur mutuel québécois avec bon rapport qualité-prix",
+              "mention_type": "recommendation",
+              "perceived_strength": "Assureur mutuel québécois avec bon rapport qualité-prix et service de proximité"
+            },
+            {
+              "name": "SSQ Assurance",
+              "urls": [],
+              "context": "Mentionné pour ses tarifs compétitifs et bonne réputation au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Tarifs compétitifs et bonne réputation au Québec"
+            },
+            {
+              "name": "Kanetix",
+              "urls": [
+                "Kanetix.ca"
+              ],
+              "context": "Courtier en ligne utile pour comparer les assurances",
+              "mention_type": "recommendation",
+              "perceived_strength": "Courtier en ligne permettant de comparer plusieurs assureurs"
+            },
+            {
+              "name": "LowestRates",
+              "urls": [
+                "LowestRates.ca"
+              ],
+              "context": "Courtier en ligne utile pour comparer les assurances",
+              "mention_type": "recommendation",
+              "perceived_strength": "Courtier en ligne permettant de comparer plusieurs assureurs"
+            },
+            {
+              "name": "Assurance.ca",
+              "urls": [
+                "Assurance.ca"
+              ],
+              "context": "Courtier en ligne utile pour comparer les assurances",
+              "mention_type": "recommendation",
+              "perceived_strength": "Courtier en ligne permettant de comparer plusieurs assureurs"
+            }
+          ],
+          "full_response": "# Meilleures assurances habitation au Québec (2024)\n\n## Top assureurs recommandés\n\n### **1. Desjardins Assurances**\n- ✅ Plus grand assureur au Québec\n- Rabais multi-produits intéressants\n- Excellent service client en français\n- Réseau étendu\n\n### **2. Intact Assurance**\n- Tarifs compétitifs\n- Application mobile performante\n- Bonne gestion des réclamations\n\n### **3. La Capitale**\n- Spécialisé pour les employés du secteur public\n- Tarifs avantageux pour ce groupe\n- Service personnalisé\n\n### **4. Promutuel**\n- Assureur mutuel québécois\n- Bon rapport qualité-prix\n- Service de proximité\n\n### **5. SSQ Assurance**\n- Tarifs compétitifs\n- Bonne réputation au Québec\n\n## Conseils pour économiser\n\n- 📊 **Comparez** au moins 3-4 soumissions\n- 🏠 Regroupez auto + habitation (rabais 10-25%)\n- 🔒 Installez système d'alarme/détecteurs\n- 💰 Augmentez la franchise pour réduire la prime\n- 🎓 Demandez les rabais (diplômé, non-fumeur, etc.)\n\n## Courtiers en ligne utiles\n\n- **Kanetix.ca**\n- **LowestRates.ca**\n- **Assurance.ca**\n\n**Conseil:** Un courtier indépendant peut vous faire gagner du temps en comparant plusieurs assureurs simultanément.\n\nAvez-vous des besoins spécifiques (condo, maison, locataire)?",
+          "response_length": 1196,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance habitation québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance habitation québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Habitation Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance des entreprises québec",
+      "timestamp": "2025-11-26T19:37:54.159388",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Présenté comme l'un des plus grands assureurs au Canada offrant une gamme complète de produits d'assurance pour entreprises",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plus grand assureur au Canada avec gamme complète incluant assurance des biens, responsabilité civile et automobile commerciale"
+            },
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Mentionné comme offrant des solutions d'assurance pour petites et moyennes entreprises",
+              "mention_type": "recommendation",
+              "perceived_strength": "Propose des produits variés incluant assurance des biens, responsabilité civile et assurance contre les pertes d'exploitation"
+            },
+            {
+              "name": "Aviva Canada",
+              "urls": [],
+              "context": "Présenté comme offrant des produits pour entreprises de toutes tailles",
+              "mention_type": "recommendation",
+              "perceived_strength": "Options personnalisables pour répondre aux besoins spécifiques de chaque entreprise"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Mentionné comme fusionné avec SSQ Assurance pour former Beneva",
+              "mention_type": "recommendation",
+              "perceived_strength": "Propose des solutions complètes incluant assurance des biens, responsabilité civile et automobile commerciale"
+            },
+            {
+              "name": "Beneva",
+              "urls": [],
+              "context": "Résultat de la fusion entre La Capitale et SSQ Assurance",
+              "mention_type": "neutral",
+              "perceived_strength": "Entité issue de fusion proposant des solutions d'assurance pour entreprises"
+            },
+            {
+              "name": "SSQ Assurance",
+              "urls": [],
+              "context": "Mentionné comme fusionné avec La Capitale pour former Beneva",
+              "mention_type": "neutral",
+              "perceived_strength": "Partie de la fusion ayant créé Beneva"
+            },
+            {
+              "name": "Allianz",
+              "urls": [],
+              "context": "Présenté comme offrant des solutions d'assurance pour entreprises, notamment grandes entreprises et multinationales",
+              "mention_type": "recommendation",
+              "perceived_strength": "Offre des solutions pour grandes entreprises et multinationales en plus de l'assurance voyage"
+            },
+            {
+              "name": "Axa XL",
+              "urls": [],
+              "context": "Mentionné comme spécialisé dans les solutions d'assurance pour grandes entreprises",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialisé dans les grandes entreprises avec produits d'assurance sur mesure pour divers secteurs industriels"
+            }
+          ],
+          "full_response": "Choisir la meilleure assurance pour une entreprise au Québec dépend de plusieurs facteurs, notamment le type d'entreprise, sa taille, son secteur d'activité et ses besoins spécifiques. Voici quelques compagnies d'assurance bien connues au Québec qui offrent des produits d'assurance pour les entreprises :\n\n1. **Intact Assurance** : L'un des plus grands assureurs au Canada, Intact propose une gamme complète de produits d'assurance pour les entreprises, y compris l'assurance des biens, la responsabilité civile et l'assurance automobile commerciale.\n\n2. **Desjardins Assurances** : Offrant des solutions d'assurance pour les petites et moyennes entreprises, Desjardins propose des produits tels que l'assurance des biens, la responsabilité civile et l'assurance contre les pertes d'exploitation.\n\n3. **Aviva Canada** : Aviva offre des produits d'assurance pour les entreprises de toutes tailles, avec des options personnalisables pour répondre aux besoins spécifiques de chaque entreprise.\n\n4. **La Capitale** : Maintenant fusionnée avec SSQ Assurance pour former Beneva, cette compagnie propose des solutions d'assurance pour les entreprises, y compris l'assurance des biens, la responsabilité civile et l'assurance automobile commerciale.\n\n5. **Allianz** : Bien que principalement connue pour l'assurance voyage, Allianz offre également des solutions d'assurance pour les entreprises, notamment pour les grandes entreprises et les multinationales.\n\n6. **Axa XL** : Spécialisée dans les solutions d'assurance pour les grandes entreprises, Axa XL propose des produits d'assurance sur mesure pour divers secteurs industriels.\n\nIl est important de comparer les offres et de consulter un courtier en assurance pour obtenir des conseils personnalisés et trouver la couverture qui convient le mieux à votre entreprise. Assurez-vous de bien comprendre les termes et conditions de chaque police d'assurance avant de prendre une décision.",
+          "response_length": 1932,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Présenté comme le plus grand assureur P&C au Canada avec une large gamme de produits commerciaux",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plus grand assureur dommages au Canada, offre une large gamme de produits commerciaux et service en français"
+            },
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Présenté comme institution québécoise avec expertise locale et produits adaptés aux PME",
+              "mention_type": "recommendation",
+              "perceived_strength": "Institution québécoise avec expertise locale et produits spécifiquement adaptés aux PME"
+            },
+            {
+              "name": "Aviva Canada",
+              "urls": [],
+              "context": "Mentionné pour sa forte présence au Québec avec solutions personnalisées",
+              "mention_type": "recommendation",
+              "perceived_strength": "Forte présence au Québec, offre des solutions personnalisées et bon service client"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Présenté comme assureur québécois spécialisé en assurance collective",
+              "mention_type": "recommendation",
+              "perceived_strength": "Assureur québécois spécialisé en assurance collective avec connaissance approfondie du marché local"
+            },
+            {
+              "name": "Industrielle Alliance",
+              "urls": [],
+              "context": "Mentionné pour l'assurance collective et individuelle avec forte présence au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Forte présence au Québec avec offre d'assurance collective et individuelle pour PME"
+            }
+          ],
+          "full_response": "# Meilleures assurances pour entreprises au Québec\n\nVoici les principaux assureurs pour entreprises au Québec en 2024 :\n\n## Assureurs majeurs\n\n### **Intact Assurance**\n- Plus grand assureur P&C au Canada\n- Large gamme de produits commerciaux\n- Service en français\n\n### **Desjardins Assurances**\n- Institution québécoise\n- Expertise locale\n- Produits adaptés aux PME\n\n### **Aviva Canada**\n- Forte présence au Québec\n- Solutions personnalisées\n- Bon service client\n\n### **La Capitale**\n- Assureur québécois\n- Spécialisé en assurance collective\n- Connaissance du marché local\n\n### **Industrielle Alliance**\n- Assurance collective et individuelle\n- Forte présence au Québec\n- Produits pour PME\n\n## Types d'assurances essentielles\n\n- **Responsabilité civile générale**\n- **Assurance des biens**\n- **Assurance collective (employés)**\n- **Assurance erreurs et omissions**\n- **Assurance interruption d'activités**\n\n## Conseils\n\n✅ Comparez plusieurs soumissions\n✅ Utilisez un courtier en assurance\n✅ Évaluez vos besoins spécifiques selon votre secteur\n\n**Besoin d'aide?** Un courtier peut vous guider gratuitement vers la meilleure option pour votre entreprise.\n\nQuel type d'entreprise assurez-vous?",
+          "response_length": 1190,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance des entreprises québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance des entreprises québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Des Entreprises Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur assurances collectives québec",
+      "timestamp": "2025-11-26T19:38:45.324030",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Offre une gamme complète de produits d'assurance collective au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Gamme complète incluant assurance santé, dentaire, vie et invalidité"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Propose des solutions d'assurance collective pour petites et grandes entreprises",
+              "mention_type": "recommendation",
+              "perceived_strength": "Solutions adaptées avec options personnalisables pour entreprises de toutes tailles"
+            },
+            {
+              "name": "SSQ Assurance",
+              "urls": [],
+              "context": "Offre des plans d'assurance collective flexibles au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plans flexibles adaptables aux besoins spécifiques des entreprises et employés"
+            },
+            {
+              "name": "Manuvie",
+              "urls": [],
+              "context": "Fournisseur de solutions d'assurance collective complètes",
+              "mention_type": "recommendation",
+              "perceived_strength": "Solutions complètes incluant programmes de bien-être et de prévention"
+            },
+            {
+              "name": "Sun Life",
+              "urls": [],
+              "context": "Propose des régimes d'assurance collective avec outils numériques",
+              "mention_type": "recommendation",
+              "perceived_strength": "Variété d'options de couverture avec outils numériques pour faciliter la gestion"
+            },
+            {
+              "name": "Canada Vie",
+              "urls": [],
+              "context": "Offre des solutions d'assurance collective personnalisables",
+              "mention_type": "recommendation",
+              "perceived_strength": "Solutions personnalisables pour entreprises de toutes tailles"
+            }
+          ],
+          "full_response": "Choisir la meilleure assurance collective au Québec dépend de plusieurs facteurs, notamment les besoins spécifiques de votre entreprise et de vos employés, le budget disponible, ainsi que les types de couvertures souhaitées. Voici quelques compagnies d'assurance bien connues au Québec qui offrent des plans d'assurance collective :\n\n1. **Desjardins Assurances** - Offre une gamme complète de produits d'assurance collective, y compris l'assurance santé, dentaire, vie, et invalidité.\n\n2. **La Capitale** - Propose des solutions d'assurance collective adaptées aux petites et grandes entreprises, avec des options personnalisables.\n\n3. **SSQ Assurance** - Offre des plans flexibles qui peuvent être adaptés aux besoins spécifiques des entreprises et de leurs employés.\n\n4. **Manuvie** - Connue pour ses solutions d'assurance collective complètes, incluant des programmes de bien-être et de prévention.\n\n5. **Sun Life** - Propose des régimes d'assurance collective avec une variété d'options de couverture et des outils numériques pour faciliter la gestion des régimes.\n\n6. **Canada Vie** - Offre des solutions d'assurance collective qui peuvent être personnalisées pour répondre aux besoins des entreprises de toutes tailles.\n\nIl est conseillé de comparer les offres de plusieurs assureurs et de consulter un courtier en assurance pour obtenir des conseils adaptés à votre situation. Un courtier peut vous aider à évaluer les différentes options et à choisir le plan qui offre le meilleur rapport qualité-prix pour votre entreprise et vos employés.",
+          "response_length": 1548,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Canada Vie",
+              "urls": [],
+              "context": "Présenté comme leader du marché québécois des assurances collectives",
+              "mention_type": "recommendation",
+              "perceived_strength": "Leader du marché avec excellente réputation pour le service et plateforme numérique performante"
+            },
+            {
+              "name": "Manuvie",
+              "urls": [],
+              "context": "Mentionné comme option compétitive pour PME et grandes entreprises",
+              "mention_type": "recommendation",
+              "perceived_strength": "Très compétitif avec bons programmes de mieux-être et application mobile conviviale"
+            },
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Présenté comme assureur avec forte présence au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Forte présence québécoise avec service en français prioritaire, adapté aux petites entreprises"
+            },
+            {
+              "name": "Sun Life",
+              "urls": [],
+              "context": "Mentionné comme innovateur en santé mentale et virtuelle",
+              "mention_type": "recommendation",
+              "perceived_strength": "Innovateur en santé mentale/virtuelle avec programmes de prévention reconnus"
+            },
+            {
+              "name": "SSQ Assurance",
+              "urls": [],
+              "context": "Présenté comme mutuelle québécoise avec service personnalisé",
+              "mention_type": "recommendation",
+              "perceived_strength": "Mutuelle québécoise offrant service personnalisé, populaire auprès des PME québécoises"
+            },
+            {
+              "name": "Croix Bleue Medavie",
+              "urls": [],
+              "context": "Mentionné comme spécialiste des régimes flexibles",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialiste des régimes flexibles avec bonne gestion des médicaments et réseau étendu"
+            }
+          ],
+          "full_response": "# Meilleures assurances collectives au Québec\n\nVoici les principaux assureurs offrant des régimes collectifs au Québec :\n\n## Grands assureurs établis\n\n### **Canada Vie**\n- Leader du marché québécois\n- Excellente réputation pour le service\n- Plateforme numérique performante\n\n### **Manuvie**\n- Très compétitif pour PME et grandes entreprises\n- Bons programmes de mieux-être\n- Application mobile conviviale\n\n### **Desjardins Assurances**\n- Forte présence au Québec\n- Service en français prioritaire\n- Bon pour les petites entreprises\n\n### **Sun Life**\n- Innovateur en santé mentale et virtuelle\n- Programmes de prévention reconnus\n- Bon pour moyennes/grandes entreprises\n\n### **SSQ Assurance**\n- Mutuelle québécoise\n- Service personnalisé\n- Populaire auprès des PME québécoises\n\n### **Croix Bleue Medavie**\n- Spécialiste des régimes flexibles\n- Bonne gestion des médicaments\n- Réseau étendu\n\n## Critères de sélection\n\n- **Taille de l'entreprise** (nombre d'employés)\n- **Budget disponible**\n- **Besoins spécifiques** (dentaire, invalidité, voyage)\n- **Service en français**\n- **Outils numériques**\n\n**Conseil** : Faites affaire avec un **courtier en assurances collectives** qui comparera plusieurs assureurs pour vous.\n\nAvez-vous des besoins particuliers pour votre entreprise?",
+          "response_length": 1276,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives québec'",
+              "example_title": "Guide Complet: Meilleur Assurances Collectives Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives québec'",
+              "example_title": "Guide Complet: Meilleur Assurances Collectives Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurances collectives québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurances collectives québec'",
+              "example_title": "Guide Complet: Meilleur Assurances Collectives Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur solutions financières et investissements québec",
+      "timestamp": "2025-11-26T19:39:34.907498",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Trouver les meilleures solutions financières et d'investissement au Québec dépend de plusieurs facteurs, notamment vos objectifs financiers, votre tolérance au risque, votre horizon temporel et votre situation personnelle. Voici quelques options et conseils généraux qui pourraient vous aider à naviguer dans le paysage financier québécois :\n\n1. **Conseillers Financiers** : Consulter un conseiller financier peut vous aider à élaborer un plan personnalisé. Ils peuvent vous offrir des conseils sur la gestion de votre portefeuille, la planification de la retraite, et d'autres aspects financiers.\n\n2. **Comptes d'Épargne et d'Investissement** :\n   - **CELI (Compte d'Épargne Libre d'Impôt)** : Un excellent moyen d'épargner et d'investir sans payer d'impôt sur les gains.\n   - **REER (Régime Enregistré d'Épargne-Retraite)** : Permet de différer l'impôt sur les revenus jusqu'à la retraite.\n\n3. **Fonds Communs de Placement** : Offrent une diversification instantanée et sont gérés par des professionnels. Ils peuvent être une bonne option pour les investisseurs qui préfèrent une approche plus passive.\n\n4. **Actions et Obligations** : Investir directement dans des actions ou des obligations peut offrir des rendements potentiellement plus élevés, mais avec un risque accru. Il est important de bien comprendre le marché avant d'investir.\n\n5. **Immobilier** : Investir dans l'immobilier peut être une bonne option pour diversifier votre portefeuille. Cela peut inclure l'achat de propriétés locatives ou l'investissement dans des fonds de placement immobilier (FPI).\n\n6. **Planification Fiscale** : Optimiser votre situation fiscale peut vous aider à conserver plus de vos gains. Cela peut inclure l'utilisation de crédits d'impôt, de déductions et de stratégies de fractionnement du revenu.\n\n7. **Éducation Financière** : Investir dans votre propre éducation financière peut être l'un des meilleurs investissements que vous puissiez faire. Comprendre les bases de la finance personnelle et des investissements vous permettra de prendre des décisions plus éclairées.\n\n8. **Investissements Responsables** : De plus en plus d'investisseurs s'intéressent aux investissements socialement responsables (ISR) ou durables, qui prennent en compte des critères environnementaux, sociaux et de gouvernance (ESG).\n\nIl est important de faire vos propres recherches et de consulter des",
+          "response_length": 2375,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Desjardins",
+              "urls": [],
+              "context": "Présenté comme leader coopératif québécois parmi les institutions financières principales",
+              "mention_type": "recommendation",
+              "perceived_strength": "Positionné comme leader du secteur coopératif au Québec"
+            },
+            {
+              "name": "Banque Nationale",
+              "urls": [],
+              "context": "Identifiée comme banque québécoise majeure et mentionnée pour son service de courtage",
+              "mention_type": "recommendation",
+              "perceived_strength": "Reconnue comme institution bancaire majeure au Québec avec service de courtage en ligne"
+            },
+            {
+              "name": "RBC",
+              "urls": [],
+              "context": "Listée parmi les banques canadiennes principales opérant au Québec",
+              "mention_type": "neutral",
+              "perceived_strength": "Fait partie des grandes banques canadiennes établies"
+            },
+            {
+              "name": "TD",
+              "urls": [],
+              "context": "Listée parmi les banques canadiennes principales opérant au Québec",
+              "mention_type": "neutral",
+              "perceived_strength": "Fait partie des grandes banques canadiennes établies"
+            },
+            {
+              "name": "BMO",
+              "urls": [],
+              "context": "Listée parmi les banques canadiennes principales opérant au Québec",
+              "mention_type": "neutral",
+              "perceived_strength": "Fait partie des grandes banques canadiennes établies"
+            },
+            {
+              "name": "Scotia",
+              "urls": [],
+              "context": "Listée parmi les banques canadiennes principales opérant au Québec",
+              "mention_type": "neutral",
+              "perceived_strength": "Fait partie des grandes banques canadiennes établies"
+            },
+            {
+              "name": "CIBC",
+              "urls": [],
+              "context": "Listée parmi les banques canadiennes principales opérant au Québec",
+              "mention_type": "neutral",
+              "perceived_strength": "Fait partie des grandes banques canadiennes établies"
+            },
+            {
+              "name": "Wealthsimple",
+              "urls": [],
+              "context": "Recommandé comme robo-conseiller pour investisseurs débutants",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme solution accessible pour débutants via robo-conseil"
+            },
+            {
+              "name": "Questrade",
+              "urls": [],
+              "context": "Recommandé comme robo-conseiller pour débutants et courtier en ligne pour investisseurs actifs",
+              "mention_type": "recommendation",
+              "perceived_strength": "Offre double: robo-conseil pour débutants et plateforme de courtage pour investisseurs actifs"
+            },
+            {
+              "name": "Disnat",
+              "urls": [],
+              "context": "Recommandé comme courtier en ligne pour investisseurs actifs",
+              "mention_type": "recommendation",
+              "perceived_strength": "Positionné comme option de courtage en ligne pour investisseurs expérimentés"
+            }
+          ],
+          "full_response": "# Meilleures solutions financières et investissements au Québec\n\n## 🏦 Institutions financières principales\n\n### Banques et caisses\n- **Desjardins** - Leader coopératif québécois\n- **Banque Nationale** - Banque québécoise majeure\n- **Banques canadiennes** (RBC, TD, BMO, Scotia, CIBC)\n\n## 💰 Comptes enregistrés avantageux\n\n### CELI (Compte d'épargne libre d'impôt)\n- Retraits non imposables\n- Plafond 2024 : 7 000 $\n- Idéal pour objectifs court/moyen terme\n\n### REER (Régime enregistré d'épargne-retraite)\n- Déduction fiscale immédiate\n- Particulièrement avantageux au Québec (taux d'imposition élevés)\n- Plafond : 18% du revenu (max 31 560 $ en 2024)\n\n### REEE (Régime d'épargne-études)\n- Subvention canadienne (20-40%)\n- Bon d'études québécois (10%)\n- Jusqu'à 1 000 $/an en subventions gratuites\n\n## 📈 Options d'investissement\n\n### Pour débutants\n- **Fonds indiciels** (FNB/ETF)\n- **Robo-conseillers** : Wealthsimple, Questrade\n- **Fonds communs** via institutions\n\n### Pour investisseurs actifs\n- **Courtiers en ligne** : Questrade, Disnat, Banque Nationale Courtage\n- **Actions individuelles** (TSX, NYSE)\n- **FNB sectoriels**\n\n## 🎯 Stratégies recommandées\n\n### Portefeuille équilibré québécois\n1. **60% actions** (canadiennes et internationales)\n2. **30% obligations**",
+          "response_length": 1272,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur solutions financières et investissements québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur solutions financières et investissements québec'",
+              "example_title": "Guide Complet: Meilleur Solutions Financières Et Investissements Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec",
+      "timestamp": "2025-11-26T19:40:26.747663",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Propose des assurances pour divers types de véhicules récréatifs avec des options de couverture personnalisables.",
+              "mention_type": "recommendation",
+              "perceived_strength": "Offre des options de couverture personnalisables pour différents types de véhicules récréatifs"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Offre des assurances pour VR avec des protections adaptées aux besoins des propriétaires de véhicules récréatifs.",
+              "mention_type": "recommendation",
+              "perceived_strength": "Propose des protections adaptées spécifiquement aux besoins des propriétaires de VR"
+            },
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Connue pour sa flexibilité et ses options de couverture, Intact propose des assurances pour différents types de véhicules récréatifs.",
+              "mention_type": "recommendation",
+              "perceived_strength": "Reconnue pour sa flexibilité et la variété de ses options de couverture"
+            },
+            {
+              "name": "Aviva",
+              "urls": [],
+              "context": "Offre des polices d'assurance pour VR qui peuvent inclure des protections pour les biens personnels à l'intérieur du véhicule.",
+              "mention_type": "recommendation",
+              "perceived_strength": "Inclut des protections pour les biens personnels à l'intérieur du véhicule récréatif"
+            },
+            {
+              "name": "Allstate",
+              "urls": [],
+              "context": "Propose des assurances pour VR avec des options de couverture étendues et un service client réputé.",
+              "mention_type": "recommendation",
+              "perceived_strength": "Offre des options de couverture étendues et possède un service client réputé"
+            },
+            {
+              "name": "Promutuel Assurance",
+              "urls": [],
+              "context": "Offre des solutions d'assurance pour VR avec des options de couverture variées.",
+              "mention_type": "recommendation",
+              "perceived_strength": "Propose des solutions avec des options de couverture variées"
+            }
+          ],
+          "full_response": "Choisir la meilleure assurance pour véhicules récréatifs au Québec dépend de plusieurs facteurs, notamment vos besoins spécifiques, le type de véhicule que vous possédez, et votre budget. Voici quelques compagnies d'assurance bien connues au Québec qui offrent des couvertures pour les VR, remorques et caravanes :\n\n1. **Desjardins Assurances** : Propose des assurances pour divers types de véhicules récréatifs avec des options de couverture personnalisables.\n\n2. **La Capitale** : Offre des assurances pour VR avec des protections adaptées aux besoins des propriétaires de véhicules récréatifs.\n\n3. **Intact Assurance** : Connue pour sa flexibilité et ses options de couverture, Intact propose des assurances pour différents types de véhicules récréatifs.\n\n4. **Aviva** : Offre des polices d'assurance pour VR qui peuvent inclure des protections pour les biens personnels à l'intérieur du véhicule.\n\n5. **Allstate** : Propose des assurances pour VR avec des options de couverture étendues et un service client réputé.\n\n6. **Promutuel Assurance** : Offre des solutions d'assurance pour VR avec des options de couverture variées.\n\nIl est important de comparer les offres de plusieurs assureurs pour trouver celle qui répond le mieux à vos besoins. Prenez en compte les éléments suivants lors de votre choix :\n\n- **Couverture** : Assurez-vous que la police couvre tous les aspects importants, tels que les dommages, le vol, la responsabilité civile, et les biens personnels à l'intérieur du véhicule.\n\n- **Prix** : Comparez les primes et les franchises pour trouver une option qui convient à votre budget.\n\n- **Service client** : Recherchez des avis et des évaluations sur le service client de l'assureur.\n\n- **Réductions** : Vérifiez si l'assureur offre des réductions pour des éléments tels que l'adhésion à des associations de VR, l'installation de dispositifs de sécurité, ou la souscription de plusieurs polices.\n\nN'hésitez pas à consulter un courtier en assurance pour obtenir des conseils personnalisés et des devis de plusieurs compagnies.",
+          "response_length": 2046,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": true,
+          "position": 6,
+          "context_snippet": "...onne réputation\n\n## Courtiers spécialisés à considérer\n\n- **Assurance Chaput** - Spécialiste VR\n- **Lussier Dale Parizeau** - Expertise véhicules récréatifs\n- **Assurances Promutuel** - Réseau québécois\n\n## ...",
+          "competitors_mentioned": [
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Présenté comme leader au Canada pour les VR avec couverture complète",
+              "mention_type": "recommendation",
+              "perceived_strength": "Leader canadien avec programme spécifique et couverture flexible pour véhicules récréatifs"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Assureur avec expertise québécoise pour VR et roulottes",
+              "mention_type": "recommendation",
+              "perceived_strength": "Expertise locale québécoise avec options personnalisées et service en français"
+            },
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Mentionné pour ses rabais multi-produits et couverture adaptée",
+              "mention_type": "recommendation",
+              "perceived_strength": "Rabais multi-produits intéressants avec réseau étendu et couverture adaptée au Québec"
+            },
+            {
+              "name": "Promutuel Assurance",
+              "urls": [],
+              "context": "Coopérative québécoise avec tarifs compétitifs",
+              "mention_type": "recommendation",
+              "perceived_strength": "Coopérative locale offrant tarifs compétitifs et service personnalisé"
+            },
+            {
+              "name": "Aviva Canada",
+              "urls": [],
+              "context": "Spécialiste VR avec protection complète des accessoires",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialisation VR avec protection complète incluant accessoires et bonne réputation"
+            },
+            {
+              "name": "Assurance Chaput",
+              "urls": [],
+              "context": "Courtier spécialisé en véhicules récréatifs",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialiste reconnu dans le domaine des VR"
+            },
+            {
+              "name": "Lussier Dale Parizeau",
+              "urls": [],
+              "context": "Courtier avec expertise en véhicules récréatifs",
+              "mention_type": "recommendation",
+              "perceived_strength": "Expertise spécifique dans les véhicules récréatifs"
+            }
+          ],
+          "full_response": "# Meilleures assurances pour véhicules récréatifs au Québec\n\n## Assureurs spécialisés recommandés\n\n### **1. Intact Assurance**\n- Leader au Canada pour les VR\n- Couverture complète et flexible\n- Programme spécifique pour véhicules récréatifs\n\n### **2. La Capitale**\n- Expertise québécoise\n- Options personnalisées pour VR et roulottes\n- Service en français\n\n### **3. Desjardins Assurances**\n- Rabais multi-produits intéressants\n- Couverture adaptée aux besoins québécois\n- Réseau étendu\n\n### **4. Promutuel Assurance**\n- Coopérative québécoise\n- Tarifs compétitifs\n- Service personnalisé\n\n### **5. Aviva Canada**\n- Spécialisation VR\n- Protection complète incluant les accessoires\n- Bonne réputation\n\n## Courtiers spécialisés à considérer\n\n- **Assurance Chaput** - Spécialiste VR\n- **Lussier Dale Parizeau** - Expertise véhicules récréatifs\n- **Assurances Promutuel** - Réseau québécois\n\n## Couvertures importantes à vérifier\n\n✅ Responsabilité civile\n✅ Dommages collision et versement\n✅ Protection des accessoires et équipements\n✅ Couverture de remplacement\n✅ Assistance routière spécialisée VR\n✅ Protection hivernage\n\n## Conseil\n**Utilisez un courtier** pour comparer plusieurs soumissions gratuitement et obtenir la meilleure protection au meilleur prix.\n\nBesoin de recommandations plus spécifiques selon votre type de VR?",
+          "response_length": 1322,
+          "sentiment": "positive",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.125
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Vr, Remorques, Caravanes) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Vr, Remorques, Caravanes) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Véhicules Récréatifs (Vr, Remorques, Caravanes) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur assurance motoneige québec",
+      "timestamp": "2025-11-26T19:41:12.458843",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Mentionné comme une des compagnies d'assurance populaires au Québec pour les motoneiges",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Mentionné comme une des compagnies d'assurance populaires au Québec pour les motoneiges",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+            },
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Mentionné comme une des compagnies d'assurance populaires au Québec pour les motoneiges",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+            },
+            {
+              "name": "Promutuel",
+              "urls": [],
+              "context": "Mentionné comme une des compagnies d'assurance populaires au Québec pour les motoneiges",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+            }
+          ],
+          "full_response": "Choisir la meilleure assurance pour votre motoneige au Québec dépend de plusieurs facteurs, notamment de vos besoins spécifiques, de votre budget et des options de couverture que vous recherchez. Voici quelques conseils pour vous aider à trouver la meilleure assurance motoneige :\n\n1. **Comparer les offres** : Utilisez des comparateurs en ligne pour obtenir des devis de plusieurs compagnies d'assurance. Cela vous donnera une idée des prix et des options disponibles.\n\n2. **Considérer la couverture** : Assurez-vous que la police d'assurance couvre les dommages à votre motoneige, la responsabilité civile, le vol, le vandalisme et les blessures corporelles. Certaines polices peuvent également offrir une couverture pour les accessoires et l'équipement.\n\n3. **Vérifier les franchises** : Les franchises peuvent varier d'une police à l'autre. Assurez-vous de choisir une franchise que vous pouvez vous permettre de payer en cas de sinistre.\n\n4. **Regarder les avis et la réputation** : Consultez les avis en ligne et demandez des recommandations à d'autres propriétaires de motoneiges pour connaître la réputation des assureurs.\n\n5. **Consulter un courtier** : Un courtier en assurance peut vous aider à naviguer dans les différentes options et à trouver une police qui correspond à vos besoins.\n\n6. **Rabais et réductions** : Renseignez-vous sur les rabais possibles, comme ceux pour les conducteurs expérimentés, les membres d'associations de motoneige, ou si vous regroupez plusieurs polices d'assurance avec le même assureur.\n\nParmi les compagnies d'assurance populaires au Québec pour les motoneiges, on trouve Desjardins Assurances, La Capitale, Intact Assurance, et Promutuel. Chacune de ces compagnies offre différentes options et avantages, donc il est important de faire vos recherches pour trouver celle qui vous convient le mieux.",
+          "response_length": 1844,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Assurance Promutuel",
+              "urls": [],
+              "context": "Présenté comme spécialiste des véhicules récréatifs avec couverture adaptée aux motoneigistes québécois",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialisation dans les véhicules récréatifs, couverture adaptée au marché québécois et bon rapport qualité-prix"
+            },
+            {
+              "name": "Intact Assurance",
+              "urls": [],
+              "context": "Mentionné pour ses offres compétitives et options de protection complètes",
+              "mention_type": "recommendation",
+              "perceived_strength": "Offres compétitives, options de protection complètes et service client réputé"
+            },
+            {
+              "name": "Desjardins Assurances",
+              "urls": [],
+              "context": "Présenté avec rabais pour membres et réseau étendu au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Rabais pour membres, couverture flexible et réseau étendu au Québec"
+            },
+            {
+              "name": "La Capitale",
+              "urls": [],
+              "context": "Mentionné pour ses tarifs avantageux et service en français",
+              "mention_type": "recommendation",
+              "perceived_strength": "Tarifs avantageux, protection tous risques disponible et service en français"
+            },
+            {
+              "name": "SSQ Assurance",
+              "urls": [],
+              "context": "Présenté avec options personnalisables et bonne réputation",
+              "mention_type": "recommendation",
+              "perceived_strength": "Options personnalisables et bonne réputation"
+            }
+          ],
+          "full_response": "# Meilleures assurances motoneige au Québec\n\nVoici les principaux assureurs recommandés pour la motoneige au Québec :\n\n## Assureurs spécialisés\n\n**1. Assurance Promutuel**\n- Spécialiste des véhicules récréatifs\n- Couverture adaptée aux motoneigistes québécois\n- Bon rapport qualité-prix\n\n**2. Intact Assurance**\n- Offres compétitives\n- Options de protection complètes\n- Service client réputé\n\n**3. Desjardins Assurances**\n- Rabais pour membres\n- Couverture flexible\n- Réseau étendu au Québec\n\n**4. La Capitale**\n- Tarifs avantageux\n- Protection tous risques disponible\n- Service en français\n\n**5. SSQ Assurance**\n- Options personnalisables\n- Bonne réputation\n\n## Points à comparer\n\n- **Responsabilité civile** (minimum 1M$ recommandé)\n- **Protection collision/versement**\n- **Vol et vandalisme**\n- **Assistance routière**\n- **Équipement et accessoires**\n- **Rabais multi-produits**\n\n## Conseils\n\n✓ Comparez au moins 3 soumissions\n✓ Vérifiez si votre courtier offre des forfaits groupés\n✓ Demandez les rabais (cours de sécurité, entreposage hivernal)\n✓ L'assurance est **obligatoire** au Québec\n\nBesoin d'aide pour comparer des soumissions spécifiques?",
+          "response_length": 1151,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance motoneige québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance motoneige québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Motoneige Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance motoneige québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance motoneige québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Motoneige Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur assurance motoneige québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur assurance motoneige québec'",
+              "example_title": "Guide Complet: Meilleur Assurance Motoneige Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "comment choisir courtage en assurance des particuliers",
+      "timestamp": "2025-11-26T19:42:01.365929",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Choisir un courtier en assurance pour particuliers peut être une décision importante, car cela peut influencer la qualité de la couverture que vous obtenez et le coût de vos primes. Voici quelques conseils pour vous aider à faire le bon choix :\n\n1. **Comprendre vos besoins** : Avant de commencer votre recherche, identifiez clairement vos besoins en assurance. Cela peut inclure l'assurance auto, habitation, santé, ou tout autre type de couverture dont vous pourriez avoir besoin.\n\n2. **Recherchez des recommandations** : Demandez à vos amis, votre famille ou vos collègues s'ils ont des courtiers à recommander. Les avis personnels peuvent souvent vous donner une idée de la qualité du service.\n\n3. **Vérifiez les qualifications** : Assurez-vous que le courtier est dûment enregistré et possède les qualifications nécessaires pour exercer. Dans de nombreux pays, les courtiers doivent être agréés par une autorité de régulation.\n\n4. **Évaluez l'expérience** : Un courtier expérimenté peut souvent offrir de meilleurs conseils et avoir accès à un réseau plus large de compagnies d'assurance.\n\n5. **Comparez les offres** : Ne vous contentez pas du premier courtier que vous rencontrez. Comparez les services et les offres de plusieurs courtiers pour vous assurer d'obtenir la meilleure couverture au meilleur prix.\n\n6. **Considérez le service client** : Un bon courtier doit être facilement joignable et prêt à répondre à vos questions. Testez leur réactivité et leur disponibilité.\n\n7. **Transparence des frais** : Assurez-vous de bien comprendre comment le courtier est rémunéré. Certains courtiers peuvent facturer des frais, tandis que d'autres sont payés par les compagnies d'assurance.\n\n8. **Lisez les avis en ligne** : Consultez les avis et les évaluations en ligne pour avoir une idée de la réputation du courtier.\n\n9. **Rencontrez le courtier** : Si possible, rencontrez le courtier en personne pour discuter de vos besoins et voir si vous vous sentez à l'aise de travailler avec lui.\n\n10. **Vérifiez les options de personnalisation** : Un bon courtier devrait être capable de vous offrir des solutions personnalisées qui répondent spécifiquement à vos besoins.\n\nEn suivant ces étapes, vous augmenterez vos chances de trouver un courtier en assurance qui vous fournira un service de qualité et une couverture adaptée à vos besoins.",
+          "response_length": 2341,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "en assurance",
+              "urls": [],
+              "context": "Mentionné",
+              "mention_type": "neutral",
+              "perceived_strength": ""
+            }
+          ],
+          "full_response": "# Comment choisir un courtage en assurance pour particuliers\n\n## 🔍 Critères essentiels de sélection\n\n### 1. **Vérifications réglementaires**\n- Inscription à l'**ORIAS** (Registre des intermédiaires en assurance)\n- Responsabilité civile professionnelle à jour\n- Garantie financière valide\n\n### 2. **Expertise et spécialisation**\n- Expérience dans vos besoins spécifiques (auto, habitation, santé, vie)\n- Connaissance du marché local\n- Nombre de compagnies partenaires (plus = meilleur choix)\n\n### 3. **Qualité du service**\n\n**À privilégier :**\n- ✅ Disponibilité et réactivité\n- ✅ Accompagnement personnalisé\n- ✅ Gestion des sinistres\n- ✅ Explications claires des contrats\n- ✅ Suivi régulier de vos contrats\n\n### 4. **Transparence financière**\n- Rémunération clairement expliquée\n- Comparaison objective des offres\n- Absence de frais cachés\n\n## 💡 Questions à poser\n\n1. \"Combien d'assureurs comparez-vous ?\"\n2. \"Comment êtes-vous rémunéré ?\"\n3. \"Qui gère mes sinistres ?\"\n4. \"Proposez-vous un bilan annuel ?\"\n5. \"Quels sont vos délais de réponse ?\"\n\n## ⚠️ Signaux d'alerte\n\n- Pression à la vente\n- Manque de transparence sur les commissions\n- Peu de compagnies proposées\n- Pas d'inscription ORIAS\n- Promesses irréalistes\n\n## 🎯 Conseils pratiques\n\n**Rencontrez 2-3 courtiers** pour comparer leur approche et leurs propositions avant de vous engager.\n\nBesoin",
+          "response_length": 1353,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir courtage en assurance des particuliers'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir courtage en assurance des particuliers'",
+              "example_title": "Guide Complet: Comment Choisir Courtage En Assurance Des Particuliers en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "comment choisir assurance automobile",
+      "timestamp": "2025-11-26T19:42:42.007328",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Choisir une assurance automobile peut sembler complexe, mais en suivant quelques étapes clés, vous pouvez trouver une couverture qui répond à vos besoins et à votre budget. Voici quelques conseils pour vous aider dans votre choix :\n\n1. **Évaluez vos besoins** : Avant de commencer à comparer les offres, déterminez le niveau de couverture dont vous avez besoin. Considérez des facteurs tels que la valeur de votre véhicule, votre historique de conduite, et l'utilisation que vous faites de votre voiture.\n\n2. **Comprenez les types de couverture** : Familiarisez-vous avec les différents types de couverture disponibles, tels que la responsabilité civile, la couverture tous risques, la couverture collision, et la protection contre le vol ou le vandalisme.\n\n3. **Comparez les offres** : Utilisez des comparateurs en ligne pour obtenir des devis de plusieurs assureurs. Assurez-vous de comparer des offres équivalentes en termes de couverture et de services.\n\n4. **Vérifiez les franchises** : La franchise est le montant que vous devrez payer de votre poche en cas de sinistre. Un montant de franchise plus élevé peut réduire votre prime, mais assurez-vous qu'il reste abordable en cas de besoin.\n\n5. **Considérez les options supplémentaires** : Certaines assurances offrent des options supplémentaires comme l'assistance routière, la couverture des accessoires, ou la protection juridique. Évaluez si ces options sont nécessaires pour vous.\n\n6. **Examinez les réductions possibles** : Renseignez-vous sur les réductions disponibles, comme celles pour les conducteurs prudents, les véhicules équipés de dispositifs de sécurité, ou les contrats multi-assurances.\n\n7. **Lisez les avis et évaluations** : Consultez les avis d'autres clients pour évaluer la réputation de l'assureur en termes de service client et de gestion des sinistres.\n\n8. **Vérifiez les conditions générales** : Lisez attentivement les conditions générales du contrat pour comprendre les exclusions, les limitations, et les obligations de chaque partie.\n\n9. **Consultez un courtier** : Si vous avez des besoins spécifiques ou si vous êtes incertain, un courtier en assurance peut vous aider à naviguer dans les différentes options et à trouver la meilleure offre.\n\nEn suivant ces étapes, vous serez mieux préparé pour choisir une assurance automobile qui vous offre la protection adéquate tout en respectant votre budget.",
+          "response_length": 2388,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "une assurance",
+              "urls": [],
+              "context": "Mentionné",
+              "mention_type": "neutral",
+              "perceived_strength": ""
+            },
+            {
+              "name": "votre assurance",
+              "urls": [],
+              "context": "Mentionné",
+              "mention_type": "neutral",
+              "perceived_strength": ""
+            }
+          ],
+          "full_response": "# Comment choisir une assurance automobile\n\nVoici les étapes clés pour bien choisir votre assurance auto :\n\n## 1. **Déterminez vos besoins**\n- **Valeur du véhicule** (neuf, récent, ancien)\n- **Usage** (trajet travail, occasionnel, professionnel)\n- **Profil conducteur** (âge, expérience, bonus/malus)\n\n## 2. **Choisissez le niveau de couverture**\n\n### Au tiers (minimum légal)\n- Couvre les dommages causés aux autres\n- Pour véhicules anciens ou de faible valeur\n\n### Tiers étendu/intermédiaire\n- Au tiers + vol, incendie, bris de glace\n- Bon compromis prix/protection\n\n### Tous risques\n- Protection maximale (même responsable)\n- Pour véhicules neufs ou récents\n\n## 3. **Comparez les offres**\n- Utilisez des comparateurs en ligne\n- Demandez plusieurs devis\n- Vérifiez les **franchises**\n- Lisez les **exclusions de garantie**\n\n## 4. **Vérifiez les garanties importantes**\n- Assistance 0 km\n- Véhicule de remplacement\n- Protection du conducteur\n- Valeur à neuf (si véhicule récent)\n\n## 5. **Optimisez le prix**\n- Augmentez la franchise\n- Limitez les kilomètres annuels\n- Regroupez vos assurances\n- Installez un dispositif antivol\n\n**Conseil** : Le moins cher n'est pas toujours le meilleur. Privilégiez le rapport qualité/prix et la qualité du service client.\n\nAvez-vous des questions spécifiques sur votre situation?",
+          "response_length": 1315,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'comment choisir assurance automobile'",
+              "action": "Créer une page dédiée ou un article sur 'comment choisir assurance automobile'",
+              "example_title": "Guide Complet: Comment Choisir Assurance Automobile en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 100,
+    "global_visibility": 0.06000000000000001,
+    "by_platform": {
+      "chatgpt": 0.1,
+      "claude": 0.2,
+      "perplexity": 0.0,
+      "gemini": 0.0,
+      "google_ai": 0.0
+    },
+    "sentiment_breakdown": {
+      "positive": 1,
+      "neutral": 2,
+      "negative": 0
+    },
+    "avg_share_of_voice": 0.14
+  },
+  "insights": {
+    "dominant_sentiment": "neutral",
+    "share_of_voice_rating": "LOW",
+    "competitive_position": "Follower"
+  },
+  "query_type_analysis": {
+    "comparison": {
+      "queries": [
+        "meilleur courtage en assurance des particuliers québec",
+        "meilleur assurance automobile québec",
+        "meilleur assurance habitation québec",
+        "meilleur assurance des entreprises québec",
+        "meilleur assurances collectives québec",
+        "meilleur solutions financières et investissements québec",
+        "meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec",
+        "meilleur assurance motoneige québec",
+        "comment choisir courtage en assurance des particuliers",
+        "comment choisir assurance automobile"
+      ],
+      "visibility": 0.06,
+      "mentions": 3,
+      "total_tests": 50,
+      "avg_position": 7.333333333333333,
+      "top_competitors": [
+        {
+          "name": "La Capitale",
+          "mentions": 12
+        },
+        {
+          "name": "Intact Assurance",
+          "mentions": 11
+        },
+        {
+          "name": "Desjardins Assurances",
+          "mentions": 11
+        },
+        {
+          "name": "SSQ Assurance",
+          "mentions": 5
+        },
+        {
+          "name": "Promutuel Assurance",
+          "mentions": 4
+        }
+      ]
+    }
+  },
+  "competitive_analysis": {
+    "total_unique_competitors": 41,
+    "competitors": [
+      {
+        "name": "La Capitale",
+        "total_mentions": 12,
+        "visibility_rate": 0.24,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Propose des protections adaptées spécifiquement aux besoins des propriétaires de VR",
+          "Tarifs avantageux, protection tous risques disponible et service en français",
+          "Bien établis au Québec avec une gamme complète de produits",
+          "Propose des solutions complètes incluant assurance des biens, responsabilité civile et automobile commerciale",
+          "Expertise locale québécoise avec options personnalisées et service en français",
+          "Spécialisé au Québec, bon rapport qualité-prix et service personnalisé",
+          "Présenté comme un assureur populaire et établi au Québec",
+          "Solutions adaptées avec options personnalisables pour entreprises de toutes tailles",
+          "Assureur québécois spécialisé en assurance collective avec connaissance approfondie du marché local",
+          "Présenté comme une compagnie populaire et établie au Québec pour l'assurance automobile",
+          "Spécialisé pour les employés du secteur public avec tarifs avantageux et service personnalisé",
+          "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+        ],
+        "mention_breakdown": {
+          "recommendation": 11,
+          "comparison": 1,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurances collectives québec",
+          "meilleur assurance des entreprises québec",
+          "meilleur assurance automobile québec",
+          "meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec",
+          "meilleur assurance motoneige québec",
+          "meilleur assurance habitation québec",
+          "meilleur courtage en assurance des particuliers québec"
+        ]
+      },
+      {
+        "name": "Intact Assurance",
+        "total_mentions": 11,
+        "visibility_rate": 0.22,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Plus grand assureur dommages au Canada, offre une large gamme de produits commerciaux et service en français",
+          "Leader canadien avec programme spécifique et couverture flexible pour véhicules récréatifs",
+          "Tarifs compétitifs, application mobile performante et bonne gestion des réclamations",
+          "Plus grand assureur au Canada avec gamme complète incluant assurance des biens, responsabilité civile et automobile commerciale",
+          "Présenté comme un assureur populaire et établi au Québec",
+          "Reconnue pour sa flexibilité et la variété de ses options de couverture",
+          "Offres compétitives, options de protection complètes et service client réputé",
+          "Présenté comme une compagnie populaire et établie au Québec pour l'assurance automobile",
+          "Offre des produits adaptés aux besoins des clients",
+          "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+        ],
+        "mention_breakdown": {
+          "recommendation": 10,
+          "comparison": 1,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurance des entreprises québec",
+          "meilleur assurance automobile québec",
+          "meilleur courtage en assurance des particuliers québec",
+          "meilleur assurance motoneige québec",
+          "meilleur assurance habitation québec",
+          "meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec"
+        ]
+      },
+      {
+        "name": "Desjardins Assurances",
+        "total_mentions": 11,
+        "visibility_rate": 0.22,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Propose des produits variés incluant assurance des biens, responsabilité civile et assurance contre les pertes d'exploitation",
+          "Offre des services de courtage pour certains produits",
+          "Plus grand assureur au Québec, rabais multi-produits intéressants, excellent service client en français et réseau étendu",
+          "Rabais pour membres, couverture flexible et réseau étendu au Québec",
+          "Institution québécoise avec expertise locale et produits spécifiquement adaptés aux PME",
+          "Forte présence québécoise avec service en français prioritaire, adapté aux petites entreprises",
+          "Offre des options de couverture personnalisables pour différents types de véhicules récréatifs",
+          "Rabais multi-produits intéressants avec réseau étendu et couverture adaptée au Québec",
+          "Plus grand assureur au Québec, rabais multiples disponibles, excellent service client et réseau étendu",
+          "Gamme complète incluant assurance santé, dentaire, vie et invalidité",
+          "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+        ],
+        "mention_breakdown": {
+          "recommendation": 11,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurances collectives québec",
+          "meilleur assurance des entreprises québec",
+          "meilleur assurance automobile québec",
+          "meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec",
+          "meilleur assurance motoneige québec",
+          "meilleur assurance habitation québec",
+          "meilleur courtage en assurance des particuliers québec"
+        ]
+      },
+      {
+        "name": "SSQ Assurance",
+        "total_mentions": 5,
+        "visibility_rate": 0.1,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Mutuelle québécoise offrant service personnalisé, populaire auprès des PME québécoises",
+          "Tarifs compétitifs et bonne réputation au Québec",
+          "Options personnalisables et bonne réputation",
+          "Plans flexibles adaptables aux besoins spécifiques des entreprises et employés",
+          "Partie de la fusion ayant créé Beneva"
+        ],
+        "mention_breakdown": {
+          "recommendation": 4,
+          "comparison": 0,
+          "neutral": 1,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurances collectives québec",
+          "meilleur assurance des entreprises québec",
+          "meilleur assurance habitation québec",
+          "meilleur assurance motoneige québec"
+        ]
+      },
+      {
+        "name": "Promutuel Assurance",
+        "total_mentions": 4,
+        "visibility_rate": 0.08,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Propose des solutions avec des options de couverture variées",
+          "Approche personnalisée et service à la clientèle de qualité",
+          "Coopérative québécoise établie avec réseau étendu au Québec",
+          "Coopérative locale offrant tarifs compétitifs et service personnalisé"
+        ],
+        "mention_breakdown": {
+          "recommendation": 4,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec",
+          "meilleur courtage en assurance des particuliers québec"
+        ]
+      },
+      {
+        "name": "Promutuel",
+        "total_mentions": 4,
+        "visibility_rate": 0.08,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Présenté comme un assureur populaire et établi au Québec",
+          "Assureur mutualiste, tarifs avantageux en région et service de proximité",
+          "Assureur mutuel québécois avec bon rapport qualité-prix et service de proximité",
+          "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 1,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurance habitation québec",
+          "meilleur assurance automobile québec",
+          "meilleur assurance motoneige québec"
+        ]
+      },
+      {
+        "name": "Lussier Dale Parizeau",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Expertise spécifique dans les véhicules récréatifs",
+          "Un des plus grands courtiers canadiens offrant service personnalisé pour tous types d'assurances",
+          "Bien établi au Québec avec une large gamme de produits d'assurance"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurance véhicules récréatifs (vr, remorques, caravanes) québec",
+          "meilleur courtage en assurance des particuliers québec"
+        ]
+      },
+      {
+        "name": "Kanetix",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [
+          "Kanetix.ca"
+        ],
+        "perceived_strengths": [
+          "Courtier en ligne permettant de comparer plusieurs assureurs",
+          "Plateforme de comparaison en ligne rapide et gratuite offrant plusieurs soumissions simultanées",
+          "Courtier en ligne permettant de comparer les offres d'assurance"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurance habitation québec",
+          "meilleur assurance automobile québec",
+          "meilleur courtage en assurance des particuliers québec"
+        ]
+      },
+      {
+        "name": "Assurance.ca",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [
+          "assurance.ca",
+          "Assurance.ca"
+        ],
+        "perceived_strengths": [
+          "Courtier en ligne permettant de comparer plusieurs assureurs",
+          "Plateforme de comparaison en ligne rapide et gratuite offrant plusieurs soumissions simultanées",
+          "Courtier en ligne permettant de comparer les offres d'assurance"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur assurance habitation québec",
+          "meilleur assurance automobile québec",
+          "meilleur courtage en assurance des particuliers québec"
+        ]
+      },
+      {
+        "name": "Desjardins",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Présenté comme un assureur populaire et établi au Québec",
+          "Positionné comme leader du secteur coopératif au Québec",
+          "Présenté comme une compagnie populaire et établie au Québec pour l'assurance automobile"
+        ],
+        "mention_breakdown": {
+          "recommendation": 2,
+          "comparison": 1,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur solutions financières et investissements québec",
+          "meilleur assurance habitation québec",
+          "meilleur assurance automobile québec"
+        ]
+      }
+    ],
+    "competitive_insights": [
+      {
+        "type": "DOMINANT_COMPETITOR",
+        "severity": "HIGH",
+        "title": "La Capitale domine avec 12 mentions",
+        "details": "Visibilité : 24.0%",
+        "perceived_strengths": [
+          "Propose des protections adaptées spécifiquement aux besoins des propriétaires de VR",
+          "Tarifs avantageux, protection tous risques disponible et service en français",
+          "Bien établis au Québec avec une gamme complète de produits",
+          "Propose des solutions complètes incluant assurance des biens, responsabilité civile et automobile commerciale",
+          "Expertise locale québécoise avec options personnalisées et service en français",
+          "Spécialisé au Québec, bon rapport qualité-prix et service personnalisé",
+          "Présenté comme un assureur populaire et établi au Québec",
+          "Solutions adaptées avec options personnalisables pour entreprises de toutes tailles",
+          "Assureur québécois spécialisé en assurance collective avec connaissance approfondie du marché local",
+          "Présenté comme une compagnie populaire et établie au Québec pour l'assurance automobile",
+          "Spécialisé pour les employés du secteur public avec tarifs avantageux et service personnalisé",
+          "Présenté comme une option populaire offrant différentes options et avantages pour l'assurance motoneige"
+        ],
+        "action": "Analyser leurs 0 URLs citées",
+        "urls_to_analyze": []
+      },
+      {
+        "type": "VISIBILITY_GAP",
+        "severity": "CRITICAL",
+        "title": "Vous êtes 4.0x MOINS visible que La Capitale",
+        "details": "Leur: 24.0% | Vous: 6.0%",
+        "action": "Reverse-engineer leurs pages citées"
+      },
+      {
+        "type": "URL_CITATION_GAP",
+        "severity": "HIGH",
+        "title": "LLMs citent 4 URLs de compétiteurs",
+        "details": "Top: ",
+        "action": "Créer pages avec stats pour être cité",
+        "example": "Ajouter 15+ statistiques par page"
+      }
+    ]
+  },
+  "competitive_intelligence": {
+    "error": "cannot access local variable 'CompetitiveIntelligence' where it is not associated with a value",
+    "competitors_analyzed": 0
+  }
+}
