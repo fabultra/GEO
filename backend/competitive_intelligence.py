@@ -6,18 +6,108 @@ Reverse-engineering des patterns de contenu qui font performer dans les IA
 import logging
 import requests
 from bs4 import BeautifulSoup
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import json
 import re
+import time
 from urllib.parse import urljoin, urlparse
 
 logger = logging.getLogger(__name__)
+
+# Configuration
+REQUEST_TIMEOUT = 15  # Augmenté de 10 à 15 secondes
+MAX_RETRIES = 2
+RETRY_DELAY = 1  # secondes
 
 class CompetitiveIntelligence:
     """
     Analyse détaillée des compétiteurs pour comprendre pourquoi ils dominent dans les moteurs génératifs.
     Extrait les patterns de contenu, structure, données factuelles qui plaisent aux IA.
     """
+    
+    def __init__(self):
+        """Initialise le service d'intelligence compétitive"""
+        self.timeout = REQUEST_TIMEOUT
+        self.max_retries = MAX_RETRIES
+        self.retry_delay = RETRY_DELAY
+    
+    def _validate_url(self, url: str) -> Optional[str]:
+        """
+        Valide et normalise une URL
+        
+        Args:
+            url: URL à valider
+            
+        Returns:
+            URL normalisée ou None si invalide
+        """
+        if not url or not isinstance(url, str):
+            return None
+        
+        # Nettoyer l'URL
+        url = url.strip()
+        
+        # Ajouter https:// si manquant
+        if not url.startswith(('http://', 'https://')):
+            url = f'https://{url}'
+        
+        # Valider avec urlparse
+        try:
+            parsed = urlparse(url)
+            if not parsed.netloc:
+                logger.warning(f"Invalid URL (no domain): {url}")
+                return None
+            
+            # Reconstruire l'URL proprement
+            scheme = parsed.scheme or 'https'
+            netloc = parsed.netloc
+            path = parsed.path or '/'
+            
+            normalized_url = f"{scheme}://{netloc}{path}"
+            return normalized_url
+            
+        except Exception as e:
+            logger.error(f"Failed to parse URL {url}: {e}")
+            return None
+    
+    def _make_request_with_retry(self, url: str) -> Optional[requests.Response]:
+        """
+        Fait une requête HTTP avec retry logic
+        
+        Args:
+            url: URL à requêter
+            
+        Returns:
+            Response object ou None si échec
+        """
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (compatible; GEOBot/1.0)',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7'
+        }
+        
+        for attempt in range(self.max_retries):
+            try:
+                response = requests.get(
+                    url, 
+                    timeout=self.timeout, 
+                    headers=headers,
+                    allow_redirects=True
+                )
+                response.raise_for_status()
+                return response
+                
+            except requests.exceptions.Timeout:
+                logger.warning(f"Timeout on attempt {attempt + 1}/{self.max_retries} for {url}")
+                if attempt < self.max_retries - 1:
+                    time.sleep(self.retry_delay)
+                    
+            except requests.exceptions.RequestException as e:
+                logger.warning(f"Request failed on attempt {attempt + 1}/{self.max_retries} for {url}: {e}")
+                if attempt < self.max_retries - 1:
+                    time.sleep(self.retry_delay)
+        
+        return None
     
     def analyze_competitors(
         self, 
@@ -39,30 +129,72 @@ class CompetitiveIntelligence:
             comparative_metrics (NOUS vs AVERAGE_COMPETITORS vs GAP), et insights actionnables
         """
         analyses = []
+        failed_urls = []
         
-        for comp_url in competitors_urls[:5]:  # Top 5 compétiteurs (était 3)
-            logger.info(f"Analyzing competitor: {comp_url}")
+        # Valider et filtrer les URLs
+        valid_urls = []
+        for url in competitors_urls[:5]:  # Top 5 compétiteurs
+            validated_url = self._validate_url(url)
+            if validated_url:
+                valid_urls.append(validated_url)
+                logger.info(f"✅ Valid competitor URL: {validated_url}")
+            else:
+                logger.warning(f"❌ Invalid competitor URL skipped: {url}")
+                failed_urls.append({'url': url, 'reason': 'Invalid URL format'})
+        
+        # Analyser chaque compétiteur
+        for comp_url in valid_urls:
+            logger.info(f"🔍 Analyzing competitor: {comp_url}")
             
             try:
                 analysis = self.analyze_single_competitor(comp_url, visibility_data)
+                
+                # Vérifier si l'analyse a réussi
+                if analysis.get('error'):
+                    logger.warning(f"⚠️  Partial failure for {comp_url}: {analysis['error']}")
+                    failed_urls.append({'url': comp_url, 'reason': analysis['error']})
+                else:
+                    logger.info(f"✅ Successfully analyzed {comp_url}")
+                
                 analyses.append(analysis)
+                
             except Exception as e:
-                logger.error(f"Failed to analyze {comp_url}: {str(e)}")
-                continue
+                error_msg = str(e)
+                logger.error(f"❌ Failed to analyze {comp_url}: {error_msg}")
+                failed_urls.append({'url': comp_url, 'reason': error_msg})
+                
+                # Ajouter une entrée d'erreur pour tracking
+                analyses.append({
+                    "domain": self._extract_domain(comp_url),
+                    "main_url": comp_url,
+                    "error": error_msg,
+                    "pages_analyzed": [],
+                    "aggregate": {},
+                    "llm_visibility": {},
+                    "geo_power_score": 0.0
+                })
         
         # Calculer confidence level basé sur échantillon
-        competitors_analyzed = len(analyses)
+        competitors_analyzed = len([a for a in analyses if not a.get('error')])
         pages_analyzed = sum(len(a.get("pages_analyzed", [])) for a in analyses)
         confidence = self._compute_confidence_level(competitors_analyzed, pages_analyzed)
         
-        return {
+        result = {
             "competitors_analyzed": competitors_analyzed,
+            "total_attempted": len(competitors_urls[:5]),
             "pages_analyzed": pages_analyzed,
             "confidence_level": confidence,
             "analyses": analyses,
             "comparative_metrics": self.generate_comparative_table(analyses, our_data),
             "actionable_insights": self.generate_actionable_insights(analyses, our_data)
         }
+        
+        # Ajouter les URLs échouées si présentes
+        if failed_urls:
+            result['failed_urls'] = failed_urls
+            logger.warning(f"⚠️  {len(failed_urls)} competitor URLs failed to analyze")
+        
+        return result
     
     def _compute_confidence_level(self, competitors_analyzed: int, pages_analyzed: int) -> str:
         """
