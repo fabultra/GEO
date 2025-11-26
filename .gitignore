@@ -113,3 +113,27 @@ android-sdk/ -e
 # Environment files
 *.env
 *.env.*
+
+# ============================================
+# GEO APP SPECIFIC - Temporary & Cache Files
+# ============================================
+
+# Backend temporary files (auto-generated)
+backend/queries_config_*.json
+backend/visibility_results_*.json
+backend/cache/*.json
+backend/temp_*.json
+
+# Reports (local storage, will move to cloud)
+backend/reports/*.docx
+backend/reports/*.pdf
+backend/reports/*.html
+backend/dashboards/*.html
+
+# Local database
+data/*.db
+data/*.db-journal
+
+# Archives
+docs/archived/
+tests/archived/
