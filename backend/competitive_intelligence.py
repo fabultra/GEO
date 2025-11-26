@@ -384,23 +384,44 @@ class CompetitiveIntelligence:
             geo_keywords = [
                 'guide', 'comment', 'how-to', 'faq', 'questions', 'prix', 'tarifs',
                 'compare', 'vs', 'fonctionnalites', 'features', 'ressources', 'resources',
-                'blog', 'article', 'tutoriel', 'tutorial'
+                'blog', 'article', 'tutoriel', 'tutorial', 'about', 'a-propos'
             ]
             
             internal_urls = []
             for link in soup.find_all('a', href=True):
                 href = link['href']
-                # Convertir en URL absolue
-                if href.startswith('/'):
-                    href = urljoin(comp_url, href)
                 
-                # Vérifier que c'est le même domaine
-                if domain in href and any(keyword in href.lower() for keyword in geo_keywords):
-                    if href not in internal_urls and href != comp_url:
-                        internal_urls.append(href)
+                try:
+                    # Ignorer les ancres et javascript
+                    if href.startswith('#') or href.startswith('javascript:'):
+                        continue
+                    
+                    # Convertir en URL absolue
+                    if href.startswith('/'):
+                        absolute_url = urljoin(comp_url, href)
+                    elif href.startswith('http'):
+                        absolute_url = href
+                    else:
+                        absolute_url = urljoin(comp_url, href)
+                    
+                    # Valider l'URL
+                    absolute_url = self._validate_url(absolute_url)
+                    if not absolute_url:
+                        continue
+                    
+                    # Vérifier que c'est le même domaine
+                    link_domain = self._extract_domain(absolute_url)
+                    if link_domain == domain and any(keyword in absolute_url.lower() for keyword in geo_keywords):
+                        if absolute_url not in internal_urls and absolute_url != comp_url:
+                            internal_urls.append(absolute_url)
+                            
+                except Exception as e:
+                    logger.debug(f"Skipped invalid link {href}: {e}")
+                    continue
             
-            # Garder maximum 4-5 pages
+            # Garder maximum 4-5 pages uniques
             internal_urls = list(set(internal_urls))[:5]
+            logger.info(f"📄 Found {len(internal_urls)} relevant internal pages for {domain}")
             
             # 3. Analyser les pages internes
             pages_analyzed = [main_page]
