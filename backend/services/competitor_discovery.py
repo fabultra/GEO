@@ -107,38 +107,43 @@ class CompetitorDiscovery:
         offerings: List[str],
         geographic_scope: str
     ) -> List[str]:
-        """Génère des requêtes de recherche Google ciblées"""
+        """Génère des requêtes de recherche Google ciblées et SIMPLES"""
         queries = []
         
         # Déterminer la localisation
-        location = ""
-        if geographic_scope in ['local', 'regional']:
-            location = "Canada"  # Adapter selon le contexte
-        elif geographic_scope == 'national':
-            location = "Canada"
+        location = "Canada"  # Pour l'instant
         
-        # Query 1: Industrie + type + top companies
-        if sub_industry:
-            queries.append(f"top {sub_industry} {company_type} companies {location}")
+        # Simplifier les noms d'industrie (enlever underscores, prendre les mots clés)
+        industry_clean = primary_industry.replace('_', ' ').strip()
+        sub_clean = sub_industry.replace('_', ' ').strip() if sub_industry else ""
+        
+        # Prendre seulement les 3 premiers mots du company_type si trop long
+        type_words = company_type.split()[:3]
+        type_clean = ' '.join(type_words) if len(company_type) < 50 else industry_clean
+        
+        # Query 1: Industrie simple + location
+        if sub_clean and len(sub_clean) < 40:
+            queries.append(f"top {sub_clean} companies {location}")
         else:
-            queries.append(f"top {primary_industry} {company_type} companies {location}")
+            queries.append(f"top {industry_clean} companies {location}")
         
-        # Query 2: Services/produits principaux
-        if offerings:
+        # Query 2: Services/produits principaux (simplifié)
+        if offerings and len(offerings[0]) < 40:
             main_offering = offerings[0]
-            queries.append(f"best {main_offering} providers {location}")
+            queries.append(f"{main_offering} companies {location}")
         
-        # Query 3: Industrie + leaders
-        queries.append(f"{primary_industry} industry leaders {location}")
+        # Query 3: Industrie + leaders (court)
+        queries.append(f"{industry_clean} leaders {location}")
         
-        # Query 4: Alternative générique
-        queries.append(f"{primary_industry} companies list {location}")
+        # Query 4: Alternative ultra-simple
+        queries.append(f"{industry_clean} {location}")
         
         return queries
     
     def _search_google(self, query: str, max_results: int = 10) -> List[str]:
         """
         Recherche sur Google et extrait les URLs des résultats
+        Utilise plusieurs méthodes de parsing pour robustesse
         
         Args:
             query: Requête de recherche
@@ -169,23 +174,27 @@ class CompetitorDiscovery:
             # Parser les résultats
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Extraire les URLs des résultats de recherche
-            # Google utilise différents sélecteurs selon les versions
-            result_divs = soup.find_all('div', class_='g')
+            # Méthode 1: Chercher tous les liens <a>
+            all_links = soup.find_all('a', href=True)
             
-            for div in result_divs:
-                # Chercher le lien
-                link = div.find('a', href=True)
-                if link:
-                    url = link['href']
-                    
-                    # Nettoyer l'URL (Google ajoute parfois des préfixes)
-                    if url.startswith('/url?q='):
-                        url = url.split('/url?q=')[1].split('&')[0]
-                    
-                    # Vérifier que c'est une vraie URL
-                    if url.startswith('http') and self._is_valid_competitor_url(url):
-                        urls.append(url)
+            for link in all_links:
+                href = link.get('href', '')
+                
+                # Nettoyer et extraire l'URL
+                if '/url?q=' in href:
+                    # Format: /url?q=https://example.com&sa=...
+                    try:
+                        url = href.split('/url?q=')[1].split('&')[0]
+                        if url.startswith('http') and self._is_valid_competitor_url(url):
+                            urls.append(url)
+                    except:
+                        pass
+                elif href.startswith('http') and self._is_valid_competitor_url(href):
+                    # URL directe
+                    urls.append(href)
+            
+            # Dédupliquer
+            urls = list(dict.fromkeys(urls))  # Garde l'ordre
             
             logger.info(f"  → Found {len(urls)} URLs from Google")
             
