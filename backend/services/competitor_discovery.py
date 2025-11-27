@@ -256,7 +256,13 @@ class CompetitorDiscovery:
             import os
             from anthropic import Anthropic
             
-            anthropic_client = Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
+            # Utiliser ANTHROPIC_API_KEY ou EMERGENT_LLM_KEY
+            api_key = os.environ.get('ANTHROPIC_API_KEY') or os.environ.get('EMERGENT_LLM_KEY')
+            if not api_key:
+                logger.error("No API key found for Claude (ANTHROPIC_API_KEY or EMERGENT_LLM_KEY)")
+                return []
+            
+            anthropic_client = Anthropic(api_key=api_key)
             
             # Simplifier pour Claude
             industry_desc = sub_industry if sub_industry else primary_industry
