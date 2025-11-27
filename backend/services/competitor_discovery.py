@@ -9,7 +9,7 @@ import socket
 import time
 import re
 import hashlib
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional, Tuple, Set
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, quote_plus
 from collections import Counter
