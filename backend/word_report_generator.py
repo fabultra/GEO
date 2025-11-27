@@ -111,12 +111,15 @@ class WordReportGenerator:
         self.doc.add_paragraph()
         
         # Score global
+        scores = report_data.get('scores', {})
+        global_score = scores.get('global_score', 0) if isinstance(scores, dict) else 0
+        
         score_para = self.doc.add_paragraph()
         score_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        run = score_para.add_run(f"Score Global: {report_data['scores']['global_score']:.1f}/10")
+        run = score_para.add_run(f"Score Global: {global_score:.1f}/10")
         run.font.size = Pt(36)
         run.font.bold = True
-        run.font.color.rgb = self.get_score_color(report_data['scores']['global_score'])
+        run.font.color.rgb = self.get_score_color(global_score)
         
         self.doc.add_paragraph()
         self.doc.add_paragraph()
@@ -164,7 +167,11 @@ class WordReportGenerator:
         self.doc.add_paragraph(exec_summary.get('global_assessment', 'Analyse en cours...'))
         
         # Score visuel
-        self.add_scores_table(report_data['scores'])
+        scores = report_data.get('scores', {})
+        if isinstance(scores, dict):
+            self.add_scores_table(scores)
+        else:
+            self.doc.add_paragraph("Scores non disponibles")
         
         # Problèmes critiques
         if exec_summary.get('critical_issues'):
