@@ -121,52 +121,76 @@ class CompetitorDiscovery:
         queries = []
         
         # Localisation pour Québec/Canada
-        location_fr = "Québec Canada"
+        location_fr = "Québec"
         location_en = "Quebec Canada"
         
         # Simplifier les noms d'industrie
-        industry_clean = primary_industry.replace('_', ' ').strip()
-        sub_clean = sub_industry.replace('_', ' ').strip() if sub_industry else ""
+        industry_clean = primary_industry.replace('_', ' ').strip().lower()
+        sub_clean = sub_industry.replace('_', ' ').strip().lower() if sub_industry else ""
         
         # Choisir la meilleure industrie
         industry_to_use = sub_clean if (sub_clean and len(sub_clean) < 40) else industry_clean
         
-        # Traductions françaises courantes pour industries
-        translations = {
-            'insurance': 'assurance',
+        # Traductions françaises NATURELLES pour industries (expressions québécoises)
+        industry_translations = {
+            'insurance': 'compagnie d\'assurance',
+            'life insurance': 'assurance vie',
+            'car insurance': 'assurance auto',
+            'home insurance': 'assurance habitation',
             'financial services': 'services financiers',
-            'banking': 'bancaire',
+            'banking': 'institution bancaire',
             'real estate': 'immobilier',
             'construction': 'construction',
-            'technology': 'technologie',
-            'healthcare': 'santé',
+            'technology': 'entreprise technologie',
+            'healthcare': 'services santé',
             'education': 'éducation',
             'retail': 'commerce détail',
-            'manufacturing': 'manufacturier'
+            'manufacturing': 'manufacturier',
+            'consulting': 'firme consultation',
+            'legal services': 'cabinet avocat',
+            'accounting': 'cabinet comptable'
         }
         
-        # Essayer de traduire l'industrie
-        industry_fr = industry_to_use.lower()
-        for en, fr in translations.items():
-            if en in industry_fr:
-                industry_fr = industry_fr.replace(en, fr)
+        # Termes génériques en français
+        generic_terms_fr = {
+            'insurance': 'assureur',
+            'financial': 'financière',
+            'technology': 'techno',
+            'consulting': 'conseil',
+            'service': 'service'
+        }
+        
+        # Traduire l'industrie vers le français naturel
+        industry_fr = None
+        for en, fr in industry_translations.items():
+            if en in industry_to_use:
+                industry_fr = fr
                 break
         
-        # REQUÊTES EN FRANÇAIS (priorité pour Québec)
-        queries.append(f"meilleures entreprises {industry_fr} {location_fr}")
-        queries.append(f"top compagnies {industry_fr} Québec")
+        # Si pas de traduction exacte, utiliser terme générique
+        if not industry_fr:
+            for en, fr in generic_terms_fr.items():
+                if en in industry_to_use:
+                    industry_fr = fr
+                    break
         
-        # REQUÊTES EN ANGLAIS
+        # Fallback: garder l'original si aucune traduction
+        if not industry_fr:
+            industry_fr = industry_to_use
+        
+        # REQUÊTES EN FRANÇAIS (naturel québécois)
+        queries.append(f"meilleures {industry_fr} {location_fr}")
+        queries.append(f"top {industry_fr} Québec")
+        queries.append(f"liste {industry_fr} Canada")
+        
+        # REQUÊTES EN ANGLAIS (Canada)
         queries.append(f"top {industry_to_use} companies {location_en}")
-        queries.append(f"{industry_to_use} leaders Canada")
+        queries.append(f"best {industry_to_use} {location_en}")
         
-        # REQUÊTE MIXTE (pour capturer sites bilingues)
-        queries.append(f"{industry_to_use} {industry_fr} Canada")
-        
-        # Services/produits en français si disponible
+        # Services/produits spécifiques en français
         if offerings and len(offerings[0]) < 40:
             main_offering = offerings[0]
-            queries.append(f"{main_offering} Québec")
+            queries.append(f"{main_offering} {location_fr}")
         
         return queries
     
