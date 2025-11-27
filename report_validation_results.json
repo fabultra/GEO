@@ -1,0 +1,58 @@
+{
+  "report_id": "e38b4d21-31d8-410b-9753-fa1268fe823a",
+  "url": "sekoia.ca",
+  "modules_found": 1,
+  "modules_details": {
+    "visibility_results": {
+      "present": true,
+      "global_visibility": 0.0,
+      "queries_tested": 10,
+      "platforms": [
+        "chatgpt",
+        "claude",
+        "perplexity",
+        "gemini",
+        "google_ai"
+      ]
+    },
+    "semantic_analysis": {
+      "present": false
+    },
+    "competitive_intelligence": {
+      "present": false
+    },
+    "schemas": {
+      "present": false
+    },
+    "generated_articles": {
+      "present": false
+    }
+  },
+  "downloads_successful": 0,
+  "download_results": {
+    "dashboard": {
+      "success": false,
+      "error": "HTTPSConnectionPool(host='issue-resolver-41.preview.emergentagent.com', port=443): Read timed out. (read timeout=10)"
+    },
+    "docx": {
+      "success": false,
+      "error": "HTTPSConnectionPool(host='issue-resolver-41.preview.emergentagent.com', port=443): Read timed out. (read timeout=10)"
+    },
+    "pdf": {
+      "success": false,
+      "error": "HTTPSConnectionPool(host='issue-resolver-41.preview.emergentagent.com', port=443): Read timed out. (read timeout=10)"
+    }
+  },
+  "score": 15.384615384615385,
+  "missing_modules": [
+    "Module 5: Analyse sémantique",
+    "Module 3: Intelligence compétitive",
+    "Module 4: Génération de schemas",
+    "Module 2: Articles générés"
+  ],
+  "failed_downloads": [
+    "dashboard",
+    "docx",
+    "pdf"
+  ]
+}
