@@ -165,7 +165,7 @@ class CompetitorDiscovery:
             # Prendre la partie avant le TLD
             brand = domain.split('.')[0]
             return brand.capitalize()
-        except:
+        except Exception:
             return ''
     
     def _search_web_for_competitors(
@@ -376,7 +376,7 @@ class CompetitorDiscovery:
                     # Valider que c'est une vraie URL
                     if url.startswith('http') and self._is_valid_competitor_url(url):
                         urls.append(url)
-                except:
+                except Exception:
                     continue
             
             # Format direct
@@ -415,7 +415,7 @@ class CompetitorDiscovery:
                         
                         if url.startswith('http') and self._is_valid_competitor_url(url):
                             urls.append(url)
-                    except:
+                    except Exception:
                         continue
         
         # Dédupliquer
