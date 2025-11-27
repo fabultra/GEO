@@ -147,11 +147,12 @@ class CompetitorDiscoveryTester:
                 "consent": True
             }
             
-            logger.info(f"📝 Création du lead pour {test_site['url']}")
+            logger.info(f"📝 Création du lead pour {test_site['url']} (analyse automatique)")
             lead_response = self.session.post(f"{API_BASE}/leads", json=lead_data)
             
-            if lead_response.status_code != 201:
+            if lead_response.status_code != 200:
                 logger.error(f"❌ Échec création lead: {lead_response.status_code}")
+                logger.error(f"Response: {lead_response.text}")
                 self.results['tests_failed'] += 1
                 return None
             
@@ -159,24 +160,34 @@ class CompetitorDiscoveryTester:
             lead_id = lead['id']
             logger.info(f"✅ Lead créé: {lead_id}")
             
-            # Lancer l'analyse
-            analysis_data = {
-                "leadId": lead_id,
-                "url": test_site['url'],
-                "type": "complete"
-            }
+            # L'analyse est lancée automatiquement, récupérer le job
+            logger.info("🔍 Recherche du job d'analyse...")
             
-            logger.info(f"🚀 Lancement de l'analyse pour {test_site['url']}")
-            analysis_response = self.session.post(f"{API_BASE}/analyze", json=analysis_data)
+            # Attendre un peu que le job soit créé
+            time.sleep(2)
             
-            if analysis_response.status_code != 200:
-                logger.error(f"❌ Échec lancement analyse: {analysis_response.status_code}")
+            # Récupérer tous les leads pour trouver le job
+            leads_response = self.session.get(f"{API_BASE}/leads")
+            if leads_response.status_code == 200:
+                leads = leads_response.json()
+                current_lead = None
+                for lead_data in leads:
+                    if lead_data['id'] == lead_id:
+                        current_lead = lead_data
+                        break
+                
+                if current_lead and current_lead.get('latestJob'):
+                    job = current_lead['latestJob']
+                    job_id = job['id']
+                    logger.info(f"✅ Job d'analyse trouvé: {job_id}")
+                else:
+                    logger.error("❌ Aucun job d'analyse trouvé")
+                    self.results['tests_failed'] += 1
+                    return None
+            else:
+                logger.error(f"❌ Impossible de récupérer les leads: {leads_response.status_code}")
                 self.results['tests_failed'] += 1
                 return None
-            
-            job = analysis_response.json()
-            job_id = job['id']
-            logger.info(f"✅ Analyse lancée: {job_id}")
             
             # Attendre la completion (max 10 minutes)
             max_wait = 600  # 10 minutes
