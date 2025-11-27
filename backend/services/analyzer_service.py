@@ -55,7 +55,7 @@ class AnalyzerService:
             try:
                 cached_result, cache_key = await self._check_cache(crawl_data, visibility_data)
                 if cached_result:
-                    logger.info(f"✅ CACHE HIT - saved ~$0.50 API cost")
+                    logger.info("✅ CACHE HIT - saved ~$0.50 API cost")
                     return cached_result
                 logger.info("💰 CACHE MISS - calling Claude...")
             except Exception as e:
@@ -77,7 +77,7 @@ class AnalyzerService:
             try:
                 from services.cache_service import cache_service
                 cache_service.set(cache_key, analysis_result)
-                logger.info(f"💾 Résultat sauvegardé en cache")
+                logger.info("💾 Résultat sauvegardé en cache")
             except Exception as e:
                 logger.debug(f"Cache save failed: {e}")
         
