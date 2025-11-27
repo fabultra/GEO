@@ -241,7 +241,7 @@ async def crawl_website(url: str, max_pages: int = 10) -> Dict[str, Any]:
                 for script in soup.find_all('script', {'type': 'application/ld+json'}):
                     try:
                         json_ld.append(json.loads(script.string))
-                    except:
+                    except Exception:
                         pass
                 
                 # Extract internal links
