@@ -117,36 +117,56 @@ class CompetitorDiscovery:
         offerings: List[str],
         geographic_scope: str
     ) -> List[str]:
-        """Génère des requêtes de recherche Google ciblées et SIMPLES"""
+        """Génère des requêtes de recherche Google BILINGUES (FR + EN) pour le Québec/Canada"""
         queries = []
         
-        # Déterminer la localisation
-        location = "Canada"  # Pour l'instant
+        # Localisation pour Québec/Canada
+        location_fr = "Québec Canada"
+        location_en = "Quebec Canada"
         
-        # Simplifier les noms d'industrie (enlever underscores, prendre les mots clés)
+        # Simplifier les noms d'industrie
         industry_clean = primary_industry.replace('_', ' ').strip()
         sub_clean = sub_industry.replace('_', ' ').strip() if sub_industry else ""
         
-        # Prendre seulement les 3 premiers mots du company_type si trop long
-        type_words = company_type.split()[:3]
-        type_clean = ' '.join(type_words) if len(company_type) < 50 else industry_clean
+        # Choisir la meilleure industrie
+        industry_to_use = sub_clean if (sub_clean and len(sub_clean) < 40) else industry_clean
         
-        # Query 1: Industrie simple + location
-        if sub_clean and len(sub_clean) < 40:
-            queries.append(f"top {sub_clean} companies {location}")
-        else:
-            queries.append(f"top {industry_clean} companies {location}")
+        # Traductions françaises courantes pour industries
+        translations = {
+            'insurance': 'assurance',
+            'financial services': 'services financiers',
+            'banking': 'bancaire',
+            'real estate': 'immobilier',
+            'construction': 'construction',
+            'technology': 'technologie',
+            'healthcare': 'santé',
+            'education': 'éducation',
+            'retail': 'commerce détail',
+            'manufacturing': 'manufacturier'
+        }
         
-        # Query 2: Services/produits principaux (simplifié)
+        # Essayer de traduire l'industrie
+        industry_fr = industry_to_use.lower()
+        for en, fr in translations.items():
+            if en in industry_fr:
+                industry_fr = industry_fr.replace(en, fr)
+                break
+        
+        # REQUÊTES EN FRANÇAIS (priorité pour Québec)
+        queries.append(f"meilleures entreprises {industry_fr} {location_fr}")
+        queries.append(f"top compagnies {industry_fr} Québec")
+        
+        # REQUÊTES EN ANGLAIS
+        queries.append(f"top {industry_to_use} companies {location_en}")
+        queries.append(f"{industry_to_use} leaders Canada")
+        
+        # REQUÊTE MIXTE (pour capturer sites bilingues)
+        queries.append(f"{industry_to_use} {industry_fr} Canada")
+        
+        # Services/produits en français si disponible
         if offerings and len(offerings[0]) < 40:
             main_offering = offerings[0]
-            queries.append(f"{main_offering} companies {location}")
-        
-        # Query 3: Industrie + leaders (court)
-        queries.append(f"{industry_clean} leaders {location}")
-        
-        # Query 4: Alternative ultra-simple
-        queries.append(f"{industry_clean} {location}")
+            queries.append(f"{main_offering} Québec")
         
         return queries
     
@@ -247,7 +267,7 @@ class CompetitorDiscovery:
         max_competitors: int = 5
     ) -> List[str]:
         """
-        Fallback: Demander à Claude de suggérer des compétiteurs
+        Fallback: Demander à Claude de suggérer des compétiteurs (bilingue FR/EN)
         
         Returns:
             Liste d'URLs suggérées
@@ -267,9 +287,11 @@ class CompetitorDiscovery:
             # Simplifier pour Claude
             industry_desc = sub_industry if sub_industry else primary_industry
             
-            prompt = f"""Suggère {max_competitors} URLs de sites web de compétiteurs majeurs pour une entreprise dans l'industrie "{industry_desc}" au Canada.
+            prompt = f"""Suggère {max_competitors} URLs de sites web de compétiteurs majeurs pour une entreprise dans l'industrie "{industry_desc}" au Québec/Canada.
 
-Réponds UNIQUEMENT avec un JSON valide contenant juste les URLs:
+IMPORTANT: Inclure des compétiteurs francophones québécois ET anglophones canadiens.
+
+Réponds UNIQUEMENT avec un JSON valide:
 {{
   "competitors": ["https://competitor1.com", "https://competitor2.com", ...]
 }}
