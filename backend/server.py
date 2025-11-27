@@ -287,7 +287,12 @@ async def crawl_website(url: str, max_pages: int = 10) -> Dict[str, Any]:
         raise
 
 async def analyze_with_claude(crawl_data: Dict[str, Any], visibility_data: Dict[str, Any] = None, retry_count: int = 3) -> Dict[str, Any]:
-    """Use Claude to analyze crawled content based on 8 GEO criteria - WITH CACHE"""
+    """
+    Use Claude to analyze crawled content based on 8 GEO criteria - WITH CACHE
+    DELEGATED TO analyzer_service for better modularity
+    """
+    from services.analyzer_service import analyzer_service
+    return await analyzer_service.analyze_with_claude(crawl_data, visibility_data, retry_count, use_cache=True)
     
     # ============ CACHE CHECK (économie -30-40% API) ============
     try:
