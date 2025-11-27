@@ -469,9 +469,11 @@ class CompetitorDiscovery:
         
         for url in urls:
             try:
+                logger.info(f"  🔍 Validating: {url}")
+                
                 # 1. Valider existence (DNS + HTTP)
                 if not self._check_url_exists(url):
-                    logger.debug(f"  ❌ {url}: URL does not exist or not reachable")
+                    logger.info(f"  ❌ {url}: URL does not exist or not reachable")
                     continue
                 
                 # 2. Analyser le contenu de la page d'accueil
