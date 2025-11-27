@@ -137,3 +137,7 @@ data/*.db-journal
 # Archives
 docs/archived/
 tests/archived/
+-e 
+# Environment files
+*.env
+*.env.*
