@@ -169,6 +169,7 @@ const ReportPage = () => {
             <TabsTrigger value="data-gaps" data-testid="data-gaps-tab">📊 Data Gaps</TabsTrigger>
             <TabsTrigger value="tokens" data-testid="tokens-tab">🔤 Tokens</TabsTrigger>
             <TabsTrigger value="schemas" data-testid="schemas-tab">📋 Schemas</TabsTrigger>
+            <TabsTrigger value="content" data-testid="content-tab">📝 Contenu GEO</TabsTrigger>
             <TabsTrigger value="analysis" data-testid="analysis-tab">Analyse</TabsTrigger>
           </TabsList>
 
