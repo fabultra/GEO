@@ -239,11 +239,16 @@ class WordReportGenerator:
         ]
         
         observations = report_data.get('detailed_observations', {})
+        scores = report_data.get('scores', {})
+        
+        # S'assurer que scores est un dict
+        if not isinstance(scores, dict):
+            scores = {}
         
         for key, name, weight in criteria:
             self.doc.add_heading(f"{name} (Poids: {weight}%)", level=2)
             
-            score = report_data['scores'].get(key, 0)
+            score = scores.get(key, 0)
             obs = observations.get(key, {})
             
             # Score
