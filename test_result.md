@@ -766,3 +766,24 @@ agent_communication:
         
         STATUS: PRÊT POUR TESTS
 
+
+---
+## Test Session - Validation Système de Découverte de Compétiteurs V3
+**Date:** $(date)
+**Agent:** Fork Agent (Nouveau)
+**Objectif:** Valider la refonte complète du système de découverte de compétiteurs
+
+### Tests Unitaires
+- **Fichier:** `/app/tests/test_competitor_discovery.py`
+- **Résultats:** ✅ 14/14 tests passés
+- **Tests couverts:**
+  - CompetitorExtractor (Stage 1): normalisation URLs, extraction domaine, filtrage domaines exclus, extraction depuis visibilité
+  - CompetitorDiscovery (Stage 2 & 3): génération requêtes, validation URLs, analyse homepage, calcul score, pipeline complet
+
+### Corrections Appliquées
+- ✅ Corrigé `_extract_domain()` pour gérer les domaines sans protocole
+- ✅ Le système gère maintenant correctement les cas où on passe "domain.com" au lieu de "https://domain.com"
+
+### Prochaine Étape
+- Test end-to-end avec analyse réelle pour valider l'intégration complète dans server.py
+
