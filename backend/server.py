@@ -1153,28 +1153,33 @@ async def process_analysis_job(job_id: str):
                 job_doc['url']
             )
             
-            # Si aucun ou peu de compétiteurs trouvés dans visibility, utiliser la découverte intelligente
-            if (not competitors_urls or len(competitors_urls) < 3) and semantic_analysis:
-                logger.info("🔍 Using intelligent competitor discovery (Google search + semantic analysis)")
+            # Découverte intelligente complète (pipeline 3 étages)
+            if semantic_analysis:
+                logger.info("🚀 Running full competitor discovery pipeline...")
                 
                 try:
                     from services.competitor_discovery import competitor_discovery
                     
-                    # Découvrir de VRAIS compétiteurs via recherche Google
-                    discovered_urls = competitor_discovery.discover_real_competitors(
+                    # Nouveau pipeline: retourne liste de dicts avec score/type/reason
+                    discovered_competitors = competitor_discovery.discover_real_competitors(
                         semantic_analysis=semantic_analysis,
                         our_url=job_doc['url'],
+                        visibility_urls=competitors_urls,  # URLs déjà trouvées
                         max_competitors=5
                     )
                     
-                    if discovered_urls:
-                        # Combiner avec les URLs déjà trouvées
-                        all_urls = list(set(competitors_urls + discovered_urls))
-                        competitors_urls = all_urls[:5]  # Garder top 5
-                        logger.info(f"✅ Total competitors after discovery: {len(competitors_urls)}")
+                    if discovered_competitors:
+                        # Extraire URLs pour competitive_intelligence
+                        competitors_urls = [c['homepage_url'] for c in discovered_competitors]
+                        
+                        logger.info(f"✅ Competitor discovery complete: {len(competitors_urls)} competitors")
+                        for comp in discovered_competitors:
+                            logger.info(f"  • {comp['domain']}: {comp['score']} ({comp['type']}) - {comp['reason']}")
                     
                 except Exception as e:
                     logger.error(f"Competitor discovery failed: {str(e)}")
+                    import traceback
+                    traceback.print_exc()
                     
                     # Fallback sur Claude si la découverte échoue
                     logger.info("Fallback: Using Claude for competitor suggestions")
