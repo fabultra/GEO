@@ -76,6 +76,16 @@ class CompetitorDiscovery:
             
             time.sleep(self.google_delay)  # Respecter les limites
         
+        # FALLBACK: Si Google ne retourne rien, utiliser Claude
+        if len(competitor_urls) == 0:
+            logger.warning("⚠️  Google search returned 0 results, using Claude fallback")
+            competitor_urls = set(self._get_competitors_from_claude(
+                primary_industry=primary_industry,
+                sub_industry=sub_industry,
+                company_type=company_type,
+                max_competitors=max_competitors
+            ))
+        
         # Filtrer notre propre domaine
         our_domain = self._extract_domain(our_url)
         competitor_urls = [
@@ -228,6 +238,63 @@ class CompetitorDiscovery:
             return domain.replace('www.', '')
         except:
             return url
+    
+    def _get_competitors_from_claude(
+        self,
+        primary_industry: str,
+        sub_industry: str,
+        company_type: str,
+        max_competitors: int = 5
+    ) -> List[str]:
+        """
+        Fallback: Demander à Claude de suggérer des compétiteurs
+        
+        Returns:
+            Liste d'URLs suggérées
+        """
+        try:
+            import os
+            from anthropic import Anthropic
+            
+            anthropic_client = Anthropic(api_key=os.environ.get('ANTHROPIC_API_KEY'))
+            
+            # Simplifier pour Claude
+            industry_desc = sub_industry if sub_industry else primary_industry
+            
+            prompt = f"""Suggère {max_competitors} URLs de sites web de compétiteurs majeurs pour une entreprise dans l'industrie "{industry_desc}" au Canada.
+
+Réponds UNIQUEMENT avec un JSON valide contenant juste les URLs:
+{{
+  "competitors": ["https://competitor1.com", "https://competitor2.com", ...]
+}}
+
+URLs seulement, pas d'explication."""
+            
+            response = anthropic_client.messages.create(
+                model="claude-sonnet-4-5-20250929",
+                max_tokens=500,
+                temperature=0,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            
+            response_text = response.content[0].text.strip()
+            
+            # Nettoyer markdown
+            if '```json' in response_text:
+                response_text = response_text.split('```json')[1].split('```')[0]
+            elif '```' in response_text:
+                response_text = response_text.split('```')[1].split('```')[0]
+            
+            import json
+            result = json.loads(response_text.strip())
+            competitors = result.get('competitors', [])[:max_competitors]
+            
+            logger.info(f"✅ Claude suggested {len(competitors)} competitors")
+            return competitors
+            
+        except Exception as e:
+            logger.error(f"Failed to get competitors from Claude: {e}")
+            return []
     
     def _validate_and_score_competitors(
         self,
