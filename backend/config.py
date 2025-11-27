@@ -88,6 +88,17 @@ CORS_ORIGINS = [
 RATE_LIMIT_ANALYSES_PER_HOUR = 10
 RATE_LIMIT_REPORTS_PER_DAY = 50
 
+# Découverte de compétiteurs
+MAX_COMPETITORS = 5
+COMPETITOR_SEARCH_PROVIDER = os.environ.get('GEO_SEARCH_PROVIDER', 'google_scrape')
+SERPAPI_API_KEY = os.environ.get('SERPAPI_API_KEY')  # Optionnel
+COMPETITOR_SEARCH_TIMEOUT = 10  # secondes
+COMPETITOR_SEARCH_DELAY = 2  # secondes entre requêtes
+COMPETITOR_VALIDATION_TIMEOUT = 5  # secondes pour HEAD request
+COMPETITOR_MAX_RETRIES = 2
+COMPETITOR_RELEVANCE_THRESHOLD_DIRECT = 0.6  # Score min pour "direct"
+COMPETITOR_RELEVANCE_THRESHOLD_INDIRECT = 0.3  # Score min pour "indirect"
+
 
 def get_api_key(service: str) -> Optional[str]:
     """
