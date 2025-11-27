@@ -479,8 +479,10 @@ class CompetitorDiscovery:
                 # 2. Analyser le contenu de la page d'accueil
                 competitor_data = self._analyze_competitor_homepage(url)
                 if not competitor_data:
-                    logger.debug(f"  ⚠️  {url}: Could not analyze homepage")
+                    logger.info(f"  ⚠️  {url}: Could not analyze homepage")
                     continue
+                
+                logger.info(f"  ✅ {url}: Homepage analyzed successfully")
                 
                 # 3. Calculer score de pertinence
                 score = self._calculate_relevance_score(
