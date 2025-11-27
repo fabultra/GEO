@@ -496,10 +496,14 @@ class CompetitorDiscovery:
                 # 4. Classifier direct/indirect
                 comp_type = 'direct' if score >= self.threshold_direct else 'indirect'
                 
+                logger.info(f"  📊 {url}: Relevance score = {score:.2f}")
+                
                 # Filtrer si score trop faible
                 if score < self.threshold_indirect:
-                    logger.debug(f"  🔻 {url}: score {score:.2f} too low")
+                    logger.info(f"  🔻 {url}: score {score:.2f} < threshold {self.threshold_indirect} - REJECTED")
                     continue
+                
+                logger.info(f"  ✅ {url}: VALIDATED as {comp_type} competitor (score: {score:.2f})")
                 
                 # 5. Générer justification
                 reason = self._generate_reason(
