@@ -1,0 +1,14 @@
+{
+  "test_start": "2025-11-27T18:28:05.150316",
+  "tests_run": 4,
+  "tests_passed": 2,
+  "tests_failed": 2,
+  "details": {
+    "extractor": "PASSED",
+    "discovery": "FAILED",
+    "fields_validation": "PASSED",
+    "url_accessibility": "FAILED"
+  },
+  "test_end": "2025-11-27T18:28:17.206319",
+  "competitors_found": []
+}
