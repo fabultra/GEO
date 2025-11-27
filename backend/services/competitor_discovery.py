@@ -91,7 +91,6 @@ class CompetitorDiscovery:
         industry_info = semantic_analysis.get('industry_classification', {})
         primary_industry = industry_info.get('primary_industry', '')
         sub_industry = industry_info.get('sub_industry', '')
-        company_type = industry_info.get('company_type', '')
         
         entities = semantic_analysis.get('entities', {})
         offerings = entities.get('offerings', [])
