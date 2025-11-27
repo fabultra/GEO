@@ -205,7 +205,7 @@ class CompetitorExtractor:
         Supprime www. pour uniformiser
         
         Args:
-            url: URL complète
+            url: URL complète ou domaine simple
             
         Returns:
             Domaine normalisé (sans www., en minuscules) ou None
@@ -214,6 +214,10 @@ class CompetitorExtractor:
             return None
         
         try:
+            # Si pas de protocole, l'ajouter pour urlparse
+            if not url.startswith(('http://', 'https://')):
+                url = 'https://' + url
+            
             parsed = urlparse(url)
             domain = parsed.netloc.lower()
             
