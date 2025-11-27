@@ -15,11 +15,17 @@ const AnalysisPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    let pollAttempts = 0;
+    const maxPollAttempts = 150; // 5 minutes max (150 * 2s)
+    
     const pollJobStatus = async () => {
       try {
-        const response = await axios.get(`${API}/jobs/${jobId}`);
+        const response = await axios.get(`${API}/jobs/${jobId}`, {
+          timeout: 10000 // 10 secondes timeout
+        });
         setJob(response.data);
         setLoading(false);
+        pollAttempts = 0; // Reset sur succès
 
         if (response.data.status === 'completed' && response.data.reportId) {
           setTimeout(() => {
@@ -30,7 +36,25 @@ const AnalysisPage = () => {
         }
       } catch (error) {
         console.error('Error polling job:', error);
+        pollAttempts++;
+        
+        // Si erreur 502 ou timeout, continuer à essayer
+        if (error.response?.status === 502 || error.code === 'ECONNABORTED' || error.message.includes('timeout')) {
+          if (pollAttempts < maxPollAttempts) {
+            console.log(`Tentative ${pollAttempts}/${maxPollAttempts} - Réessai dans 3s...`);
+            setTimeout(pollJobStatus, 3000); // Réessayer après 3s
+            return;
+          }
+        }
+        
         setLoading(false);
+        // Afficher erreur seulement après max tentatives
+        if (pollAttempts >= maxPollAttempts) {
+          setJob({ 
+            status: 'error', 
+            error: 'Délai d\'analyse dépassé. Veuillez vérifier le dashboard pour voir si l\'analyse est terminée.' 
+          });
+        }
       }
     };
 
