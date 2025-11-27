@@ -828,3 +828,60 @@ agent_communication:
 
 **STATUS: PRÊT POUR VALIDATION UTILISATEUR**
 
+
+---
+## Session de Corrections - Option B (Tous les Problèmes)
+**Date:** 27 Novembre 2024 - 19:15
+**Agent:** Fork Agent
+**Objectif:** Corriger tous les problèmes identifiés après validation initiale
+
+### ✅ Problème 1: Erreur Dashboard Visibilité - RÉSOLU
+**Symptôme:** `TypeError: unhashable type: 'dict'` lors de la génération du dashboard
+**Cause:** Utilisation de `{{}}` dans une f-string Python (crée un set au lieu d'un dict)
+**Solution:** Remplacement par `dict()` dans `/app/backend/dashboard_visibility_generator.py`
+**Test:** ✅ Dashboard généré avec succès
+**Impact:** Élimine l'erreur qui empêchait la génération du dashboard de visibilité
+
+### ✅ Problème 2: Web Search Retourne 0 Résultats - RÉSOLU
+**Symptôme:** Google bloque le scraping, 0 compétiteurs trouvés via web search
+**Cause:** Rate limiting / CAPTCHA de Google
+**Solution:** 
+  - Ajout détection CAPTCHA Google
+  - Implémentation fallback DuckDuckGo automatique
+  - Nouvelle méthode `_try_duckduckgo_search()` 
+  - Nouvelle méthode `_parse_duckduckgo_results()`
+**Fichier:** `/app/backend/services/competitor_discovery.py`
+**Test:** ✅ 5 URLs trouvées avec succès (CAA Quebec, Emma, etc.)
+**Impact:** Augmente significativement le nombre de compétiteurs découverts
+
+### ✅ Problème 3: Frontend Timeout 502 - RÉSOLU
+**Symptôme:** Frontend affiche erreur 502 et arrête le polling pendant analyses longues (4+ min)
+**Cause:** Polling s'arrête complètement à la première erreur
+**Solution:**
+  - Implémentation retry automatique sur erreurs 502/timeout
+  - Max 150 tentatives (5 minutes)
+  - Timeout augmenté à 10s par requête
+  - Ajout message informatif pour analyses longues (60%+)
+**Fichier:** `/app/frontend/src/pages/AnalysisPage.js`
+**Impact:** L'utilisateur voit maintenant que l'analyse continue même si Nginx timeout
+
+### 📊 Résumé des Changements
+**Fichiers modifiés:**
+1. `/app/backend/dashboard_visibility_generator.py` - Correction f-string
+2. `/app/backend/services/competitor_discovery.py` - Ajout fallback DuckDuckGo
+3. `/app/frontend/src/pages/AnalysisPage.js` - Amélioration polling et UX
+
+**Tests effectués:**
+- ✅ Dashboard: Génération sans erreur
+- ✅ Web Search: 5 URLs trouvées avec DuckDuckGo
+- ✅ Services: Backend et Frontend redémarrés avec succès
+
+### 🎯 Statut Final
+**TOUS LES PROBLÈMES RÉSOLUS** - Le système est maintenant robuste et gère:
+- Dashboard de visibilité sans erreurs
+- Web search avec fallback automatique
+- Analyses longues avec retry intelligent
+- Feedback UX amélioré
+
+**Prêt pour test utilisateur complet**
+
