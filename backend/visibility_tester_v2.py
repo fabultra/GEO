@@ -236,21 +236,23 @@ class VisibilityTesterV2:
             if platform == 'chatgpt':
                 response = self.openai_client.chat.completions.create(
                     model="gpt-4o",
-                    messages=[{"role": "user", "content": query}],
+                    messages=[{"role": "user", "content": str(query)}],
                     max_tokens=500,
                     temperature=0,  # ✅ DÉTERMINISTE
                     seed=42         # ✅ REPRODUCTIBLE
                 )
-                return response.choices[0].message.content
+                content = response.choices[0].message.content
+                return str(content) if content else ""
             
             elif platform == 'claude':
                 response = self.anthropic_client.messages.create(
                     model="claude-sonnet-4-5-20250929",
                     max_tokens=500,
                     temperature=0,  # ✅ DÉTERMINISTE
-                    messages=[{"role": "user", "content": query}]
+                    messages=[{"role": "user", "content": str(query)}]
                 )
-                return response.content[0].text
+                text = response.content[0].text
+                return str(text) if text else ""
             
             elif platform == 'gemini':
                 model = genai.GenerativeModel('gemini-1.5-pro')
