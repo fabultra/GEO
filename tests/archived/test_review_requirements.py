@@ -17,7 +17,7 @@ import os
 load_dotenv('/app/backend/.env')
 
 class ReviewRequirementsTest:
-    def __init__(self, base_url="https://geo-competitor-fix.preview.emergentagent.com"):
+    def __init__(self, base_url="https://issue-resolver-41.preview.emergentagent.com"):
         self.base_url = base_url
         self.api_url = f"{base_url}/api"
         self.tests_run = 0

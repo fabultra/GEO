@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 
 # Configuration
 load_dotenv('/app/backend/.env')
-BACKEND_URL = os.environ.get('REACT_APP_BACKEND_URL', 'https://geo-competitor-fix.preview.emergentagent.com')
+BACKEND_URL = os.environ.get('REACT_APP_BACKEND_URL', 'https://issue-resolver-41.preview.emergentagent.com')
 API_BASE = f"{BACKEND_URL}/api"
 
 # Configuration des logs
