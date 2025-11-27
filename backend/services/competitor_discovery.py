@@ -282,7 +282,8 @@ class CompetitorDiscovery:
     
     def _search_google(self, query: str, max_results: int = 10) -> List[str]:
         """
-        Effectue une recherche Google et extrait les URLs des résultats organiques
+        Effectue une recherche web et extrait les URLs des résultats organiques
+        Essaie Google d'abord, puis DuckDuckGo en fallback
         
         Args:
             query: Requête de recherche
@@ -291,8 +292,19 @@ class CompetitorDiscovery:
         Returns:
             Liste d'URLs extraites
         """
+        # Essayer Google d'abord
+        urls = self._try_google_search(query, max_results)
+        
+        # Si Google échoue, essayer DuckDuckGo
+        if not urls:
+            logger.debug(f"Google failed, trying DuckDuckGo for: {query}")
+            urls = self._try_duckduckgo_search(query, max_results)
+        
+        return urls
+    
+    def _try_google_search(self, query: str, max_results: int = 10) -> List[str]:
+        """Essaie une recherche Google"""
         try:
-            # Construire URL de recherche
             encoded_query = quote_plus(query)
             search_url = f"https://www.google.com/search?q={encoded_query}&num={max_results}"
             
@@ -307,15 +319,42 @@ class CompetitorDiscovery:
             response = requests.get(search_url, headers=headers, timeout=self.search_timeout)
             response.raise_for_status()
             
-            soup = BeautifulSoup(response.content, 'html.parser')
+            # Vérifier si Google a bloqué (CAPTCHA)
+            if 'captcha' in response.text.lower() or response.status_code == 429:
+                logger.debug("Google CAPTCHA detected")
+                return []
             
-            # Extraire URLs des résultats organiques
+            soup = BeautifulSoup(response.content, 'html.parser')
             urls = self._parse_google_results(soup)
             
             return urls
             
         except Exception as e:
             logger.debug(f"Google search error: {e}")
+            return []
+    
+    def _try_duckduckgo_search(self, query: str, max_results: int = 10) -> List[str]:
+        """Essaie une recherche DuckDuckGo (fallback)"""
+        try:
+            encoded_query = quote_plus(query)
+            search_url = f"https://duckduckgo.com/html/?q={encoded_query}"
+            
+            headers = {
+                'User-Agent': self.user_agent,
+                'Accept': 'text/html,application/xhtml+xml',
+                'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+            }
+            
+            response = requests.get(search_url, headers=headers, timeout=self.search_timeout)
+            response.raise_for_status()
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            urls = self._parse_duckduckgo_results(soup)
+            
+            return urls[:max_results]
+            
+        except Exception as e:
+            logger.debug(f"DuckDuckGo search error: {e}")
             return []
     
     def _parse_google_results(self, soup: BeautifulSoup) -> List[str]:
