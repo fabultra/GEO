@@ -1,0 +1,2381 @@
+{
+  "site_url": "sekoia.ca",
+  "company_name": "Data-Driven Digital Growth for Businesses",
+  "last_updated": "2025-11-27T18:12:16.320054",
+  "queries": [
+    {
+      "query": "meilleur optimisation complète de l'écosystème digital québec",
+      "timestamp": "2025-11-27T18:12:16.320166",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "L'optimisation complète de l'écosystème digital au Québec nécessite une approche holistique qui prend en compte plusieurs aspects clés. Voici quelques stratégies qui pourraient être mises en œuvre pour atteindre cet objectif :\n\n1. **Infrastructure Technologique** : \n   - Améliorer l'accès à Internet haute vitesse dans les régions rurales et éloignées pour garantir une connectivité équitable.\n   - Investir dans des technologies émergentes comme la 5G pour améliorer la vitesse et la fiabilité des connexions.\n\n2. **Transformation Numérique des Entreprises** :\n   - Encourager les PME à adopter des outils numériques pour améliorer leur efficacité opérationnelle.\n   - Offrir des subventions et des formations pour faciliter l'intégration de technologies comme l'intelligence artificielle et l'automatisation.\n\n3. **Éducation et Formation** :\n   - Mettre à jour les programmes éducatifs pour inclure des compétences numériques essentielles dès le plus jeune âge.\n   - Proposer des formations continues pour les travailleurs afin de les aider à s'adapter aux évolutions technologiques.\n\n4. **Innovation et Recherche** :\n   - Soutenir les initiatives de recherche et développement dans le secteur technologique.\n   - Favoriser les partenariats entre les universités, les centres de recherche et l'industrie pour stimuler l'innovation.\n\n5. **Sécurité et Protection des Données** :\n   - Renforcer les réglementations sur la protection des données pour garantir la sécurité des informations personnelles et professionnelles.\n   - Sensibiliser les entreprises et les citoyens aux bonnes pratiques en matière de cybersécurité.\n\n6. **Économie Numérique** :\n   - Promouvoir l'entrepreneuriat numérique et soutenir les startups technologiques.\n   - Développer des plateformes de commerce électronique pour aider les entreprises locales à atteindre un marché plus large.\n\n7. **Gouvernance et Politiques Publiques** :\n   - Élaborer des politiques publiques qui soutiennent l'innovation numérique tout en protégeant les droits des citoyens.\n   - Encourager la collaboration entre les différents niveaux de gouvernement pour harmoniser les initiatives numériques.\n\n8. **Inclusion Numérique** :\n   - Assurer que tous les segments de la population, y compris les personnes âgées et les communautés marginalisées, ont accès aux outils et aux ressources numériques.\n   - Mettre en place des programmes pour réduire la fracture numérique.\n\nEn combinant ces stratégies, le Québec peut créer un écosystème digital robuste et inclus",
+          "response_length": 2512,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation complète de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation complète de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Complète De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Google My Business",
+              "urls": [],
+              "context": "Mentionné comme outil d'optimisation pour le référencement local",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme essentielle pour l'optimisation du référencement local au Québec"
+            },
+            {
+              "name": "Bing Places",
+              "urls": [],
+              "context": "Présenté comme important pour le référencement au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme de référencement local importante spécifiquement pour le marché québécois"
+            },
+            {
+              "name": "411.ca",
+              "urls": [
+                "411.ca"
+              ],
+              "context": "Recommandé comme annuaire pour citations locales",
+              "mention_type": "recommendation",
+              "perceived_strength": "Annuaire local pertinent pour améliorer la visibilité au Québec"
+            },
+            {
+              "name": "PagesJaunes.ca",
+              "urls": [
+                "pagesjaunes.ca"
+              ],
+              "context": "Recommandé comme annuaire pour citations locales",
+              "mention_type": "recommendation",
+              "perceived_strength": "Annuaire local pertinent pour améliorer la visibilité au Québec"
+            },
+            {
+              "name": "Yelp.ca",
+              "urls": [
+                "yelp.ca"
+              ],
+              "context": "Recommandé comme annuaire pour citations locales",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme d'avis et annuaire pertinente pour le marché canadien"
+            },
+            {
+              "name": "Facebook",
+              "urls": [],
+              "context": "Identifié comme plateforme prioritaire très populaire au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Réseau social très populaire au Québec avec forte pénétration du marché"
+            },
+            {
+              "name": "Instagram",
+              "urls": [],
+              "context": "Mentionné comme plateforme en forte croissance",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme en croissance forte adaptée au contenu visuel localisé"
+            },
+            {
+              "name": "LinkedIn",
+              "urls": [],
+              "context": "Recommandé pour le B2B et réseautage professionnel",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme professionnelle clé pour le réseautage B2B québécois"
+            },
+            {
+              "name": "TikTok",
+              "urls": [],
+              "context": "Suggéré pour atteindre la jeune audience",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme efficace pour cibler la jeune audience avec contenu local"
+            }
+          ],
+          "full_response": "# Optimisation Complète de l'Écosystème Digital au Québec\n\n## 🎯 Stratégie Globale d'Optimisation\n\n### 1. **Référencement Local Québécois (SEO)**\n\n#### Optimisation technique\n- **Hébergement canadien** (.ca) pour vitesse et confiance\n- **Balises hreflang** fr-CA pour ciblage linguistique\n- **Schema markup** LocalBusiness avec adresse québécoise\n- **Google My Business** optimisé (horaires, photos, avis)\n- **Bing Places** (important au Québec)\n\n#### Contenu localisé\n- Français québécois authentique (pas de traduction France)\n- Mots-clés géolocalisés : \"Montréal\", \"Québec\", \"Laval\", etc.\n- Références culturelles locales\n- Contenus sur événements québécois\n\n#### Citations locales\n- **411.ca**, **PagesJaunes.ca**, **Yelp.ca**\n- Chambres de commerce locales\n- Annuaires sectoriels québécois\n\n---\n\n### 2. **Réseaux Sociaux Adaptés au Marché Québécois**\n\n#### Plateformes prioritaires\n1. **Facebook** (très populaire au Québec)\n   - Groupes communautaires locaux\n   - Facebook Marketplace\n   - Publicités géociblées\n\n2. **Instagram** (croissance forte)\n   - Stories avec géolocalisation\n   - Reels en français québécois\n   - Collaborations avec influenceurs locaux\n\n3. **LinkedIn** (B2B)\n   - Contenu professionnel en français\n   - Réseautage avec entreprises québécoises\n\n4. **TikTok** (jeune audience)\n   - Tendances québécoises\n   - Humour local\n\n#### Stratégie de contenu\n- **Horaires de publication** : 12h-13h et 19h-21h (EST",
+          "response_length": 1432,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation complète de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation complète de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Complète De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation complète de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation complète de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Complète De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur optimisation complète de l'écosystème digital québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur optimisation complète de l'écosystème digital québec'",
+              "example_title": "Guide Complet: Meilleur Optimisation Complète De L'Écosystème Digital Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur audit et optimisation de conversion (cro) québec",
+      "timestamp": "2025-11-27T18:13:07.806124",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Pour trouver les meilleures entreprises ou consultants spécialisés en audit et optimisation de la conversion (CRO) au Québec, il est important de considérer plusieurs critères tels que l'expérience, les témoignages clients, les études de cas, et les services offerts. Voici quelques étapes et suggestions pour vous aider dans votre recherche :\n\n1. **Recherche en ligne :**\n   - Utilisez des moteurs de recherche pour trouver des entreprises spécialisées en CRO au Québec. Des termes comme \"agence CRO Québec\" ou \"consultant optimisation conversion Québec\" peuvent être utiles.\n\n2. **Consultez les avis et témoignages :**\n   - Regardez les avis sur Google, Yelp, ou d'autres plateformes pour voir ce que les clients disent de leurs services.\n   - Consultez les témoignages et études de cas sur les sites web des entreprises.\n\n3. **Vérifiez l'expérience et l'expertise :**\n   - Recherchez des entreprises qui ont une solide expérience dans votre secteur d'activité.\n   - Assurez-vous qu'elles utilisent des méthodes éprouvées et des outils modernes pour l'optimisation de la conversion.\n\n4. **Demandez des recommandations :**\n   - Parlez à d'autres entreprises ou collègues dans votre réseau pour obtenir des recommandations.\n\n5. **Consultez des forums et groupes professionnels :**\n   - Participez à des forums en ligne ou des groupes LinkedIn dédiés au marketing digital pour obtenir des conseils et recommandations.\n\n6. **Évaluez les services offerts :**\n   - Assurez-vous que l'entreprise offre un audit complet de votre site web, des tests A/B, des analyses de données, et des recommandations personnalisées.\n\n7. **Contactez plusieurs entreprises :**\n   - N'hésitez pas à contacter plusieurs agences pour discuter de vos besoins spécifiques et obtenir des devis.\n\nEn suivant ces étapes, vous devriez être en mesure de trouver un partenaire fiable pour améliorer le taux de conversion de votre site web au Québec.",
+          "response_length": 1915,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et optimisation de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et optimisation de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Optimisation De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Dialekta",
+              "urls": [],
+              "context": "Présentée comme spécialiste reconnu en optimisation de conversion avec approche data-driven",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialiste reconnu en CRO avec approche data-driven et tests A/B, basée à Montréal"
+            },
+            {
+              "name": "Adviso",
+              "urls": [],
+              "context": "Mentionnée pour son expertise en analytique web et CRO avec méthodologie structurée",
+              "mention_type": "recommendation",
+              "perceived_strength": "Expertise en analytique web et CRO avec méthodologie structurée d'optimisation, présence dans deux villes"
+            },
+            {
+              "name": "Bloom",
+              "urls": [],
+              "context": "Agence de marketing numérique recommandée pour sa forte expertise CRO et UX",
+              "mention_type": "recommendation",
+              "perceived_strength": "Forte expertise CRO avec focus particulier sur l'expérience utilisateur (UX)"
+            },
+            {
+              "name": "Rablab",
+              "urls": [],
+              "context": "Présentée comme spécialiste en growth marketing et CRO avec approche scientifique",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialistes en growth marketing et CRO avec approche scientifique des tests"
+            },
+            {
+              "name": "Digitad",
+              "urls": [],
+              "context": "Recommandée pour ses services complets incluant audit CRO et expertise e-commerce",
+              "mention_type": "recommendation",
+              "perceived_strength": "Services complets incluant audit CRO avec expertise spécifique en e-commerce, présence dans deux villes"
+            }
+          ],
+          "full_response": "# Meilleurs services d'audit et optimisation de conversion (CRO) au Québec\n\nVoici une sélection des meilleures agences et experts CRO au Québec :\n\n## **Agences spécialisées en CRO**\n\n### **1. Dialekta**\n- Spécialiste reconnu en optimisation de conversion\n- Approche data-driven et tests A/B\n- Basée à Montréal\n\n### **2. Adviso**\n- Expertise en analytique web et CRO\n- Méthodologie structurée d'optimisation\n- Présence à Montréal et Québec\n\n### **3. Bloom**\n- Agence de marketing numérique avec forte expertise CRO\n- Focus sur l'expérience utilisateur (UX)\n- Montréal\n\n### **4. Rablab**\n- Spécialistes en growth marketing et CRO\n- Approche scientifique des tests\n- Montréal\n\n### **5. Digitad**\n- Services complets incluant audit CRO\n- Expertise e-commerce\n- Montréal et Québec\n\n## **Ce qu'un bon audit CRO devrait inclure :**\n\n✅ Analyse des données analytiques\n✅ Cartographie du parcours utilisateur\n✅ Tests d'utilisabilité\n✅ Analyse heuristique\n✅ Recommandations priorisées\n✅ Plan de tests A/B\n\n**Besoin d'une recommandation plus précise selon votre secteur ou budget?**",
+          "response_length": 1070,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et optimisation de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et optimisation de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Optimisation De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et optimisation de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et optimisation de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Optimisation De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur audit et optimisation de conversion (cro) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur audit et optimisation de conversion (cro) québec'",
+              "example_title": "Guide Complet: Meilleur Audit Et Optimisation De Conversion (Cro) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur seo technique et stratégique québec",
+      "timestamp": "2025-11-27T18:13:43.048824",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Pour optimiser le SEO (Search Engine Optimization) au Québec, il est important de combiner des techniques à la fois techniques et stratégiques. Voici quelques conseils pour améliorer votre SEO dans cette région :\n\n### Techniques SEO\n\n1. **Optimisation Mobile** : Assurez-vous que votre site est responsive et fonctionne bien sur tous les appareils mobiles. Google privilégie les sites adaptés aux mobiles.\n\n2. **Vitesse de Chargement** : Améliorez la vitesse de chargement de votre site en optimisant les images, en utilisant la mise en cache et en minimisant le code CSS et JavaScript.\n\n3. **Structure du Site** : Utilisez une structure de site claire avec des URL propres et des balises de titre et de méta descriptions optimisées.\n\n4. **Balises Schema** : Implémentez des données structurées pour aider les moteurs de recherche à comprendre le contenu de votre site.\n\n5. **Sécurité du Site** : Utilisez HTTPS pour sécuriser votre site, ce qui est également un facteur de classement pour Google.\n\n### Stratégies SEO\n\n1. **Recherche de Mots-Clés Locaux** : Identifiez et ciblez des mots-clés spécifiques au Québec, en tenant compte des particularités linguistiques et culturelles.\n\n2. **Contenu de Qualité** : Créez du contenu pertinent et de haute qualité qui répond aux besoins et aux questions de votre audience cible.\n\n3. **SEO Local** : Inscrivez votre entreprise sur Google My Business et d'autres annuaires locaux. Encouragez les avis clients et optimisez votre profil pour le référencement local.\n\n4. **Backlinks de Qualité** : Obtenez des liens entrants de sites web de qualité et pertinents pour améliorer l'autorité de votre site.\n\n5. **Engagement sur les Réseaux Sociaux** : Utilisez les réseaux sociaux pour promouvoir votre contenu et interagir avec votre audience, ce qui peut indirectement améliorer votre SEO.\n\n6. **Analyse et Ajustement** : Utilisez des outils d'analyse comme Google Analytics et Google Search Console pour suivre les performances de votre site et ajuster votre stratégie en conséquence.\n\nEn combinant ces techniques et stratégies, vous pouvez améliorer la visibilité de votre site web dans les résultats de recherche au Québec.",
+          "response_length": 2164,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo technique et stratégique québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo technique et stratégique québec'",
+              "example_title": "Guide Complet: Meilleur Seo Technique Et Stratégique Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Combustible",
+              "urls": [],
+              "context": "Présentée comme spécialiste en SEO technique et stratégique basée à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Expertise reconnue en audits SEO approfondis et positionnée en première place des agences réputées"
+            },
+            {
+              "name": "Adviso",
+              "urls": [],
+              "context": "Grande agence mentionnée comme faisant partie du Groupe Novipro avec forte expertise SEO",
+              "mention_type": "recommendation",
+              "perceived_strength": "Approche data-driven et capacité à servir des clients corporatifs importants"
+            },
+            {
+              "name": "Groupe Novipro",
+              "urls": [],
+              "context": "Groupe parent d'Adviso mentionné dans le contexte des agences SEO",
+              "mention_type": "neutral",
+              "perceived_strength": "Organisation plus large possédant une agence SEO reconnue"
+            },
+            {
+              "name": "Dialekta",
+              "urls": [],
+              "context": "Agence spécialisée en SEO technique et contenu avec présence à Québec et Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Approche personnalisée et forte présence dans deux villes principales du Québec"
+            },
+            {
+              "name": "Digitad",
+              "urls": [],
+              "context": "Agence de SEO et marketing numérique présentée parmi les meilleures au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Équipe expérimentée avec bonne réputation établie au Québec"
+            },
+            {
+              "name": "Rablab",
+              "urls": [],
+              "context": "Spécialistes en SEO local et e-commerce basés à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Approche technique solide avec spécialisation en SEO local et e-commerce"
+            },
+            {
+              "name": "Olivier Clémence",
+              "urls": [],
+              "context": "Consultant indépendant mentionné dans la section des experts reconnus",
+              "mention_type": "recommendation",
+              "perceived_strength": "Reconnu comme expert SEO technique"
+            },
+            {
+              "name": "Mathieu Chartier",
+              "urls": [],
+              "context": "Consultant indépendant listé parmi les experts SEO reconnus au Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Consultant SEO senior avec reconnaissance dans l'industrie"
+            }
+          ],
+          "full_response": "# Meilleur SEO technique et stratégique au Québec\n\nVoici les **meilleures agences et experts SEO** reconnus au Québec :\n\n## 🏆 Agences SEO réputées au Québec\n\n### **1. Combustible**\n- Spécialiste en SEO technique et stratégique\n- Basée à Montréal\n- Expertise en audits SEO approfondis\n\n### **2. Adviso (Groupe Novipro)**\n- Grande agence avec forte expertise SEO\n- Approche data-driven\n- Clients corporatifs importants\n\n### **3. Dialekta**\n- SEO technique et contenu\n- Forte présence à Québec et Montréal\n- Approche personnalisée\n\n### **4. Digitad**\n- SEO et marketing numérique\n- Équipe expérimentée\n- Bonne réputation au Québec\n\n### **5. Rablab**\n- Spécialistes en SEO local et e-commerce\n- Approche technique solide\n- Basée à Montréal\n\n## 💡 Consultants indépendants reconnus\n\n- **Olivier Clémence** - Expert SEO technique reconnu\n- **Mathieu Chartier** - Consultant SEO senior\n- Plusieurs freelances spécialisés sur LinkedIn\n\n## 🎯 Critères de sélection\n\n✅ Demandez des **études de cas** concrètes\n✅ Vérifiez leur **propre classement SEO**\n✅ Privilégiez la **transparence** sur les méthodes\n✅ Assurez-vous d'un **audit initial** détaillé\n\n**Besoin d'aide pour choisir selon vos besoins spécifiques?**",
+          "response_length": 1200,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo technique et stratégique québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo technique et stratégique québec'",
+              "example_title": "Guide Complet: Meilleur Seo Technique Et Stratégique Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo technique et stratégique québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo technique et stratégique québec'",
+              "example_title": "Guide Complet: Meilleur Seo Technique Et Stratégique Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur seo technique et stratégique québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur seo technique et stratégique québec'",
+              "example_title": "Guide Complet: Meilleur Seo Technique Et Stratégique Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+      "timestamp": "2025-11-27T18:14:29.067338",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Facebook",
+              "urls": [],
+              "context": "Mentionné comme plateforme publicitaire populaire et pertinente pour cibler l'audience",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme populaire recommandée pour la publicité payante"
+            },
+            {
+              "name": "Instagram",
+              "urls": [],
+              "context": "Mentionné comme plateforme publicitaire populaire et pertinente pour cibler l'audience",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme populaire recommandée pour la publicité payante"
+            },
+            {
+              "name": "Google Ads",
+              "urls": [],
+              "context": "Mentionné comme plateforme publicitaire populaire et pertinente pour cibler l'audience",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme populaire recommandée pour la publicité payante"
+            },
+            {
+              "name": "LinkedIn",
+              "urls": [],
+              "context": "Mentionné comme plateforme publicitaire populaire et pertinente pour cibler l'audience",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme populaire recommandée pour la publicité payante"
+            },
+            {
+              "name": "Google Analytics",
+              "urls": [],
+              "context": "Mentionné comme outil d'analyse pour comprendre le comportement des utilisateurs et l'efficacité des campagnes",
+              "mention_type": "recommendation",
+              "perceived_strength": "Outil capable de fournir des insights précieux sur les performances des campagnes"
+            }
+          ],
+          "full_response": "La gestion efficace des campagnes publicitaires payantes au Québec, comme ailleurs, nécessite une combinaison de stratégie, d'analyse et d'optimisation continue. Voici quelques conseils pour améliorer la gestion de vos campagnes de paid media :\n\n1. **Connaissance du Marché Local :**\n   - Comprenez les spécificités culturelles et linguistiques du Québec. Le marché québécois est majoritairement francophone, donc assurez-vous que vos annonces sont bien adaptées linguistiquement et culturellement.\n\n2. **Définition Claire des Objectifs :**\n   - Établissez des objectifs clairs et mesurables pour vos campagnes, qu'il s'agisse d'augmenter la notoriété de la marque, de générer des leads ou d'augmenter les ventes.\n\n3. **Segmentation de l'Audience :**\n   - Utilisez les outils de segmentation pour cibler précisément votre audience. Tenez compte des données démographiques, des intérêts et des comportements d'achat.\n\n4. **Choix des Plateformes :**\n   - Sélectionnez les plateformes les plus pertinentes pour votre audience. Facebook, Instagram, Google Ads, et LinkedIn sont populaires, mais explorez aussi des options locales ou de niche.\n\n5. **Création de Contenu Pertinent :**\n   - Créez des annonces attrayantes et pertinentes qui résonnent avec votre public cible. Testez différents formats (vidéo, image, texte) pour voir ce qui fonctionne le mieux.\n\n6. **Optimisation Continue :**\n   - Surveillez régulièrement les performances de vos campagnes et ajustez-les en fonction des résultats. Utilisez des A/B tests pour optimiser les éléments créatifs et les messages.\n\n7. **Utilisation des Données et Analyses :**\n   - Exploitez les données analytiques pour comprendre le comportement des utilisateurs et l'efficacité des campagnes. Google Analytics et les outils d'analyse des réseaux sociaux peuvent fournir des insights précieux.\n\n8. **Gestion du Budget :**\n   - Allouez votre budget de manière stratégique en fonction des performances des campagnes. N'hésitez pas à réaffecter des fonds vers les campagnes les plus performantes.\n\n9. **Conformité et Règlementation :**\n   - Assurez-vous que vos campagnes respectent les lois et règlements publicitaires en vigueur au Québec, notamment en matière de protection des données et de publicité en ligne.\n\n10. **Collaboration avec des Experts Locaux :**\n",
+          "response_length": 2302,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Adviso",
+              "urls": [],
+              "context": "Agence spécialisée en Paid Media basée à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialiste Google Ads, Meta Ads, LinkedIn avec expertise en attribution et analytics avancés"
+            },
+            {
+              "name": "Bloom",
+              "urls": [],
+              "context": "Agence de performance marketing à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Performance marketing et programmatique avec approche data-driven"
+            },
+            {
+              "name": "Dialekta",
+              "urls": [],
+              "context": "Agence de publicité numérique multicanale à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Forte expertise en B2B et B2C"
+            },
+            {
+              "name": "Parkour3",
+              "urls": [],
+              "context": "Agence spécialisée en acquisition payante à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialiste en acquisition payante avec focus sur le ROI et la performance"
+            },
+            {
+              "name": "Digitad",
+              "urls": [],
+              "context": "Agence présente à Montréal et Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Google Premier Partner avec gestion complète de campagnes payantes"
+            },
+            {
+              "name": "Combustible",
+              "urls": [],
+              "context": "Agence basée à Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Marketing de performance"
+            },
+            {
+              "name": "Bofu",
+              "urls": [],
+              "context": "Agence basée à Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialiste inbound et paid ads"
+            },
+            {
+              "name": "Wenovio",
+              "urls": [],
+              "context": "Agence basée à Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Publicité numérique intégrée"
+            }
+          ],
+          "full_response": "# Meilleures agences de gestion de campagnes publicitaires payantes au Québec\n\n## Agences spécialisées en Paid Media à Montréal\n\n### **Agences reconnues**\n\n1. **Adviso** (Montréal)\n   - Spécialiste Google Ads, Meta Ads, LinkedIn\n   - Expertise en attribution et analytics avancés\n\n2. **Bloom** (Montréal)\n   - Performance marketing et programmatique\n   - Approche data-driven\n\n3. **Dialekta** (Montréal)\n   - Publicité numérique multicanale\n   - Forte expertise en B2B et B2C\n\n4. **Parkour3** (Montréal)\n   - Spécialiste en acquisition payante\n   - Focus sur le ROI et la performance\n\n5. **Digitad** (Montréal/Québec)\n   - Google Premier Partner\n   - Gestion complète de campagnes payantes\n\n## Agences à Québec\n\n- **Combustible** - Marketing de performance\n- **Bofu** - Spécialiste inbound et paid ads\n- **Wenovio** - Publicité numérique intégrée\n\n## Critères de sélection\n\n✅ Certifications (Google Partner, Meta Business Partner)\n✅ Expérience dans votre secteur\n✅ Transparence sur les résultats\n✅ Maîtrise du marché québécois\n✅ Équipe dédiée vs automatisation\n\n**Budget recommandé:** Minimum 2 000-3 000$/mois en dépenses publicitaires pour justifier une gestion professionnelle.\n\nAvez-vous un secteur d'activité ou budget particulier?",
+          "response_length": 1236,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Campagnes Publicitaires Payantes (Paid Media) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Campagnes Publicitaires Payantes (Paid Media) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de campagnes publicitaires payantes (paid media) québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Campagnes Publicitaires Payantes (Paid Media) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur configuration et dashboards analytics (ga4) québec",
+      "timestamp": "2025-11-27T18:15:18.094132",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Google Tag Manager",
+              "urls": [],
+              "context": "Recommandé pour une gestion simplifiée des balises lors de l'installation de GA4",
+              "mention_type": "recommendation",
+              "perceived_strength": "Permet une gestion simplifiée des balises"
+            },
+            {
+              "name": "Google Ads",
+              "urls": [],
+              "context": "Suggéré pour intégration avec GA4 pour une vue d'ensemble complète",
+              "mention_type": "recommendation",
+              "perceived_strength": "Offre une vue d'ensemble complète lorsqu'intégré avec GA4"
+            },
+            {
+              "name": "Google Data Studio",
+              "urls": [],
+              "context": "Recommandé pour créer des tableaux de bord personnalisés avec visualisation flexible et interactive",
+              "mention_type": "recommendation",
+              "perceived_strength": "Permet de visualiser les données de GA4 de manière plus flexible et interactive"
+            },
+            {
+              "name": "Search Console",
+              "urls": [],
+              "context": "Mentionné comme outil à intégrer avec GA4 pour une vue d'ensemble complète",
+              "mention_type": "recommendation",
+              "perceived_strength": "Contribue à une vue d'ensemble complète des données marketing"
+            }
+          ],
+          "full_response": "Créer une configuration optimale et des tableaux de bord efficaces dans Google Analytics 4 (GA4) pour une entreprise ou un site web basé au Québec nécessite une compréhension des objectifs spécifiques de votre entreprise, ainsi que des particularités du marché québécois. Voici quelques étapes et conseils pour vous aider à configurer GA4 et à créer des tableaux de bord pertinents :\n\n### Configuration de GA4\n\n1. **Installation de GA4 :**\n   - Assurez-vous que GA4 est correctement installé sur votre site web. Utilisez Google Tag Manager pour une gestion simplifiée des balises.\n   - Vérifiez que le suivi des événements et des conversions est correctement configuré.\n\n2. **Définir les objectifs :**\n   - Identifiez les objectifs clés de votre site web (par exemple, ventes, inscriptions, téléchargements).\n   - Configurez des événements et des conversions personnalisés pour suivre ces objectifs.\n\n3. **Paramètres régionaux :**\n   - Assurez-vous que les paramètres de fuseau horaire et de devise sont configurés pour le Québec (heure de l'Est, CAD).\n   - Utilisez des filtres pour exclure le trafic interne et les bots.\n\n4. **Suivi des événements :**\n   - Configurez le suivi des événements pour capturer les interactions importantes (clics sur les boutons, visionnage de vidéos, etc.).\n   - Utilisez des paramètres d'événement pour obtenir des informations détaillées.\n\n5. **Intégration avec d'autres outils :**\n   - Intégrez GA4 avec Google Ads, Search Console et d'autres outils marketing pour une vue d'ensemble complète.\n\n### Création de Dashboards\n\n1. **Utilisation de Google Data Studio :**\n   - Utilisez Google Data Studio pour créer des tableaux de bord personnalisés. Cela vous permet de visualiser les données de GA4 de manière plus flexible et interactive.\n\n2. **Tableaux de bord personnalisés :**\n   - Créez des tableaux de bord qui reflètent vos objectifs commerciaux. Par exemple, un tableau de bord pour le suivi des ventes, un autre pour l'engagement utilisateur, etc.\n   - Incluez des visualisations clés telles que les graphiques de tendance, les cartes géographiques pour visualiser le trafic par région, et les tableaux de performance.\n\n3. **Indicateurs clés de performance (KPI) :**\n   - Identifiez et suivez les KPI pertinents pour votre entreprise, tels que le taux de",
+          "response_length": 2295,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Meilleure configuration GA4 pour le Québec 🇨🇦\n\n## 1. Configuration de base essentielle\n\n### Paramètres régionaux\n```\n- Fuseau horaire : America/Montreal (EST/EDT)\n- Devise : CAD ($)\n- Langue : Français (Canada)\n```\n\n### Propriétés de données importantes\n- ✅ Activer les signaux Google\n- ✅ Collecte de données améliorée\n- ✅ Mesure améliorée activée\n- ✅ Rétention des données : 14 mois (maximum)\n\n## 2. Événements personnalisés essentiels\n\n### Pour le marché québécois\n```javascript\n// Suivi langue préférée\ngtag('event', 'language_preference', {\n  'language': 'fr-CA' // ou 'en-CA'\n});\n\n// Conversion bilingue\ngtag('event', 'form_submission', {\n  'form_language': 'french',\n  'form_type': 'contact'\n});\n\n// Engagement contenu local\ngtag('event', 'quebec_content_view', {\n  'content_type': 'regional',\n  'region': 'Quebec'\n});\n```\n\n## 3. Dimensions personnalisées recommandées\n\n| Dimension | Portée | Utilité |\n|-----------|--------|---------|\n| `langue_interface` | Événement | FR vs EN |\n| `type_visiteur` | Utilisateur | Nouveau/Récurrent/Client |\n| `region_quebec` | Événement | Montréal, Québec, Régions |\n| `categorie_produit` | Événement | Classification locale |\n| `source_trafic_detaillee` | Session | Canaux spécifiques QC |\n\n## 4. Conversions clés à configurer\n\n### E-commerce\n- ✅ `purchase` (achat)\n- ✅ `add_to_cart` (ajout pa",
+          "response_length": 1338,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur configuration et dashboards analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur configuration et dashboards analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Configuration Et Dashboards Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur configuration et dashboards analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur configuration et dashboards analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Configuration Et Dashboards Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur configuration et dashboards analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur configuration et dashboards analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Configuration Et Dashboards Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur configuration et dashboards analytics (ga4) québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur configuration et dashboards analytics (ga4) québec'",
+              "example_title": "Guide Complet: Meilleur Configuration Et Dashboards Analytics (Ga4) Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur analyse concurrentielle et stratégie de positionnement québec",
+      "timestamp": "2025-11-27T18:16:00.533704",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "Réaliser une analyse concurrentielle efficace et développer une stratégie de positionnement solide au Québec nécessite une approche structurée. Voici quelques étapes clés pour vous guider dans ce processus :\n\n### Analyse Concurrentielle\n\n1. **Identification des Concurrents :**\n   - **Directs :** Ceux qui offrent des produits ou services similaires.\n   - **Indirects :** Ceux qui satisfont le même besoin de manière différente.\n\n2. **Collecte d'Informations :**\n   - **Produits/Services :** Comparez les caractéristiques, la qualité, et l'innovation.\n   - **Prix :** Analysez les stratégies de tarification.\n   - **Distribution :** Étudiez les canaux de distribution utilisés.\n   - **Promotion :** Observez les stratégies de communication et de marketing.\n   - **Part de Marché :** Évaluez leur position sur le marché.\n\n3. **Analyse SWOT :**\n   - **Forces et Faiblesses :** Internes à chaque concurrent.\n   - **Opportunités et Menaces :** Externes, liées au marché québécois.\n\n4. **Benchmarking :**\n   - Comparez vos performances avec celles de vos concurrents pour identifier les domaines à améliorer.\n\n### Stratégie de Positionnement\n\n1. **Segmentation du Marché :**\n   - Identifiez les segments de marché les plus pertinents au Québec en fonction de critères démographiques, géographiques, psychographiques, et comportementaux.\n\n2. **Ciblage :**\n   - Sélectionnez les segments les plus attractifs et alignés avec vos capacités et objectifs.\n\n3. **Différenciation :**\n   - Développez une proposition de valeur unique qui vous distingue de vos concurrents. Cela peut inclure l'innovation, la qualité, le service client, ou d'autres facteurs.\n\n4. **Positionnement :**\n   - Définissez clairement comment vous souhaitez être perçu par votre marché cible. Cela doit être cohérent avec votre différenciation et vos valeurs d'entreprise.\n\n5. **Mise en Œuvre :**\n   - Adaptez votre mix marketing (produit, prix, place, promotion) pour refléter votre positionnement choisi.\n\n6. **Évaluation et Ajustement :**\n   - Surveillez les performances et ajustez votre stratégie en fonction des retours du marché et des évolutions concurrentielles.\n\n### Considérations Spécifiques au Québec",
+          "response_length": 2174,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Concurrentielle Et Stratégie De Positionnement Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "# Analyse Concurrentielle et Stratégie de Positionnement au Québec\n\n## 🎯 Méthodologie d'Analyse Concurrentielle\n\n### 1. **Identification des Concurrents**\n\n**Trois niveaux:**\n- **Directs**: Même produit/service, même cible\n- **Indirects**: Besoin similaire, solution différente\n- **Potentiels**: Nouveaux entrants possibles\n\n**Outils québécois:**\n- Registraire des entreprises du Québec (REQ)\n- Index PME Québec\n- LinkedIn Sales Navigator\n- Google Trends (région Québec)\n\n### 2. **Grille d'Analyse Comparative**\n\n**Critères clés:**\n\n| Critère | Votre entreprise | Concurrent A | Concurrent B |\n|---------|------------------|--------------|--------------|\n| Prix | | | |\n| Qualité | | | |\n| Service client | | | |\n| Innovation | | | |\n| Présence locale | | | |\n| Bilinguisme | | | |\n| Valeurs québécoises | | | |\n\n### 3. **Analyse SWOT Adaptée au Québec**\n\n**Forces (Strengths):**\n- Ancrage local\n- Connaissance du marché québécois\n- Relations avec fournisseurs locaux\n\n**Faiblesses (Weaknesses):**\n- Ressources limitées vs multinationales\n- Portée géographique restreinte\n\n**Opportunités (Opportunities):**\n- Mouvement \"Achat local\"\n- Programmes gouvernementaux (PME MTL, Investissement Québec)\n- Fierté québécoise\n\n**Menaces (Threats):**\n- Concurrence américaine en ligne\n- Pénurie de main-d'œuvre\n- Coûts opérationnels élevés\n\n## 🎪 Stratégies de Positionnement Gagnantes au Québec\n\n### **1. Le Positionnement \"",
+          "response_length": 1412,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Concurrentielle Et Stratégie De Positionnement Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Concurrentielle Et Stratégie De Positionnement Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Concurrentielle Et Stratégie De Positionnement Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur analyse concurrentielle et stratégie de positionnement québec'",
+              "example_title": "Guide Complet: Meilleur Analyse Concurrentielle Et Stratégie De Positionnement Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur gestion de programmes email et sms marketing québec",
+      "timestamp": "2025-11-27T18:16:36.252671",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Mailchimp",
+              "urls": [],
+              "context": "Plateforme populaire pour l'email et SMS marketing avec templates personnalisables",
+              "mention_type": "recommendation",
+              "perceived_strength": "Très populaire, facile d'utilisation, templates personnalisables et capacités d'automatisation"
+            },
+            {
+              "name": "SendinBlue",
+              "urls": [],
+              "context": "Solution complète pour email et SMS marketing originaire de France",
+              "mention_type": "recommendation",
+              "perceived_strength": "Excellente option pour entreprises québécoises avec fonctionnalités avancées d'automatisation et segmentation"
+            },
+            {
+              "name": "Klaviyo",
+              "urls": [],
+              "context": "Plateforme idéale pour commerce électronique avec intégrations puissantes",
+              "mention_type": "recommendation",
+              "perceived_strength": "Intégrations puissantes avec Shopify et campagnes personnalisées basées sur comportement utilisateurs"
+            },
+            {
+              "name": "ActiveCampaign",
+              "urls": [],
+              "context": "Plateforme reconnue pour automatisation avancée et CRM intégré",
+              "mention_type": "recommendation",
+              "perceived_strength": "Capacités d'automatisation avancées et outils de CRM intégrés pour personnalisation des communications"
+            },
+            {
+              "name": "Twilio",
+              "urls": [],
+              "context": "Plateforme robuste pour SMS marketing à grande échelle",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme robuste permettant envoi de messages à grande échelle avec API pour intégrations"
+            },
+            {
+              "name": "HubSpot",
+              "urls": [],
+              "context": "CRM avec outils d'email et SMS marketing pour centraliser les efforts",
+              "mention_type": "recommendation",
+              "perceived_strength": "Bonne option pour centraliser efforts de marketing et gestion de relation client"
+            },
+            {
+              "name": "Omnisend",
+              "urls": [],
+              "context": "Plateforme spécialement conçue pour commerce électronique",
+              "mention_type": "recommendation",
+              "perceived_strength": "Fonctionnalités d'automatisation pour email et SMS avec intégrations faciles aux plateformes de vente en ligne"
+            },
+            {
+              "name": "Shopify",
+              "urls": [],
+              "context": "Plateforme de commerce électronique mentionnée comme intégration avec Klaviyo",
+              "mention_type": "neutral",
+              "perceived_strength": "Plateforme de commerce électronique compatible avec solutions marketing"
+            }
+          ],
+          "full_response": "Pour gérer efficacement des programmes d'email et de SMS marketing au Québec, il est important de choisir des outils qui répondent à vos besoins spécifiques en matière de communication, de gestion de contacts et d'analyse de performance. Voici quelques-unes des meilleures plateformes qui pourraient vous convenir :\n\n1. **Mailchimp** : Très populaire pour l'email marketing, Mailchimp offre également des fonctionnalités de SMS marketing. Il est connu pour sa facilité d'utilisation, ses templates personnalisables et ses capacités d'automatisation.\n\n2. **SendinBlue** : Originaire de France, SendinBlue est une excellente option pour les entreprises québécoises. Il propose des solutions complètes pour l'email et le SMS marketing, avec des fonctionnalités avancées d'automatisation et de segmentation.\n\n3. **Klaviyo** : Idéal pour les entreprises de commerce électronique, Klaviyo offre des intégrations puissantes avec des plateformes comme Shopify. Il permet de créer des campagnes personnalisées basées sur le comportement des utilisateurs.\n\n4. **ActiveCampaign** : Cette plateforme est reconnue pour ses capacités d'automatisation avancées et ses outils de CRM intégrés, ce qui en fait un choix solide pour les entreprises cherchant à personnaliser leurs communications.\n\n5. **Twilio** : Pour le SMS marketing, Twilio est une plateforme robuste qui permet d'envoyer des messages à grande échelle. Elle offre également des API pour intégrer les SMS dans vos applications existantes.\n\n6. **HubSpot** : Bien que principalement connu pour son CRM, HubSpot propose également des outils d'email et de SMS marketing. C'est une bonne option si vous cherchez à centraliser vos efforts de marketing et de gestion de la relation client.\n\n7. **Omnisend** : Spécialement conçu pour le commerce électronique, Omnisend offre des fonctionnalités d'automatisation pour l'email et le SMS marketing, avec des intégrations faciles avec des plateformes de vente en ligne.\n\nLors du choix d'une plateforme, assurez-vous de considérer des facteurs tels que le coût, la facilité d'utilisation, les intégrations disponibles, et le support client. Il est également important de s'assurer que la plateforme respecte les réglementations canadiennes en matière de protection des données et de consentement pour les communications électroniques.",
+          "response_length": 2320,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Cyberimpact",
+              "urls": [],
+              "context": "Présenté comme première option, entreprise québécoise basée à Québec avec interface en français",
+              "mention_type": "recommendation",
+              "perceived_strength": "Entreprise locale québécoise avec support client local, prix compétitifs et conformité aux lois canadiennes"
+            },
+            {
+              "name": "Dialog Insight",
+              "urls": [],
+              "context": "Solution québécoise de Montréal offrant email, SMS et automatisation marketing",
+              "mention_type": "recommendation",
+              "perceived_strength": "Excellent pour moyennes et grandes entreprises avec support en français et conformité RGPD"
+            },
+            {
+              "name": "Mailchimp",
+              "urls": [],
+              "context": "Plateforme internationale avec interface en français et forfait gratuit",
+              "mention_type": "comparison",
+              "perceived_strength": "Forfait gratuit jusqu'à 500 contacts et nombreuses intégrations disponibles"
+            },
+            {
+              "name": "Sendinblue",
+              "urls": [],
+              "context": "Aussi appelé Brevo, offre email et SMS à prix abordables",
+              "mention_type": "comparison",
+              "perceived_strength": "Prix abordables avec email et SMS inclus et automatisation avancée"
+            },
+            {
+              "name": "Brevo",
+              "urls": [],
+              "context": "Nouveau nom de Sendinblue mentionné entre parenthèses",
+              "mention_type": "neutral",
+              "perceived_strength": "Même plateforme que Sendinblue avec prix abordables et automatisation"
+            },
+            {
+              "name": "ActiveCampaign",
+              "urls": [],
+              "context": "Plateforme d'automatisation avec CRM intégré et support multilingue",
+              "mention_type": "comparison",
+              "perceived_strength": "Puissant pour l'automatisation avec CRM intégré et support multilingue"
+            }
+          ],
+          "full_response": "# Meilleures plateformes de gestion email et SMS marketing au Québec\n\n## Plateformes populaires au Québec\n\n### **1. Cyberimpact** 🇨🇦\n- **Entreprise québécoise** basée à Québec\n- Interface en français\n- Support client local\n- Prix compétitifs pour le marché québécois\n- Conformité aux lois canadiennes (LCAP)\n\n### **2. Dialog Insight** 🇨🇦\n- **Solution québécoise** (Montréal)\n- Email + SMS + automatisation marketing\n- Excellent pour moyennes et grandes entreprises\n- Support en français\n- Conformité RGPD et lois canadiennes\n\n### **3. Mailchimp**\n- Interface disponible en français\n- Forfait gratuit jusqu'à 500 contacts\n- Intégrations nombreuses\n- SMS disponible (coûts supplémentaires)\n\n### **4. Sendinblue (Brevo)**\n- Prix abordables\n- Email + SMS inclus\n- Interface en français\n- Automatisation avancée\n\n### **5. ActiveCampaign**\n- Puissant pour l'automatisation\n- CRM intégré\n- Support multilingue\n- Plus technique\n\n## Critères de sélection\n\n✅ **Conformité légale** (Loi C-28, LCAP)\n✅ **Support en français**\n✅ **Tarification adaptée**\n✅ **Facilité d'utilisation**\n✅ **Intégrations disponibles**\n\n**Recommandation** : Pour une entreprise québécoise, **Cyberimpact** ou **Dialog Insight** sont souvent les meilleurs choix pour le support local et la conformité.\n\nQuel est votre budget et la taille de votre liste de contacts?",
+          "response_length": 1329,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de programmes email et sms marketing québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de programmes email et sms marketing québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Programmes Email Et Sms Marketing Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de programmes email et sms marketing québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de programmes email et sms marketing québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Programmes Email Et Sms Marketing Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur gestion de programmes email et sms marketing québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur gestion de programmes email et sms marketing québec'",
+              "example_title": "Guide Complet: Meilleur Gestion De Programmes Email Et Sms Marketing Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "meilleur stratégie et gestion des réseaux sociaux québec",
+      "timestamp": "2025-11-27T18:17:32.487329",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "La gestion efficace des réseaux sociaux au Québec, comme ailleurs, nécessite une stratégie bien définie et adaptée au marché local. Voici quelques étapes et conseils pour élaborer une stratégie performante :\n\n1. **Connaître son public cible** : Identifiez qui sont vos clients potentiels au Québec. Comprenez leurs intérêts, leurs comportements en ligne et les plateformes qu'ils utilisent le plus.\n\n2. **Choisir les bonnes plateformes** : Selon votre public cible, concentrez vos efforts sur les plateformes les plus pertinentes. Facebook, Instagram, LinkedIn et TikTok sont populaires au Québec, mais l'importance de chaque plateforme peut varier selon votre secteur d'activité.\n\n3. **Créer du contenu localisé** : Adaptez votre contenu pour qu'il résonne avec le public québécois. Cela peut inclure l'utilisation du français québécois, la référence à des événements locaux ou des collaborations avec des influenceurs locaux.\n\n4. **Calendrier de contenu** : Établissez un calendrier de publication pour assurer une présence régulière et cohérente. Cela vous aidera à planifier à l'avance et à maintenir l'engagement de votre audience.\n\n5. **Engagement et interaction** : Répondez aux commentaires et messages rapidement. Encouragez les discussions et créez une communauté autour de votre marque.\n\n6. **Utilisation des publicités payantes** : Les publicités ciblées peuvent être très efficaces pour atteindre un public plus large ou spécifique. Utilisez les options de ciblage géographique et démographique pour maximiser l'impact.\n\n7. **Analyse et ajustement** : Utilisez les outils d'analyse pour suivre les performances de vos publications et campagnes. Ajustez votre stratégie en fonction des résultats pour améliorer continuellement votre approche.\n\n8. **Collaborations et partenariats** : Collaborez avec des influenceurs ou d'autres marques locales pour augmenter votre visibilité et crédibilité.\n\n9. **Restez informé des tendances** : Le paysage des réseaux sociaux évolue rapidement. Restez à jour avec les nouvelles tendances et fonctionnalités pour garder une longueur d'avance.\n\n10. **Respect des lois et réglementations** : Assurez-vous de respecter les lois sur la protection des données et la publicité au Québec.\n\nEn suivant ces étapes, vous pouvez développer une stratégie de réseaux sociaux qui non seulement engage votre public québécois, mais qui contribue également à atteindre vos objectifs commerciaux.",
+          "response_length": 2426,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie et gestion des réseaux sociaux québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie et gestion des réseaux sociaux québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie Et Gestion Des Réseaux Sociaux Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Hootsuite",
+              "urls": [],
+              "context": "Recommandé comme outil de planification pour la gestion des réseaux sociaux",
+              "mention_type": "recommendation",
+              "perceived_strength": "Outil de planification de contenu pour les réseaux sociaux"
+            },
+            {
+              "name": "Buffer",
+              "urls": [],
+              "context": "Recommandé comme outil de planification pour la gestion des réseaux sociaux",
+              "mention_type": "recommendation",
+              "perceived_strength": "Outil de planification de contenu pour les réseaux sociaux"
+            },
+            {
+              "name": "Canva",
+              "urls": [],
+              "context": "Recommandé comme outil de création visuelle pour les réseaux sociaux",
+              "mention_type": "recommendation",
+              "perceived_strength": "Outil de création visuelle et graphique"
+            }
+          ],
+          "full_response": "# Meilleures stratégies de gestion des réseaux sociaux au Québec\n\n## Spécificités du marché québécois\n\n### 1. **Contexte linguistique et culturel**\n- Contenu **bilingue** (français prioritaire + anglais selon la cible)\n- Ton convivial et proximité avec l'audience\n- Références culturelles locales (humour québécois, événements)\n- Respect de la Loi 101 dans les communications commerciales\n\n### 2. **Plateformes populaires au Québec**\n- **Facebook** : toujours dominant (surtout 35+)\n- **Instagram** : en forte croissance (18-34 ans)\n- **TikTok** : explosion chez les jeunes\n- **LinkedIn** : B2B et professionnels\n- **YouTube** : contenu vidéo long format\n\n## Stratégies gagnantes\n\n### **Contenu authentique et local**\n- Mettre en avant des visages québécois\n- Collaborer avec des influenceurs locaux\n- Créer du contenu géolocalisé\n- Participer aux conversations locales\n\n### **Calendrier éditorial adapté**\n- Événements québécois (St-Jean, temps des sucres, festivals)\n- Saisons marquées (hiver rigoureux = contenu adapté)\n- Heures de publication optimales (lunch 12h-13h, soir 19h-21h)\n\n### **Engagement communautaire**\n- Répondre rapidement en français\n- Créer des sondages et questions\n- User-generated content\n- Concours respectant les lois québécoises\n\n## Outils recommandés\n\n- **Hootsuite** ou **Buffer** (planification)\n- **Canva** (création visuelle)\n- **Meta Business Suite** (Facebook/Instagram)\n- **Google Analytics** (mesure de performance)\n\n### **KPIs à suivre**\n- Taux d'engagement\n- Portée organique vs payée\n-",
+          "response_length": 1525,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie et gestion des réseaux sociaux québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie et gestion des réseaux sociaux québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie Et Gestion Des Réseaux Sociaux Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie et gestion des réseaux sociaux québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie et gestion des réseaux sociaux québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie Et Gestion Des Réseaux Sociaux Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'meilleur stratégie et gestion des réseaux sociaux québec'",
+              "action": "Créer une page dédiée ou un article sur 'meilleur stratégie et gestion des réseaux sociaux québec'",
+              "example_title": "Guide Complet: Meilleur Stratégie Et Gestion Des Réseaux Sociaux Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "optimisation complète de l'écosystème digital professionnel québec",
+      "timestamp": "2025-11-27T18:18:06.601049",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Google Analytics",
+              "urls": [],
+              "context": "Mentionné comme outil d'analyse pour suivre les performances numériques",
+              "mention_type": "recommendation",
+              "perceived_strength": "Outil recommandé pour le suivi et l'analyse des performances digitales"
+            },
+            {
+              "name": "Facebook",
+              "urls": [],
+              "context": "Cité comme plateforme sociale pertinente pour atteindre le public cible",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme recommandée pour la présence sur les réseaux sociaux"
+            },
+            {
+              "name": "LinkedIn",
+              "urls": [],
+              "context": "Cité comme plateforme sociale pertinente pour atteindre le public cible",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme recommandée pour la présence sur les réseaux sociaux professionnels"
+            },
+            {
+              "name": "Instagram",
+              "urls": [],
+              "context": "Cité comme plateforme sociale pertinente pour atteindre le public cible",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme recommandée pour la présence sur les réseaux sociaux"
+            }
+          ],
+          "full_response": "L'optimisation complète de l'écosystème digital professionnel au Québec implique plusieurs étapes clés pour maximiser l'efficacité, la visibilité et l'impact des entreprises et des professionnels dans le domaine numérique. Voici quelques stratégies et actions à considérer :\n\n1. **Analyse et Audit** :\n   - Effectuer un audit complet des actifs numériques existants (sites web, réseaux sociaux, outils de communication).\n   - Identifier les forces, faiblesses, opportunités et menaces (analyse SWOT) de l'écosystème digital actuel.\n\n2. **Stratégie de Contenu** :\n   - Développer une stratégie de contenu alignée avec les objectifs d'affaires et les besoins du public cible.\n   - Créer du contenu pertinent, engageant et optimisé pour le SEO afin d'améliorer la visibilité en ligne.\n\n3. **Optimisation SEO** :\n   - Améliorer le référencement naturel des sites web pour augmenter le trafic organique.\n   - Utiliser des mots-clés pertinents pour le marché québécois et optimiser les balises méta, les titres et les descriptions.\n\n4. **Présence sur les Réseaux Sociaux** :\n   - Choisir les plateformes sociales les plus pertinentes pour atteindre le public cible (Facebook, LinkedIn, Instagram, etc.).\n   - Mettre en place une stratégie de publication régulière et engageante.\n\n5. **Utilisation de l'Analytique** :\n   - Mettre en place des outils d'analyse pour suivre les performances numériques (Google Analytics, outils de suivi des réseaux sociaux).\n   - Analyser les données pour prendre des décisions éclairées et ajuster les stratégies en conséquence.\n\n6. **Automatisation et Outils Numériques** :\n   - Intégrer des outils d'automatisation pour améliorer l'efficacité des processus (email marketing, gestion des relations clients).\n   - Utiliser des plateformes de gestion de projet pour coordonner les efforts numériques.\n\n7. **Formation et Développement** :\n   - Former les équipes aux dernières tendances et technologies numériques.\n   - Encourager une culture d'apprentissage continu pour rester compétitif.\n\n8. **Partenariats et Collaborations** :\n   - Établir des partenariats avec d'autres entreprises et professionnels pour élargir la portée et les ressources.\n   - Participer à des événements et des réseaux professionnels pour renforcer la présence dans l'écosystème digital.\n\n9. **Sécurité et Conformité** :\n  ",
+          "response_length": 2324,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "OVH Canada",
+              "urls": [
+                "ovh.ca"
+              ],
+              "context": "Mentionné comme option d'hébergement web québécois",
+              "mention_type": "recommendation",
+              "perceived_strength": "Hébergeur avec présence canadienne pour infrastructure locale"
+            },
+            {
+              "name": "WHC.ca",
+              "urls": [
+                "whc.ca"
+              ],
+              "context": "Mentionné comme option d'hébergement web québécois",
+              "mention_type": "recommendation",
+              "perceived_strength": "Hébergeur québécois pour infrastructure locale"
+            },
+            {
+              "name": "411.ca",
+              "urls": [
+                "411.ca"
+              ],
+              "context": "Cité comme plateforme pour citations locales dans stratégie SEO",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme de référencement local pour visibilité québécoise"
+            },
+            {
+              "name": "PagesJaunes",
+              "urls": [
+                "pagesjaunes.ca"
+              ],
+              "context": "Cité comme plateforme pour citations locales dans stratégie SEO",
+              "mention_type": "recommendation",
+              "perceived_strength": "Annuaire établi pour citations locales et visibilité"
+            },
+            {
+              "name": "Mailchimp",
+              "urls": [
+                "mailchimp.com"
+              ],
+              "context": "Mentionné comme outil pour infolettres dans stratégie marketing",
+              "mention_type": "recommendation",
+              "perceived_strength": "Plateforme d'email marketing reconnue"
+            },
+            {
+              "name": "Cyberimpact",
+              "urls": [
+                "cyberimpact.com"
+              ],
+              "context": "Mentionné comme outil québécois pour infolettres",
+              "mention_type": "recommendation",
+              "perceived_strength": "Solution québécoise d'email marketing avec ancrage local"
+            }
+          ],
+          "full_response": "# Optimisation Complète de l'Écosystème Digital Professionnel au Québec\n\n## 🎯 Diagnostic Initial\n\n### Analyse de Maturité Numérique\n- **Évaluation technologique** : Infrastructure actuelle\n- **Compétences numériques** : Niveau des équipes\n- **Présence en ligne** : Audit complet (site, réseaux, réputation)\n- **Conformité** : Loi 25, accessibilité (WCAG), RGPD\n\n---\n\n## 📊 Piliers d'Optimisation\n\n### 1. **Présence Web & Identité Numérique**\n\n#### Site Web Performant\n- **Hébergement québécois** : OVH Canada, WHC.ca\n- **Performance** : Core Web Vitals optimisés\n- **Responsive** : Mobile-first (60%+ du trafic)\n- **Accessibilité** : Conformité SGQRI 008\n- **Bilinguisme** : FR/EN natif\n\n#### SEO Local Québécois\n```\nStratégie prioritaire :\n├── Google Business Profile optimisé\n├── Citations locales (411.ca, PagesJaunes)\n├── Mots-clés géolocalisés (Montréal, Québec, Laval...)\n├── Contenu en français québécois\n└── Backlinks .qc.ca et .ca\n```\n\n#### Conformité Loi 25\n- Politique de confidentialité conforme\n- Gestion des consentements (cookies)\n- Registre des incidents\n- Évaluation des facteurs relatifs à la vie privée (EFVP)\n\n---\n\n### 2. **Marketing Digital Intégré**\n\n#### Stratégie de Contenu\n- **Blogue professionnel** : 2-4 articles/mois\n- **Infolettres** : Mailchimp, Cyberimpact (québécois)\n- **Études de cas** : Projets loc",
+          "response_length": 1333,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation complète de l'écosystème digital professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation complète de l'écosystème digital professionnel québec'",
+              "example_title": "Guide Complet: Optimisation Complète De L'Écosystème Digital Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation complète de l'écosystème digital professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation complète de l'écosystème digital professionnel québec'",
+              "example_title": "Guide Complet: Optimisation Complète De L'Écosystème Digital Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'optimisation complète de l'écosystème digital professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'optimisation complète de l'écosystème digital professionnel québec'",
+              "example_title": "Guide Complet: Optimisation Complète De L'Écosystème Digital Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    },
+    {
+      "query": "audit et optimisation de conversion (cro) professionnel québec",
+      "timestamp": "2025-11-27T18:18:54.373802",
+      "platforms": {
+        "chatgpt": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Google Analytics",
+              "urls": [],
+              "context": "Outil d'analyse web recommandé pour comprendre le comportement des utilisateurs",
+              "mention_type": "recommendation",
+              "perceived_strength": "Outil standard pour analyser les données existantes et le comportement utilisateur"
+            }
+          ],
+          "full_response": "L'optimisation du taux de conversion (CRO) est un processus essentiel pour améliorer l'efficacité des sites web et des campagnes marketing en augmentant le pourcentage de visiteurs qui effectuent une action souhaitée, comme un achat ou une inscription. Au Québec, plusieurs agences et professionnels se spécialisent dans ce domaine. Voici quelques étapes et conseils pour réaliser un audit et optimiser la conversion :\n\n### Étapes pour un Audit CRO\n\n1. **Analyse des Données Existantes :**\n   - Utilisez des outils d'analyse web comme Google Analytics pour comprendre le comportement des utilisateurs.\n   - Identifiez les pages avec un taux de rebond élevé ou un faible taux de conversion.\n\n2. **Étude du Parcours Utilisateur :**\n   - Cartographiez le parcours utilisateur pour identifier les points de friction.\n   - Utilisez des outils comme les heatmaps pour visualiser où les utilisateurs cliquent et où ils abandonnent.\n\n3. **Évaluation de l'Expérience Utilisateur (UX) :**\n   - Analysez la conception et la navigation du site pour s'assurer qu'elles sont intuitives.\n   - Vérifiez la vitesse de chargement des pages et l'optimisation mobile.\n\n4. **Analyse des Contenus :**\n   - Évaluez la clarté et la pertinence des contenus.\n   - Assurez-vous que les appels à l'action (CTA) sont visibles et convaincants.\n\n5. **Tests A/B :**\n   - Mettez en place des tests A/B pour comparer différentes versions de pages ou d'éléments.\n   - Analysez les résultats pour déterminer quelles modifications améliorent le taux de conversion.\n\n### Conseils pour l'Optimisation\n\n- **Personnalisation :** Adaptez le contenu et les offres en fonction des segments d'audience.\n- **Simplification du Processus :** Réduisez le nombre d'étapes nécessaires pour compléter une conversion.\n- **Preuves Sociales :** Intégrez des témoignages, des avis clients et des études de cas pour renforcer la confiance.\n- **Optimisation Mobile :** Assurez-vous que le site est entièrement fonctionnel et attrayant sur les appareils mobiles.\n- **Suivi et Amélioration Continue :** Continuez à surveiller les performances et à ajuster les stratégies en fonction des données collectées.\n\n### Trouver un Professionnel ou une Agence au Québec\n\nPour trouver un expert en CRO au Québec, vous",
+          "response_length": 2247,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "claude": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [
+            {
+              "name": "Adviso",
+              "urls": [],
+              "context": "Listée comme agence CRO reconnue à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Positionnée comme leader en analytique et CRO"
+            },
+            {
+              "name": "Dialekta",
+              "urls": [],
+              "context": "Listée comme agence CRO reconnue à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Présentée comme spécialiste UX/CRO"
+            },
+            {
+              "name": "Bloom",
+              "urls": [],
+              "context": "Listée comme agence CRO reconnue à Montréal",
+              "mention_type": "recommendation",
+              "perceived_strength": "Décrite comme agence de croissance numérique"
+            },
+            {
+              "name": "Absolunet",
+              "urls": [],
+              "context": "Listée comme agence CRO reconnue à Montréal (propriété d'Accenture)",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialisée en commerce électronique et CRO"
+            },
+            {
+              "name": "Combustible",
+              "urls": [],
+              "context": "Listée comme agence CRO reconnue à Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Positionnée en marketing numérique et optimisation"
+            },
+            {
+              "name": "Wenovio",
+              "urls": [],
+              "context": "Listée comme agence CRO reconnue à Québec",
+              "mention_type": "recommendation",
+              "perceived_strength": "Spécialisée en design web et CRO"
+            }
+          ],
+          "full_response": "# Audit et Optimisation de Conversion (CRO) au Québec\n\n## 🎯 Qu'est-ce que le CRO?\n\nLe **CRO (Conversion Rate Optimization)** vise à augmenter le pourcentage de visiteurs qui accomplissent une action désirée sur votre site web (achat, inscription, demande de soumission, etc.).\n\n## 🔍 Composantes d'un Audit CRO Professionnel\n\n### 1. **Analyse Quantitative**\n- Google Analytics (comportement utilisateurs)\n- Taux de rebond et pages de sortie\n- Entonnoirs de conversion\n- Cartes de chaleur (Hotjar, Crazy Egg)\n- Enregistrements de sessions\n\n### 2. **Analyse Qualitative**\n- Tests utilisateurs\n- Sondages et questionnaires\n- Analyse des commentaires clients\n- Tests d'utilisabilité\n\n### 3. **Audit Technique**\n- Vitesse de chargement\n- Compatibilité mobile\n- Formulaires et processus de paiement\n- Erreurs 404 et liens brisés\n\n## 🏆 Agences CRO Reconnues au Québec\n\n### **Montréal**\n- **Adviso** - Leader en analytique et CRO\n- **Dialekta** - Spécialistes UX/CRO\n- **Bloom** - Agence de croissance numérique\n- **Absolunet (Accenture)** - Commerce électronique et CRO\n\n### **Québec**\n- **Combustible** - Marketing numérique et optimisation\n- **Wenovio** - Design web et CRO\n\n### **Consultants Indépendants**\n- Recherchez sur LinkedIn avec mots-clés: \"CRO Québec\", \"Optimisation conversion Montréal\"\n\n## 💰 Coûts Approximatifs (Québec)\n\n| Service | Tarif |\n|---------|-------|\n|",
+          "response_length": 1370,
+          "sentiment": "neutral",
+          "invisibility_reasons": [],
+          "share_of_voice": 0.0,
+          "error": "sequence item 0: expected str instance, dict found"
+        },
+        "perplexity": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'audit et optimisation de conversion (cro) professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'audit et optimisation de conversion (cro) professionnel québec'",
+              "example_title": "Guide Complet: Audit Et Optimisation De Conversion (Cro) Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "gemini": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'audit et optimisation de conversion (cro) professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'audit et optimisation de conversion (cro) professionnel québec'",
+              "example_title": "Guide Complet: Audit Et Optimisation De Conversion (Cro) Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        },
+        "google_ai": {
+          "mentioned": false,
+          "position": null,
+          "context_snippet": null,
+          "competitors_mentioned": [],
+          "full_response": "",
+          "response_length": 0,
+          "sentiment": "neutral",
+          "invisibility_reasons": [
+            {
+              "reason": "NO_RELEVANT_CONTENT",
+              "severity": "CRITICAL",
+              "explanation": "Aucune page ne traite spécifiquement de 'audit et optimisation de conversion (cro) professionnel québec'",
+              "action": "Créer une page dédiée ou un article sur 'audit et optimisation de conversion (cro) professionnel québec'",
+              "example_title": "Guide Complet: Audit Et Optimisation De Conversion (Cro) Professionnel Québec en 2025",
+              "estimated_impact": "HIGH"
+            },
+            {
+              "reason": "INSUFFICIENT_CONTENT",
+              "severity": "HIGH",
+              "explanation": "Contenu existant trop court (estimé < 1000 mots)",
+              "action": "Étendre le contenu à minimum 2000 mots avec 10+ statistiques",
+              "estimated_impact": "MEDIUM-HIGH"
+            },
+            {
+              "reason": "NO_SCHEMA_MARKUP",
+              "severity": "MEDIUM",
+              "explanation": "Schéma markup probablement absent ou incomplet",
+              "action": "Ajouter schema Article + FAQPage + Organization",
+              "estimated_impact": "MEDIUM"
+            }
+          ],
+          "share_of_voice": 0.0
+        }
+      }
+    }
+  ],
+  "summary": {
+    "total_queries": 100,
+    "global_visibility": 0.0,
+    "by_platform": {
+      "chatgpt": 0.0,
+      "claude": 0.0,
+      "perplexity": 0.0,
+      "gemini": 0.0,
+      "google_ai": 0.0
+    },
+    "sentiment_breakdown": {
+      "positive": 0,
+      "neutral": 0,
+      "negative": 0
+    },
+    "avg_share_of_voice": 0
+  },
+  "insights": {
+    "dominant_sentiment": "neutral",
+    "share_of_voice_rating": "LOW",
+    "competitive_position": "Follower"
+  },
+  "query_type_analysis": {
+    "comparison": {
+      "queries": [
+        "meilleur optimisation complète de l'écosystème digital québec",
+        "meilleur audit et optimisation de conversion (cro) québec",
+        "meilleur seo technique et stratégique québec",
+        "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+        "meilleur configuration et dashboards analytics (ga4) québec",
+        "meilleur analyse concurrentielle et stratégie de positionnement québec",
+        "meilleur gestion de programmes email et sms marketing québec",
+        "meilleur stratégie et gestion des réseaux sociaux québec"
+      ],
+      "visibility": 0.0,
+      "mentions": 0,
+      "total_tests": 40,
+      "avg_position": null,
+      "top_competitors": [
+        {
+          "name": "Dialekta",
+          "mentions": 3
+        },
+        {
+          "name": "Adviso",
+          "mentions": 3
+        },
+        {
+          "name": "Digitad",
+          "mentions": 3
+        },
+        {
+          "name": "Facebook",
+          "mentions": 2
+        },
+        {
+          "name": "Instagram",
+          "mentions": 2
+        }
+      ]
+    },
+    "informational": {
+      "queries": [
+        "optimisation complète de l'écosystème digital professionnel québec",
+        "audit et optimisation de conversion (cro) professionnel québec"
+      ],
+      "visibility": 0.0,
+      "mentions": 0,
+      "total_tests": 10,
+      "avg_position": null,
+      "top_competitors": [
+        {
+          "name": "Google Analytics",
+          "mentions": 2
+        },
+        {
+          "name": "Facebook",
+          "mentions": 1
+        },
+        {
+          "name": "LinkedIn",
+          "mentions": 1
+        },
+        {
+          "name": "Instagram",
+          "mentions": 1
+        },
+        {
+          "name": "OVH Canada",
+          "mentions": 1
+        }
+      ]
+    }
+  },
+  "competitive_analysis": {
+    "total_unique_competitors": 45,
+    "competitors": [
+      {
+        "name": "Dialekta",
+        "total_mentions": 4,
+        "visibility_rate": 0.08,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Présentée comme spécialiste UX/CRO",
+          "Forte expertise en B2B et B2C",
+          "Approche personnalisée et forte présence dans deux villes principales du Québec",
+          "Spécialiste reconnu en CRO avec approche data-driven et tests A/B, basée à Montréal"
+        ],
+        "mention_breakdown": {
+          "recommendation": 4,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "audit et optimisation de conversion (cro) professionnel québec",
+          "meilleur audit et optimisation de conversion (cro) québec",
+          "meilleur seo technique et stratégique québec"
+        ]
+      },
+      {
+        "name": "Adviso",
+        "total_mentions": 4,
+        "visibility_rate": 0.08,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Positionnée comme leader en analytique et CRO",
+          "Approche data-driven et capacité à servir des clients corporatifs importants",
+          "Spécialiste Google Ads, Meta Ads, LinkedIn avec expertise en attribution et analytics avancés",
+          "Expertise en analytique web et CRO avec méthodologie structurée d'optimisation, présence dans deux villes"
+        ],
+        "mention_breakdown": {
+          "recommendation": 4,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "audit et optimisation de conversion (cro) professionnel québec",
+          "meilleur audit et optimisation de conversion (cro) québec",
+          "meilleur seo technique et stratégique québec"
+        ]
+      },
+      {
+        "name": "Facebook",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Réseau social très populaire au Québec avec forte pénétration du marché",
+          "Plateforme populaire recommandée pour la publicité payante",
+          "Plateforme recommandée pour la présence sur les réseaux sociaux"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "meilleur optimisation complète de l'écosystème digital québec",
+          "optimisation complète de l'écosystème digital professionnel québec"
+        ]
+      },
+      {
+        "name": "Instagram",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Plateforme recommandée pour la présence sur les réseaux sociaux",
+          "Plateforme populaire recommandée pour la publicité payante",
+          "Plateforme en croissance forte adaptée au contenu visuel localisé"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "meilleur optimisation complète de l'écosystème digital québec",
+          "optimisation complète de l'écosystème digital professionnel québec"
+        ]
+      },
+      {
+        "name": "LinkedIn",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Plateforme populaire recommandée pour la publicité payante",
+          "Plateforme professionnelle clé pour le réseautage B2B québécois",
+          "Plateforme recommandée pour la présence sur les réseaux sociaux professionnels"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "meilleur optimisation complète de l'écosystème digital québec",
+          "optimisation complète de l'écosystème digital professionnel québec"
+        ]
+      },
+      {
+        "name": "Bloom",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Décrite comme agence de croissance numérique",
+          "Forte expertise CRO avec focus particulier sur l'expérience utilisateur (UX)",
+          "Performance marketing et programmatique avec approche data-driven"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "audit et optimisation de conversion (cro) professionnel québec",
+          "meilleur audit et optimisation de conversion (cro) québec"
+        ]
+      },
+      {
+        "name": "Digitad",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Google Premier Partner avec gestion complète de campagnes payantes",
+          "Équipe expérimentée avec bonne réputation établie au Québec",
+          "Services complets incluant audit CRO avec expertise spécifique en e-commerce, présence dans deux villes"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "meilleur audit et optimisation de conversion (cro) québec",
+          "meilleur seo technique et stratégique québec"
+        ]
+      },
+      {
+        "name": "Combustible",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Positionnée en marketing numérique et optimisation",
+          "Marketing de performance",
+          "Expertise reconnue en audits SEO approfondis et positionnée en première place des agences réputées"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "audit et optimisation de conversion (cro) professionnel québec",
+          "meilleur seo technique et stratégique québec"
+        ]
+      },
+      {
+        "name": "Google Analytics",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [],
+        "perceived_strengths": [
+          "Outil standard pour analyser les données existantes et le comportement utilisateur",
+          "Outil capable de fournir des insights précieux sur les performances des campagnes",
+          "Outil recommandé pour le suivi et l'analyse des performances digitales"
+        ],
+        "mention_breakdown": {
+          "recommendation": 3,
+          "comparison": 0,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "meilleur gestion de campagnes publicitaires payantes (paid media) québec",
+          "audit et optimisation de conversion (cro) professionnel québec",
+          "optimisation complète de l'écosystème digital professionnel québec"
+        ]
+      },
+      {
+        "name": "Mailchimp",
+        "total_mentions": 3,
+        "visibility_rate": 0.06,
+        "urls_cited": [
+          "mailchimp.com"
+        ],
+        "perceived_strengths": [
+          "Plateforme d'email marketing reconnue",
+          "Très populaire, facile d'utilisation, templates personnalisables et capacités d'automatisation",
+          "Forfait gratuit jusqu'à 500 contacts et nombreuses intégrations disponibles"
+        ],
+        "mention_breakdown": {
+          "recommendation": 2,
+          "comparison": 1,
+          "neutral": 0,
+          "negative": 0
+        },
+        "queries_present_in": [
+          "optimisation complète de l'écosystème digital professionnel québec",
+          "meilleur gestion de programmes email et sms marketing québec"
+        ]
+      }
+    ],
+    "competitive_insights": [
+      {
+        "type": "DOMINANT_COMPETITOR",
+        "severity": "HIGH",
+        "title": "Dialekta domine avec 4 mentions",
+        "details": "Visibilité : 8.0%",
+        "perceived_strengths": [
+          "Présentée comme spécialiste UX/CRO",
+          "Forte expertise en B2B et B2C",
+          "Approche personnalisée et forte présence dans deux villes principales du Québec",
+          "Spécialiste reconnu en CRO avec approche data-driven et tests A/B, basée à Montréal"
+        ],
+        "action": "Analyser leurs 0 URLs citées",
+        "urls_to_analyze": []
+      },
+      {
+        "type": "VISIBILITY_GAP",
+        "severity": "CRITICAL",
+        "title": "Dialekta visible, vous invisible",
+        "details": "Leur: 8.0% | Vous: 0.0%",
+        "action": "Reverse-engineer leurs pages citées"
+      },
+      {
+        "type": "URL_CITATION_GAP",
+        "severity": "HIGH",
+        "title": "LLMs citent 8 URLs de compétiteurs",
+        "details": "Top: ",
+        "action": "Créer pages avec stats pour être cité",
+        "example": "Ajouter 15+ statistiques par page"
+      }
+    ]
+  },
+  "competitive_intelligence": {
+    "competitors_analyzed": 0
+  }
+}

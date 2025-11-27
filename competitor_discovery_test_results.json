@@ -1,10 +1,12 @@
 {
-  "test_start": "2025-11-27T18:10:48.693027",
+  "test_start": "2025-11-27T18:16:44.051126",
   "tests_run": 2,
   "tests_passed": 1,
   "tests_failed": 1,
   "detailed_results": [],
-  "critical_issues": [],
+  "critical_issues": [
+    "Analysis timeout for sekoia.ca"
+  ],
   "competitor_validation": [],
-  "test_end": "2025-11-27T18:10:48.832362"
+  "test_end": "2025-11-27T18:45:25.386940"
 }
