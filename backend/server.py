@@ -1220,6 +1220,50 @@ async def process_analysis_job(job_id: str):
             {"$set": {"progress": 80}}
         )
         
+        # Step 5.5: Generate GEO-optimized content (Module 2)
+        generated_articles = []
+        try:
+            logger.info("📝 Module 2: Generating GEO-optimized content...")
+            from content_generator import ContentGenerator
+            
+            content_gen = ContentGenerator()
+            
+            # Extraire les top opportunités (requêtes à faible visibilité)
+            opportunities = []
+            if analysis_result.get('recommendations'):
+                for rec in analysis_result.get('recommendations', [])[:5]:  # Limiter à 5 pour les coûts
+                    opportunities.append({
+                        'query': rec.get('action', ''),
+                        'competitors_content': ''
+                    })
+            
+            # Préparer le contexte du site
+            site_context = {
+                'industry': semantic_analysis.get('industry_classification', {}).get('primary_industry', 'services'),
+                'site_name': job_doc.get('url', '').replace('https://', '').replace('http://', '').split('/')[0],
+                'url': job_doc['url'],
+                'expertise': semantic_analysis.get('company_description', {}).get('value_proposition', '')
+            }
+            
+            # Générer les articles
+            if opportunities:
+                generated_articles = await content_gen.generate_articles(
+                    opportunities,
+                    site_context
+                )
+                logger.info(f"✅ Generated {len(generated_articles)} GEO-optimized articles")
+            else:
+                logger.warning("No opportunities found for content generation")
+                
+        except Exception as e:
+            logger.error(f"Content generation failed: {str(e)}")
+            generated_articles = []
+        
+        await db.analysis_jobs.update_one(
+            {"id": job_id},
+            {"$set": {"progress": 82}}
+        )
+        
         # Step 6: Create report with enriched data and weighted scoring
         scores_dict = analysis_result['scores']
         
