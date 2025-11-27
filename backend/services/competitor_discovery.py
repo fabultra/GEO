@@ -179,8 +179,21 @@ class CompetitorDiscovery:
             industry_fr = industry_to_use
         
         # REQUÊTES EN FRANÇAIS (naturel québécois)
-        queries.append(f"meilleures {industry_fr} {location_fr}")
-        queries.append(f"top {industry_fr} Québec")
+        # Adapter selon le type d'industrie (avec ou sans "compagnie")
+        if any(term in industry_fr for term in ['compagnie', 'cabinet', 'firme', 'institution']):
+            # Déjà un nom complet (ex: "compagnie d'assurance")
+            queries.append(f"meilleures {industry_fr} {location_fr}")
+            queries.append(f"top {industry_fr} Québec")
+        elif any(term in industry_fr for term in ['assurance', 'assureur', 'financière']):
+            # Ajouter "compagnie" ou terme approprié
+            queries.append(f"meilleures compagnies {industry_fr} {location_fr}")
+            queries.append(f"top compagnies {industry_fr} Québec")
+        else:
+            # Terme générique - ajouter "entreprise"
+            queries.append(f"meilleures entreprises {industry_fr} {location_fr}")
+            queries.append(f"top entreprises {industry_fr} Québec")
+        
+        # Liste générale
         queries.append(f"liste {industry_fr} Canada")
         
         # REQUÊTES EN ANGLAIS (Canada)
