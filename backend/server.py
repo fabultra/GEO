@@ -1028,24 +1028,29 @@ async def process_analysis_job(job_id: str):
                 
                 logger.info(f"📊 Found {len(competitor_urls)} competitor URLs from visibility results")
                 
-                # Étape 2: Si pas assez de compétiteurs, utiliser la découverte intelligente
-                if len(competitor_urls) < 3:
-                    logger.info("🔍 Not enough competitors from visibility, using intelligent discovery...")
+                # Étape 2: Découverte intelligente complète (nouveau pipeline 3 étages)
+                logger.info("🚀 Running full competitor discovery pipeline...")
+                
+                try:
+                    # Le nouveau discover_real_competitors retourne une liste de dicts avec score/type/reason
+                    discovered_competitors = competitor_discovery.discover_real_competitors(
+                        semantic_analysis=semantic_analysis,
+                        our_url=job_doc['url'],
+                        visibility_urls=competitor_urls,  # URLs déjà trouvées depuis visibilité
+                        max_competitors=5
+                    )
                     
-                    try:
-                        discovered_urls = competitor_discovery.discover_real_competitors(
-                            semantic_analysis=semantic_analysis,
-                            our_url=job_doc['url'],
-                            max_competitors=5
-                        )
-                        
-                        # Combiner et dédupliquer
-                        all_urls = list(set(competitor_urls + discovered_urls))
-                        competitor_urls = all_urls[:5]
-                        
-                        logger.info(f"✅ Total competitors after discovery: {len(competitor_urls)}")
-                    except Exception as e:
-                        logger.error(f"Competitor discovery failed: {e}")
+                    # Extraire les URLs pour compatibilité avec competitive_intelligence
+                    competitor_urls = [c['homepage_url'] for c in discovered_competitors]
+                    
+                    logger.info(f"✅ Competitor discovery complete: {len(competitor_urls)} competitors")
+                    for i, comp in enumerate(discovered_competitors, 1):
+                        logger.info(f"  {i}. {comp['domain']} (score: {comp['score']}, type: {comp['type']}, source: {comp['source']})")
+                    
+                except Exception as e:
+                    logger.error(f"Competitor discovery failed: {e}")
+                    import traceback
+                    traceback.print_exc()
                 
                 logger.info(f"📊 Final competitor count: {len(competitor_urls)}")
                 
