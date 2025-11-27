@@ -79,7 +79,7 @@ class CacheService:
             # En cas d'erreur, supprimer le fichier corrompu
             try:
                 cache_file.unlink()
-            except:
+            except Exception:
                 pass
             return None
     

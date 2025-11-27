@@ -337,7 +337,7 @@ VOUS DEVEZ GÉNÉRER 20 RECOMMENDATIONS VARIÉES COUVRANT:
                 analysis_result = json.loads(response_text)
                 if 'scores' in analysis_result and 'recommendations' in analysis_result:
                     return analysis_result
-            except:
+            except Exception:
                 pass
             
             # Tentative 3: Extraction manuelle des scores + génération recommendations
