@@ -388,6 +388,41 @@ class CompetitorDiscovery:
         
         return unique_urls
     
+    def _parse_duckduckgo_results(self, soup: BeautifulSoup) -> List[str]:
+        """
+        Parse la page DuckDuckGo et extrait les URLs des résultats organiques
+        """
+        urls = []
+        
+        # DuckDuckGo utilise des balises avec class="result__url"
+        for result in soup.find_all('a', class_='result__url'):
+            href = result.get('href', '')
+            
+            if href.startswith('http') and self._is_valid_competitor_url(href):
+                urls.append(href)
+        
+        # Fallback: chercher dans les liens directs
+        if not urls:
+            for link in soup.find_all('a', href=True):
+                href = link['href']
+                
+                # Format DuckDuckGo: //duckduckgo.com/l/?uddg=https://example.com
+                if 'uddg=' in href:
+                    try:
+                        url = href.split('uddg=')[1].split('&')[0]
+                        from urllib.parse import unquote
+                        url = unquote(url)
+                        
+                        if url.startswith('http') and self._is_valid_competitor_url(url):
+                            urls.append(url)
+                    except:
+                        continue
+        
+        # Dédupliquer
+        unique_urls = list(dict.fromkeys(urls))
+        
+        return unique_urls
+    
     def _is_valid_competitor_url(self, url: str) -> bool:
         """
         Filtre les URLs non pertinentes (social media, directories, etc.)
