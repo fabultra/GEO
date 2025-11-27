@@ -1192,6 +1192,136 @@ const ReportPage = () => {
             )}
           </TabsContent>
 
+          {/* Content Tab - Generated GEO Articles */}
+          <TabsContent value="content" className="space-y-6">
+            <div className="glass-effect rounded-2xl p-8">
+              <div className="flex items-center justify-between mb-6">
+                <div>
+                  <h2 className="text-2xl font-bold mb-2 flex items-center gap-2">
+                    <Sparkles className="w-6 h-6 text-purple-500" />
+                    Module 2 : Contenu GEO-Optimisé Généré
+                  </h2>
+                  <p className="text-gray-600">
+                    Articles optimisés pour ChatGPT, Claude, Perplexity et Gemini
+                  </p>
+                </div>
+              </div>
+
+              {report.generated_articles && report.generated_articles.length > 0 ? (
+                <div className="space-y-6">
+                  <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-4 border border-purple-200">
+                    <div className="flex items-center gap-4">
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-purple-600">
+                          {report.generated_articles.length}
+                        </div>
+                        <div className="text-sm text-gray-600">Articles générés</div>
+                      </div>
+                      <div className="text-center border-l border-purple-300 pl-4">
+                        <div className="text-3xl font-bold text-blue-600">
+                          {report.generated_articles.reduce((sum, a) => sum + (a.word_count || 0), 0).toLocaleString()}
+                        </div>
+                        <div className="text-sm text-gray-600">Mots total</div>
+                      </div>
+                      <div className="text-center border-l border-purple-300 pl-4">
+                        <div className="text-3xl font-bold text-green-600">
+                          {(report.generated_articles.reduce((sum, a) => sum + (a.geo_score_estimate || 0), 0) / report.generated_articles.length).toFixed(1)}/10
+                        </div>
+                        <div className="text-sm text-gray-600">Score GEO moyen</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {report.generated_articles.map((article, idx) => (
+                    <div key={idx} className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                      <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">
+                        <div className="flex items-start justify-between">
+                          <div className="flex-1">
+                            <h3 className="text-2xl font-bold mb-2">{article.title}</h3>
+                            <p className="text-purple-100">Requête cible : "{article.query}"</p>
+                          </div>
+                          <div className="bg-white/20 backdrop-blur rounded-lg px-4 py-2 text-center">
+                            <div className="text-2xl font-bold">{article.geo_score_estimate || 7}/10</div>
+                            <div className="text-xs">Score GEO</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="p-6 space-y-4">
+                        <div className="flex items-center gap-6 text-sm text-gray-600">
+                          <div className="flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-green-500" />
+                            <span>{article.word_count || 0} mots</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-green-500" />
+                            <span>{article.stats_count || 0}+ statistiques</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <CheckCircle2 className="w-4 h-4 text-green-500" />
+                            <span>Structure GEO-optimisée</span>
+                          </div>
+                        </div>
+
+                        <div className="bg-gray-50 rounded-lg p-4 max-h-96 overflow-y-auto">
+                          <pre className="whitespace-pre-wrap text-sm font-mono text-gray-700">
+                            {article.content_markdown ? article.content_markdown.substring(0, 1000) : 'Contenu non disponible'}...
+                          </pre>
+                        </div>
+
+                        <div className="flex gap-3">
+                          <Button 
+                            onClick={() => {
+                              const blob = new Blob([article.content_markdown || ''], { type: 'text/markdown' });
+                              const url = window.URL.createObjectURL(blob);
+                              const link = document.createElement('a');
+                              link.href = url;
+                              link.download = `article-${idx + 1}-${article.query.replace(/\s+/g, '-')}.md`;
+                              link.click();
+                              toast.success('Article téléchargé!');
+                            }}
+                            variant="outline"
+                          >
+                            <Download className="w-4 h-4 mr-2" />
+                            Télécharger Markdown
+                          </Button>
+                          {article.schema_markup && (
+                            <Button 
+                              onClick={() => {
+                                const blob = new Blob([JSON.stringify(article.schema_markup, null, 2)], { type: 'application/json' });
+                                const url = window.URL.createObjectURL(blob);
+                                const link = document.createElement('a');
+                                link.href = url;
+                                link.download = `schema-article-${idx + 1}.json`;
+                                link.click();
+                                toast.success('Schema téléchargé!');
+                              }}
+                              variant="outline"
+                            >
+                              <Download className="w-4 h-4 mr-2" />
+                              Télécharger Schema
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-12 bg-gray-50 rounded-lg">
+                  <Sparkles className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-700 mb-2">
+                    Aucun article généré
+                  </h3>
+                  <p className="text-gray-500">
+                    La génération de contenu n'a pas été activée pour cette analyse.
+                  </p>
+                </div>
+              )}
+            </div>
+          </TabsContent>
+
+
           {/* Data Gaps Tab */}
           <TabsContent value="data-gaps" className="space-y-6">
             <h3 className="text-2xl font-bold mb-4">📊 Analyse des Gaps de Données</h3>
