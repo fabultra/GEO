@@ -293,6 +293,7 @@ async def analyze_with_claude(crawl_data: Dict[str, Any], visibility_data: Dict[
     """
     from services.analyzer_service import analyzer_service
     return await analyzer_service.analyze_with_claude(crawl_data, visibility_data, retry_count, use_cache=True)
+
 async def generate_pdf_report(report: Report) -> bytes:
     """Generate PDF report"""
     try:
