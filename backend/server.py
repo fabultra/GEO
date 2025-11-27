@@ -287,7 +287,31 @@ async def crawl_website(url: str, max_pages: int = 10) -> Dict[str, Any]:
         raise
 
 async def analyze_with_claude(crawl_data: Dict[str, Any], visibility_data: Dict[str, Any] = None, retry_count: int = 3) -> Dict[str, Any]:
-    """Use Claude to analyze crawled content based on 8 GEO criteria"""
+    """Use Claude to analyze crawled content based on 8 GEO criteria - WITH CACHE"""
+    
+    # ============ CACHE CHECK (économie -30-40% API) ============
+    try:
+        from services.cache_service import cache_service
+        import hashlib
+        import json
+        
+        cache_key_data = {
+            'base_url': crawl_data.get('base_url', ''),
+            'pages_count': len(crawl_data.get('pages', [])),
+            'vis_score': visibility_data.get('overall_visibility', 0) if visibility_data else 0,
+            'v': '3'
+        }
+        cache_key = f"claude_v3_{hashlib.md5(json.dumps(cache_key_data, sort_keys=True).encode()).hexdigest()}"
+        
+        cached = cache_service.get(cache_key, max_age_hours=168)
+        if cached:
+            logger.info(f"✅ CACHE HIT - saved ~$0.50 API cost")
+            return cached
+        logger.info("💰 CACHE MISS - calling Claude...")
+    except Exception as e:
+        logger.debug(f"Cache check failed: {e}")
+    # ===========================================================
+    
     try:
         # Utiliser la clé Anthropic directe en priorité, fallback sur Emergent
         api_key = os.environ.get('ANTHROPIC_API_KEY', os.environ.get('EMERGENT_LLM_KEY'))
