@@ -133,22 +133,23 @@ class CompetitorDiscovery:
         
         # Traductions françaises NATURELLES pour industries (expressions québécoises)
         industry_translations = {
-            'insurance': 'compagnie d\'assurance',
+            'insurance': 'assurance',
             'life insurance': 'assurance vie',
             'car insurance': 'assurance auto',
             'home insurance': 'assurance habitation',
             'financial services': 'services financiers',
-            'banking': 'institution bancaire',
+            'banking': 'banque',
             'real estate': 'immobilier',
             'construction': 'construction',
-            'technology': 'entreprise technologie',
-            'healthcare': 'services santé',
+            'technology': 'technologie',
+            'software': 'logiciel',
+            'healthcare': 'santé',
             'education': 'éducation',
             'retail': 'commerce détail',
             'manufacturing': 'manufacturier',
-            'consulting': 'firme consultation',
-            'legal services': 'cabinet avocat',
-            'accounting': 'cabinet comptable'
+            'consulting': 'consultation',
+            'legal services': 'services juridiques',
+            'accounting': 'comptabilité'
         }
         
         # Termes génériques en français
@@ -179,22 +180,27 @@ class CompetitorDiscovery:
             industry_fr = industry_to_use
         
         # REQUÊTES EN FRANÇAIS (naturel québécois)
-        # Adapter selon le type d'industrie (avec ou sans "compagnie")
-        if any(term in industry_fr for term in ['compagnie', 'cabinet', 'firme', 'institution']):
-            # Déjà un nom complet (ex: "compagnie d'assurance")
-            queries.append(f"meilleures {industry_fr} {location_fr}")
-            queries.append(f"top {industry_fr} Québec")
-        elif any(term in industry_fr for term in ['assurance', 'assureur', 'financière']):
-            # Ajouter "compagnie" ou terme approprié
-            queries.append(f"meilleures compagnies {industry_fr} {location_fr}")
-            queries.append(f"top compagnies {industry_fr} Québec")
+        # Adapter selon le type d'industrie
+        if 'assurance' in industry_fr:
+            # Assurance → "compagnies d'assurance"
+            queries.append(f"meilleures compagnies d'assurance {location_fr}")
+            queries.append(f"compagnies {industry_fr} Québec")
+            queries.append(f"assureurs {location_fr}")
+        elif 'banque' in industry_fr or 'financier' in industry_fr:
+            # Finance → "institutions financières"
+            queries.append(f"meilleures institutions financières {location_fr}")
+            queries.append(f"banques {location_fr}")
+            queries.append(f"{industry_fr} Canada")
+        elif 'cabinet' in industry_fr or 'juridique' in industry_fr or 'comptable' in industry_fr:
+            # Services professionnels → "cabinets"
+            queries.append(f"meilleurs cabinets {industry_fr} {location_fr}")
+            queries.append(f"cabinets {industry_fr} Québec")
+            queries.append(f"{industry_fr} Canada")
         else:
-            # Terme générique - ajouter "entreprise"
+            # Terme générique → "entreprises"
             queries.append(f"meilleures entreprises {industry_fr} {location_fr}")
-            queries.append(f"top entreprises {industry_fr} Québec")
-        
-        # Liste générale
-        queries.append(f"liste {industry_fr} Canada")
+            queries.append(f"entreprises {industry_fr} Québec")
+            queries.append(f"{industry_fr} Canada")
         
         # REQUÊTES EN ANGLAIS (Canada)
         queries.append(f"top {industry_to_use} companies {location_en}")
