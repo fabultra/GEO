@@ -1307,6 +1307,11 @@ async def process_analysis_job(job_id: str):
         if token_analysis:
             report_dict['token_analysis'] = token_analysis
         
+        # Ajouter Module 2 (Generated Articles)
+        if generated_articles:
+            report_dict['generated_articles'] = generated_articles
+            logger.info(f"Added {len(generated_articles)} generated articles to report")
+        
         await db.reports.insert_one(report_dict)
         
         await db.analysis_jobs.update_one(
