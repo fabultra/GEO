@@ -557,20 +557,22 @@ class CompetitorDiscovery:
             # Accepter 200-399
             is_valid = response.status_code < 400
             if not is_valid:
-                logger.debug(f"  ❌ URL check failed: HTTP {response.status_code} for {url}")
+                logger.info(f"    ❌ URL check failed: HTTP {response.status_code}")
+            else:
+                logger.info(f"    ✅ URL exists: HTTP {response.status_code}")
             return is_valid
             
         except socket.gaierror as e:
-            logger.debug(f"  ❌ DNS lookup failed for {url}: {e}")
+            logger.info(f"    ❌ DNS lookup failed: {str(e)[:50]}")
             return False
         except requests.exceptions.Timeout:
-            logger.debug(f"  ⏱️  Timeout checking {url}")
+            logger.info(f"    ⏱️  Timeout (>{self.validation_timeout}s)")
             return False
         except requests.exceptions.RequestException as e:
-            logger.debug(f"  ❌ HTTP request failed for {url}: {e}")
+            logger.info(f"    ❌ HTTP error: {str(e)[:50]}")
             return False
         except Exception as e:
-            logger.debug(f"  ❌ URL validation error for {url}: {e}")
+            logger.info(f"    ❌ Validation error: {str(e)[:50]}")
             return False
     
     def _analyze_competitor_homepage(self, url: str) -> Optional[Dict[str, Any]]:
