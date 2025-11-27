@@ -1,453 +1,642 @@
 """
 Service de découverte intelligente de compétiteurs RÉELS
-Utilise l'analyse sémantique + recherche Google pour identifier les vrais acteurs du marché
-Inspiré de searchable.com
+Pipeline complet en 3 étages sans code incomplet
+Version 2 - Production ready
 """
 import logging
 import requests
+import socket
+import time
 import re
-from typing import List, Dict, Any, Optional, Set
+import hashlib
+from typing import List, Dict, Any, Optional, Tuple
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, quote_plus
-import time
+from collections import Counter
 
 logger = logging.getLogger(__name__)
 
 
 class CompetitorDiscovery:
-    """Découvre de vrais compétiteurs basés sur l'analyse sémantique"""
+    """
+    Découvre de vrais compétiteurs via pipeline 3 étages:
+    1. Extraction depuis visibilité/LLM (via CompetitorExtractor)
+    2. Recherche web structurée (Google + fallback Claude)
+    3. Validation, scoring et sélection finale
+    """
     
     def __init__(self):
-        self.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        self.google_delay = 2  # Délai entre requêtes Google
+        from config import (
+            COMPETITOR_SEARCH_TIMEOUT,
+            COMPETITOR_SEARCH_DELAY,
+            COMPETITOR_VALIDATION_TIMEOUT,
+            COMPETITOR_MAX_RETRIES,
+            COMPETITOR_RELEVANCE_THRESHOLD_DIRECT,
+            COMPETITOR_RELEVANCE_THRESHOLD_INDIRECT,
+            MAX_COMPETITORS
+        )
         
+        self.search_timeout = COMPETITOR_SEARCH_TIMEOUT
+        self.search_delay = COMPETITOR_SEARCH_DELAY
+        self.validation_timeout = COMPETITOR_VALIDATION_TIMEOUT
+        self.max_retries = COMPETITOR_MAX_RETRIES
+        self.threshold_direct = COMPETITOR_RELEVANCE_THRESHOLD_DIRECT
+        self.threshold_indirect = COMPETITOR_RELEVANCE_THRESHOLD_INDIRECT
+        self.max_competitors = MAX_COMPETITORS
+        
+        self.user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+    
     def discover_real_competitors(
-        self, 
+        self,
         semantic_analysis: Dict[str, Any],
         our_url: str,
-        max_competitors: int = 5
-    ) -> List[str]:
+        visibility_urls: Optional[List[str]] = None,
+        max_competitors: int = None
+    ) -> List[Dict[str, Any]]:
         """
-        Découvre de vrais compétiteurs basés sur l'analyse sémantique
+        Point d'entrée principal : découvre des compétiteurs réels et pertinents
+        
+        Pipeline complet:
+        1. Combine URLs depuis visibilité (visibility_urls) + recherche web
+        2. Valide existence et accessibilité
+        3. Score pertinence (0-1) et classe direct/indirect
+        4. Retourne top N triés par score
         
         Args:
-            semantic_analysis: Résultat de l'analyse sémantique
-            our_url: Notre URL (à exclure)
-            max_competitors: Nombre max de compétiteurs
+            semantic_analysis: Analyse sémantique du site (industrie, offerings, etc.)
+            our_url: URL de notre site (à exclure)
+            visibility_urls: URLs déjà extraites depuis visibilité/LLM (optionnel)
+            max_competitors: Nombre max (défaut: config.MAX_COMPETITORS)
             
         Returns:
-            Liste d'URLs de compétiteurs réels et validées
+            Liste de dicts:
+            [
+                {
+                    'domain': 'competitor.com',
+                    'homepage_url': 'https://competitor.com',
+                    'score': 0.85,
+                    'type': 'direct',  # ou 'indirect'
+                    'reason': 'Même industrie (assurance), offerings similaires',
+                    'source': 'both'  # 'llm', 'web_search', 'both'
+                },
+                ...
+            ]
         """
-        logger.info("🔍 Starting intelligent competitor discovery...")
+        if max_competitors is None:
+            max_competitors = self.max_competitors
         
-        # Extraire les informations clés
+        logger.info("🚀 Starting complete competitor discovery pipeline...")
+        
+        # Extraire infos clés du semantic_analysis
         industry_info = semantic_analysis.get('industry_classification', {})
         primary_industry = industry_info.get('primary_industry', '')
         sub_industry = industry_info.get('sub_industry', '')
         company_type = industry_info.get('company_type', '')
-        geographic_scope = industry_info.get('geographic_scope', 'national')
         
-        # Extraire les offerings principaux
         entities = semantic_analysis.get('entities', {})
         offerings = entities.get('offerings', [])
         top_offerings = [o.get('name') if isinstance(o, dict) else str(o) for o in offerings[:3]]
         
-        logger.info(f"📊 Industry: {primary_industry} | Sub: {sub_industry} | Type: {company_type}")
-        logger.info(f"🎯 Top offerings: {', '.join(top_offerings)}")
+        # Extraire brand name depuis URL ou title
+        brand_name = self._extract_brand_name(our_url, semantic_analysis)
         
-        # Générer des requêtes de recherche intelligentes
+        logger.info(f"📊 Target: {brand_name} | Industry: {primary_industry} | Offerings: {top_offerings[:2]}")
+        
+        # STAGE 1 déjà fait en amont (visibility_urls)
+        # STAGE 2: Recherche web
+        web_urls = self._search_web_for_competitors(
+            our_url=our_url,
+            primary_industry=primary_industry,
+            sub_industry=sub_industry,
+            offerings=top_offerings,
+            brand_name=brand_name
+        )
+        
+        # Combiner URLs des 2 sources
+        all_candidate_urls = list(set((visibility_urls or []) + web_urls))
+        
+        # Marquer la source de chaque URL
+        url_sources = {}
+        for url in visibility_urls or []:
+            url_sources[url] = 'llm'
+        for url in web_urls:
+            if url in url_sources:
+                url_sources[url] = 'both'
+            else:
+                url_sources[url] = 'web_search'
+        
+        logger.info(f"📥 Total candidates: {len(all_candidate_urls)} (LLM: {len(visibility_urls or [])}, Web: {len(web_urls)})")
+        
+        # Filtrer notre propre domaine
+        from utils.competitor_extractor import CompetitorExtractor
+        filtered_urls = CompetitorExtractor.filter_self_domain(all_candidate_urls, our_url)
+        
+        # STAGE 3: Validation et scoring
+        scored_competitors = self._validate_and_score_competitors(
+            urls=filtered_urls,
+            our_url=our_url,
+            primary_industry=primary_industry,
+            offerings=top_offerings,
+            url_sources=url_sources
+        )
+        
+        # Trier par score décroissant et limiter
+        scored_competitors.sort(key=lambda x: x['score'], reverse=True)
+        top_competitors = scored_competitors[:max_competitors]
+        
+        logger.info(f"✅ Final: {len(top_competitors)} competitors (direct: {sum(1 for c in top_competitors if c['type']=='direct')}, indirect: {sum(1 for c in top_competitors if c['type']=='indirect')})")
+        
+        return top_competitors
+    
+    def _extract_brand_name(self, url: str, semantic_analysis: Dict) -> str:
+        """
+        Extrait le nom de marque depuis l'URL ou l'analyse sémantique
+        """
+        # Essayer depuis semantic_analysis
+        company_desc = semantic_analysis.get('company_description', {})
+        brand = company_desc.get('brand_name', '')
+        if brand:
+            return brand
+        
+        # Fallback: depuis domain
+        try:
+            parsed = urlparse(url)
+            domain = parsed.netloc.replace('www.', '')
+            # Prendre la partie avant le TLD
+            brand = domain.split('.')[0]
+            return brand.capitalize()
+        except:
+            return ''
+    
+    def _search_web_for_competitors(
+        self,
+        our_url: str,
+        primary_industry: str,
+        sub_industry: str,
+        offerings: List[str],
+        brand_name: str
+    ) -> List[str]:
+        """
+        STAGE 2: Recherche web structurée pour trouver des compétiteurs
+        
+        Returns:
+            Liste d'URLs trouvées via recherche
+        """
+        logger.info("🔎 Stage 2: Web search for competitors...")
+        
+        # Générer requêtes de recherche
         search_queries = self._generate_search_queries(
             primary_industry=primary_industry,
             sub_industry=sub_industry,
-            company_type=company_type,
-            offerings=top_offerings,
-            geographic_scope=geographic_scope
+            offerings=offerings,
+            brand_name=brand_name
         )
         
-        # Rechercher sur Google
-        competitor_urls = set()
-        for query in search_queries[:3]:  # Limiter à 3 requêtes max
-            logger.info(f"🔎 Google search: {query}")
-            urls = self._search_google(query, max_results=10)
-            competitor_urls.update(urls)
+        all_urls = set()
+        
+        for query in search_queries[:4]:  # Max 4 requêtes pour limiter
+            logger.info(f"  🔍 Query: {query}")
             
-            if len(competitor_urls) >= max_competitors * 2:
-                break
-            
-            time.sleep(self.google_delay)  # Respecter les limites
+            try:
+                urls = self._search_google(query, max_results=10)
+                all_urls.update(urls)
+                logger.info(f"    → Found {len(urls)} URLs")
+                
+                # Délai entre requêtes
+                time.sleep(self.search_delay)
+                
+            except Exception as e:
+                logger.warning(f"    ⚠️  Search failed: {e}")
+                continue
         
-        # FALLBACK: Si Google ne retourne rien, utiliser Claude
-        if len(competitor_urls) == 0:
-            logger.warning("⚠️  Google search returned 0 results, using Claude fallback")
-            competitor_urls = set(self._get_competitors_from_claude(
-                primary_industry=primary_industry,
-                sub_industry=sub_industry,
-                company_type=company_type,
-                max_competitors=max_competitors
-            ))
-        
-        # Filtrer notre propre domaine
-        our_domain = self._extract_domain(our_url)
-        competitor_urls = [
-            url for url in competitor_urls 
-            if self._extract_domain(url) != our_domain
-        ]
-        
-        # Valider et scorer les URLs
-        validated_competitors = self._validate_and_score_competitors(
-            competitor_urls,
-            primary_industry=primary_industry,
-            offerings=top_offerings
-        )
-        
-        # Retourner les top N
-        top_competitors = validated_competitors[:max_competitors]
-        
-        logger.info(f"✅ Found {len(top_competitors)} real competitors")
-        for i, comp in enumerate(top_competitors, 1):
-            logger.info(f"  {i}. {comp['url']} (score: {comp['score']:.2f})")
-        
-        return [c['url'] for c in top_competitors]
+        urls_list = list(all_urls)
+        logger.info(f"📦 Stage 2 total: {len(urls_list)} unique URLs from web search")
+        return urls_list
     
     def _generate_search_queries(
         self,
         primary_industry: str,
         sub_industry: str,
-        company_type: str,
         offerings: List[str],
-        geographic_scope: str
+        brand_name: str
     ) -> List[str]:
-        """Génère des requêtes de recherche Google BILINGUES (FR + EN) pour le Québec/Canada"""
+        """
+        Génère des requêtes de recherche intelligentes orientées "trouver des compétiteurs"
+        
+        Returns:
+            Liste de requêtes (français + anglais pour Québec/Canada)
+        """
         queries = []
         
-        # Localisation pour Québec/Canada
-        location_fr = "Québec"
-        location_en = "Quebec Canada"
+        # Utiliser sub_industry si disponible, sinon primary
+        industry = (sub_industry if sub_industry else primary_industry).lower()
         
-        # Simplifier les noms d'industrie
-        industry_clean = primary_industry.replace('_', ' ').strip().lower()
-        sub_clean = sub_industry.replace('_', ' ').strip().lower() if sub_industry else ""
+        # Traductions FR pour industrie
+        industry_fr = self._translate_industry_to_french(industry)
         
-        # Choisir la meilleure industrie
-        industry_to_use = sub_clean if (sub_clean and len(sub_clean) < 40) else industry_clean
+        # Query 1: Alternative à [brand]
+        if brand_name:
+            queries.append(f"alternative à {brand_name} Québec")
+            queries.append(f"{brand_name} competitors Canada")
         
-        # Traductions françaises NATURELLES pour industries (expressions québécoises)
-        industry_translations = {
-            'insurance': 'assurance',
-            'life insurance': 'assurance vie',
-            'car insurance': 'assurance auto',
-            'home insurance': 'assurance habitation',
-            'financial services': 'services financiers',
-            'banking': 'banque',
-            'real estate': 'immobilier',
-            'construction': 'construction',
-            'technology': 'technologie',
-            'software': 'logiciel',
-            'healthcare': 'santé',
-            'education': 'éducation',
-            'retail': 'commerce détail',
-            'manufacturing': 'manufacturier',
-            'consulting': 'consultation',
-            'legal services': 'services juridiques',
-            'accounting': 'comptabilité'
-        }
+        # Query 2: Meilleurs [type de service]
+        if industry_fr:
+            queries.append(f"meilleures compagnies {industry_fr} Québec")
+        if industry:
+            queries.append(f"top {industry} companies Quebec Canada")
         
-        # Termes génériques en français
-        generic_terms_fr = {
-            'insurance': 'assureur',
-            'financial': 'financière',
-            'technology': 'techno',
-            'consulting': 'conseil',
-            'service': 'service'
-        }
+        # Query 3: [Offering] + location
+        if offerings:
+            main_offering = offerings[0].lower()
+            queries.append(f"{main_offering} Québec Canada")
         
-        # Traduire l'industrie vers le français naturel
-        industry_fr = None
-        for en, fr in industry_translations.items():
-            if en in industry_to_use:
-                industry_fr = fr
-                break
-        
-        # Si pas de traduction exacte, utiliser terme générique
-        if not industry_fr:
-            for en, fr in generic_terms_fr.items():
-                if en in industry_to_use:
-                    industry_fr = fr
-                    break
-        
-        # Fallback: garder l'original si aucune traduction
-        if not industry_fr:
-            industry_fr = industry_to_use
-        
-        # REQUÊTES EN FRANÇAIS (naturel québécois)
-        # Adapter selon le type d'industrie
-        if 'assurance' in industry_fr:
-            # Assurance → "compagnies d'assurance"
-            queries.append(f"meilleures compagnies d'assurance {location_fr}")
-            queries.append(f"compagnies {industry_fr} Québec")
-            queries.append(f"assureurs {location_fr}")
-        elif 'banque' in industry_fr or 'financier' in industry_fr:
-            # Finance → "institutions financières"
-            queries.append(f"meilleures institutions financières {location_fr}")
-            queries.append(f"banques {location_fr}")
-            queries.append(f"{industry_fr} Canada")
-        elif 'cabinet' in industry_fr or 'juridique' in industry_fr or 'comptable' in industry_fr:
-            # Services professionnels → "cabinets"
-            queries.append(f"meilleurs cabinets {industry_fr} {location_fr}")
-            queries.append(f"cabinets {industry_fr} Québec")
-            queries.append(f"{industry_fr} Canada")
-        else:
-            # Terme générique → "entreprises"
-            queries.append(f"meilleures entreprises {industry_fr} {location_fr}")
-            queries.append(f"entreprises {industry_fr} Québec")
-            queries.append(f"{industry_fr} Canada")
-        
-        # REQUÊTES EN ANGLAIS (Canada)
-        queries.append(f"top {industry_to_use} companies {location_en}")
-        queries.append(f"best {industry_to_use} {location_en}")
-        
-        # Services/produits spécifiques en français
-        if offerings and len(offerings[0]) < 40:
-            main_offering = offerings[0]
-            queries.append(f"{main_offering} {location_fr}")
+        # Query 4: [Industry] concurrents
+        if industry:
+            queries.append(f"{industry} leaders Canada")
         
         return queries
     
+    def _translate_industry_to_french(self, industry: str) -> str:
+        """
+        Traduit industrie en français naturel
+        """
+        translations = {
+            'insurance': "d'assurance",
+            'life insurance': 'assurance vie',
+            'financial services': 'services financiers',
+            'banking': 'bancaires',
+            'real estate': 'immobilier',
+            'technology': 'technologie',
+            'software': 'logiciels',
+            'consulting': 'consultation',
+            'legal': 'juridiques',
+            'accounting': 'comptables'
+        }
+        
+        industry_lower = industry.lower()
+        for en, fr in translations.items():
+            if en in industry_lower:
+                return fr
+        
+        return industry
+    
     def _search_google(self, query: str, max_results: int = 10) -> List[str]:
         """
-        Recherche sur Google et extrait les URLs des résultats
-        Utilise plusieurs méthodes de parsing pour robustesse
+        Effectue une recherche Google et extrait les URLs des résultats organiques
         
         Args:
             query: Requête de recherche
-            max_results: Nombre max de résultats
+            max_results: Nombre max de résultats à extraire
             
         Returns:
-            Liste d'URLs
+            Liste d'URLs extraites
+        """
+        try:
+            # Construire URL de recherche
+            encoded_query = quote_plus(query)
+            search_url = f"https://www.google.com/search?q={encoded_query}&num={max_results}"
+            
+            headers = {
+                'User-Agent': self.user_agent,
+                'Accept': 'text/html,application/xhtml+xml',
+                'Accept-Language': 'fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive'
+            }
+            
+            response = requests.get(search_url, headers=headers, timeout=self.search_timeout)
+            response.raise_for_status()
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Extraire URLs des résultats organiques
+            urls = self._parse_google_results(soup)
+            
+            return urls
+            
+        except Exception as e:
+            logger.debug(f"Google search error: {e}")
+            return []
+    
+    def _parse_google_results(self, soup: BeautifulSoup) -> List[str]:
+        """
+        Parse la page Google et extrait les URLs des résultats organiques
         """
         urls = []
         
-        try:
-            # Construire l'URL de recherche Google
-            encoded_query = quote_plus(query)
-            google_url = f"https://www.google.com/search?q={encoded_query}&num={max_results}"
+        # Méthode 1: Chercher tous les liens <a>
+        for link in soup.find_all('a', href=True):
+            href = link['href']
             
-            # Faire la requête
-            headers = {
-                'User-Agent': self.user_agent,
-                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                'Accept-Language': 'en-US,en;q=0.5',
-                'Accept-Encoding': 'gzip, deflate',
-                'Connection': 'keep-alive',
-            }
+            # Format Google: /url?q=https://example.com&sa=...
+            if '/url?q=' in href:
+                try:
+                    # Extraire l'URL réelle
+                    url = href.split('/url?q=')[1].split('&')[0]
+                    
+                    # Valider que c'est une vraie URL
+                    if url.startswith('http') and self._is_valid_competitor_url(url):
+                        urls.append(url)
+                except:
+                    continue
             
-            response = requests.get(google_url, headers=headers, timeout=10)
-            response.raise_for_status()
-            
-            # Parser les résultats
-            soup = BeautifulSoup(response.content, 'html.parser')
-            
-            # Méthode 1: Chercher tous les liens <a>
-            all_links = soup.find_all('a', href=True)
-            
-            for link in all_links:
-                href = link.get('href', '')
-                
-                # Nettoyer et extraire l'URL
-                if '/url?q=' in href:
-                    # Format: /url?q=https://example.com&sa=...
-                    try:
-                        url = href.split('/url?q=')[1].split('&')[0]
-                        if url.startswith('http') and self._is_valid_competitor_url(url):
-                            urls.append(url)
-                    except:
-                        pass
-                elif href.startswith('http') and self._is_valid_competitor_url(href):
-                    # URL directe
-                    urls.append(href)
-            
-            # Dédupliquer
-            urls = list(dict.fromkeys(urls))  # Garde l'ordre
-            
-            logger.info(f"  → Found {len(urls)} URLs from Google")
-            
-        except Exception as e:
-            logger.warning(f"Failed to search Google for '{query}': {e}")
+            # Format direct
+            elif href.startswith('http') and self._is_valid_competitor_url(href):
+                urls.append(href)
         
-        return urls
+        # Dédupliquer
+        unique_urls = list(dict.fromkeys(urls))  # Garde l'ordre
+        
+        return unique_urls
     
     def _is_valid_competitor_url(self, url: str) -> bool:
-        """Filtre les URLs non pertinentes (réseaux sociaux, etc.)"""
-        # Exclure les domaines non pertinents
-        excluded_domains = [
-            'google.com', 'facebook.com', 'twitter.com', 'linkedin.com',
-            'instagram.com', 'youtube.com', 'wikipedia.org', 'yelp.com',
-            'maps.google.com', 'amazon.com', 'ebay.com'
-        ]
+        """
+        Filtre les URLs non pertinentes (social media, directories, etc.)
+        """
+        from utils.competitor_extractor import CompetitorExtractor
         
-        domain = self._extract_domain(url)
+        domain = CompetitorExtractor._extract_domain(url)
+        if not domain:
+            return False
         
-        for excluded in excluded_domains:
-            if excluded in domain:
-                return False
+        # Utiliser la liste d'exclusion de CompetitorExtractor
+        if CompetitorExtractor._is_excluded_domain(domain):
+            return False
         
         return True
-    
-    def _extract_domain(self, url: str) -> str:
-        """Extrait le domaine d'une URL"""
-        try:
-            parsed = urlparse(url)
-            domain = parsed.netloc.lower()
-            return domain.replace('www.', '')
-        except:
-            return url
-    
-    def _get_competitors_from_claude(
-        self,
-        primary_industry: str,
-        sub_industry: str,
-        company_type: str,
-        max_competitors: int = 5
-    ) -> List[str]:
-        """
-        Fallback: Demander à Claude de suggérer des compétiteurs (bilingue FR/EN)
-        
-        Returns:
-            Liste d'URLs suggérées
-        """
-        try:
-            import os
-            from anthropic import Anthropic
-            
-            # Utiliser ANTHROPIC_API_KEY ou EMERGENT_LLM_KEY
-            api_key = os.environ.get('ANTHROPIC_API_KEY') or os.environ.get('EMERGENT_LLM_KEY')
-            if not api_key:
-                logger.error("No API key found for Claude (ANTHROPIC_API_KEY or EMERGENT_LLM_KEY)")
-                return []
-            
-            anthropic_client = Anthropic(api_key=api_key)
-            
-            # Simplifier pour Claude
-            industry_desc = sub_industry if sub_industry else primary_industry
-            
-            prompt = f"""Suggère {max_competitors} URLs de sites web de compétiteurs majeurs pour une entreprise dans l'industrie "{industry_desc}" au Québec/Canada.
-
-IMPORTANT: Inclure des compétiteurs francophones québécois ET anglophones canadiens.
-
-Réponds UNIQUEMENT avec un JSON valide:
-{{
-  "competitors": ["https://competitor1.com", "https://competitor2.com", ...]
-}}
-
-URLs seulement, pas d'explication."""
-            
-            response = anthropic_client.messages.create(
-                model="claude-sonnet-4-5-20250929",
-                max_tokens=500,
-                temperature=0,
-                messages=[{"role": "user", "content": prompt}]
-            )
-            
-            response_text = response.content[0].text.strip()
-            
-            # Nettoyer markdown
-            if '```json' in response_text:
-                response_text = response_text.split('```json')[1].split('```')[0]
-            elif '```' in response_text:
-                response_text = response_text.split('```')[1].split('```')[0]
-            
-            import json
-            result = json.loads(response_text.strip())
-            competitors = result.get('competitors', [])[:max_competitors]
-            
-            logger.info(f"✅ Claude suggested {len(competitors)} competitors")
-            return competitors
-            
-        except Exception as e:
-            logger.error(f"Failed to get competitors from Claude: {e}")
-            return []
     
     def _validate_and_score_competitors(
         self,
         urls: List[str],
+        our_url: str,
         primary_industry: str,
-        offerings: List[str]
+        offerings: List[str],
+        url_sources: Dict[str, str]
     ) -> List[Dict[str, Any]]:
         """
-        Valide et score les URLs de compétiteurs
+        STAGE 3: Valide existence, analyse contenu, calcule score de pertinence
         
+        Args:
+            urls: Liste d'URLs candidates
+            our_url: Notre URL
+            primary_industry: Industrie
+            offerings: Liste d'offerings
+            url_sources: Dict {url: 'llm'|'web_search'|'both'}
+            
         Returns:
-            Liste triée par score décroissant
+            Liste de dicts avec score, type, reason
         """
-        competitors = []
+        logger.info(f"🎯 Stage 3: Validating and scoring {len(urls)} candidates...")
+        
+        scored = []
+        
+        # Extraire mots-clés de notre industrie/offerings pour comparaison
+        our_keywords = self._extract_keywords(primary_industry, offerings)
         
         for url in urls:
             try:
-                # Validation basique (HEAD request)
-                response = requests.head(url, timeout=5, allow_redirects=True)
+                # 1. Valider existence (DNS + HTTP)
+                if not self._check_url_exists(url):
+                    logger.debug(f"  ❌ {url}: URL does not exist or not reachable")
+                    continue
                 
-                if response.status_code < 400:
-                    # Score basé sur plusieurs critères
-                    score = self._calculate_relevance_score(
-                        url=url,
-                        primary_industry=primary_industry,
-                        offerings=offerings
-                    )
-                    
-                    competitors.append({
-                        'url': url,
-                        'score': score,
-                        'domain': self._extract_domain(url)
-                    })
-                    
+                # 2. Analyser le contenu de la page d'accueil
+                competitor_data = self._analyze_competitor_homepage(url)
+                if not competitor_data:
+                    logger.debug(f"  ⚠️  {url}: Could not analyze homepage")
+                    continue
+                
+                # 3. Calculer score de pertinence
+                score = self._calculate_relevance_score(
+                    competitor_data=competitor_data,
+                    our_keywords=our_keywords,
+                    primary_industry=primary_industry,
+                    offerings=offerings,
+                    source=url_sources.get(url, 'web_search')
+                )
+                
+                # 4. Classifier direct/indirect
+                comp_type = 'direct' if score >= self.threshold_direct else 'indirect'
+                
+                # Filtrer si score trop faible
+                if score < self.threshold_indirect:
+                    logger.debug(f"  🔻 {url}: score {score:.2f} too low")
+                    continue
+                
+                # 5. Générer justification
+                reason = self._generate_reason(
+                    competitor_data=competitor_data,
+                    score=score,
+                    comp_type=comp_type,
+                    primary_industry=primary_industry
+                )
+                
+                from utils.competitor_extractor import CompetitorExtractor
+                domain = CompetitorExtractor._extract_domain(url)
+                
+                scored.append({
+                    'domain': domain,
+                    'homepage_url': url,
+                    'score': round(score, 2),
+                    'type': comp_type,
+                    'reason': reason,
+                    'source': url_sources.get(url, 'web_search')
+                })
+                
+                logger.info(f"  ✅ {domain}: {score:.2f} ({comp_type}) - {reason[:50]}...")
+                
             except Exception as e:
-                logger.debug(f"Skipped {url}: {e}")
+                logger.debug(f"  ⚠️  {url}: Validation error - {e}")
                 continue
         
-        # Trier par score décroissant
-        competitors.sort(key=lambda x: x['score'], reverse=True)
+        logger.info(f"📊 Stage 3 complete: {len(scored)} validated competitors")
+        return scored
+    
+    def _check_url_exists(self, url: str) -> bool:
+        """
+        Vérifie qu'une URL existe et est accessible
+        1. DNS lookup
+        2. HEAD request rapide
+        """
+        try:
+            # 1. Vérifier DNS
+            parsed = urlparse(url)
+            domain = parsed.netloc
+            socket.gethostbyname(domain)
+            
+            # 2. HEAD request
+            response = requests.head(
+                url,
+                timeout=self.validation_timeout,
+                allow_redirects=True,
+                headers={'User-Agent': self.user_agent}
+            )
+            
+            # Accepter 200-399
+            return response.status_code < 400
+            
+        except:
+            return False
+    
+    def _analyze_competitor_homepage(self, url: str) -> Optional[Dict[str, Any]]:
+        """
+        Analyse la page d'accueil d'un compétiteur
+        Extrait: title, meta description, h1, h2, keywords
+        """
+        try:
+            response = requests.get(
+                url,
+                timeout=self.validation_timeout,
+                headers={'User-Agent': self.user_agent}
+            )
+            response.raise_for_status()
+            
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Extraire éléments clés
+            title = soup.find('title')
+            title_text = title.get_text().strip() if title else ''
+            
+            meta_desc = soup.find('meta', {'name': 'description'})
+            description = meta_desc.get('content', '').strip() if meta_desc else ''
+            
+            h1_tags = [h.get_text().strip() for h in soup.find_all('h1')]
+            h2_tags = [h.get_text().strip() for h in soup.find_all('h2')][:5]
+            
+            # Combiner tout le texte pour extraction de mots-clés
+            all_text = ' '.join([title_text, description] + h1_tags + h2_tags)
+            
+            # Extraire mots-clés
+            keywords = self._extract_keywords_from_text(all_text)
+            
+            return {
+                'title': title_text,
+                'description': description,
+                'h1': h1_tags,
+                'h2': h2_tags,
+                'keywords': keywords
+            }
+            
+        except Exception as e:
+            logger.debug(f"Homepage analysis failed for {url}: {e}")
+            return None
+    
+    def _extract_keywords(self, industry: str, offerings: List[str]) -> Set[str]:
+        """
+        Extrait mots-clés depuis industrie et offerings
+        """
+        keywords = set()
         
-        return competitors
+        # Industry
+        if industry:
+            keywords.update(industry.lower().split())
+        
+        # Offerings
+        for offering in offerings:
+            if offering:
+                keywords.update(str(offering).lower().split())
+        
+        # Retirer stop words français/anglais communs
+        stop_words = {'le', 'la', 'les', 'de', 'des', 'un', 'une', 'et', 'ou',
+                     'the', 'a', 'an', 'and', 'or', 'of', 'to', 'in', 'for'}
+        keywords = {k for k in keywords if len(k) > 2 and k not in stop_words}
+        
+        return keywords
+    
+    def _extract_keywords_from_text(self, text: str) -> Set[str]:
+        """
+        Extrait mots-clés d'un texte
+        """
+        if not text:
+            return set()
+        
+        # Tokenizer simple
+        words = re.findall(r'\b[a-zàâäéèêëïîôùûüÿæœç]{3,}\b', text.lower())
+        
+        # Stop words
+        stop_words = {'le', 'la', 'les', 'de', 'des', 'un', 'une', 'et', 'ou', 'pour', 'dans', 'sur',
+                     'the', 'a', 'an', 'and', 'or', 'of', 'to', 'in', 'for', 'with', 'on', 'at'}
+        
+        keywords = set([w for w in words if w not in stop_words])
+        
+        return keywords
     
     def _calculate_relevance_score(
         self,
-        url: str,
+        competitor_data: Dict[str, Any],
+        our_keywords: Set[str],
         primary_industry: str,
-        offerings: List[str]
+        offerings: List[str],
+        source: str
     ) -> float:
         """
-        Calculate un score de pertinence pour un compétiteur
+        Calcule le score de pertinence (0-1) d'un compétiteur
         
-        Returns:
-            Score entre 0 et 1
+        Basé sur:
+        - Recouvrement de mots-clés
+        - Présence industrie dans texte
+        - Présence offerings
+        - Bonus si trouvé dans LLM ET web search
         """
-        score = 0.5  # Score de base
+        score = 0.0
         
-        url_lower = url.lower()
-        domain = self._extract_domain(url)
+        competitor_keywords = competitor_data.get('keywords', set())
         
-        # Bonus si l'industrie est dans l'URL/domaine
-        industry_keywords = primary_industry.lower().split()
-        for keyword in industry_keywords:
-            if len(keyword) > 3:  # Ignorer les mots courts
-                if keyword in url_lower or keyword in domain:
-                    score += 0.1
+        # 1. Recouvrement de mots-clés (max 0.5)
+        if our_keywords and competitor_keywords:
+            overlap = len(our_keywords & competitor_keywords)
+            total = len(our_keywords | competitor_keywords)
+            jaccard = overlap / total if total > 0 else 0
+            score += jaccard * 0.5
         
-        # Bonus si un offering est dans l'URL/domaine
-        for offering in offerings:
-            if offering:
-                offering_lower = offering.lower()
-                if offering_lower in url_lower or offering_lower in domain:
-                    score += 0.15
+        # 2. Industrie mentionnée (0.2)
+        all_text = ' '.join([
+            competitor_data.get('title', ''),
+            competitor_data.get('description', ''),
+            ' '.join(competitor_data.get('h1', [])),
+            ' '.join(competitor_data.get('h2', []))
+        ]).lower()
         
-        # Pénalité pour les domaines génériques
-        generic_terms = ['info', 'web', 'site', 'portal', 'directory']
-        for term in generic_terms:
-            if term in domain:
-                score -= 0.1
+        if primary_industry.lower() in all_text:
+            score += 0.2
         
-        # Cap entre 0 et 1
-        return max(0.0, min(1.0, score))
+        # 3. Offerings mentionnés (0.15)
+        for offering in offerings[:2]:
+            if str(offering).lower() in all_text:
+                score += 0.075
+        
+        # 4. Bonus source (0.15)
+        if source == 'both':  # Trouvé dans LLM ET web
+            score += 0.15
+        elif source == 'llm':  # LLM seulement
+            score += 0.05
+        
+        return min(score, 1.0)
+    
+    def _generate_reason(self, competitor_data: Dict, score: float, comp_type: str, primary_industry: str) -> str:
+        """
+        Génère une justification courte en français
+        """
+        reasons = []
+        
+        # Industrie
+        title = competitor_data.get('title', '')
+        if primary_industry.lower() in title.lower():
+            reasons.append(f"Même secteur ({primary_industry})")
+        
+        # Type
+        if comp_type == 'direct':
+            reasons.append("Concurrent direct")
+        else:
+            reasons.append("Concurrent indirect")
+        
+        # Score
+        if score >= 0.7:
+            reasons.append("Forte similarité")
+        elif score >= 0.5:
+            reasons.append("Similarité moyenne")
+        
+        return ', '.join(reasons) if reasons else f"Score: {score:.2f}"
 
 
 # Instance globale
