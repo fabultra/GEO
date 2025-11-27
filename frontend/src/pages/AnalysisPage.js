@@ -81,6 +81,14 @@ const AnalysisPage = () => {
               
               <Progress value={job.progress} className="mb-4" data-testid="analysis-progress" />
               <p className="text-sm text-gray-500">{job.progress}% complété</p>
+              
+              {job.progress >= 60 && (
+                <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p className="text-xs text-blue-800">
+                    ℹ️ L'analyse complète peut prendre 3-5 minutes. Le système teste votre visibilité sur 5 plateformes IA et analyse vos compétiteurs.
+                  </p>
+                </div>
+              )}
 
               <div className="mt-8 text-left space-y-3">
                 <div className="flex items-center space-x-3">
