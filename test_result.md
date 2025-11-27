@@ -214,6 +214,18 @@ backend:
           agent: "testing"
           comment: "✅ REVIEW REQUEST ENHANCED PROBLEMS SOLVED - TESTS COMPLETS EFFECTUÉS! Tests directs du module semantic_analyzer.py confirment: ✅ Méthode _extract_problems_solved IMPLÉMENTÉE ET FONCTIONNELLE, ✅ Génère EXACTEMENT 15 problèmes avec structure complète (problem, category, severity, affected_segment, solution_approach), ✅ Méthode fallback garantit 15 problèmes structurés même si Claude API échoue, ✅ Aucun champ null/N/A/MISSING, ✅ Données cohérentes et pertinentes. TESTS DIRECTS: 15/15 problèmes valides avec tous les champs requis. BACKEND REDÉMARRÉ avec corrections. ANCIEN RAPPORT (dc87ef7e-3942-41f2-8f36-2cd99d6a3aea) montre encore ancien format (3 problèmes string), mais NOUVEAU CODE FONCTIONNEL. REVIEW REQUEST REQUIREMENTS MET - Enhanced Problems Solved COMPLIANT!"
   
+  - task: "Système de Découverte de Compétiteurs V3 (Pipeline 3 Étages)"
+    implemented: true
+    working: true
+    file: "/app/backend/utils/competitor_extractor.py, /app/backend/services/competitor_discovery.py"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "testing"
+          comment: "✅ SYSTÈME DE DÉCOUVERTE COMPÉTITEURS V3 VALIDÉ - Pipeline 3 étages complètement implémenté et fonctionnel! ✅ Stage 1 (CompetitorExtractor): Extraction URLs depuis résultats visibilité LLM, normalisation robuste, filtrage domaines exclus. ✅ Stage 2 (Web Search): Recherches Google bilingues FR/EN pour marché québécois, génération requêtes intelligentes. ✅ Stage 3 (Validation & Scoring): Vérification existence sites, analyse homepage, calcul score pertinence (0-1). ✅ NOUVEAUX CHAMPS IMPLÉMENTÉS: score (pertinence), type (direct/indirect), reason (justification), source (llm/web_search/both). ✅ Tests unitaires: 14/14 passés. ✅ Intégration server.py: Correctement intégré lignes 1015-1050. ✅ Anti-hallucination: URLs validées par DNS + HTTP, pas d'URLs fictives. SYSTÈME OPÉRATIONNEL - Résout le problème critique des compétiteurs non-pertinents!"
+  
   - task: "Word Report Generator (50-70 pages)"
     implemented: true
     working: true
