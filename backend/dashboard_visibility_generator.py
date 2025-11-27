@@ -1150,13 +1150,13 @@ def generate_interactive_dashboard(visibility_results: Dict[str, Any], output_pa
         </div>
         
         <!-- Analyse par type de requête -->
-        {generate_query_type_analysis_html(visibility_results.get('query_type_analysis', {{}}))}
+        {generate_query_type_analysis_html(visibility_results.get('query_type_analysis', dict()))}
         
         <!-- Analyse compétitive détaillée -->
-        {generate_competitive_analysis_html(visibility_results.get('competitive_analysis', {{}}))}
+        {generate_competitive_analysis_html(visibility_results.get('competitive_analysis', dict()))}
         
         <!-- Insights actionnables -->
-        {generate_insights_html(visibility_results.get('competitive_analysis', {{}}))}
+        {generate_insights_html(visibility_results.get('competitive_analysis', dict()))}
         
         <!-- Formulaire ajout de requête -->
         <div class="add-query-form">
