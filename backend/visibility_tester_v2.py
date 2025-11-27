@@ -383,10 +383,11 @@ class VisibilityTesterV2:
     
     def _extract_competitors(self, response: str, industry: str = "generic") -> List[Dict[str, Any]]:
         """Extraire TOUS les compétiteurs avec Claude (extraction structurée)"""
-        if not response or len(response) < 50:
+        # S'assurer que response est un string
+        if not response or not isinstance(response, str) or len(response) < 50:
             return []
         
-        response_sample = response[:3000] if len(response) > 3000 else response
+        response_sample = str(response[:3000]) if len(response) > 3000 else str(response)
         
         prompt = f"""Analyse cette réponse d'un LLM et identifie TOUS les compétiteurs/entreprises mentionnés.
 
