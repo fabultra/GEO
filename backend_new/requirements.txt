@@ -1,0 +1,67 @@
+# ============================================
+# GEO Backend - Production Requirements
+# Architecture PostgreSQL + FastAPI + Redis
+# ============================================
+
+# Core Framework
+fastapi==0.110.1
+uvicorn[standard]==0.25.0
+python-multipart==0.0.20
+python-dotenv==1.2.1
+
+# Database
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+alembic==1.13.1
+
+# Redis & Cache
+redis==5.0.1
+hiredis==2.3.2
+
+# Celery (async tasks)
+celery[redis]==5.3.6
+
+# Authentication & Security
+python-jose[cryptography]==3.5.0
+passlib[bcrypt]==1.7.4
+PyJWT==2.10.1
+bcrypt==4.1.3
+
+# Validation
+pydantic==2.12.4
+pydantic-settings==2.1.0
+email-validator==2.3.0
+
+# AI APIs
+anthropic==0.72.1
+openai==1.99.9
+httpx==0.28.1
+
+# Web Scraping & Crawling
+beautifulsoup4==4.14.2
+lxml==6.0.2
+requests==2.32.5
+aiohttp==3.13.2
+
+# Reports Generation
+reportlab==4.4.4
+python-docx==1.2.0
+weasyprint==66.0  # For PDF generation
+
+# Utilities
+python-dateutil==2.9.0.post0
+pytz==2025.2
+tenacity==9.1.2  # Retry logic
+
+# Optional - Search API (si pas de scraping Google)
+# google-search-results==2.4.2  # SerpAPI
+
+# Development & Testing (comment out in production)
+pytest==8.4.2
+pytest-asyncio==0.23.5
+black==25.9.0
+flake8==7.3.0
+mypy==1.18.2
+
+# Monitoring & Logging
+# sentry-sdk==1.40.0  # Pour error tracking (optionnel)
