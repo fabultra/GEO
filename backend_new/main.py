@@ -131,13 +131,19 @@ async def root():
 
 
 # Import et inclure les routers
-# TODO: Uncomment as routers are created
-# from routers import auth, users, analyses, reports, admin
-# app.include_router(auth.router, prefix=f"{API_PREFIX}/auth", tags=["Authentication"])
-# app.include_router(users.router, prefix=f"{API_PREFIX}/users", tags=["Users"])
-# app.include_router(analyses.router, prefix=f"{API_PREFIX}/analyses", tags=["Analyses"])
-# app.include_router(reports.router, prefix=f"{API_PREFIX}/reports", tags=["Reports"])
-# app.include_router(admin.router, prefix=f"{API_PREFIX}/admin", tags=["Admin"])
+from routers import (
+    auth_router,
+    users_router,
+    analyses_router,
+    reports_router,
+    admin_router,
+)
+
+app.include_router(auth_router, prefix=f"{API_PREFIX}/auth", tags=["Authentication"])
+app.include_router(users_router, prefix=f"{API_PREFIX}/users", tags=["Users"])
+app.include_router(analyses_router, prefix=f"{API_PREFIX}/analyses", tags=["Analyses"])
+app.include_router(reports_router, prefix=f"{API_PREFIX}/reports", tags=["Reports"])
+app.include_router(admin_router, prefix=f"{API_PREFIX}/admin", tags=["Admin"])
 
 
 if __name__ == "__main__":
